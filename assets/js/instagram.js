@@ -19,14 +19,10 @@
     capDiv.textContent = cap;
 
     if(item.media_type === 'VIDEO' || item.media_type === 'REEL'){
-      const v = document.createElement('video');
-      v.src = item.media_url;
-      v.muted = true;
-      v.playsInline = true;
-      v.preload = 'metadata';
-      // Affiche juste l’aperçu statique
-      v.poster = item.thumbnail_url || '';
-      wrap.appendChild(v);
+      const img = document.createElement('img');
+      img.src = item.thumbnail_url || item.media_url; // aperçu
+      img.loading = 'lazy';
+      wrap.appendChild(img);
     } else {
       const img = document.createElement('img');
       img.src = item.media_url; img.loading = 'lazy';
@@ -48,10 +44,7 @@
       grid.innerHTML = '<div class="ig-empty">Aucun post à afficher pour le moment.</div>';
       return;
     }
-
-    data.forEach(item => {
-      try { grid.appendChild(cardFor(item)); } catch {}
-    });
+    data.forEach(item => { try { grid.appendChild(cardFor(item)); } catch {} });
   } catch (e) {
     console.error('IG error', e);
     grid.innerHTML = '<div class="ig-empty">Impossible de charger Instagram pour le moment.</div>';
