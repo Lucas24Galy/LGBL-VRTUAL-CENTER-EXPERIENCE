@@ -3,189 +3,171 @@
 <head>
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
-  <title>LGBL Virtual Experience Center – Tarifs</title>
-  <meta name="description" content="Tarifs : sessions libres, Grand Prix IA, coaching, soirées, abonnements, privatisations et mini race esport.">
-  <link rel="stylesheet" href="assets/css/styles.css"/>
-  <link rel="icon" type="image/svg+xml" href="assets/img/favicon.svg"/>
-  <link rel="preconnect" href="https://fonts.googleapis.com"/>
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <title>Tarifs provisoires – LGBL Virtual Experience Center</title>
+  <link rel="icon" type="image/png" href="assets/img/logo-lgbl.png"/>
   <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600;800&family=Poppins:wght@400;600;700&display=swap" rel="stylesheet"/>
+  <style>
+    :root { --line: rgba(255,255,255,.1); }
+    body {
+      font-family: 'Poppins', sans-serif;
+      background:#0a0b0d;
+      color:#e9ecef;
+      margin:0;
+      padding:0;
+    }
+    header {
+      text-align:center;
+      padding:30px 0 10px;
+      border-bottom:1px solid var(--line);
+      background:rgba(10,11,13,.8);
+      backdrop-filter:blur(6px);
+    }
+    header img {
+      height:70px;
+      border-radius:50%;
+      margin-bottom:10px;
+      transition:transform .3s ease, filter .3s ease;
+    }
+    header img:hover {
+      transform:scale(1.05);
+      filter:drop-shadow(0 0 8px rgba(0,150,255,.5));
+    }
+    h1 {
+      font-family:'Orbitron',sans-serif;
+      font-size:clamp(24px,4vw,38px);
+      letter-spacing:1px;
+      color:#fff;
+      margin:0;
+    }
+    h2 {
+      border-bottom:1px solid var(--line);
+      padding-bottom:4px;
+      color:#00aaff;
+      margin-top:40px;
+      font-family:'Orbitron',sans-serif;
+    }
+    .container { max-width:1100px; margin:auto; padding:20px; }
+    table {
+      width:100%;
+      border-collapse:collapse;
+      margin-top:10px;
+      background:#0f1115;
+      border-radius:8px;
+      overflow:hidden;
+    }
+    th, td {
+      border:1px solid var(--line);
+      padding:10px;
+      text-align:left;
+    }
+    th {
+      background:#11151a;
+      color:#00aaff;
+    }
+    tr:nth-child(even) { background:#101215; }
+    tr:hover { background:rgba(255,255,255,.05); }
+    footer {
+      text-align:center;
+      padding:20px;
+      border-top:1px solid var(--line);
+      color:#8f98a1;
+      margin-top:40px;
+      font-size:.9rem;
+    }
+  </style>
 </head>
 <body>
 
-<header>
-  <div class="container nav">
-    <a class="logo" href="index.html" aria-label="LGBL Accueil">
-      <span class="logo-mark"></span><span>LGBL Virtual Experience</span>
-    </a>
-    <nav>
-      <button class="mobile-toggle" aria-label="Ouvrir le menu">Menu</button>
-      <div class="links">
-        <a href="index.html">Accueil</a>
-        <a class="active" href="tarifs.html">Tarifs</a>
-        <a href="evenements.html">Événements</a>
-        <a href="contact.html">Contact</a>
-        <a href="https://www.youtube.com/@LucasGaly24/streams" target="_blank" rel="noopener">LIVE</a>
-      </div>
-    </nav>
-  </div>
-</header>
+  <header>
+    <img src="assets/img/logo-lgbl.png" alt="Logo LGBL">
+    <h1>Tarifs provisoires – LGBL Virtual Experience Center</h1>
+    <p style="color:#a9b3bb; font-size:.9rem;">(Les prix indiqués sont susceptibles d’être ajustés avant ouverture officielle)</p>
+  </header>
 
-<section class="hero hero--small hero--neutral">
   <div class="container">
-    <h1>Nos Tarifs & Formules</h1>
-    <div class="alert-warning" style="margin: 1rem 0; text-align:center; background:rgba(255,200,0,0.1); border:1px solid rgba(255,200,0,0.4); padding:0.6rem 1rem; border-radius:8px; color:#ffda52; font-weight:600;">
-  ⚠️ Tarifs provisoires — susceptibles d’être ajustés avant l’ouverture officielle.
-</div>
 
-    <p class="subtitle">Sessions libres, Grand Prix IA, coaching, soirées, abonnements, privatisations et mini race esport.</p>
-  </div>
-</section>
-
-<section class="pricing">
-  <!-- LIBRE -->
-  <div class="tarif-card">
-    <div class="head"><h3>LIBRE</h3></div>
+    <h2>LIBRE – Châssis Standard</h2>
     <table>
-      <thead><tr><th>Catégorie</th><th>Offre</th><th>Tarif (€)</th><th>Notes</th></tr></thead>
-      <tbody>
-        <tr><td>Châssis Standard</td><td>10 Minutes</td><td>10,00</td><td></td></tr>
-        <tr><td>Châssis Standard</td><td>2x10 Minutes</td><td>20,00</td><td></td></tr>
-        <tr><td>Châssis Standard</td><td>3x10 Minutes</td><td>30,00</td><td></td></tr>
-        <tr><td>Châssis Standard</td><td>4x10 Minutes</td><td>40,00</td><td></td></tr>
-        <tr><td>Châssis Standard</td><td>5x10 Minutes</td><td>50,00</td><td></td></tr>
-
-        <tr class="tarif-spacer"></tr>
-
-        <tr><td>Châssis Dynamique Pro</td><td>10 Minutes</td><td>12,00</td><td></td></tr>
-        <tr><td>Châssis Dynamique Pro</td><td>2x10 Minutes</td><td>25,00</td><td></td></tr>
-        <tr><td>Châssis Dynamique Pro</td><td>3x10 Minutes</td><td>34,00</td><td></td></tr>
-        <tr><td>Châssis Dynamique Pro</td><td>4x10 Minutes</td><td>44,00</td><td></td></tr>
-        <tr><td>Châssis Dynamique Pro</td><td>5x10 Minutes</td><td>52,00</td><td></td></tr>
-      </tbody>
+      <tr><th>Offre</th><th>Tarif (€)</th></tr>
+      <tr><td>10 Minutes</td><td>10 €</td></tr>
+      <tr><td>2x10 Minutes</td><td>20 €</td></tr>
+      <tr><td>3x10 Minutes</td><td>30 €</td></tr>
+      <tr><td>4x10 Minutes</td><td>40 €</td></tr>
+      <tr><td>5x10 Minutes</td><td>50 €</td></tr>
     </table>
-  </div>
 
-  <!-- GRAND PRIX IA (BOTS) -->
-  <div class="tarif-card">
-    <div class="head"><h3>GRAND PRIX IA (BOTS)</h3></div>
+    <h2>LIBRE – Châssis Dynamique Pro</h2>
     <table>
-      <thead><tr><th>Catégorie</th><th>Offre</th><th>Tarif (€)</th><th>Notes</th></tr></thead>
-      <tbody>
-        <tr><td>Châssis Standard</td><td>Qualifications + Course 30 minutes</td><td>32,00</td><td></td></tr>
-        <tr><td>Châssis Dynamique Pro</td><td>Qualifications + Course 30 minutes</td><td>36,00</td><td></td></tr>
-        <tr><td>Châssis Standard</td><td>Qualifications + 2x30 minutes course</td><td>52,00</td><td></td></tr>
-        <tr><td>Châssis Dynamique Pro</td><td>Qualifications + 2x30 minutes course</td><td>56,00</td><td></td></tr>
-      </tbody>
+      <tr><th>Offre</th><th>Tarif (€)</th></tr>
+      <tr><td>10 Minutes</td><td>12 €</td></tr>
+      <tr><td>2x10 Minutes</td><td>25 €</td></tr>
+      <tr><td>3x10 Minutes</td><td>34 €</td></tr>
+      <tr><td>4x10 Minutes</td><td>44 €</td></tr>
+      <tr><td>5x10 Minutes</td><td>52 €</td></tr>
     </table>
-  </div>
 
-  <!-- COACHING INDIVIDUELS -->
-  <div class="tarif-card">
-    <div class="head"><h3>COACHING INDIVIDUELS</h3></div>
+    <h2>GRAND PRIX IA (BOTS)</h2>
     <table>
-      <thead><tr><th>Catégorie</th><th>Offre</th><th>Tarif (€)</th><th>Notes</th></tr></thead>
-      <tbody>
-        <tr><td>Coaching</td><td>1h</td><td>60,00</td><td></td></tr>
-        <tr><td>Coaching</td><td>2h</td><td>120,00</td><td></td></tr>
-        <tr><td>Coaching</td><td>4h</td><td>240,00</td><td></td></tr>
-        <tr><td>Coaching</td><td>6h</td><td>360,00</td><td></td></tr>
-      </tbody>
+      <tr><th>Offre</th><th>Tarif (€)</th></tr>
+      <tr><td>Châssis Standard – Qualifications + Course 30 min</td><td>32 €</td></tr>
+      <tr><td>Châssis Dynamique Pro – Qualifications + Course 30 min</td><td>36 €</td></tr>
+      <tr><td>Châssis Standard – Qualifications + 2x30 min course</td><td>52 €</td></tr>
+      <tr><td>Châssis Dynamique Pro – Qualifications + 2x30 min course</td><td>56 €</td></tr>
     </table>
-  </div>
 
-  <!-- FORMULE MERCREDI (–16 ans) -->
-  <div class="tarif-card">
-    <div class="head"><h3>FORMULE MERCREDI (–16 ans)</h3></div>
+    <h2>COACHING INDIVIDUEL</h2>
     <table>
-      <thead><tr><th>Catégorie</th><th>Offre</th><th>Tarif (€)</th><th>Notes</th></tr></thead>
-      <tbody>
-        <tr>
-          <td>Châssis Standard</td>
-          <td>Formule Collège découverte 5 minutes</td>
-          <td>5,00</td>
-          <td>Présenter carte d’établissement • Meilleur chrono = 1 session offerte</td>
-        </tr>
-      </tbody>
+      <tr><th>Durée</th><th>Tarif (€)</th></tr>
+      <tr><td>1h</td><td>60 €</td></tr>
+      <tr><td>2h</td><td>120 €</td></tr>
+      <tr><td>4h</td><td>240 €</td></tr>
+      <tr><td>6h</td><td>360 €</td></tr>
     </table>
-  </div>
 
-  <!-- SOIRÉES / ÉVÉNEMENTS -->
-  <div class="tarif-card">
-    <div class="head"><h3>SOIRÉES / ÉVÉNEMENTS</h3></div>
+    <h2>FORMULE MERCREDI APRÈS-MIDI (-16 ans)</h2>
     <table>
-      <thead><tr><th>Catégorie</th><th>Offre</th><th>Tarif (€)</th><th>Notes</th></tr></thead>
-      <tbody>
-        <tr><td>Soirées & Spéciaux</td><td>Diffusion F1 – entrée</td><td>6,00</td><td>Conso obligatoire</td></tr>
-        <tr><td>Soirées & Spéciaux</td><td>Soirée Ambiance Pro</td><td>28,00</td><td>2 sessions Pro + boisson</td></tr>
-        <tr><td>Soirées & Spéciaux</td><td>Soirée Couple</td><td>35,00</td><td>2×20 min + boissons</td></tr>
-        <tr><td>Soirées & Spéciaux</td><td>Abonnement mensuel (Standard)</td><td>60,00</td><td>4 × 30 min</td></tr>
-        <tr><td>Family</td><td>Family Pack</td><td>20,00</td><td>1 adulte + 1 enfant, 2×10 min</td></tr>
-        <tr><td>Soirées & Spéciaux</td><td>Tournoi mensuel (inscription)</td><td>18,00</td><td>Variable selon la durée</td></tr>
-      </tbody>
+      <tr><th>Offre</th><th>Tarif (€)</th><th>Notes</th></tr>
+      <tr><td>Formule Collège découverte 5 min</td><td>5 €</td><td>Présenter carte d’établissement – meilleur chrono = session offerte</td></tr>
     </table>
-  </div>
 
-  <!-- ABONNEMENTS -->
-  <div class="tarif-card">
-    <div class="head"><h3>ABONNEMENTS</h3></div>
+    <h2>SOIRÉES / ÉVÉNEMENTS</h2>
     <table>
-      <thead><tr><th>Catégorie</th><th>Offre</th><th>Tarif (€)</th><th>Notes</th></tr></thead>
-      <tbody>
-        <tr><td>Licence à l'année</td><td>Accès aux sessions dynamique aux tarifs standards</td><td>350,00</td><td></td></tr>
-        <tr><td>Carte fidélité</td><td>Bon cadeau à offrir d'une valeur de 10€</td><td>10,00</td><td></td></tr>
-      </tbody>
+      <tr><th>Offre</th><th>Tarif (€)</th><th>Notes</th></tr>
+      <tr><td>Diffusion F1 – Entrée</td><td>6 €</td><td>Conso obligatoire</td></tr>
+      <tr><td>Soirée Ambiance Pro</td><td>28 €</td><td>2 sessions Pro + boisson</td></tr>
+      <tr><td>Soirée Couple</td><td>35 €</td><td>2×20 min + boissons</td></tr>
+      <tr><td>Abonnement mensuel (Standard)</td><td>60 €</td><td>4×30 min</td></tr>
+      <tr><td>Family Pack</td><td>20 €</td><td>1 adulte + 1 enfant, 2×10 min</td></tr>
+      <tr><td>Tournoi mensuel (inscription)</td><td>18 €</td><td>Variable selon la durée</td></tr>
     </table>
-  </div>
 
-  <!-- PRIVATISATION -->
-  <div class="tarif-card">
-    <div class="head"><h3>PRIVATISATION</h3></div>
+    <h2>ABONNEMENTS</h2>
     <table>
-      <thead><tr><th>Catégorie</th><th>Offre</th><th>Tarif (€)</th><th>Notes</th></tr></thead>
-      <tbody>
-        <tr><td>Groupes & Événements</td><td>Privatisation (2h)</td><td>120,00</td><td>À confirmer</td></tr>
-        <tr><td>Groupes & Événements</td><td>Privatisation (4h)</td><td>240,00</td><td></td></tr>
-        <tr><td>Groupes & Événements</td><td>Privatisation (6h)</td><td>360,00</td><td></td></tr>
-        <tr><td>Groupes & Événements</td><td>Privatisation (8h)</td><td>480,00</td><td></td></tr>
-      </tbody>
+      <tr><th>Offre</th><th>Tarif (€)</th></tr>
+      <tr><td>Licence à l’année</td><td>350 €</td></tr>
+      <tr><td>Carte fidélité / bon cadeau (valeur 10 €)</td><td>10 €</td></tr>
     </table>
-  </div>
 
-  <!-- MINI RACE ESPORT -->
-  <div class="tarif-card">
-    <div class="head"><h3>MINI RACE ESPORT (CONFIRMÉ)</h3></div>
+    <h2>PRIVATISATION</h2>
     <table>
-      <thead><tr><th>Catégorie</th><th>Offre</th><th>Tarif (€)</th><th>Notes</th></tr></thead>
-      <tbody>
-        <tr><td>Mini Race</td><td>2 courses / 2 circuits</td><td>40,00</td><td>5 min practice | 8 min qualif | 10 min course</td></tr>
-        <tr><td>Mini Race</td><td>4 courses / 4 circuits</td><td>85,00</td><td>10 min practice | 10 min qualif | 2×15 min course (grille inversée)</td></tr>
-      </tbody>
+      <tr><th>Durée</th><th>Tarif (€)</th></tr>
+      <tr><td>2h</td><td>120 €</td></tr>
+      <tr><td>4h</td><td>240 €</td></tr>
+      <tr><td>6h</td><td>360 €</td></tr>
+      <tr><td>8h</td><td>480 €</td></tr>
     </table>
-  </div>
-</section>
 
-<footer>
-  <div class="container footer-grid">
-    <div>
-      <div class="logo"><span class="logo-mark"></span><span>LGBL Virtual Experience</span></div>
-      <p class="copy">© 2025 LGBL Virtual Experience Center — Conception : Lucas Galy</p>
-    </div>
-    <div>
-      <h4>Le site</h4>
-      <p><a href="index.html">Accueil</a><br><a class="active" href="tarifs.html">Tarifs</a><br><a href="evenements.html">Événements</a></p>
-    </div>
-    <div>
-      <h4>Contact</h4>
-      <p><a href="mailto:contact@lgbl-experience.fr">contact@lgbl-experience.fr</a><br><a href="tel:+33672392264">06 72 39 22 64</a></p>
-    </div>
-    <div>
-      <h4>LIVE</h4>
-      <p><a href="https://www.youtube.com/@LucasGaly24/streams" target="_blank" rel="noopener">YouTube</a></p>
-    </div>
-  </div>
-</footer>
+    <h2>MINI RACE ESPORT (CONFIRMÉ)</h2>
+    <table>
+      <tr><th>Format</th><th>Détails</th><th>Tarif (€)</th></tr>
+      <tr><td>2 Courses / 2 Circuits</td><td>5’ practice – 8’ qualif – 10’ course</td><td>40 €</td></tr>
+      <tr><td>4 Courses / 4 Circuits</td><td>10’ practice – 10’ qualif – 2×15’ course (grille inversée)</td><td>85 €</td></tr>
+    </table>
 
-<script src="assets/js/main.js"></script>
+  </div>
+
+  <footer>
+    © 2025 LGBL Virtual Experience Center — Lucas Galy
+  </footer>
 </body>
 </html>
