@@ -121,23 +121,29 @@
     </div>
   </section>
 
-  <!-- LIVE (auto: live si en cours, sinon vidéo aléatoire) -->
+  <!-- LIVE -->
   <section class="section">
     <div class="container">
       <h2>🎥 LIVE – Diffusions</h2>
-      <p class="small">Le live s’affiche automatiquement s’il est en cours. Sinon, une vidéo aléatoire de la chaîne.</p>
+      <p class="small">Si un live est en cours, il s’affiche automatiquement. Sinon, tu peux lancer une vidéo aléatoire de la chaîne.</p>
+
+      <!-- Iframe LIVE : YouTube affiche le live automatiquement si en cours -->
       <div class="video-embed" style="margin-top:.8rem;border-radius:14px;overflow:hidden;border:1px solid var(--line)">
         <iframe
           id="liveFrame"
           title="LGBL Diffusion"
           width="100%" height="520"
+          src="https://www.youtube.com/embed/live_stream?channel=@LucasGaly24&autoplay=0"
           frameborder="0"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
           allowfullscreen>
         </iframe>
       </div>
+
+      <!-- Bouton pour charger une vidéo aléatoire (sans API) -->
       <p style="margin-top:.8rem" class="small">
-        <a class="btn btn-outline" href="https://www.youtube.com/@LucasGaly24/streams" target="_blank" rel="noopener">Tous les lives & replays</a>
+        <button class="btn btn-outline" id="randomBtn" type="button">🎲 Charger une vidéo aléatoire</button>
+        <a class="btn" href="https://www.youtube.com/@LucasGaly24/streams" target="_blank" rel="noopener">Tous les lives & replays</a>
       </p>
     </div>
   </section>
@@ -167,86 +173,21 @@
     </div>
   </footer>
 
-  <!-- ====== YouTube auto-live / aléatoire ====== -->
+  <!-- JS: liste de vidéos aléatoires (tu peux ajouter/supprimer des IDs) -->
   <script>
-    // Clé API transmise par Lucas
-    const apiKey = "AIzaSyDs6KX_-2Oln19qTs_X0Kb0IY5_dAIiAmg";
-    // Handle public de la chaîne
-    const channelHandle = "@LucasGaly24";
-    const iframe = document.getElementById("liveFrame");
+    // Mets ici quelques IDs de tes vidéos YouTube (les 11 caractères après "watch?v=")
+    const LGBL_VIDEOS = [
+      "3FpLX8IgXa8", // exemple: Onboard Karting (remplace/ajoute les tiens)
+      // "VIDE0_ID_2",
+      // "VIDE0_ID_3",
+    ];
 
-    // 1) Résoudre le channelId via le handle
-    async function resolveChannelId() {
-      try {
-        // Méthode moderne (forHandle)
-        const r1 = await fetch(`https://www.googleapis.com/youtube/v3/channels?part=id&forHandle=${encodeURIComponent(channelHandle)}&key=${apiKey}`);
-        const j1 = await r1.json();
-        if (j1.items && j1.items.length > 0) return j1.items[0].id;
-
-        // Fallback : recherche par nom si jamais (rare)
-        const r2 = await fetch(`https://www.googleapis.com/youtube/v3/search?part=snippet&type=channel&q=${encodeURIComponent(channelHandle)}&key=${apiKey}`);
-        const j2 = await r2.json();
-        if (j2.items && j2.items.length > 0) return j2.items[0].id.channelId;
-
-      } catch (e) {
-        console.error("Erreur pour récupérer channelId:", e);
-      }
-      return null;
-    }
-
-    // 2) Vérifier s'il y a un live en cours
-    async function hasLiveNow(channelId) {
-      try {
-        const res = await fetch(`https://www.googleapis.com/youtube/v3/search?part=snippet&channelId=${channelId}&eventType=live&type=video&key=${apiKey}`);
-        const data = await res.json();
-        return data.items && data.items.length > 0 ? data.items[0].id.videoId : null;
-      } catch (e) {
-        console.error("Erreur check live:", e);
-        return null;
-      }
-    }
-
-    // 3) Une vidéo aléatoire récente de la chaîne
-    async function randomRecentVideo(channelId) {
-      try {
-        const res = await fetch(`https://www.googleapis.com/youtube/v3/search?part=snippet&channelId=${channelId}&maxResults=25&order=date&type=video&key=${apiKey}`);
-        const data = await res.json();
-        if (data.items && data.items.length > 0) {
-          const pick = data.items[Math.floor(Math.random() * data.items.length)];
-          return pick.id.videoId;
-        }
-      } catch (e) {
-        console.error("Erreur random video:", e);
-      }
-      return null;
-    }
-
-    // 4) Mettre à jour l’iframe selon live / aléatoire
-    async function updateLiveFrame() {
-      const channelId = await resolveChannelId();
-      if (!channelId) {
-        // Fallback handle direct (certaines intégrations supportent le handle pour l’embed live)
-        iframe.src = `https://www.youtube.com/embed/live_stream?channel=${encodeURIComponent(channelHandle)}&autoplay=0`;
-        return;
-      }
-
-      const liveVideoId = await hasLiveNow(channelId);
-      if (liveVideoId) {
-        // Afficher le live en cours
-        iframe.src = `https://www.youtube.com/embed/${liveVideoId}?autoplay=1`;
-      } else {
-        // Pas de live : vidéo aléatoire
-        const randomId = await randomRecentVideo(channelId);
-        if (randomId) {
-          iframe.src = `https://www.youtube.com/embed/${randomId}`;
-        } else {
-          // Dernier fallback : embed live_stream (au cas où)
-          iframe.src = `https://www.youtube.com/embed/live_stream?channel=${channelId}&autoplay=0`;
-        }
-      }
-    }
-
-    document.addEventListener("DOMContentLoaded", updateLiveFrame);
+    document.getElementById("randomBtn").addEventListener("click", () => {
+      if (!LGBL_VIDEOS.length) return alert("Ajoute des IDs de vidéos dans LGBL_VIDEOS.");
+      const id = LGBL_VIDEOS[Math.floor(Math.random() * LGBL_VIDEOS.length)];
+      const iframe = document.getElementById("liveFrame");
+      iframe.src = `https://www.youtube.com/embed/${id}`;
+    });
   </script>
 
   <script src="assets/js/main.js"></script>
