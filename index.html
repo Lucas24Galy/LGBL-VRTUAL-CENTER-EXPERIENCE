@@ -4,9 +4,9 @@
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <title>LGBL Virtual Experience Center – Accueil</title>
-  <meta name="description" content="8 simulateurs Sim-Lab P1X Pro, bases 12 Nm, volants Conspit 300 GT, VR & soirées e-sport à Agen.">
+  <meta name="description" content="Vivez la course comme un pro — simulateurs, bar, coin détente. Site en préparation, ouverture à venir.">
   <link rel="stylesheet" href="assets/css/styles.css"/>
-  <link rel="icon" type="image/svg+xml" href="assets/img/favicon.svg"/>
+  <link rel="icon" type="image/svg+xml" href="assets/img/logo-lgbl.svg"/>
   <link rel="preconnect" href="https://fonts.googleapis.com"/>
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
   <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600;800&family=Poppins:wght@400;600;700&display=swap" rel="stylesheet"/>
@@ -16,6 +16,8 @@
 <header>
   <div class="container nav">
     <a class="logo" href="index.html" aria-label="LGBL Accueil">
+      <!-- Si tu préfères l’image plutôt que la pastille texte, décommente la ligne suivante -->
+      <!-- <img src="assets/img/logo-lgbl.svg" alt="LGBL Virtual Experience" style="height:28px"> -->
       <span class="logo-mark"></span><span>LGBL Virtual Experience</span>
     </a>
     <nav>
@@ -31,10 +33,20 @@
   </div>
 </header>
 
+<!-- Bandeau info "en préparation" -->
+<section class="section" style="padding:14px 0; border-top:none; border-bottom:1px solid var(--line); background:#0e0e0e;">
+  <div class="container">
+    <div class="alert info" style="display:flex; gap:.6rem; align-items:center; justify-content:center">
+      <strong>ℹ️ En préparation :</strong>
+      <span>le centre n’est pas encore ouvert au public. Ouverture prochaine — restez connectés !</span>
+    </div>
+  </div>
+</section>
+
 <section class="hero">
   <div class="container">
     <h1>Vivez la course comme un pro</h1>
-    <p class="subtitle">8 simulateurs haut de gamme — Sim-Lab P1X Pro • Bases 12 Nm • Conspit 300 GT • Pédaliers Simnet SP Pro • Ambiance LED pit-lane.</p>
+    <p class="subtitle">Simulateurs – Bar – coin détente</p>
     <div style="display:flex; gap:.6rem; flex-wrap:wrap; margin-top:.8rem">
       <a class="btn" href="tarifs.html">Voir les tarifs</a>
       <a class="btn btn-outline" href="evenements.html">Événements & lives</a>
@@ -44,25 +56,43 @@
 
 <section class="section">
   <div class="container grid-3">
+    <!-- SIM RACING PRO -->
     <article class="card">
       <h3>Sim Racing Pro</h3>
-      <p>8 cockpits Sim-Lab P1X Pro, bases 12 Nm, pédaliers SP Pro. Triple-écrans et VR disponibles. Sensations “comme en vrai”.</p>
+      <ul class="small" style="margin:0; padding-left:1.1rem; line-height:1.8">
+        <li>Simulateurs <strong>statiques et dynamiques</strong></li>
+        <li>Volant type <strong>F1</strong> & <strong>pédalier pro</strong></li>
+        <li><strong>Cockpit pro</strong> (structure rigide)</li>
+        <li><strong>Simple écran</strong> pour une immersion totale</li>
+      </ul>
     </article>
+
+    <!-- BAR -->
     <article class="card">
-      <h3>Réalité Virtuelle</h3>
-      <p>Vive Pro 2, roller-coaster 9D, wingsuit & free roaming. Expériences pour tous, de l’initiation au challenge.</p>
+      <h3>Bar</h3>
+      <p>Boissons soft & <strong>snacking sucré</strong> rapide pour recharger entre deux sessions.</p>
     </article>
+
+    <!-- DÉTENTE & AMBIANCE -->
     <article class="card">
-      <h3>Bar & Ambiance</h3>
-      <p>Zone chill, PS5, TV 55”, sono VHF, déco bidons racing. Accueil groupes, anniversaires, entreprises.</p>
+      <h3>Détente & Ambiance</h3>
+      <ul class="small" style="margin:0; padding-left:1.1rem; line-height:1.8">
+        <li><strong>Fond sonore</strong> ambiance paddock</li>
+        <li><strong>Coin console</strong> pour patienter</li>
+        <li><strong>Baby-foot</strong> pour le fun</li>
+      </ul>
     </article>
   </div>
 </section>
 
+<!-- Espace volontaire avant le LIVE -->
+<div style="height:22px"></div>
+
 <section class="section">
   <div class="container">
     <h2>🎥 LIVE – Diffusions</h2>
-    <div class="video-embed">
+    <p class="subtitle">Retrouvez nos diffusions en direct si un stream est en cours.</p>
+    <div class="video-embed" style="margin-top:.8rem">
       <iframe
         title="LGBL Live YouTube"
         width="100%" height="520"
@@ -80,7 +110,10 @@
 <footer>
   <div class="container footer-grid">
     <div>
-      <div class="logo"><span class="logo-mark"></span><span>LGBL Virtual Experience</span></div>
+      <div class="logo">
+        <img src="assets/img/logo-lgbl.svg" alt="LGBL" style="height:22px; margin-right:.5rem">
+        <span>LGBL Virtual Experience</span>
+      </div>
       <p class="copy">© 2025 LGBL Virtual Experience Center — Conception : Lucas Galy</p>
     </div>
     <div>
