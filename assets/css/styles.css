@@ -230,4 +230,16 @@ header .logo img:hover {
   filter: drop-shadow(0 0 8px rgba(0, 150, 255, 0.6));
 }
 
+/* --- Effet hover pour les cartes d'événements --- */
+.hoverable{
+  transition: transform .2s ease, box-shadow .2s ease, border-color .2s ease;
+  will-change: transform;
+}
+.hoverable:hover{
+  transform: translateY(-4px);
+  box-shadow: 0 14px 34px rgba(0,0,0,.5), 0 0 0 1px rgba(0,170,255,.18) inset;
+  border-color: rgba(0,170,255,.35);
+}
+
+
 
