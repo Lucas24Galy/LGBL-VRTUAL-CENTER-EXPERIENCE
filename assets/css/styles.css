@@ -1,83 +1,135 @@
+/* =========================================================
+   LGBL Virtual Experience Center — Design System
+   Styles globaux pour TOUT le site (multi-pages)
+   Palette LED racing (rouge/bleu), fond sombre carbone
+   ========================================================= */
+
+/* ---------- Variables & Reset ---------- */
 :root{
-  --red:#ff003c;
-  --blue:#00aaff;
-  --black:#111111;
-  --white:#f5f5f5;
-  --muted:#cfcfcf;
-  --line: rgba(255,255,255,.09);
-  --maxw:1200px;
+  /* Couleurs marque */
+  --red: #ff003c;
+  --blue: #00aaff;
+  --blue-2: #2979ff;
+  --black: #0a0a0a;
+  --black-2: #111111;
+  --white: #f5f5f5;
+  --muted: #cfcfcf;
+
+  /* UI */
+  --line: rgba(255,255,255,.10);
+  --shadow: 0 10px 30px rgba(0,0,0,.35);
+  --radius: 16px;
+  --maxw: 1200px;
+
+  /* Typo */
+  --font-title: Orbitron, Poppins, system-ui, -apple-system, Arial, Helvetica, sans-serif;
+  --font-body:  Poppins, Roboto, system-ui, -apple-system, Arial, Helvetica, sans-serif;
 }
 
 *{box-sizing:border-box}
 html{scroll-behavior:smooth}
+::selection{background:rgba(0,170,255,.25)}
+
+/* ---------- Body & Base ---------- */
 body{
-  margin:0; color:var(--white);
-  font-family:Poppins, Roboto, system-ui, -apple-system, Arial, Helvetica, sans-serif;
+  margin:0; color:var(--white); font-family:var(--font-body);
   background:
-    radial-gradient(1200px 700px at 70% -10%, rgba(0,170,255,0.10), transparent 60%),
-    radial-gradient(1200px 700px at 10% 120%, rgba(255,0,60,0.05), transparent 60%),
+    radial-gradient(1100px 650px at 70% -8%, rgba(0,170,255,0.10), transparent 65%),
+    radial-gradient(1100px 750px at 8% 120%, rgba(255,0,60,0.06), transparent 62%),
     linear-gradient(180deg, #0d0d0d 0%, #080808 100%);
 }
 a{color:inherit; text-decoration:none}
+img{max-width:100%; display:block}
 .container{max-width:var(--maxw); margin:0 auto; padding:0 1rem}
-h1,h2{font-family:Orbitron, Poppins, sans-serif}
-h1{font-size: clamp(1.8rem, 4vw, 2.6rem); margin:.2rem 0}
-h2{font-size: clamp(1.5rem, 3.2vw, 2.2rem); margin:.2rem 0 1rem}
+
+/* ---------- Titres & textes ---------- */
+h1,h2{font-family:var(--font-title)}
+h1{font-size: clamp(2rem, 3.8vw, 2.8rem); line-height:1.1; margin:.2rem 0}
+h2{font-size: clamp(1.6rem, 3vw, 2.2rem); margin:.2rem 0 1rem}
 h3{margin:.2rem 0 .6rem}
+p{line-height:1.6}
 .subtitle{color:var(--muted)}
 .small{color:#bdbdbd; font-size:.95rem}
+.big{font-size:1.1rem; font-weight:600}
+
+/* ---------- Boutons ---------- */
 .btn{
   display:inline-block; padding:.9rem 1.2rem; border-radius:999px;
-  border:1px solid var(--line); color:white; font-weight:600; letter-spacing:.3px;
+  border:1px solid var(--line); color:white; font-weight:700; letter-spacing:.3px;
   background:linear-gradient(90deg, var(--red), var(--blue));
-  box-shadow:0 6px 20px rgba(255,0,60,.25), 0 6px 20px rgba(0,170,255,.2) inset;
-  transition:transform .15s ease, box-shadow .2s ease;
+  box-shadow:0 6px 20px rgba(255,0,60,.25), 0 6px 22px rgba(0,170,255,.22) inset;
+  transition:transform .15s ease, box-shadow .2s ease, opacity .2s;
 }
-.btn:hover{transform:translateY(-1px); box-shadow:0 10px 26px rgba(0,0,0,.5)}
+.btn:hover{transform:translateY(-1px); box-shadow:0 14px 28px rgba(0,0,0,.45)}
+.btn:active{transform:translateY(0)}
+.btn[disabled]{opacity:.6; pointer-events:none}
 .btn.btn-outline{background:transparent; border-color:var(--blue); box-shadow:none}
+.btn.btn-ghost{background:transparent; border-color:transparent}
 
-/* ---------- HEADER / NAV (commun) ---------- */
+/* ---------- Header / Navigation ---------- */
 header{
   position:sticky; top:0; z-index:50; backdrop-filter: blur(8px);
   background:rgba(17,17,17,.72); border-bottom:1px solid var(--line);
 }
 .nav{display:flex; align-items:center; justify-content:space-between; height:64px}
 .logo{display:flex; align-items:center; gap:.6rem; font-weight:800; letter-spacing:.8px}
-.logo-mark{width:28px; height:28px; border-radius:8px; background:#111; position:relative; overflow:hidden; box-shadow:0 0 0 1px var(--line) inset}
+.logo-mark{
+  width:28px; height:28px; border-radius:10px; background:#0f0f0f;
+  position:relative; overflow:hidden; box-shadow:0 0 0 1px var(--line) inset;
+}
 .logo-mark::before{content:""; position:absolute; inset:auto 0 4px 0; height:5px; background:var(--red)}
 .logo-mark::after{content:""; position:absolute; inset:auto 30% 14px 30%; height:4px; background:var(--blue)}
-nav .links a{padding:.5rem .6rem; border-radius:8px}
-nav .links a.active, nav .links a:hover{background:rgba(255,255,255,.06)}
-.mobile-toggle{display:none; border:1px solid var(--line); padding:.4rem .6rem; border-radius:8px; background:transparent; color:var(--white)}
 
-/* ---------- HERO / SECTIONS ---------- */
-.hero{padding:96px 0 48px; background: radial-gradient(800px 400px at 20% 10%, rgba(255,0,60,.20), transparent 60%)}
-.hero--small{padding:72px 0 36px}
-.hero--neutral{background:#0e0e0e !important}
-.section{padding:72px 0; border-top:1px solid var(--line)}
-.grid-3{display:grid; grid-template-columns:repeat(3, 1fr); gap:1rem}
-.card{
-  background:linear-gradient(180deg, rgba(255,255,255,.03), rgba(255,255,255,.02));
-  border:1px solid var(--line); padding:1rem; border-radius:16px; min-height:100%;
+nav .links a{padding:.5rem .66rem; border-radius:8px; font-weight:600}
+nav .links a.active, nav .links a:hover{background:rgba(255,255,255,.06)}
+.mobile-toggle{
+  display:none; border:1px solid var(--line); padding:.45rem .7rem;
+  border-radius:10px; background:transparent; color:var(--white)
 }
 
-/* ---------- VIDEO / MAP ---------- */
+/* ---------- Hero & Sections ---------- */
+.hero{
+  padding:96px 0 48px;
+  background: radial-gradient(800px 420px at 20% 8%, rgba(255,0,60,.18), transparent 60%);
+}
+.hero--small{padding:72px 0 36px}
+.hero--neutral{background:#0e0e0e !important}
+
+.section{padding:72px 0; border-top:1px solid var(--line)}
+
+/* ---------- Grilles & Cartes ---------- */
+.grid-2{display:grid; grid-template-columns:repeat(2, 1fr); gap:1rem}
+.grid-3{display:grid; grid-template-columns:repeat(3, 1fr); gap:1rem}
+.grid-4{display:grid; grid-template-columns:repeat(4, 1fr); gap:.9rem}
+
+.card{
+  background:linear-gradient(180deg, rgba(255,255,255,.03), rgba(255,255,255,.02));
+  border:1px solid var(--line); padding:1rem; border-radius:var(--radius); min-height:100%;
+  box-shadow: var(--shadow);
+}
+
+/* ---------- Vidéo & Carte ---------- */
 .video-embed, .map-embed{border:1px solid var(--line); border-radius:14px; overflow:hidden}
 
-/* ---------- FOOTER ---------- */
-footer{padding:48px 0; background:#0b0b0b; border-top:1px solid var(--line)}
-.footer-grid{display:grid; grid-template-columns:2fr 1fr 1fr 1fr; gap:1rem}
-.copy{color:#a9a9a9; font-size:.9rem; margin-top:.6rem}
+/* ---------- Galerie ---------- */
+.gallery{display:grid; grid-template-columns:repeat(4, 1fr); gap:.6rem}
+.gallery img{width:100%; border-radius:12px; border:1px solid var(--line); cursor:zoom-in}
+.gallery img:hover{transform:scale(1.01); transition:transform .2s ease}
 
-/* ---------- TARIFS (blocs propres) ---------- */
+/* ---------- Tableaux (général) ---------- */
+table{width:100%; border-collapse:collapse}
+th, td{padding:.85rem 1rem; border-bottom:1px solid var(--line); text-align:left; vertical-align:top}
+th{font-weight:700; background:rgba(255,255,255,.035)}
+tr:nth-child(even) td{background:rgba(255,255,255,.02)}
+
+/* ---------- Tarifs : cartes par catégories ---------- */
 .pricing{max-width: var(--maxw); margin: 0 auto; padding: 64px 1rem;}
 .pricing > p{color:var(--muted); margin:.2rem 0 1.2rem}
 .tarif-card{
   border:1px solid var(--line);
   border-radius:18px;
   background:linear-gradient(180deg, rgba(255,255,255,.03), rgba(255,255,255,.015));
-  overflow:hidden;
-  box-shadow:0 10px 30px rgba(0,0,0,.25);
+  overflow:hidden; box-shadow:var(--shadow);
   margin: 22px 0 34px; position:relative;
 }
 .tarif-card .head{
@@ -86,29 +138,70 @@ footer{padding:48px 0; background:#0b0b0b; border-top:1px solid var(--line)}
   border-bottom:1px solid var(--line);
 }
 .tarif-card .head h3{
-  margin:0; font-family: Orbitron, Poppins, sans-serif; letter-spacing:.4px; font-size:1.15rem;
+  margin:0; font-family: var(--font-title); letter-spacing:.4px; font-size:1.15rem;
 }
-.tarif-card::before{content:""; position:absolute; inset:0 auto 0 0; width:6px; background: linear-gradient(180deg, var(--blue), #2979ff)}
-.tarif-card table{width:100%; border-collapse:collapse}
-.tarif-card th, .tarif-card td{padding:.85rem 1rem; border-bottom:1px solid var(--line); text-align:left; vertical-align:top}
-.tarif-card th{font-weight:700; background:rgba(255,255,255,.035)}
-.tarif-card tr:nth-child(even) td{background:rgba(255,255,255,.02)}
+.tarif-card::before{
+  content:""; position:absolute; inset:0 auto 0 0; width:6px;
+  background: linear-gradient(180deg, var(--blue), var(--blue-2));
+}
 .tarif-card th:nth-child(1), .tarif-card td:nth-child(1){width: 22%}
 .tarif-card th:nth-child(2), .tarif-card td:nth-child(2){width: 44%}
 .tarif-card th:nth-child(3), .tarif-card td:nth-child(3){width: 14%; white-space:nowrap}
 .tarif-card th:nth-child(4), .tarif-card td:nth-child(4){width: 20%}
 .tarif-spacer{height:8px}
 
-/* ---------- RESPONSIVE ---------- */
+/* ---------- Formulaires ---------- */
+.form{
+  display:grid; gap:.8rem; max-width:720px;
+  background:linear-gradient(180deg, rgba(255,255,255,.03), rgba(255,255,255,.015));
+  border:1px solid var(--line); padding:1rem; border-radius:var(--radius);
+}
+.input, textarea, select{
+  width:100%; padding:.85rem 1rem; border-radius:12px; color:var(--white);
+  background:#111; border:1px solid var(--line); outline:none;
+}
+.input:focus, textarea:focus, select:focus{border-color:var(--blue); box-shadow:0 0 0 3px rgba(0,170,255,.18)}
+label{font-weight:600}
+.help{color:#a9a9a9; font-size:.9rem}
+
+/* ---------- Alertes (succès/erreur/info) ---------- */
+.alert{padding:.9rem 1rem; border-radius:12px; border:1px solid var(--line); background:rgba(255,255,255,.03)}
+.alert.success{border-color:rgba(0,255,170,.2); background:rgba(0,255,170,.08)}
+.alert.error{border-color:rgba(255,0,60,.2); background:rgba(255,0,60,.08)}
+.alert.info{border-color:rgba(0,170,255,.2); background:rgba(0,170,255,.08)}
+
+/* ---------- Footer ---------- */
+footer{padding:48px 0; background:#0b0b0b; border-top:1px solid var(--line)}
+.footer-grid{display:grid; grid-template-columns:2fr 1fr 1fr 1fr; gap:1rem}
+.copy{color:#a9a9a9; font-size:.9rem; margin-top:.6rem}
+
+/* ---------- Utilitaires ---------- */
+.center{text-align:center}
+.mt-0{margin-top:0} .mt-1{margin-top:.25rem} .mt-2{margin-top:.5rem} .mt-3{margin-top:1rem} .mt-4{margin-top:1.5rem}
+.mb-0{margin-bottom:0} .mb-1{margin-bottom:.25rem} .mb-2{margin-bottom:.5rem} .mb-3{margin-bottom:1rem} .mb-4{margin-bottom:1.5rem}
+.hide{display:none !important}
+.maxw{max-width:var(--maxw); margin:0 auto}
+
+/* ---------- Pages spécifiques ---------- */
+/* Page tarifs : neutraliser tout halo rouge pour un rendu + lisible */
+.page-tarifs{background:#0b0b0b !important; background-image:none !important}
+.page-tarifs .hero--neutral{background:#0e0e0e !important; border-bottom:1px solid var(--line)}
+.page-tarifs .tarif-card .head{background: linear-gradient(90deg, rgba(0,170,255,.22), rgba(255,255,255,.06))}
+.page-tarifs .tarif-card::before{background: linear-gradient(180deg, var(--blue), var(--blue-2))}
+
+/* ---------- Responsive ---------- */
+@media (max-width: 1100px){
+  .grid-4{grid-template-columns:repeat(3, 1fr)}
+}
 @media (max-width: 980px){
   .grid-3{grid-template-columns:1fr}
+  .grid-4{grid-template-columns:repeat(2, 1fr)}
   .footer-grid{grid-template-columns:1fr 1fr}
   .mobile-toggle{display:inline-block}
   nav .links{display:none}
 }
 @media (max-width: 820px){
-  .tarif-card th:nth-child(1), .tarif-card td:nth-child(1),
-  .tarif-card th:nth-child(4), .tarif-card td:nth-child(4){width:auto}
+  /* Tableaux tarifs en “cartes” lisibles */
   .tarif-card table, .tarif-card thead{display:block}
   .tarif-card tr{display:grid; grid-template-columns: 1fr 1fr; gap:.4rem; padding:.6rem 0}
   .tarif-card th{display:none}
@@ -117,3 +210,7 @@ footer{padding:48px 0; background:#0b0b0b; border-top:1px solid var(--line)}
   .tarif-card td:nth-child(2){grid-column:1 / span 2}
   .tarif-card td:nth-child(3), .tarif-card td:nth-child(4){grid-column:1 / span 1}
 }
+
+/* ---------- Animations discrètes ---------- */
+.fade-in{animation:fade .5s ease both}
+@keyframes fade{from{opacity:.0; transform:translateY(6px)} to{opacity:1; transform:none}}
