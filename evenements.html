@@ -3,20 +3,21 @@
 <head>
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
-  <title>LGBL Virtual Experience Center – Événements & Esport</title>
-  <meta name="description" content="Live YouTube, tournois, soirées thématiques, partenaires et calendrier LGBL.">
+  <title>LGBL – Événements & eSport</title>
+  <meta name="description" content="Soirées eSport, privatisation groupe/entreprise, diffusion F1 & matchs (conso obligatoire).">
   <link rel="stylesheet" href="assets/css/styles.css"/>
-  <link rel="icon" type="image/svg+xml" href="assets/img/favicon.svg"/>
+  <link rel="icon" type="image/png" href="assets/img/logo-lgbl.png"/>
   <link rel="preconnect" href="https://fonts.googleapis.com"/>
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
   <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600;800&family=Poppins:wght@400;600;700&display=swap" rel="stylesheet"/>
 </head>
-<body>
+<body class="page-evenements">
 
 <header>
   <div class="container nav">
-    <a class="logo" href="index.html" aria-label="LGBL Accueil">
-      <span class="logo-mark"></span><span>LGBL Virtual Experience</span>
+    <a class="logo" href="index.html" aria-label="LGBL Accueil" style="display:flex;align-items:center;gap:.6rem;">
+      <img src="assets/img/logo-lgbl.png" alt="Logo LGBL" style="height:42px;border-radius:50%;">
+      <span style="font-weight:700;font-size:1.2rem;letter-spacing:1px;">LGBL Virtual Experience</span>
     </a>
     <nav>
       <button class="mobile-toggle" aria-label="Ouvrir le menu">Menu</button>
@@ -33,65 +34,97 @@
 
 <section class="hero hero--small">
   <div class="container">
-    <h1>Événements & Esport</h1>
-    <p class="subtitle">Diffusions, tournois, soirées thématiques et résultats — rejoins la communauté LGBL.</p>
-    <div style="margin-top:1rem">
-      <a class="btn" href="https://www.youtube.com/@LucasGaly24/streams" target="_blank" rel="noopener">Voir le LIVE</a>
-      <a class="btn btn-outline" href="tarifs.html">S’inscrire à une course</a>
+    <h1>Événements & eSport</h1>
+    <p class="subtitle">Soirées eSport, privatisation groupe/entreprise et diffusion F1 & matchs.</p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <h2>🎮 Soirées eSport</h2>
+    <p class="small">Deux formats au choix. Classement, fair-play, et bonne ambiance !</p>
+
+    <div class="grid-2" style="margin-top:.8rem">
+      <article class="card hoverable">
+        <h3>Format Sprint</h3>
+        <p class="big">2 courses • 2 circuits</p>
+        <p class="small">5' practice • 8' qualif • 10' course</p>
+      </article>
+
+      <article class="card hoverable">
+        <h3>Format Endurance</h3>
+        <p class="big">4 courses • 4 circuits</p>
+        <p class="small">10' practice • 10' qualif • 2×15' course (grille inversée)</p>
+      </article>
+    </div>
+
+    <div class="alert info" style="margin-top:1rem">
+      💡 Les soirées eSport sont ouvertes aux débutants comme aux pilotes confirmés. Inscriptions sur place ou via nos réseaux — matos fourni.
     </div>
   </div>
 </section>
 
 <section class="section">
   <div class="container">
-    <h2>🎥 Diffusions en direct</h2>
-    <div class="video-embed">
-      <iframe
-        title="LGBL Live YouTube"
-        width="100%" height="520"
-        src="https://www.youtube.com/embed/live_stream?channel=@LucasGaly24&autoplay=0"
-        frameborder="0"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-        allowfullscreen></iframe>
+    <h2>🏢 Privatisation groupe / entreprise</h2>
+    <div class="grid-2" style="margin-top:.8rem">
+      <article class="card hoverable">
+        <h3>Team building & anniversaires</h3>
+        <p>Privatisez l’espace pour vos évènements (2h, 4h, 6h, 8h). Formats sur mesure : mini-championnats, relais, hot-lap, etc.</p>
+        <p class="small">Nous contacter pour un devis adapté au nombre de personnes et au planning.</p>
+        <a class="btn" href="contact.html" style="margin-top:.6rem">Demander un devis</a>
+      </article>
+
+      <article class="card hoverable">
+        <h3>Options</h3>
+        <ul class="small" style="margin:0; padding-left:1.1rem; line-height:1.8">
+          <li>Classements & podiums personnalisés</li>
+          <li>Briefing découverte & encadrement</li>
+          <li>Bar soft & snacking sucré rapide</li>
+          <li>Coin détente : fond sonore, console, baby-foot</li>
+        </ul>
+      </article>
     </div>
-    <p class="small" style="margin-top:.8rem">
-      <a class="btn" target="_blank" rel="noopener" href="https://www.youtube.com/@LucasGaly24/streams">Tous les lives & replays</a>
-    </p>
   </div>
 </section>
 
 <section class="section">
-  <div class="container grid-3">
-    <article class="card">
-      <h3>Mini Race Esport – Sprint Night</h3>
-      <p>2 courses • 2 circuits — 5' practice • 8' qualif • 10' course</p>
-      <p class="small">Inscription : 40€</p>
-      <a class="btn" href="tarifs.html">S’inscrire</a>
-    </article>
-    <article class="card">
-      <h3>Mini Race Esport – Enduro Duo</h3>
-      <p>4 courses • 4 circuits — 10' practice • 10' qualif • 2×15' course (grille inversée)</p>
-      <p class="small">Inscription : 85€</p>
-      <a class="btn" href="tarifs.html">S’inscrire</a>
-    </article>
-    <article class="card">
-      <h3>Soirée Diffusion F1</h3>
-      <p>Ambiance pit-lane, écrans géants, sonorisation VHF.</p>
-      <p class="small">Entrée : 6€ (conso obligatoire)</p>
-      <a class="btn" href="contact.html">Réserver une table</a>
-    </article>
+  <div class="container">
+    <h2>📺 Diffusion</h2>
+    <div class="grid-2" style="margin-top:.8rem">
+      <article class="card hoverable">
+        <h3>Formule 1</h3>
+        <p>Diffusion des Grands Prix (selon calendrier).</p>
+        <p class="small"><strong>Conso obligatoire</strong> au bar.</p>
+      </article>
+
+      <article class="card hoverable">
+        <h3>Matchs</h3>
+        <p>Soirées sportives (sélection de grands rendez-vous).</p>
+        <p class="small"><strong>Conso obligatoire</strong> au bar.</p>
+      </article>
+    </div>
+
+    <div class="card" style="margin-top:1rem">
+      <h3>Live & replays</h3>
+      <p class="small">Retrouvez nos diffusions et streams en direct sur la chaîne :</p>
+      <a class="btn" href="https://www.youtube.com/@LucasGaly24/streams" target="_blank" rel="noopener">Voir le LIVE</a>
+    </div>
   </div>
 </section>
 
 <footer>
   <div class="container footer-grid">
     <div>
-      <div class="logo"><span class="logo-mark"></span><span>LGBL Virtual Experience</span></div>
+      <div class="logo" style="display:flex;align-items:center;gap:.5rem">
+        <img src="assets/img/logo-lgbl.png" alt="LGBL" style="height:22px;border-radius:50%">
+        <span>LGBL Virtual Experience</span>
+      </div>
       <p class="copy">© 2025 LGBL Virtual Experience Center — Conception : Lucas Galy</p>
     </div>
     <div>
       <h4>Le site</h4>
-      <p><a href="tarifs.html">Tarifs</a><br><a class="active" href="evenements.html">Événements</a><br><a href="index.html">Accueil</a></p>
+      <p><a href="index.html">Accueil</a><br><a href="tarifs.html">Tarifs</a><br><a class="active" href="evenements.html">Événements</a></p>
     </div>
     <div>
       <h4>Contact</h4>
