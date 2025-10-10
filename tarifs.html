@@ -31,23 +31,48 @@
   </div>
 </header>
 
-<section class="hero hero--small hero--neutral">
-  <div class="container" style="text-align:center">
-    <!-- LOGO au-dessus -->
-    <img src="assets/img/logo-lgbl.png" alt="Logo LGBL" style="height:72px; border-radius:50%; margin-bottom:10px;">
+<section class="hero hero--small hero--neutral" style="
+  background-image:url('assets/img/bg-tarifs.jpg');
+  background-size:cover;
+  background-position:center;
+  background-attachment:fixed;
+  color:#fff;
+  text-shadow:0 0 8px rgba(0,0,0,0.5);
+  padding:5rem 0 4rem;
+">
+  <div class="container" style="text-align:center; position:relative; z-index:2;">
+    <h1 style="font-family:'Orbitron',sans-serif; font-size:clamp(28px,4vw,46px); margin-bottom:1rem; letter-spacing:1px;">
+      Tarifs provisoires – LGBL Virtual Experience Center
+    </h1>
 
-    <!-- TITRE complet -->
-    <h1>Tarifs provisoires – LGBL Virtual Experience Center</h1>
-
-    <!-- Bandeau d'info (inchangé) -->
-    <div class="alert-warning" style="margin: 1rem 0; text-align:center; background:rgba(255,200,0,0.1); border:1px solid rgba(255,200,0,0.4); padding:0.6rem 1rem; border-radius:8px; color:#ffda52; font-weight:600;">
+    <div class="alert-warning" style="
+      display:inline-block;
+      background:rgba(255,200,0,0.1);
+      border:1px solid rgba(255,200,0,0.4);
+      padding:0.6rem 1.2rem;
+      border-radius:8px;
+      color:#ffda52;
+      font-weight:600;
+      margin-bottom:1rem;
+    ">
       ⚠️ Tarifs provisoires — susceptibles d’être ajustés avant l’ouverture officielle.
     </div>
 
-    <!-- Sous-titre (inchangé) -->
-    <p class="subtitle">Sessions libres, Grand Prix IA, coaching, soirées, abonnements, privatisations et mini race esport.</p>
+    <p class="subtitle" style="color:#e9ecef; font-size:1.1rem;">
+      Sessions libres, Grand Prix IA, coaching, soirées, abonnements, privatisations et mini race esport.
+    </p>
   </div>
+
+  <!-- voile sombre pour lisibilité -->
+  <div style="
+    content:'';
+    position:absolute;
+    inset:0;
+    background:rgba(0,0,0,0.55);
+    z-index:1;
+  "></div>
 </section>
+
 
 <section class="pricing">
   <!-- LIBRE -->
