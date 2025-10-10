@@ -240,6 +240,46 @@ header .logo img:hover {
   box-shadow: 0 14px 34px rgba(0,0,0,.5), 0 0 0 1px rgba(0,170,255,.18) inset;
   border-color: rgba(0,170,255,.35);
 }
+/* === ÉVÉNEMENTS – arrière-plan LMP2 === */
+.hero--evenements {
+  position: relative;
+  background: url('assets/img/lmp2-bg.jpg') center/cover no-repeat;
+  color: #fff;
+  min-height: 60vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  overflow: hidden;
+}
+
+.hero--evenements .overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.55);
+  backdrop-filter: blur(2px);
+}
+
+.hero--evenements .container {
+  position: relative;
+  z-index: 2;
+}
+
+.hero--evenements h1 {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 3rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  color: #fff;
+  text-shadow: 0 0 10px rgba(0, 255, 255, 0.5);
+}
+
+.hero--evenements .subtitle {
+  font-size: 1.1rem;
+  color: #ddd;
+  max-width: 700px;
+  margin: 0 auto;
+}
 
 
 
