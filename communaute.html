@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>LGBL – Communauté (Instagram)</title>
+  <meta name="description" content="Tous les posts Instagram de LGBL Virtual Experience – flux mis à jour automatiquement.">
+  <link rel="icon" type="image/png" href="assets/img/logo-lgbl.png"/>
+  <link rel="stylesheet" href="assets/css/styles.css"/>
+  <style>
+    .ig-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:14px}
+    .ig-card{position:relative;background:#0f1115;border:1px solid rgba(255,255,255,.08);border-radius:12px;overflow:hidden}
+    .ig-card img,.ig-card video{width:100%;height:100%;object-fit:cover;display:block;aspect-ratio:1/1}
+    .ig-meta{position:absolute;left:8px;bottom:8px;padding:4px 8px;border-radius:999px;background:rgba(0,0,0,.55);color:#fff;font-size:.78rem}
+    .ig-cap{padding:10px;font-size:.9rem;color:#cfd6dc;max-height:4.2rem;overflow:hidden}
+    .ig-empty{padding:18px;border:1px dashed rgba(255,255,255,.2);border-radius:12px;color:#a9b3bb;text-align:center}
+    @media (max-width:900px){.ig-grid{grid-template-columns:repeat(2,1fr)}}
+    @media (max-width:560px){.ig-grid{grid-template-columns:1fr}}
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="container nav">
+    <a class="logo" href="index.html" aria-label="LGBL Accueil" style="display:flex;align-items:center;gap:.6rem;">
+      <img src="assets/img/logo-lgbl.png" alt="Logo LGBL" style="height:42px;border-radius:50%">
+      <span style="font-weight:700;letter-spacing:.5px">LGBL Virtual Experience</span>
+    </a>
+    <nav>
+      <div class="links">
+        <a href="index.html">Accueil</a>
+        <a href="tarifs.html">Tarifs</a>
+        <a href="evenements.html">Événements</a>
+        <a class="active" href="communaute.html">Communauté</a>
+        <a href="contact.html">Contact</a>
+        <a href="https://www.youtube.com/@LucasGaly24/streams" target="_blank" rel="noopener">LIVE</a>
+      </div>
+    </nav>
+  </div>
+</header>
+
+<section class="hero hero--small">
+  <div class="container">
+    <h1>Communauté</h1>
+    <p class="subtitle">Tous nos posts Instagram — <a href="https://www.instagram.com/lgbl_virtual_center_experience/" target="_blank" rel="noopener">@lgbl_virtual_center_experience</a></p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div id="igGrid" class="ig-grid">
+      <div class="ig-empty">Chargement du flux Instagram…</div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container footer-grid">
+    <div>
+      <div class="logo" style="display:flex;align-items:center;gap:.5rem">
+        <img src="assets/img/logo-lgbl.png" alt="LGBL" style="height:22px;border-radius:50%">
+        <span>LGBL Virtual Experience</span>
+      </div>
+      <p class="copy">© 2025 LGBL Virtual Experience Center — Lucas Galy</p>
+    </div>
+    <div>
+      <h4>Le site</h4>
+      <p><a href="index.html">Accueil</a><br><a href="tarifs.html">Tarifs</a><br><a href="evenements.html">Événements</a><br><a class="active" href="communaute.html">Communauté</a></p>
+    </div>
+    <div>
+      <h4>Contact</h4>
+      <p><a href="mailto:contact@lgbl-experience.fr">lucasgaly.47510@gmail.com</a><br><a href="tel:+33672392264">06 72 39 22 64</a></p>
+    </div>
+  </div>
+</footer>
+
+<script src="assets/js/instagram.js"></script>
+</body>
+</html>
