@@ -1,167 +1,109 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <title>LGBL Virtual Experience Center – Événements & Esport</title>
-  <meta name="description" content="Tournois, diffusions live, soirées spéciales et partenaires du LGBL Virtual Experience Center à Agen. Rejoignez la communauté simracing & VR."/>
+  <meta name="description" content="Live YouTube, tournois, soirées thématiques, partenaires et calendrier LGBL.">
   <link rel="stylesheet" href="assets/css/styles.css"/>
   <link rel="icon" type="image/svg+xml" href="assets/img/favicon.svg"/>
-  <meta property="og:title" content="LGBL – Événements & Esport"/>
-  <meta property="og:description" content="Live YouTube, tournois, soirées thématiques, partenaires."/>
-  <meta property="og:image" content="assets/img/og-preview.jpg"/>
-  <meta property="og:url" content="https://lgbl-experience.fr/evenements.html"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600;800&family=Poppins:wght@400;600;700&display=swap" rel="stylesheet"/>
 </head>
 <body>
 
-  <!-- Header -->
-  <header>
-    <div class="container nav">
-      <a class="logo" href="index.html" aria-label="LGBL Accueil">
-        <span class="logo-mark"></span><span>LGBL Virtual Experience</span>
-      </a>
-      <nav>
-        <button class="mobile-toggle" aria-label="Ouvrir le menu">Menu</button>
-        <div class="links">
-          <a href="index.html">Accueil</a>
-          <a href="tarifs.html">Tarifs</a>
-          <a class="active" href="evenements.html">Événements</a>
-          <a href="contact.html">Contact</a>
-          <a href="https://www.youtube.com/@LucasGaly24/streams" target="_blank" rel="noopener">LIVE</a>
-        </div>
-      </nav>
-    </div>
-  </header>
+<header>
+  <div class="container nav">
+    <a class="logo" href="index.html" aria-label="LGBL Accueil">
+      <span class="logo-mark"></span><span>LGBL Virtual Experience</span>
+    </a>
+    <nav>
+      <button class="mobile-toggle" aria-label="Ouvrir le menu">Menu</button>
+      <div class="links">
+        <a href="index.html">Accueil</a>
+        <a href="tarifs.html">Tarifs</a>
+        <a class="active" href="evenements.html">Événements</a>
+        <a href="contact.html">Contact</a>
+        <a href="https://www.youtube.com/@LucasGaly24/streams" target="_blank" rel="noopener">LIVE</a>
+      </div>
+    </nav>
+  </div>
+</header>
 
-  <!-- Hero -->
-  <section class="hero hero--small">
-    <div class="container">
-      <h1>Événements & Esport</h1>
-      <p class="subtitle">Diffusions, tournois, soirées thématiques et résultats — rejoins la communauté LGBL.</p>
-      <div style="margin-top:1rem">
-        <a class="btn" href="https://www.youtube.com/@LucasGaly24/streams" target="_blank" rel="noopener">Voir le LIVE</a>
-        <a class="btn btn-outline" href="tarifs.html">S’inscrire à une course</a>
-      </div>
+<section class="hero hero--small">
+  <div class="container">
+    <h1>Événements & Esport</h1>
+    <p class="subtitle">Diffusions, tournois, soirées thématiques et résultats — rejoins la communauté LGBL.</p>
+    <div style="margin-top:1rem">
+      <a class="btn" href="https://www.youtube.com/@LucasGaly24/streams" target="_blank" rel="noopener">Voir le LIVE</a>
+      <a class="btn btn-outline" href="tarifs.html">S’inscrire à une course</a>
     </div>
-  </section>
+  </div>
+</section>
 
-  <!-- Live embed -->
-  <section class="section">
-    <div class="container">
-      <h2>🎥 Diffusions en direct</h2>
-      <p class="small">Regarde nos directs YouTube : courses, mini championnats, soirées spéciales et aftermovies.</p>
-      <div class="video-embed">
-        <!-- Intégration chaîne LIVE -->
-        <iframe
-          title="LGBL Live YouTube"
-          width="100%" height="520"
-          src="https://www.youtube.com/embed/live_stream?channel=@LucasGaly24&autoplay=0"
-          frameborder="0"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-          allowfullscreen>
-        </iframe>
-      </div>
-      <p style="margin-top:.8rem">
-        <a class="btn" href="https://www.youtube.com/@LucasGaly24/streams" target="_blank" rel="noopener">Tous les lives & replays</a>
-      </p>
+<section class="section">
+  <div class="container">
+    <h2>🎥 Diffusions en direct</h2>
+    <div class="video-embed">
+      <iframe
+        title="LGBL Live YouTube"
+        width="100%" height="520"
+        src="https://www.youtube.com/embed/live_stream?channel=@LucasGaly24&autoplay=0"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        allowfullscreen></iframe>
     </div>
-  </section>
+    <p class="small" style="margin-top:.8rem">
+      <a class="btn" target="_blank" rel="noopener" href="https://www.youtube.com/@LucasGaly24/streams">Tous les lives & replays</a>
+    </p>
+  </div>
+</section>
 
-  <!-- Upcoming events -->
-  <section class="section">
-    <div class="container">
-      <h2>📅 À venir</h2>
-      <div class="grid-3">
-        <article class="card">
-          <h3>Mini Race Esport – Sprint Night</h3>
-          <p>2 courses • 2 circuits<br/>5' practice • 8' qualif • 10' course</p>
-          <p class="small">Inscription : 40€</p>
-          <a class="btn" href="tarifs.html">S’inscrire</a>
-        </article>
-        <article class="card">
-          <h3>Mini Race Esport – Enduro Duo</h3>
-          <p>4 courses • 4 circuits<br/>10' practice • 10' qualif • 2×15' course (grille inversée)</p>
-          <p class="small">Inscription : 85€</p>
-          <a class="btn" href="tarifs.html">S’inscrire</a>
-        </article>
-        <article class="card">
-          <h3>Soirée Diffusion F1</h3>
-          <p>Ambiance pit-lane, écrans géants, sonorisation VHF.</p>
-          <p class="small">Entrée : 6€ (conso obligatoire)</p>
-          <a class="btn" href="contact.html">Réserver une table</a>
-        </article>
-      </div>
+<section class="section">
+  <div class="container grid-3">
+    <article class="card">
+      <h3>Mini Race Esport – Sprint Night</h3>
+      <p>2 courses • 2 circuits — 5' practice • 8' qualif • 10' course</p>
+      <p class="small">Inscription : 40€</p>
+      <a class="btn" href="tarifs.html">S’inscrire</a>
+    </article>
+    <article class="card">
+      <h3>Mini Race Esport – Enduro Duo</h3>
+      <p>4 courses • 4 circuits — 10' practice • 10' qualif • 2×15' course (grille inversée)</p>
+      <p class="small">Inscription : 85€</p>
+      <a class="btn" href="tarifs.html">S’inscrire</a>
+    </article>
+    <article class="card">
+      <h3>Soirée Diffusion F1</h3>
+      <p>Ambiance pit-lane, écrans géants, sonorisation VHF.</p>
+      <p class="small">Entrée : 6€ (conso obligatoire)</p>
+      <a class="btn" href="contact.html">Réserver une table</a>
+    </article>
+  </div>
+</section>
+
+<footer>
+  <div class="container footer-grid">
+    <div>
+      <div class="logo"><span class="logo-mark"></span><span>LGBL Virtual Experience</span></div>
+      <p class="copy">© 2025 LGBL Virtual Experience Center — Conception : Lucas Galy</p>
     </div>
-  </section>
-
-  <!-- Partners -->
-  <section class="section">
-    <div class="container">
-      <h2>🤝 Partenaires</h2>
-      <div class="grid-3">
-        <div class="card"><h3>LFKarting</h3><p>Partenaire local karting & événements.</p></div>
-        <div class="card"><h3>CRT</h3><p>Support technique & community.</p></div>
-        <div class="card"><h3>TFS</h3><p>Partenaire compétition & soirées spéciales.</p></div>
-      </div>
-      <p class="small" style="margin-top:.8rem">Tu veux devenir partenaire ? <a href="contact.html">Contacte-nous</a> pour apparaître ici et sur nos diffusions.</p>
+    <div>
+      <h4>Le site</h4>
+      <p><a href="tarifs.html">Tarifs</a><br><a class="active" href="evenements.html">Événements</a><br><a href="index.html">Accueil</a></p>
     </div>
-  </section>
-
-  <!-- Simple calendar / timeline -->
-  <section class="section">
-    <div class="container">
-      <h2>🗓️ Calendrier simplifié</h2>
-      <div class="timeline">
-        <div class="timeline-item">
-          <div class="dot"></div>
-          <div>
-            <h4>Mercredi – Formule Collège (–16 ans)</h4>
-            <p class="small">Découverte 5 min : 5€ • Meilleur chrono = 1 session offerte</p>
-          </div>
-        </div>
-        <div class="timeline-item">
-          <div class="dot"></div>
-          <div>
-            <h4>Vendredi – Soirée Ambiance Pro</h4>
-            <p class="small">2 sessions Pro + boisson : 28€</p>
-          </div>
-        </div>
-        <div class="timeline-item">
-          <div class="dot"></div>
-          <div>
-            <h4>Samedi – Tournoi mensuel</h4>
-            <p class="small">Inscription : 18€ (format variable)</p>
-          </div>
-        </div>
-      </div>
-      <p style="margin-top:1rem">
-        <a class="btn btn-outline" href="tarifs.html">Voir toutes les formules</a>
-      </p>
+    <div>
+      <h4>Contact</h4>
+      <p><a href="mailto:contact@lgbl-experience.fr">contact@lgbl-experience.fr</a><br><a href="tel:+33672392264">06 72 39 22 64</a></p>
     </div>
-  </section>
-
-  <!-- Footer -->
-  <footer>
-    <div class="container footer-grid">
-      <div>
-        <div class="logo"><span class="logo-mark"></span><span>LGBL Virtual Experience</span></div>
-        <p class="copy">© 2025 LGBL Virtual Experience Center — Conception : Lucas Galy</p>
-      </div>
-      <div>
-        <h4>Le site</h4>
-        <p><a href="tarifs.html">Tarifs</a><br><a href="evenements.html" class="active">Événements</a><br><a href="index.html">Accueil</a></p>
-      </div>
-      <div>
-        <h4>Contact</h4>
-        <p><a href="contact.html">Nous écrire</a><br><a href="https://www.youtube.com/@LucasGaly24/streams" target="_blank" rel="noopener">LIVE YouTube</a></p>
-      </div>
-      <div>
-        <h4>Légal</h4>
-        <p><a href="#">Mentions légales</a><br><a href="#">Politique de confidentialité</a></p>
-      </div>
+    <div>
+      <h4>LIVE</h4>
+      <p><a href="https://www.youtube.com/@LucasGaly24/streams" target="_blank" rel="noopener">YouTube</a></p>
     </div>
-  </footer>
+  </div>
+</footer>
 
-  <script src="assets/js/main.js"></script>
+<script src="assets/js/main.js"></script>
 </body>
 </html>
