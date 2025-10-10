@@ -1,118 +1,193 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>LGBL Virtual Experience Center – Tarifs</title>
-  <meta name="description" content="Découvrez toutes les formules et tarifs du LGBL Virtual Experience Center à Agen : sessions libres, Grand Prix IA, coaching, événements et abonnements.">
-  <link rel="stylesheet" href="assets/css/styles.css">
-  <link rel="icon" type="image/svg+xml" href="assets/img/favicon.svg">
+  <meta name="description" content="Tarifs du LGBL Virtual Experience Center : sessions libres, Grand Prix IA, coaching, événements, abonnements, privatisations et mini race esport."/>
+  <link rel="stylesheet" href="assets/css/styles.css"/>
+  <link rel="icon" type="image/svg+xml" href="assets/img/favicon.svg"/>
+
+  <!-- Polices (au cas où elles ne sont pas déjà dans le head commun) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600;800&family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
 </head>
-<body>
+<body class="page-tarifs"> <!-- IMPORTANT : classe pour désactiver le rouge -->
+
+  <!-- Header -->
   <header>
-    <div class="container">
-      <h1 class="logo">LGBL Virtual Experience Center</h1>
+    <div class="container nav">
+      <a class="logo" href="index.html" aria-label="LGBL Accueil">
+        <span class="logo-mark"></span><span>LGBL Virtual Experience</span>
+      </a>
       <nav>
-        <ul class="nav-links">
-          <li><a href="index.html">Accueil</a></li>
-          <li><a href="tarifs.html" class="active">Tarifs</a></li>
-          <li><a href="evenements.html">Événements</a></li>
-          <li><a href="contact.html">Contact</a></li>
-        </ul>
+        <button class="mobile-toggle" aria-label="Ouvrir le menu">Menu</button>
+        <div class="links">
+          <a href="index.html">Accueil</a>
+          <a class="active" href="tarifs.html">Tarifs</a>
+          <a href="evenements.html">Événements</a>
+          <a href="contact.html">Contact</a>
+          <a href="https://www.youtube.com/@LucasGaly24/streams" target="_blank" rel="noopener">LIVE</a>
+        </div>
       </nav>
     </div>
   </header>
 
-  <section class="pricing">
-    <h2>Nos Tarifs et Formules</h2>
-    <p>Découvrez toutes nos offres selon votre envie : sessions libres, Grand Prix, coaching, événements, abonnements et plus encore.</p>
-
-    <!-- ===== LIBRE ===== -->
-    <h3 class="cat-title">LIBRE</h3>
-    <table>
-      <tr><th>Catégorie</th><th>Offre</th><th>Tarif (€)</th><th>Notes</th></tr>
-      <tr><td>Châssis Standard</td><td>10 Minutes</td><td>10,00</td><td></td></tr>
-      <tr><td>Châssis Standard</td><td>2x10 Minutes</td><td>20,00</td><td></td></tr>
-      <tr><td>Châssis Standard</td><td>3x10 Minutes</td><td>30,00</td><td></td></tr>
-      <tr><td>Châssis Standard</td><td>4x10 Minutes</td><td>40,00</td><td></td></tr>
-      <tr><td>Châssis Standard</td><td>5x10 Minutes</td><td>50,00</td><td></td></tr>
-      <tr><td colspan="4"></td></tr>
-      <tr><td>Châssis Dynamique Pro</td><td>10 Minutes</td><td>12,00</td><td></td></tr>
-      <tr><td>Châssis Dynamique Pro</td><td>2x10 Minutes</td><td>25,00</td><td></td></tr>
-      <tr><td>Châssis Dynamique Pro</td><td>3x10 Minutes</td><td>34,00</td><td></td></tr>
-      <tr><td>Châssis Dynamique Pro</td><td>4x10 Minutes</td><td>44,00</td><td></td></tr>
-      <tr><td>Châssis Dynamique Pro</td><td>5x10 Minutes</td><td>52,00</td><td></td></tr>
-    </table>
-
-    <!-- ===== GRAND PRIX IA ===== -->
-    <h3 class="cat-title">GRAND PRIX IA (BOTS)</h3>
-    <table>
-      <tr><th>Catégorie</th><th>Offre</th><th>Tarif (€)</th><th>Notes</th></tr>
-      <tr><td>Châssis Standard</td><td>Qualifications + Course 30 min</td><td>32,00</td><td></td></tr>
-      <tr><td>Châssis Dynamique Pro</td><td>Qualifications + Course 30 min</td><td>36,00</td><td></td></tr>
-      <tr><td>Châssis Standard</td><td>Qualifications + 2x30 min Course</td><td>52,00</td><td></td></tr>
-      <tr><td>Châssis Dynamique Pro</td><td>Qualifications + 2x30 min Course</td><td>56,00</td><td></td></tr>
-    </table>
-
-    <!-- ===== COACHING ===== -->
-    <h3 class="cat-title">COACHING INDIVIDUELS</h3>
-    <table>
-      <tr><th>Catégorie</th><th>Offre</th><th>Tarif (€)</th><th>Notes</th></tr>
-      <tr><td>Coaching</td><td>1h</td><td>60,00</td><td></td></tr>
-      <tr><td>Coaching</td><td>2h</td><td>120,00</td><td></td></tr>
-      <tr><td>Coaching</td><td>4h</td><td>240,00</td><td></td></tr>
-      <tr><td>Coaching</td><td>6h</td><td>360,00</td><td></td></tr>
-    </table>
-
-    <!-- ===== MERCREDI ===== -->
-    <h3 class="cat-title">FORMULE MERCREDI (–16 ans)</h3>
-    <table>
-      <tr><th>Catégorie</th><th>Offre</th><th>Tarif (€)</th><th>Notes</th></tr>
-      <tr><td>Châssis Standard</td><td>Formule Collège Découverte 5 min</td><td>5,00</td><td>Présenter carte d’établissement – meilleur chrono = 1 session offerte</td></tr>
-    </table>
-
-    <!-- ===== SOIRÉES ===== -->
-    <h3 class="cat-title">SOIRÉES / ÉVÉNEMENTS</h3>
-    <table>
-      <tr><th>Catégorie</th><th>Offre</th><th>Tarif (€)</th><th>Notes</th></tr>
-      <tr><td>Soirées & Spéciaux</td><td>Diffusion F1 – entrée</td><td>6,00</td><td>Conso obligatoire</td></tr>
-      <tr><td>Soirées & Spéciaux</td><td>Soirée Ambiance Pro</td><td>28,00</td><td>2 sessions Pro + boisson</td></tr>
-      <tr><td>Soirées & Spéciaux</td><td>Soirée Couple</td><td>35,00</td><td>2×20 min + boissons</td></tr>
-      <tr><td>Soirées & Spéciaux</td><td>Abonnement mensuel (Standard)</td><td>60,00</td><td>4 × 30 min</td></tr>
-      <tr><td>Family</td><td>Family Pack</td><td>20,00</td><td>1 adulte + 1 enfant, 2×10 min</td></tr>
-      <tr><td>Soirées & Spéciaux</td><td>Tournoi mensuel (inscription)</td><td>18,00</td><td>Variable selon la durée</td></tr>
-    </table>
-
-    <!-- ===== ABONNEMENTS ===== -->
-    <h3 class="cat-title">ABONNEMENTS</h3>
-    <table>
-      <tr><th>Catégorie</th><th>Offre</th><th>Tarif (€)</th><th>Notes</th></tr>
-      <tr><td>Licence à l’année</td><td>Accès aux sessions dynamique aux tarifs standards</td><td>350,00</td><td></td></tr>
-      <tr><td>Carte fidélité</td><td>Bon cadeau à offrir d'une valeur de 10€</td><td>10,00</td><td></td></tr>
-    </table>
-
-    <!-- ===== PRIVATISATION ===== -->
-    <h3 class="cat-title">PRIVATISATION</h3>
-    <table>
-      <tr><th>Catégorie</th><th>Offre</th><th>Tarif (€)</th><th>Notes</th></tr>
-      <tr><td>Groupes & Événements</td><td>Privatisation 2h</td><td>120,00</td><td>A confirmer</td></tr>
-      <tr><td>Groupes & Événements</td><td>Privatisation 4h</td><td>240,00</td><td></td></tr>
-      <tr><td>Groupes & Événements</td><td>Privatisation 6h</td><td>360,00</td><td></td></tr>
-      <tr><td>Groupes & Événements</td><td>Privatisation 8h</td><td>480,00</td><td></td></tr>
-    </table>
-
-    <!-- ===== MINI RACE ===== -->
-    <h3 class="cat-title">MINI RACE ESPORT (CONFIRMÉ)</h3>
-    <table>
-      <tr><th>Catégorie</th><th>Offre</th><th>Tarif (€)</th><th>Notes</th></tr>
-      <tr><td>Mini Race</td><td>2 courses / 2 circuits</td><td>40,00</td><td>5 min practice | 8 min qualif | 10 min course</td></tr>
-      <tr><td>Mini Race</td><td>4 courses / 4 circuits</td><td>85,00</td><td>10 min practice | 10 min qualif | 2×15 min course (grille inversée)</td></tr>
-    </table>
+  <!-- Hero (neutre) -->
+  <section class="hero hero--small hero--neutral">
+    <div class="container">
+      <h1>Nos Tarifs & Formules</h1>
+      <p class="subtitle">Sessions libres, Grand Prix IA, coaching, soirées, abonnements, privatisations et mini race esport.</p>
+    </div>
   </section>
 
+  <!-- Tarifs en cartes propres -->
+  <section class="pricing">
+    <!-- LIBRE -->
+    <div class="tarif-card">
+      <div class="head"><h3>LIBRE</h3></div>
+      <table>
+        <thead><tr><th>Catégorie</th><th>Offre</th><th>Tarif (€)</th><th>Notes</th></tr></thead>
+        <tbody>
+          <tr><td>Châssis Standard</td><td>10 Minutes</td><td>10,00</td><td></td></tr>
+          <tr><td>Châssis Standard</td><td>2x10 Minutes</td><td>20,00</td><td></td></tr>
+          <tr><td>Châssis Standard</td><td>3x10 Minutes</td><td>30,00</td><td></td></tr>
+          <tr><td>Châssis Standard</td><td>4x10 Minutes</td><td>40,00</td><td></td></tr>
+          <tr><td>Châssis Standard</td><td>5x10 Minutes</td><td>50,00</td><td></td></tr>
+
+          <tr class="tarif-spacer"></tr>
+
+          <tr><td>Châssis Dynamique Pro</td><td>10 Minutes</td><td>12,00</td><td></td></tr>
+          <tr><td>Châssis Dynamique Pro</td><td>2x10 Minutes</td><td>25,00</td><td></td></tr>
+          <tr><td>Châssis Dynamique Pro</td><td>3x10 Minutes</td><td>34,00</td><td></td></tr>
+          <tr><td>Châssis Dynamique Pro</td><td>4x10 Minutes</td><td>44,00</td><td></td></tr>
+          <tr><td>Châssis Dynamique Pro</td><td>5x10 Minutes</td><td>52,00</td><td></td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- GRAND PRIX IA (BOTS) -->
+    <div class="tarif-card">
+      <div class="head"><h3>GRAND PRIX IA (BOTS)</h3></div>
+      <table>
+        <thead><tr><th>Catégorie</th><th>Offre</th><th>Tarif (€)</th><th>Notes</th></tr></thead>
+        <tbody>
+          <tr><td>Châssis Standard</td><td>Qualifications + Course 30 minutes</td><td>32,00</td><td></td></tr>
+          <tr><td>Châssis Dynamique Pro</td><td>Qualifications + Course 30 minutes</td><td>36,00</td><td></td></tr>
+          <tr><td>Châssis Standard</td><td>Qualifications + 2x30 minutes course</td><td>52,00</td><td></td></tr>
+          <tr><td>Châssis Dynamique Pro</td><td>Qualifications + 2x30 minutes course</td><td>56,00</td><td></td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- COACHING INDIVIDUELS -->
+    <div class="tarif-card">
+      <div class="head"><h3>COACHING INDIVIDUELS</h3></div>
+      <table>
+        <thead><tr><th>Catégorie</th><th>Offre</th><th>Tarif (€)</th><th>Notes</th></tr></thead>
+        <tbody>
+          <tr><td>Coaching</td><td>1h</td><td>60,00</td><td></td></tr>
+          <tr><td>Coaching</td><td>2h</td><td>120,00</td><td></td></tr>
+          <tr><td>Coaching</td><td>4h</td><td>240,00</td><td></td></tr>
+          <tr><td>Coaching</td><td>6h</td><td>360,00</td><td></td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- FORMULE MERCREDI (–16 ans) -->
+    <div class="tarif-card">
+      <div class="head"><h3>FORMULE MERCREDI (–16 ans)</h3></div>
+      <table>
+        <thead><tr><th>Catégorie</th><th>Offre</th><th>Tarif (€)</th><th>Notes</th></tr></thead>
+        <tbody>
+          <tr>
+            <td>Châssis Standard</td>
+            <td>Formule Collège découverte 5 minutes</td>
+            <td>5,00</td>
+            <td>Présenter carte d’établissement • Meilleur chrono = 1 session offerte</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- SOIRÉES / ÉVÉNEMENTS -->
+    <div class="tarif-card">
+      <div class="head"><h3>SOIRÉES / ÉVÉNEMENTS</h3></div>
+      <table>
+        <thead><tr><th>Catégorie</th><th>Offre</th><th>Tarif (€)</th><th>Notes</th></tr></thead>
+        <tbody>
+          <tr><td>Soirées & Spéciaux</td><td>Diffusion F1 – entrée</td><td>6,00</td><td>Conso obligatoire</td></tr>
+          <tr><td>Soirées & Spéciaux</td><td>Soirée Ambiance Pro</td><td>28,00</td><td>2 sessions Pro + boisson</td></tr>
+          <tr><td>Soirées & Spéciaux</td><td>Soirée Couple</td><td>35,00</td><td>2×20 min + boissons</td></tr>
+          <tr><td>Soirées & Spéciaux</td><td>Abonnement mensuel (Standard)</td><td>60,00</td><td>4 × 30 min</td></tr>
+          <tr><td>Family</td><td>Family Pack</td><td>20,00</td><td>1 adulte + 1 enfant, 2×10 min</td></tr>
+          <tr><td>Soirées & Spéciaux</td><td>Tournoi mensuel (inscription)</td><td>18,00</td><td>Variable selon la durée</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- ABONNEMENTS -->
+    <div class="tarif-card">
+      <div class="head"><h3>ABONNEMENTS</h3></div>
+      <table>
+        <thead><tr><th>Catégorie</th><th>Offre</th><th>Tarif (€)</th><th>Notes</th></tr></thead>
+        <tbody>
+          <tr><td>Licence à l'année</td><td>Accès aux sessions dynamique aux tarifs standards</td><td>350,00</td><td></td></tr>
+          <tr><td>Carte fidélité</td><td>Bon cadeau à offrir d'une valeur de 10€</td><td>10,00</td><td></td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- PRIVATISATION -->
+    <div class="tarif-card">
+      <div class="head"><h3>PRIVATISATION</h3></div>
+      <table>
+        <thead><tr><th>Catégorie</th><th>Offre</th><th>Tarif (€)</th><th>Notes</th></tr></thead>
+        <tbody>
+          <tr><td>Groupes & Événements</td><td>Privatisation (2h)</td><td>120,00</td><td>À confirmer</td></tr>
+          <tr><td>Groupes & Événements</td><td>Privatisation (4h)</td><td>240,00</td><td></td></tr>
+          <tr><td>Groupes & Événements</td><td>Privatisation (6h)</td><td>360,00</td><td></td></tr>
+          <tr><td>Groupes & Événements</td><td>Privatisation (8h)</td><td>480,00</td><td></td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- MINI RACE ESPORT -->
+    <div class="tarif-card">
+      <div class="head"><h3>MINI RACE ESPORT (CONFIRMÉ)</h3></div>
+      <table>
+        <thead><tr><th>Catégorie</th><th>Offre</th><th>Tarif (€)</th><th>Notes</th></tr></thead>
+        <tbody>
+          <tr><td>Mini Race</td><td>2 courses / 2 circuits</td><td>40,00</td><td>5 min practice | 8 min qualif | 10 min course</td></tr>
+          <tr><td>Mini Race</td><td>4 courses / 4 circuits</td><td>85,00</td><td>10 min practice | 10 min qualif | 2×15 min course (grille inversée)</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <!-- Footer -->
   <footer>
-    <p>© 2025 LGBL Virtual Experience Center — Conception : Lucas Galy</p>
-    <p><a href="https://lgbl-experience.fr">lgbl-experience.fr</a></p>
+    <div class="container footer-grid">
+      <div>
+        <div class="logo"><span class="logo-mark"></span><span>LGBL Virtual Experience</span></div>
+        <p class="copy">© 2025 LGBL Virtual Experience Center — Conception : Lucas Galy</p>
+      </div>
+      <div>
+        <h4>Le site</h4>
+        <p><a href="index.html">Accueil</a><br><a href="tarifs.html" class="active">Tarifs</a><br><a href="evenements.html">Événements</a></p>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <p><a href="mailto:contact@lgbl-experience.fr">contact@lgbl-experience.fr</a><br><a href="tel:+33672392264">06 72 39 22 64</a></p>
+      </div>
+      <div>
+        <h4>LIVE</h4>
+        <p><a href="https://www.youtube.com/@LucasGaly24/streams" target="_blank" rel="noopener">YouTube</a></p>
+      </div>
+    </div>
   </footer>
+
+  <script src="assets/js/main.js"></script>
 </body>
 </html>
