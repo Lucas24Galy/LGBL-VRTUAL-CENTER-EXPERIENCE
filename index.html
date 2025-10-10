@@ -1,62 +1,103 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <title>LGBL Virtual Experience Center – Accueil</title>
-  <meta name="description" content="Découvrez le LGBL Virtual Experience Center à Agen : 8 simulateurs de course haut de gamme, VR, bar et espace e-sport immersif.">
-  <link rel="stylesheet" href="assets/css/styles.css">
-  <link rel="icon" type="image/svg+xml" href="assets/img/favicon.svg">
-  <link rel="manifest" href="site.webmanifest">
-  <meta property="og:title" content="LGBL Virtual Experience Center">
-  <meta property="og:description" content="Sim Racing – VR – Esport – Bar – Agen (47)">
-  <meta property="og:image" content="assets/img/og-preview.jpg">
-  <meta property="og:url" content="https://lgbl-experience.fr/">
+  <meta name="description" content="8 simulateurs Sim-Lab P1X Pro, bases 12 Nm, volants Conspit 300 GT, VR & soirées e-sport à Agen.">
+  <link rel="stylesheet" href="assets/css/styles.css"/>
+  <link rel="icon" type="image/svg+xml" href="assets/img/favicon.svg"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600;800&family=Poppins:wght@400;600;700&display=swap" rel="stylesheet"/>
 </head>
 <body>
-  <header>
-    <div class="container">
-      <h1 class="logo">LGBL Virtual Experience Center</h1>
-      <nav>
-        <ul class="nav-links">
-          <li><a href="index.html" class="active">Accueil</a></li>
-          <li><a href="tarifs.html">Tarifs</a></li>
-          <li><a href="evenements.html">Événements</a></li>
-          <li><a href="contact.html">Contact</a></li>
-        </ul>
-      </nav>
+
+<header>
+  <div class="container nav">
+    <a class="logo" href="index.html" aria-label="LGBL Accueil">
+      <span class="logo-mark"></span><span>LGBL Virtual Experience</span>
+    </a>
+    <nav>
+      <button class="mobile-toggle" aria-label="Ouvrir le menu">Menu</button>
+      <div class="links">
+        <a class="active" href="index.html">Accueil</a>
+        <a href="tarifs.html">Tarifs</a>
+        <a href="evenements.html">Événements</a>
+        <a href="contact.html">Contact</a>
+        <a href="https://www.youtube.com/@LucasGaly24/streams" target="_blank" rel="noopener">LIVE</a>
+      </div>
+    </nav>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="container">
+    <h1>Vivez la course comme un pro</h1>
+    <p class="subtitle">8 simulateurs haut de gamme — Sim-Lab P1X Pro • Bases 12 Nm • Conspit 300 GT • Pédaliers Simnet SP Pro • Ambiance LED pit-lane.</p>
+    <div style="display:flex; gap:.6rem; flex-wrap:wrap; margin-top:.8rem">
+      <a class="btn" href="tarifs.html">Voir les tarifs</a>
+      <a class="btn btn-outline" href="evenements.html">Événements & lives</a>
     </div>
-  </header>
+  </div>
+</section>
 
-  <section class="hero">
-    <div class="overlay"></div>
-    <div class="hero-content">
-      <h2>Vivez la course comme un pro</h2>
-      <p>8 simulateurs haut de gamme – Cockpits Sim-Lab P1X Pro – Bases 12 Nm – Volants Conspit 300 GT – Ambiance LED immersive.</p>
-      <a href="tarifs.html" class="btn">Voir les tarifs</a>
+<section class="section">
+  <div class="container grid-3">
+    <article class="card">
+      <h3>Sim Racing Pro</h3>
+      <p>8 cockpits Sim-Lab P1X Pro, bases 12 Nm, pédaliers SP Pro. Triple-écrans et VR disponibles. Sensations “comme en vrai”.</p>
+    </article>
+    <article class="card">
+      <h3>Réalité Virtuelle</h3>
+      <p>Vive Pro 2, roller-coaster 9D, wingsuit & free roaming. Expériences pour tous, de l’initiation au challenge.</p>
+    </article>
+    <article class="card">
+      <h3>Bar & Ambiance</h3>
+      <p>Zone chill, PS5, TV 55”, sono VHF, déco bidons racing. Accueil groupes, anniversaires, entreprises.</p>
+    </article>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <h2>🎥 LIVE – Diffusions</h2>
+    <div class="video-embed">
+      <iframe
+        title="LGBL Live YouTube"
+        width="100%" height="520"
+        src="https://www.youtube.com/embed/live_stream?channel=@LucasGaly24&autoplay=0"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        allowfullscreen></iframe>
     </div>
-  </section>
+    <p style="margin-top:.8rem" class="small">
+      <a class="btn" href="https://www.youtube.com/@LucasGaly24/streams" target="_blank" rel="noopener">Tous les lives & replays</a>
+    </p>
+  </div>
+</section>
 
-  <section class="experience">
-    <h3>Bienvenue au LGBL Virtual Experience Center</h3>
-    <p>Un espace unique de 90 m² à Agen (47) dédié au Sim Racing, à la Réalité Virtuelle et à l’Esport. Découvrez nos simulateurs dynamiques, nos soirées à thème et notre bar immersif inspiré des stands de Formule 1.</p>
-  </section>
-
-  <section class="live">
-    <h3>🎥 LIVE – Diffusions et Événements</h3>
-    <p>Regardez nos diffusions en direct, compétitions et tournois Esport directement ici :</p>
-    <div class="live-frame">
-      <iframe width="100%" height="500" src="https://www.youtube.com/embed/live_stream?channel=@LucasGaly24&autoplay=1" 
-      title="LGBL Live" frameborder="0" allowfullscreen></iframe>
+<footer>
+  <div class="container footer-grid">
+    <div>
+      <div class="logo"><span class="logo-mark"></span><span>LGBL Virtual Experience</span></div>
+      <p class="copy">© 2025 LGBL Virtual Experience Center — Conception : Lucas Galy</p>
     </div>
-    <a href="https://www.youtube.com/@LucasGaly24/streams" class="btn" target="_blank">Voir tous les lives</a>
-  </section>
+    <div>
+      <h4>Le site</h4>
+      <p><a class="active" href="index.html">Accueil</a><br><a href="tarifs.html">Tarifs</a><br><a href="evenements.html">Événements</a></p>
+    </div>
+    <div>
+      <h4>Contact</h4>
+      <p><a href="mailto:contact@lgbl-experience.fr">contact@lgbl-experience.fr</a><br><a href="tel:+33672392264">06 72 39 22 64</a></p>
+    </div>
+    <div>
+      <h4>LIVE</h4>
+      <p><a href="https://www.youtube.com/@LucasGaly24/streams" target="_blank" rel="noopener">YouTube</a></p>
+    </div>
+  </div>
+</footer>
 
-  <footer>
-    <p>© 2025 LGBL Virtual Experience Center — Conception : Lucas Galy</p>
-    <p><a href="https://lgbl-experience.fr">lgbl-experience.fr</a></p>
-  </footer>
-
-  <script src="assets/js/main.js"></script>
+<script src="assets/js/main.js"></script>
 </body>
 </html>
