@@ -1,6 +1,10 @@
 backend:
   name: git-gateway
   branch: main
+  identity_url: "https://dulcet-malabi-84f14c.netlify.app/.netlify/identity"
+  gateway_url: "https://dulcet-malabi-84f14c.netlify.app/.netlify/git"
+  accept_roles: ["admin"]  # seuls les comptes avec rôle "admin" auront accès
+
 
 media_folder: "assets/img/uploads"
 public_folder: "/assets/img/uploads"
