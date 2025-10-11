@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://lucas24galy.github.io/LGBL-VIRTUAL-CENTER-EXPERIENCE/
+Sitemap: https://lucas24galy.github.io/LGBL-VIRTUAL-CENTER-EXPERIENCE/sitemap.xml
