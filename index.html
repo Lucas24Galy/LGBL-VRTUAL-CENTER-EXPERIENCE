@@ -1,10 +1,13 @@
 <!DOCTYPE html>
 <html lang="fr">
-  <meta name="google-site-verification" content="h8sdf-2a3ldkjf89slF9jkds9L3" />
 <head>
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <title>LGBL Virtual Experience Center – Accueil</title>
+
+  <!-- ✅ Vérification Google correctement placée dans le <head> -->
+  <meta name="google-site-verification" content="h8sdf-2a3ldkjf89slF9jkds9L3" />
+
   <meta name="description" content="Vivez la course comme un pro — simulateurs, bar, coin détente. Site en préparation, ouverture à venir.">
   <link rel="icon" type="image/png" href="assets/img/logo-lgbl.png"/>
   <link rel="stylesheet" href="assets/css/styles.css"/>
@@ -59,14 +62,13 @@
       </a>
       <nav>
         <div class="links">
-  <a href="index.html">Accueil</a>
-  <a href="tarifs.html">Tarifs</a>
-  <a href="evenements.html">Événements</a>
-  <a href="communaute.html">Communauté</a>
-  <a href="contact.html">Contact</a>
-  <a href="https://www.youtube.com/@LucasGaly24/streams" target="_blank" rel="noopener">LIVE</a>
-</div>
-
+          <a href="index.html">Accueil</a>
+          <a href="tarifs.html">Tarifs</a>
+          <a href="evenements.html">Événements</a>
+          <a href="communaute.html">Communauté</a>
+          <a href="contact.html">Contact</a>
+          <a href="https://www.youtube.com/@LucasGaly24/streams" target="_blank" rel="noopener">LIVE</a>
+        </div>
       </nav>
     </div>
   </header>
@@ -130,7 +132,6 @@
       <h2>🎥 LIVE – Diffusions</h2>
       <p class="small">Si un live est en cours, il s’affiche automatiquement. Sinon, tu peux lancer une vidéo aléatoire de la chaîne.</p>
 
-      <!-- Iframe LIVE : YouTube affiche le live automatiquement si en cours -->
       <div class="video-embed" style="margin-top:.8rem;border-radius:14px;overflow:hidden;border:1px solid var(--line)">
         <iframe
           id="liveFrame"
@@ -143,7 +144,6 @@
         </iframe>
       </div>
 
-      <!-- Bouton pour charger une vidéo aléatoire (sans API) -->
       <p style="margin-top:.8rem" class="small">
         <button class="btn btn-outline" id="randomBtn" type="button">🎲 Charger une vidéo aléatoire</button>
         <a class="btn" href="https://www.youtube.com/@LucasGaly24/streams" target="_blank" rel="noopener">Tous les lives & replays</a>
@@ -176,15 +176,10 @@
     </div>
   </footer>
 
-  <!-- JS: liste de vidéos aléatoires (tu peux ajouter/supprimer des IDs) -->
   <script>
-    // Mets ici quelques IDs de tes vidéos YouTube (les 11 caractères après "watch?v=")
     const LGBL_VIDEOS = [
-      "3FpLX8IgXa8", // exemple: Onboard Karting (remplace/ajoute les tiens)
-      // "VIDE0_ID_2",
-      // "VIDE0_ID_3",
+      "3FpLX8IgXa8",
     ];
-
     document.getElementById("randomBtn").addEventListener("click", () => {
       if (!LGBL_VIDEOS.length) return alert("Ajoute des IDs de vidéos dans LGBL_VIDEOS.");
       const id = LGBL_VIDEOS[Math.floor(Math.random() * LGBL_VIDEOS.length)];
