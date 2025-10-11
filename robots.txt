@@ -1,9 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://lgbl-experience.fr/sitemap.xml
-
-# Bloquer les fichiers internes
-Disallow: /assets/js/
-Disallow: /assets/css/
-Disallow: /assets/img/
+Sitemap: https://lucas24galy.github.io/LGBL-VIRTUAL-CENTER-EXPERIENCE/sitemap.xml
