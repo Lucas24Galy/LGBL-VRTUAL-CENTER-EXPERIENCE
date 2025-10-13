@@ -3,14 +3,12 @@
   xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
 
-  <!-- Page d'accueil -->
   <url>
     <loc>https://lucas24galy.github.io/LGBL-VRTUAL-CENTER-EXPERIENCE/</loc>
     <lastmod>2025-10-13</lastmod>
     <priority>1.0</priority>
   </url>
 
-  <!-- Pages principales -->
   <url>
     <loc>https://lucas24galy.github.io/LGBL-VRTUAL-CENTER-EXPERIENCE/index.html</loc>
     <lastmod>2025-10-13</lastmod>
@@ -41,16 +39,9 @@
     <priority>0.8</priority>
   </url>
 
-  <!-- Fichiers annexes utiles au référencement -->
   <url>
     <loc>https://lucas24galy.github.io/LGBL-VRTUAL-CENTER-EXPERIENCE/site.webmanifest</loc>
     <lastmod>2025-10-13</lastmod>
-    <priority>0.6</priority>
-  </url>
-
-  <url>
-    <loc>https://lucas24galy.github.io/LGBL-VRTUAL-CENTER-EXPERIENCE/sitemap.xml</loc>
-    <lastmod>2025-10-13</lastmod>
-    <priority>0.4</priority>
+    <priority>0.5</priority>
   </url>
 </urlset>
