@@ -105,6 +105,13 @@
     @media (prefers-reduced-motion: reduce) {
       * { animation: none !important; transition: none !important; }
     }
+      /* Badges / étiquettes */
+    .tag{display:inline-block;font-size:.85rem;line-height:1;border:1px solid var(--line);padding:.45rem .6rem;border-radius:999px;background:rgba(0,170,255,.08)}
+    /* Hover feel racing */
+    .btn:hover{box-shadow:0 6px 18px rgba(0,170,255,.18)}
+    .nav .links a{position:relative}
+    .nav .links a::after{content:"";position:absolute;left:10px;right:10px;bottom:4px;height:2px;transform:scaleX(0);transform-origin:left;background:linear-gradient(90deg,var(--brand-rose),var(--brand-cyan));transition:transform .25s ease}
+    .nav .links a:hover::after,.nav .links a[aria-current="page"]::after{transform:scaleX(1)}
   </style>
 </head>
 <body>
@@ -145,7 +152,14 @@
     <section class="hero" aria-labelledby="hero-title">
       <div class="container">
         <h1 id="hero-title">Vivez la course comme un pro</h1>
-        <p class="subtitle">Simulateurs – Bar – Coin détente</p>
+        <p class="subtitle">Pas juste un simple jeu — <strong>de la simulation pure</strong>.</p>
+        <div aria-label="étiquettes" style="display:flex;gap:.5rem;flex-wrap:wrap;margin:.6rem 0 0">
+          <span class="tag">Simulateurs dynamiques</span>
+          <span class="tag">Volants F1</span>
+          <span class="tag">Pédaliers pros</span>
+          <span class="tag">Ambiance paddock</span>
+          <span class="tag">Bar & Snacking</span>
+        </div>
         <div style="display:flex;gap:.6rem;flex-wrap:wrap">
           <a class="btn" href="tarifs.html" aria-label="Voir les tarifs">Voir les tarifs</a>
           <a class="btn btn-outline" href="evenements.html" aria-label="Voir les événements et les lives">Événements & lives</a>
@@ -211,6 +225,34 @@
         </p>
       </div>
     </section>
+
+    <!-- Infos pratiques -->
+    <section class="section" aria-labelledby="infos-title">
+      <div class="container grid-2">
+        <div>
+          <h2 id="infos-title">ℹ️ Infos pratiques</h2>
+          <ul style="margin:0;padding-left:1.1rem;line-height:1.9">
+            <li>Email : <a href="mailto:lucasgaly.47510@gmail.com">lucasgaly.47510@gmail.com</a></li>
+            <li>Téléphone : <a href="tel:+33672392264">06 72 39 22 64</a></li>
+            <li>Statut : centre en préparation (ouverture à venir)</li>
+          </ul>
+          <div style="margin-top:.8rem;display:flex;gap:.6rem;flex-wrap:wrap">
+            <a class="btn" href="mailto:lucasgaly.47510@gmail.com">Être prévenu de l’ouverture</a>
+            <a class="btn btn-outline" href="tarifs.html">Consulter les tarifs</a>
+          </div>
+        </div>
+        <aside class="card" aria-label="Pourquoi nous ?">
+          <h3>Pourquoi LGBL ?</h3>
+          <p class="small">Pas juste un simple jeu : nous proposons une <strong>simulation pure</strong> avec matériel pro, ambiance paddock, et un cadre convivial (bar & coin détente).</p>
+          <div style="display:flex;gap:.5rem;flex-wrap:wrap">
+            <span class="tag">Setup rigide</span>
+            <span class="tag">Volant F1</span>
+            <span class="tag">Pédalier hydraulique</span>
+            <span class="tag">Baby-foot</span>
+          </div>
+        </aside>
+      </div>
+    </section>
   </main>
 
   <!-- Footer -->
@@ -234,7 +276,7 @@
       <div>
         <h4>Contact</h4>
         <p>
-          <a href="mailto:contact@lgbl-experience.fr">contact@lgbl-experience.fr</a><br />
+          <a href="mailto:lucasgaly.47510@gmail.com">contact@lgbl-experience.fr</a><br />
           <a href="tel:+33672392264">06 72 39 22 64</a>
         </p>
       </div>
@@ -259,7 +301,8 @@
     "logo": "https://lucas24galy.github.io/LGBL-VRTUAL-CENTER-EXPERIENCE/assets/img/logo-lgbl.png",
     "description": "Centre de simulation de course avec bar et coin détente. Ouverture prochaine.",
     "areaServed": "Agen, Lot-et-Garonne, France",
-    "telephone": "+33 6 72 39 22 64"
+    "telephone": "+33 6 72 39 22 64",
+    "email": "mailto:lucasgaly.47510@gmail.com"
   }
   </script>
 
