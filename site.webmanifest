@@ -1,1 +1,46 @@
-{"name": "LGBL Virtual Experience Center", "short_name": "LGBL", "start_url": "/", "display": "standalone", "background_color": "#111111", "theme_color": "#111111", "icons": [{"src": "favicon.svg", "type": "image/svg+xml", "sizes": "64x64"}]}
+{
+  "name": "LGBL Virtual Experience Center",
+  "short_name": "LGBL",
+  "description": "Pas juste un simple jeu — de la simulation pure. Centre de simulation automobile et eSport à Agen.",
+  "start_url": "/index.html",
+  "scope": "/",
+  "display": "standalone",
+  "orientation": "any",
+  "background_color": "#0a0b0d",
+  "theme_color": "#0a0b0d",
+  "lang": "fr-FR",
+  "dir": "ltr",
+  "icons": [
+    {
+      "src": "assets/img/logo-lgbl.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "assets/img/logo-lgbl-512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    },
+    {
+      "src": "favicon.svg",
+      "sizes": "64x64",
+      "type": "image/svg+xml"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "Tarifs",
+      "short_name": "Tarifs",
+      "url": "/tarifs.html",
+      "icons": [{ "src": "assets/icons/price.svg", "type": "image/svg+xml", "sizes": "64x64" }]
+    },
+    {
+      "name": "Événements",
+      "short_name": "Événements",
+      "url": "/evenements.html",
+      "icons": [{ "src": "assets/icons/event.svg", "type": "image/svg+xml", "sizes": "64x64" }]
+    }
+  ],
+  "categories": ["games", "entertainment", "sports", "simulation"],
+  "id": "/"
+}
