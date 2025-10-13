@@ -3,139 +3,230 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>LGBL – Communauté Instagram</title>
+  <title>LGBL – Communauté & Réseaux</title>
+
+  <!-- SEO de base -->
+  <meta name="description" content="Suivez la communauté LGBL : Instagram, TikTok, YouTube & Discord. Galerie des meilleurs moments, replays, et publications mises en avant." />
+  <meta name="robots" content="index,follow" />
+  <link rel="canonical" href="https://lucas24galy.github.io/LGBL-VRTUAL-CENTER-EXPERIENCE/communaute.html" />
+
+  <!-- Open Graph / Twitter -->
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="LGBL Virtual Experience" />
+  <meta property="og:title" content="Communauté – LGBL Virtual Experience" />
+  <meta property="og:description" content="Pas juste un simple jeu — de la simulation pure. Rejoignez la communauté : Instagram, TikTok, YouTube & Discord." />
+  <meta property="og:url" content="https://lucas24galy.github.io/LGBL-VRTUAL-CENTER-EXPERIENCE/communaute.html" />
+  <meta property="og:image" content="assets/img/logo-lgbl.png" />
+  <meta name="twitter:card" content="summary" />
+
+  <link rel="icon" type="image/png" href="assets/img/logo-lgbl.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600;800&family=Poppins:wght@400;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="assets/css/styles.css" />
+
   <style>
-    .insta-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-      gap: 16px;
-      padding: 20px;
-    }
-    .insta-item {
-      position: relative;
-      border-radius: 12px;
-      overflow: hidden;
-      background: #0f1115;
-      border: 1px solid rgba(255,255,255,0.1);
-    }
-    .insta-item img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      display: block;
-      transition: 0.3s;
-    }
-    .insta-item:hover img { transform: scale(1.05); opacity: 0.85; }
-    .insta-item span {
-      position: absolute;
-      bottom: 8px;
-      left: 8px;
-      background: rgba(0,0,0,0.6);
-      color: #fff;
-      font-size: 0.8rem;
-      padding: 4px 8px;
-      border-radius: 6px;
-    }
+    :root{--line:rgba(255,255,255,.08);--bg:#0a0b0d;--panel:#0f1115;--text:#e9ecef;--muted:#a9b3bb;--rose:#ff2d6f;--cyan:#00aaff}
+    body{background:var(--bg);color:var(--text);font-family:Poppins,system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial}
+    header{position:sticky;top:0;background:rgba(10,11,13,.7);backdrop-filter:saturate(120%) blur(8px);border-bottom:1px solid var(--line);z-index:50}
+    .container{max-width:1150px;margin:0 auto;padding:0 16px}
+    .nav{display:flex;align-items:center;justify-content:space-between;height:64px}
+    .links a{color:#cfd6dc;margin-left:16px;text-decoration:none;padding:8px 10px;border:1px solid transparent;border-radius:999px;position:relative}
+    .links a:hover,.links a[aria-current="page"]{color:#fff;border-color:rgba(0,170,255,.35)}
+    .links a::after{content:"";position:absolute;left:10px;right:10px;bottom:4px;height:2px;transform:scaleX(0);transform-origin:left;background:linear-gradient(90deg,var(--rose),var(--cyan));transition:transform .25s ease}
+    .links a:hover::after,.links a[aria-current="page"]::after{transform:scaleX(1)}
+    .logo{display:inline-flex;align-items:center;gap:.6rem;color:#fff;text-decoration:none;font-weight:700}
+    .logo img{height:42px;border-radius:50%}
+
+    .hero{padding:56px 0;border-bottom:1px solid var(--line);background:
+      radial-gradient(1200px 400px at 30% -20%, rgba(255,0,78,.22), transparent 60%),
+      radial-gradient(1000px 400px at 80% -30%, rgba(0,170,255,.18), transparent 60%)}
+    .hero h1{font-family:'Orbitron',system-ui;font-size:clamp(28px,4.5vw,44px);margin:0 0 .6rem}
+    .subtitle{color:var(--muted)}
+
+    .section{padding:38px 0;border-top:1px solid var(--line)}
+    .grid-2{display:grid;grid-template-columns:repeat(2,1fr);gap:22px}
+    .grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+    .card{background:var(--panel);border:1px solid var(--line);border-radius:16px;padding:18px}
+    .small{color:var(--muted)}
+
+    .social-hub{display:flex;gap:.6rem;flex-wrap:wrap;margin-top:.6rem}
+    .btn{display:inline-block;background:linear-gradient(90deg,var(--rose),var(--cyan));padding:.7rem 1rem;border-radius:999px;color:#fff;text-decoration:none;font-weight:700}
+    .btn-outline{background:transparent;border:1px solid rgba(0,170,255,.35)}
+    .btn:hover{box-shadow:0 6px 18px rgba(0,170,255,.18)}
+
+    /* Galerie (locale) */
+    .insta-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:16px}
+    .insta-item{position:relative;border-radius:12px;overflow:hidden;background:#0f1115;border:1px solid var(--line)}
+    .insta-item img{width:100%;height:240px;object-fit:cover;display:block;transition:.3s}
+    .insta-item:hover img{transform:scale(1.05);opacity:.9}
+    .insta-item span{position:absolute;bottom:8px;left:8px;background:rgba(0,0,0,.6);color:#fff;font-size:.8rem;padding:4px 8px;border-radius:6px}
+
+    .embed-note{font-size:.9rem;color:#cfefff;background:#0e1b22;border:1px solid rgba(0,170,255,.25);padding:.6rem .8rem;border-radius:10px}
+
+    footer{border-top:1px solid var(--line);margin-top:28px}
+    .footer-grid{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:22px;padding:24px 0}
+    .copy{color:#8f98a1}
+
+    @media (max-width:900px){.grid-2,.grid-3{grid-template-columns:1fr}}
   </style>
 </head>
 <body>
+  <a href="#main" class="sr-only" style="position:absolute;left:-9999px">Aller au contenu</a>
 
-<header>
-  <div class="container nav">
-    <a class="logo" href="index.html">
-      <img src="assets/img/logo-lgbl.png" alt="Logo LGBL" style="height:42px;border-radius:50%">
-      <span>LGBL Virtual Experience</span>
-    </a>
-    <nav>
-      <div class="links">
-        <a href="index.html">Accueil</a>
-        <a href="tarifs.html">Tarifs</a>
-        <a href="evenements.html">Événements</a>
-        <a class="active" href="communaute.html">Communauté</a>
-        <a href="contact.html">Contact</a>
-      </div>
-    </nav>
-  </div>
-</header>
-
-<section class="hero hero--small">
-  <div class="container">
-    <h1>Communauté</h1>
-    <p class="subtitle">Retrouvez ici nos dernières publications Instagram</p>
-  </div>
-</section>
-
-<section>
-  <div class="container" style="text-align:center;">
-    <h2>Notre communauté Instagram</h2>
-    <p>Découvrez les dernières publications du centre sur notre page officielle :</p>
-
-    <!-- Bouton d’accès -->
-    <a href="https://www.instagram.com/lgbl_virtual_center_experience/" 
-       target="_blank" 
-       rel="noopener" 
-       class="btn"
-       style="display:inline-block;margin:1rem auto;background:linear-gradient(90deg,#007bff,#ff0059);color:#fff;padding:12px 24px;border-radius:8px;text-decoration:none;font-weight:600;">
-       🌐 Voir le flux complet sur Instagram
-    </a>
-
-    <!-- Flux intégré officiel -->
-    <blockquote 
-      class="instagram-media" 
-      data-instgrm-permalink="https://www.instagram.com/lgbl_virtual_center_experience/" 
-      data-instgrm-version="14" 
-      style="margin:auto;max-width:540px;width:100%;background:rgba(0,0,0,0.2);border-radius:12px;padding:8px;">
-    </blockquote>
-  </div>
-
-  <!-- Script officiel -->
-  <script async src="//www.instagram.com/embed.js"></script>
-</section>
-
-
-<footer>
-  <div class="container footer-grid">
-    <div>
-      <div class="logo"><img src="assets/img/logo-lgbl.png" alt="LGBL" style="height:22px;border-radius:50%"><span>LGBL Virtual Experience</span></div>
-      <p class="copy">© 2025 LGBL Virtual Experience Center — Lucas Galy</p>
+  <header role="banner">
+    <div class="container nav">
+      <a class="logo" href="index.html" aria-label="LGBL Accueil">
+        <img src="assets/img/logo-lgbl.png" alt="Logo LGBL" loading="lazy" decoding="async" />
+        <span>LGBL Virtual Experience</span>
+      </a>
+      <nav aria-label="Navigation principale">
+        <div class="links">
+          <a href="index.html">Accueil</a>
+          <a href="tarifs.html">Tarifs</a>
+          <a href="evenements.html">Événements</a>
+          <a href="communaute.html" aria-current="page">Communauté</a>
+          <a href="contact.html">Contact</a>
+          <a href="https://www.youtube.com/@LucasGaly24/streams" target="_blank" rel="noopener noreferrer">LIVE</a>
+        </div>
+      </nav>
     </div>
-  </div>
-</footer>
+  </header>
 
-<script>
-(async () => {
-  const username = "lgbl_virtual_center_experience";
-  const feed = document.getElementById("instaFeed");
-  try {
-    const res = await fetch(`https://www.instagram.com/${username}/?__a=1&__d=dis`);
-    if (!res.ok) throw new Error("Erreur de chargement");
-    const data = await res.json();
+  <main id="main" role="main">
+    <section class="hero">
+      <div class="container">
+        <h1>Communauté</h1>
+        <p class="subtitle">Pas juste un simple jeu — <strong>de la simulation pure</strong>. Rejoignez-nous et partagez vos meilleurs moments !</p>
+        <div class="social-hub">
+          <a class="btn" href="https://www.instagram.com/lgbl_virtual_center_experience/" target="_blank" rel="noopener noreferrer">Instagram</a>
+          <a class="btn btn-outline" href="https://www.tiktok.com/@lgbl_virtual_center_experience" target="_blank" rel="noopener noreferrer">TikTok</a>
+          <a class="btn btn-outline" href="https://www.youtube.com/@LucasGaly24/streams" target="_blank" rel="noopener noreferrer">YouTube</a>
+          <a class="btn btn-outline" href="mailto:lucasgaly.47510@gmail.com">Envoyer une photo/clip</a>
+        </div>
+      </div>
+    </section>
 
-    const edges = data?.graphql?.user?.edge_owner_to_timeline_media?.edges || [];
-    if (!edges.length) {
-      feed.innerHTML = "<p>Aucune publication disponible pour le moment.</p>";
-      return;
-    }
+    <!-- Mise en avant (cards) -->
+    <section class="section" aria-labelledby="spot-title">
+      <div class="container">
+        <h2 id="spot-title">📌 À la une</h2>
+        <div class="grid-3" style="margin-top:.8rem">
+          <article class="card"><h3>Hot Lap de la semaine</h3><p class="small">Top chrono sur Silverstone – Catégorie GT3.</p><a class="btn btn-outline" href="evenements.html#esport-title">Voir le format eSport</a></article>
+          <article class="card"><h3>Photo du mois</h3><p class="small">Sélectionnée par l’équipe. Partagez la vôtre pour être mis en avant.</p><a class="btn btn-outline" href="mailto:lucasgaly.47510@gmail.com">Proposer</a></article>
+          <article class="card"><h3>Replay à ne pas manquer</h3><p class="small">Dernier live commenté disponible sur la chaîne.</p><a class="btn btn-outline" href="https://www.youtube.com/@LucasGaly24/streams" target="_blank" rel="noopener">Voir</a></article>
+        </div>
+      </div>
+    </section>
 
-    feed.innerHTML = "";
-    edges.slice(0, 12).forEach(post => {
-      const img = post.node.display_url;
-      const link = `https://www.instagram.com/p/${post.node.shortcode}/`;
-      const caption = post.node.edge_media_to_caption.edges[0]?.node.text || "";
-      const div = document.createElement("a");
-      div.href = link;
-      div.target = "_blank";
-      div.className = "insta-item";
-      div.innerHTML = `<img src="${img}" alt=""><span>Voir</span>`;
-      feed.appendChild(div);
-    });
-  } catch (err) {
-    console.error(err);
-    feed.innerHTML = "<p>Impossible de charger le flux Instagram.</p>";
+    <!-- Galerie locale (robuste pour GitHub Pages) -->
+    <section class="section" aria-labelledby="galerie-title">
+      <div class="container">
+        <h2 id="galerie-title">🖼️ Galerie de la communauté</h2>
+        <p class="small">Aucune dépendance à l’API Instagram (souvent bloquée côté navigateur). Ajoutez simplement vos images dans <code>assets/community/</code> et listez-les ci‑dessous.</p>
+        <div id="instaFeed" class="insta-grid">
+          <!-- Exemples statiques (remplace par tes propres vignettes locales) -->
+          <a class="insta-item" href="https://www.instagram.com/lgbl_virtual_center_experience/" target="_blank" rel="noopener">
+            <img src="assets/community/shot1.jpg" alt="Moment communauté 1" loading="lazy" decoding="async" />
+            <span>Voir sur Instagram</span>
+          </a>
+          <a class="insta-item" href="https://www.instagram.com/lgbl_virtual_center_experience/" target="_blank" rel="noopener">
+            <img src="assets/community/shot2.jpg" alt="Moment communauté 2" loading="lazy" decoding="async" />
+            <span>Voir sur Instagram</span>
+          </a>
+          <a class="insta-item" href="https://www.instagram.com/lgbl_virtual_center_experience/" target="_blank" rel="noopener">
+            <img src="assets/community/shot3.jpg" alt="Moment communauté 3" loading="lazy" decoding="async" />
+            <span>Voir sur Instagram</span>
+          </a>
+        </div>
+        <p class="embed-note" style="margin-top:1rem">Astuce : pour un flux IG auto, utilise un service d’embed tiers (ex : Elfsight, LightWidget) qui fournit un <code>&lt;script&gt;</code> prêt à intégrer — plus fiable que l’API web publique.</p>
+      </div>
+    </section>
+
+    <!-- Testimonials / Avis -->
+    <section class="section" aria-labelledby="avis-title">
+      <div class="container">
+        <h2 id="avis-title">💬 Avis & témoignages</h2>
+        <div class="grid-3" style="margin-top:.8rem">
+          <article class="card"><p>“Incroyable immersion, les volants F1 c’est une dinguerie.”</p><p class="small">— Alex M.</p></article>
+          <article class="card"><p>“Parfait pour une soirée entre potes, on a adoré le mode Endurance !”</p><p class="small">— Sam M.</p></article>
+          <article class="card"><p>“Ambiance paddock + bar soft = combo gagnant.”</p><p class="small">— Léa M.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Appel à contribution -->
+    <section class="section" aria-labelledby="ugc-title">
+      <div class="container">
+        <h2 id="ugc-title">📥 Partage tes moments</h2>
+        <p class="small">Envoie tes photos/vidéos à <a href="mailto:lucasgaly.47510@gmail.com">lucasgaly.47510@gmail.com</a> avec ton @Instagram pour le crédit. Nous sélectionnons régulièrement des posts “À la une”.</p>
+        <div class="social-hub">
+          <a class="btn" href="mailto:lucasgaly.47510@gmail.com">Envoyer un média</a>
+          <a class="btn btn-outline" href="https://www.instagram.com/lgbl_virtual_center_experience/" target="_blank" rel="noopener">Suivre sur Instagram</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer role="contentinfo">
+    <div class="container footer-grid">
+      <div>
+        <div class="logo" style="display:flex;align-items:center;gap:.5rem">
+          <img src="assets/img/logo-lgbl.png" alt="LGBL" style="height:22px;border-radius:50%" loading="lazy" decoding="async" />
+          <span>LGBL Virtual Experience</span>
+        </div>
+        <p class="copy">© 2025 LGBL Virtual Experience Center — Conception : Lucas Galy</p>
+      </div>
+      <div>
+        <h4>Le site</h4>
+        <p><a href="index.html">Accueil</a><br><a href="tarifs.html">Tarifs</a><br><a href="evenements.html">Événements</a><br><a href="communaute.html" aria-current="page">Communauté</a></p>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <p><a href="mailto:lucasgaly.47510@gmail.com">lucasgaly.47510@gmail.com</a><br><a href="tel:+33672392264">06 72 39 22 64</a></p>
+      </div>
+      <div>
+        <h4>LIVE</h4>
+        <p><a href="https://www.youtube.com/@LucasGaly24/streams" target="_blank" rel="noopener noreferrer">YouTube</a></p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Données structurées (simplifiées) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    "name": "Communauté – LGBL Virtual Experience",
+    "about": "Réseaux sociaux, galerie de la communauté, meilleurs moments.",
+    "url": "https://lucas24galy.github.io/LGBL-VRTUAL-CENTER-EXPERIENCE/communaute.html",
+    "publisher": {"@type":"Organization","name":"LGBL Virtual Experience"},
+    "telephone": "+33 6 72 39 22 64",
+    "email": "mailto:lucasgaly.47510@gmail.com"
   }
-})();
-</script>
+  </script>
 
+  <script defer>
+    // Si tu veux charger dynamiquement une liste d'images depuis un JSON local,
+    // crée assets/data/community.json et décommente ci-dessous.
+    /*
+    fetch('assets/data/community.json')
+      .then(r => r.json())
+      .then(list => {
+        const grid = document.getElementById('instaFeed');
+        grid.innerHTML = '';
+        list.forEach(item => {
+          const a = document.createElement('a');
+          a.className = 'insta-item';
+          a.href = item.link; a.target = '_blank'; a.rel = 'noopener';
+          a.innerHTML = `<img src="${item.src}" alt="${item.alt || ''}" loading="lazy" decoding="async"/><span>Voir</span>`;
+          grid.appendChild(a);
+        });
+      })
+      .catch(()=>{});
+    */
+  </script>
+
+  <script src="assets/js/main.js" defer></script>
 </body>
 </html>
