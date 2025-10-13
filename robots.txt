@@ -1,4 +1,12 @@
+# robots.txt - LGBL Virtual Experience Center
 User-agent: *
 Allow: /
 
-Sitemap: https://lucas24galy.github.io/LGBL-VIRTUAL-CENTER-EXPERIENCE/sitemap.xml
+# Bloque l'indexation des ressources techniques
+Disallow: /assets/js/
+Disallow: /assets/css/
+Disallow: /assets/img/icons/
+Disallow: /assets/fonts/
+
+# Indique le sitemap
+Sitemap: https://lucas24galy.github.io/LGBL-VRTUAL-CENTER-EXPERIENCE/sitemap.xml
