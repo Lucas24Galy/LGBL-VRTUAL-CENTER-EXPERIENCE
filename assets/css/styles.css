@@ -232,3 +232,12 @@ footer { border-top: 1px solid var(--line); }
 /* option: léger effet au survol */
 .card--bg.hoverable:hover { transform: translateY(-2px); box-shadow: 0 16px 36px rgba(0,0,0,.35); }
 
+.card--bg { position: relative; isolation: isolate; overflow: hidden; background: #0f1115; min-height: 180px; }
+.card--bg::before { content:""; position:absolute; inset:0; background-size:cover; background-position:center; z-index:-2; transform:scale(1.02); }
+.card--bg::after { content:""; position:absolute; inset:0; background:
+  radial-gradient(80% 100% at 50% 100%, rgba(0,0,0,.45), rgba(0,0,0,.75)),
+  linear-gradient(180deg, rgba(0,0,0,.15), rgba(0,0,0,.55)); z-index:-1; }
+.card--bg h3, .card--bg p, .card--bg li { color:#eef3f7; }
+.card--sim::before { background-image:url("assets/img/cards/simracing.jpg"); }
+.card--bar::before { background-image:url("assets/img/cards/bar.jpg"); }
+.card--detente::before { background-image:url("assets/img/cards/detente.jpg"); }
