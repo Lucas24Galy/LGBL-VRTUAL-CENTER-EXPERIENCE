@@ -1,19 +1,56 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset
+  xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml">
+
+  <!-- Page d'accueil -->
   <url>
-    <loc>https://lgbl-experience.fr/</loc>
+    <loc>https://lucas24galy.github.io/LGBL-VRTUAL-CENTER-EXPERIENCE/</loc>
+    <lastmod>2025-10-13</lastmod>
     <priority>1.0</priority>
   </url>
+
+  <!-- Pages principales -->
   <url>
-    <loc>https://lgbl-experience.fr/tarifs.html</loc>
+    <loc>https://lucas24galy.github.io/LGBL-VRTUAL-CENTER-EXPERIENCE/index.html</loc>
+    <lastmod>2025-10-13</lastmod>
+    <priority>1.0</priority>
+  </url>
+
+  <url>
+    <loc>https://lucas24galy.github.io/LGBL-VRTUAL-CENTER-EXPERIENCE/tarifs.html</loc>
+    <lastmod>2025-10-13</lastmod>
     <priority>0.9</priority>
   </url>
+
   <url>
-    <loc>https://lgbl-experience.fr/evenements.html</loc>
+    <loc>https://lucas24galy.github.io/LGBL-VRTUAL-CENTER-EXPERIENCE/evenements.html</loc>
+    <lastmod>2025-10-13</lastmod>
     <priority>0.9</priority>
   </url>
+
   <url>
-    <loc>https://lgbl-experience.fr/contact.html</loc>
+    <loc>https://lucas24galy.github.io/LGBL-VRTUAL-CENTER-EXPERIENCE/communaute.html</loc>
+    <lastmod>2025-10-13</lastmod>
     <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://lucas24galy.github.io/LGBL-VRTUAL-CENTER-EXPERIENCE/contact.html</loc>
+    <lastmod>2025-10-13</lastmod>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Fichiers annexes utiles au référencement -->
+  <url>
+    <loc>https://lucas24galy.github.io/LGBL-VRTUAL-CENTER-EXPERIENCE/site.webmanifest</loc>
+    <lastmod>2025-10-13</lastmod>
+    <priority>0.6</priority>
+  </url>
+
+  <url>
+    <loc>https://lucas24galy.github.io/LGBL-VRTUAL-CENTER-EXPERIENCE/sitemap.xml</loc>
+    <lastmod>2025-10-13</lastmod>
+    <priority>0.4</priority>
   </url>
 </urlset>
