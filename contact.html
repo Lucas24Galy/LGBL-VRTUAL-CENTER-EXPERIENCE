@@ -2,96 +2,224 @@
 <html lang="fr">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>LGBL Virtual Experience Center – Contact & Accès</title>
-  <meta name="description" content="Contactez LGBL Virtual Experience Center à Agen : téléphone, email, réseaux, carte. Réservations et privatisations."/>
-  <link rel="stylesheet" href="assets/css/styles.css"/>
-  <link rel="icon" type="image/svg+xml" href="assets/img/favicon.svg"/>
-  <meta property="og:title" content="LGBL – Contact & Accès"/>
-  <meta property="og:description" content="Téléphone, email, réseaux, carte Google. Privatisations, réservations, questions."/>
-  <meta property="og:image" content="assets/img/og-preview.jpg"/>
-  <meta property="og:url" content="https://lgbl-experience.fr/contact.html"/>
+
+  <!-- SEO de base -->
+  <meta name="description" content="Contactez LGBL Virtual Experience Center à Agen : téléphone, email, réseaux, carte. Réservations, privatisations et questions." />
+  <meta name="robots" content="index,follow" />
+  <link rel="canonical" href="https://lucas24galy.github.io/LGBL-VRTUAL-CENTER-EXPERIENCE/contact.html" />
+
+  <!-- Open Graph / Twitter -->
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="LGBL Virtual Experience" />
+  <meta property="og:title" content="LGBL – Contact & Accès" />
+  <meta property="og:description" content="Téléphone, email, réseaux, carte Google. Privatisations, réservations, questions." />
+  <meta property="og:url" content="https://lucas24galy.github.io/LGBL-VRTUAL-CENTER-EXPERIENCE/contact.html" />
+  <meta property="og:image" content="assets/img/logo-lgbl.png" />
+  <meta name="twitter:card" content="summary" />
+
+  <link rel="icon" type="image/png" href="assets/img/logo-lgbl.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600;800&family=Poppins:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/css/styles.css" />
+
+  <style>
+    :root{--line:rgba(255,255,255,.08);--bg:#0a0b0d;--panel:#0f1115;--text:#e9ecef;--muted:#a9b3bb;--rose:#ff2d6f;--cyan:#00aaff}
+    body{background:var(--bg);color:var(--text);font-family:Poppins,system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial}
+    header{position:sticky;top:0;background:rgba(10,11,13,.7);backdrop-filter:saturate(120%) blur(8px);border-bottom:1px solid var(--line);z-index:50}
+    .container{max-width:1150px;margin:0 auto;padding:0 16px}
+    .nav{display:flex;align-items:center;justify-content:space-between;height:64px}
+    .links a{color:#cfd6dc;margin-left:16px;text-decoration:none;padding:8px 10px;border:1px solid transparent;border-radius:999px;position:relative}
+    .links a:hover,.links a[aria-current="page"]{color:#fff;border-color:rgba(0,170,255,.35)}
+    .links a::after{content:"";position:absolute;left:10px;right:10px;bottom:4px;height:2px;transform:scaleX(0);transform-origin:left;background:linear-gradient(90deg,var(--rose),var(--cyan));transition:transform .25s ease}
+    .links a:hover::after,.links a[aria-current="page"]::after{transform:scaleX(1)}
+    .logo{display:inline-flex;align-items:center;gap:.6rem;color:#fff;text-decoration:none;font-weight:700}
+    .logo img{height:42px;border-radius:50%}
+
+    .hero{padding:56px 0;border-bottom:1px solid var(--line);background:
+      radial-gradient(1200px 400px at 30% -20%, rgba(255,0,78,.22), transparent 60%),
+      radial-gradient(1000px 400px at 80% -30%, rgba(0,170,255,.18), transparent 60%)}
+    .hero h1{font-family:'Orbitron',system-ui;font-size:clamp(28px,4.5vw,44px);margin:0 0 .6rem}
+    .subtitle{color:var(--muted)}
+
+    .section{padding:38px 0;border-top:1px solid var(--line)}
+    .grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+    .grid-2{display:grid;grid-template-columns:repeat(2,1fr);gap:22px}
+    .card{background:var(--panel);border:1px solid var(--line);border-radius:16px;padding:18px}
+    .small{color:var(--muted)}
+
+    .btn{display:inline-block;background:linear-gradient(90deg,var(--rose),var(--cyan));padding:.7rem 1rem;border-radius:999px;color:#fff;text-decoration:none;font-weight:700}
+    .btn-outline{background:transparent;border:1px solid rgba(0,170,255,.35)}
+    .btn:hover{box-shadow:0 6px 18px rgba(0,170,255,.18)}
+
+    /* Form */
+    form{display:grid;gap:12px}
+    label{font-weight:600}
+    input,select,textarea{background:#0b0d10;border:1px solid var(--line);border-radius:10px;padding:10px 12px;color:var(--text)}
+    textarea{min-height:120px}
+    .form-row{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+    .consent{display:flex;gap:.5rem;align-items:flex-start;font-size:.9rem;color:var(--muted)}
+    .help{font-size:.85rem;color:var(--muted)}
+
+    footer{border-top:1px solid var(--line);margin-top:28px}
+    .footer-grid{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:22px;padding:24px 0}
+    .copy{color:#8f98a1}
+
+    @media (max-width:900px){.grid-3,.grid-2{grid-template-columns:1fr}.form-row{grid-template-columns:1fr}}
+  </style>
 </head>
 <body>
+  <a href="#main" class="sr-only" style="position:absolute;left:-9999px">Aller au contenu</a>
 
-  <!-- Header -->
-  <header>
+  <header role="banner">
     <div class="container nav">
       <a class="logo" href="index.html" aria-label="LGBL Accueil">
-        <span class="logo-mark"></span><span>LGBL Virtual Experience</span>
+        <img src="assets/img/logo-lgbl.png" alt="Logo LGBL" loading="lazy" decoding="async" />
+        <span>LGBL Virtual Experience</span>
       </a>
-      <nav>
-        <button class="mobile-toggle" aria-label="Ouvrir le menu">Menu</button>
+      <nav aria-label="Navigation principale">
         <div class="links">
           <a href="index.html">Accueil</a>
           <a href="tarifs.html">Tarifs</a>
           <a href="evenements.html">Événements</a>
           <a href="communaute.html">Communauté</a>
-          <a class="active" href="contact.html">Contact</a>
-          <a href="https://www.youtube.com/@LucasGaly24/streams" target="_blank" rel="noopener">LIVE</a>
+          <a href="contact.html" aria-current="page">Contact</a>
+          <a href="https://www.youtube.com/@LucasGaly24/streams" target="_blank" rel="noopener noreferrer">LIVE</a>
         </div>
       </nav>
     </div>
   </header>
 
-  <!-- Hero -->
-  <section class="hero hero--small">
-    <div class="container">
-      <h1>Contact & Accès</h1>
-      <p class="subtitle">Besoin d’un devis, d’une privatisation ou d’une info ? On répond vite.</p>
-    </div>
-  </section>
-
-  <!-- Contact grid -->
-  <section class="section">
-    <div class="container grid-3">
-      <article class="card">
-        <h3>Nous appeler</h3>
-        <p class="big">06 72 39 22 64</p>
-        <a class="btn" href="tel:+33672392264">Appeler maintenant</a>
-      </article>
-
-      <article class="card">
-        <h3>Nous écrire</h3>
-        <p class="big">lucasgaly.47510@gmail.com</p>
-        <a class="btn btn-outline" href="mailto:lucasgaly.47510@gmail.com?subject=Infos%20LGBL%20Virtual%20Experience">Envoyer un email</a>
-      </article>
-
-      <article class="card">
-        <h3>Réseaux</h3>
-        <p><a href="https://www.youtube.com/@LucasGaly24/streams" target="_blank" rel="noopener">YouTube (Live & Replays)</a></p>
-        <p><a href="#" target="_blank" rel="noopener">Instagram</a> • <a href="#" target="_blank" rel="noopener">TikTok</a></p>
-      </article>
-    </div>
-  </section>
-
-  <!-- Map -->
-  <section class="section">
-    <div class="container">
-      <h2>Nous trouver</h2>
-      <p class="small">Agen (47000) — Nouvelle-Aquitaine. Parking à proximité. Salle accessible PMR.</p>
-      <div class="map-embed">
-        <iframe
-          title="Carte LGBL Virtual Experience"
-          width="100%" height="420"
-          style="border:0" loading="lazy" allowfullscreen
-          referrerpolicy="no-referrer-when-downgrade"
-          src="https://www.google.com/maps?q=Agen%2047000&output=embed">
-        </iframe>
+  <main id="main" role="main">
+    <section class="hero">
+      <div class="container">
+        <h1>Contact &amp; Accès</h1>
+        <p class="subtitle">Besoin d’un devis, d’une privatisation ou d’une info ? On répond vite.</p>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- Footer -->
-  <footer>
+    <!-- Coordonnées rapides -->
+    <section class="section">
+      <div class="container grid-3">
+        <article class="card">
+          <h3>Nous appeler</h3>
+          <p class="big">06 72 39 22 64</p>
+          <a class="btn" href="tel:+33672392264">Appeler maintenant</a>
+        </article>
+
+        <article class="card">
+          <h3>Nous écrire</h3>
+          <p class="big">lucasgaly.47510@gmail.com</p>
+          <a class="btn btn-outline" href="mailto:lucasgaly.47510@gmail.com?subject=Infos%20LGBL%20Virtual%20Experience">Envoyer un email</a>
+        </article>
+
+        <article class="card">
+          <h3>Réseaux</h3>
+          <p><a href="https://www.instagram.com/lgbl_virtual_center_experience/" target="_blank" rel="noopener">Instagram</a></p>
+          <p><a href="https://www.tiktok.com/@lgbl_virtual_center_experience" target="_blank" rel="noopener">TikTok</a></p>
+          <p><a href="https://www.youtube.com/@LucasGaly24/streams" target="_blank" rel="noopener">YouTube (Live & Replays)</a></p>
+        </article>
+      </div>
+    </section>
+
+    <!-- Formulaire de contact (sans backend) -->
+    <section class="section" aria-labelledby="form-title">
+      <div class="container grid-2">
+        <div>
+          <h2 id="form-title">📬 Formulaire</h2>
+          <p class="small">Sur GitHub Pages, il n’y a pas de serveur. Ce formulaire utilise <code>mailto:</code> (ouvre votre messagerie). Option : branchez un service comme <a href="https://formspree.io" target="_blank" rel="noopener">Formspree</a> (voir commentaire dans le code).</p>
+
+          <form id="contactForm" action="mailto:lucasgaly.47510@gmail.com" method="POST" enctype="text/plain">
+            <div class="form-row">
+              <div>
+                <label for="name">Nom / Prénom</label>
+                <input id="name" name="Nom" type="text" required autocomplete="name" />
+              </div>
+              <div>
+                <label for="email">Email</label>
+                <input id="email" name="Email" type="email" required autocomplete="email" />
+              </div>
+            </div>
+            <div class="form-row">
+              <div>
+                <label for="phone">Téléphone (optionnel)</label>
+                <input id="phone" name="Téléphone" type="tel" inputmode="tel" autocomplete="tel" />
+              </div>
+              <div>
+                <label for="topic">Sujet</label>
+                <select id="topic" name="Sujet" required>
+                  <option value="">— Choisir —</option>
+                  <option>Infos générales</option>
+                  <option>Réservation</option>
+                  <option>Privatisation</option>
+                  <option>eSport / Tournoi</option>
+                </select>
+              </div>
+            </div>
+            <div>
+              <label for="message">Message</label>
+              <textarea id="message" name="Message" required placeholder="Dites-nous tout…"></textarea>
+            </div>
+            <label class="consent">
+              <input type="checkbox" required />
+              <span>J’accepte d’être recontacté à propos de ma demande (voir <a href="confidentialite.html">confidentialité</a>).</span>
+            </label>
+            <button class="btn" type="submit">Envoyer</button>
+            <p class="help">Si l’application mail ne s’ouvre pas, écrivez-nous directement à <a href="mailto:lucasgaly.47510@gmail.com">lucasgaly.47510@gmail.com</a>.</p>
+          </form>
+
+          <!-- Alternative Formspree (décommentez et remplacez l'URL) -->
+          <!--
+          <form action="https://formspree.io/f/XXXXXXXX" method="POST">
+            <input type="hidden" name="_subject" value="Contact via LGBL" />
+            … mêmes champs …
+          </form>
+          -->
+        </div>
+
+        <aside class="card" aria-labelledby="info-form">
+          <h3 id="info-form">Infos utiles</h3>
+          <ul class="small" style="margin:0;padding-left:1.1rem;line-height:1.9">
+            <li>Réponse rapide (jour ouvré).</li>
+            <li>Privatisation : précisez la date, le créneau et le nombre de personnes.</li>
+            <li>Compétitions eSport : indiquez votre plateforme/jeu si pertinent.</li>
+          </ul>
+        </aside>
+      </div>
+    </section>
+
+    <!-- Carte / Accès -->
+    <section class="section" aria-labelledby="map-title">
+      <div class="container">
+        <h2 id="map-title">Nous trouver</h2>
+        <p class="small">Agen (47000) — Nouvelle-Aquitaine. Parking à proximité. Salle accessible PMR.</p>
+        <div class="card" style="overflow:hidden">
+          <iframe
+            title="Carte LGBL Virtual Experience"
+            width="100%" height="420"
+            style="border:0;border-radius:12px" loading="lazy" allowfullscreen
+            referrerpolicy="no-referrer-when-downgrade"
+            src="https://www.google.com/maps?q=Agen%2047000&output=embed">
+          </iframe>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer role="contentinfo">
     <div class="container footer-grid">
       <div>
-        <div class="logo"><span class="logo-mark"></span><span>LGBL Virtual Experience</span></div>
+        <div class="logo" style="display:flex;align-items:center;gap:.5rem">
+          <img src="assets/img/logo-lgbl.png" alt="LGBL" style="height:22px;border-radius:50%" loading="lazy" decoding="async" />
+          <span>LGBL Virtual Experience</span>
+        </div>
         <p class="copy">© 2025 LGBL Virtual Experience Center — Conception : Lucas Galy</p>
       </div>
       <div>
         <h4>Le site</h4>
-        <p><a href="index.html">Accueil</a><br><a href="tarifs.html">Tarifs</a><br><a href="evenements.html">Événements</a></p>
+        <p><a href="index.html">Accueil</a><br><a href="tarifs.html">Tarifs</a><br><a href="evenements.html">Événements</a><br><a href="communaute.html">Communauté</a><br><a href="contact.html" aria-current="page">Contact</a></p>
       </div>
       <div>
         <h4>Contact</h4>
@@ -99,11 +227,40 @@
       </div>
       <div>
         <h4>LIVE</h4>
-        <p><a href="https://www.youtube.com/@LucasGaly24/streams" target="_blank" rel="noopener">YouTube</a></p>
+        <p><a href="https://www.youtube.com/@LucasGaly24/streams" target="_blank" rel="noopener noreferrer">YouTube</a></p>
       </div>
     </div>
   </footer>
 
-  <script src="assets/js/main.js"></script>
+  <!-- Données structurées (simplifiées) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ContactPage",
+    "name": "Contact – LGBL Virtual Experience",
+    "url": "https://lucas24galy.github.io/LGBL-VRTUAL-CENTER-EXPERIENCE/contact.html",
+    "telephone": "+33 6 72 39 22 64",
+    "email": "mailto:lucasgaly.47510@gmail.com",
+    "areaServed": "Agen, Lot-et-Garonne, France"
+  }
+  </script>
+
+  <script defer>
+    // Améliore l'action mailto: compose un email avec sujet + contenu depuis le formulaire
+    const form = document.getElementById('contactForm');
+    if (form) {
+      form.addEventListener('submit', function (e) {
+        e.preventDefault();
+        const data = new FormData(form);
+        const sujet = encodeURIComponent(`[Contact] ${data.get('Sujet') || ''}`);
+        const lignes = [];
+        for (const [k,v] of data.entries()) { if (k !== 'Sujet') lignes.push(`${k}: ${v}`); }
+        const corps = encodeURIComponent(lignes.join('\n'));
+        window.location.href = `mailto:lucasgaly.47510@gmail.com?subject=${sujet}&body=${corps}`;
+      });
+    }
+  </script>
+
+  <script src="assets/js/main.js" defer></script>
 </body>
 </html>
