@@ -1,73 +1,130 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>LGBL Virtual Experience Center – Accueil</title>
 
-  <!-- ✅ Vérification Google correctement placée dans le <head> -->
-  <meta name="google-site-verification" content="<meta name="google-site-verification" content="wlRHbf8WsgIWybuijJHohaG3y2jh4_bokztoDcf79aU" />" />
+  <!-- ✅ Google Search Console (corrigé) -->
+  <meta name="google-site-verification" content="wlRHbf8WsgIWybuijJHohaG3y2jh4_bokztoDcf79aU" />
 
-  <meta name="description" content="Vivez la course comme un pro — simulateurs, bar, coin détente. Site en préparation, ouverture à venir.">
-  <link rel="icon" type="image/png" href="assets/img/logo-lgbl.png"/>
-  <link rel="stylesheet" href="assets/css/styles.css"/>
-  <link rel="preconnect" href="https://fonts.googleapis.com"/>
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
-  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600;800&family=Poppins:wght@400;600;700&display=swap" rel="stylesheet"/>
+  <!-- ✅ SEO de base -->
+  <meta name="description" content="Vivez la course comme un pro — simulateurs, bar et coin détente. Site en préparation, ouverture à venir." />
+  <meta name="robots" content="index,follow" />
+  <link rel="canonical" href="https://lucas24galy.github.io/LGBL-VRTUAL-CENTER-EXPERIENCE/index.html" />
+
+  <!-- ✅ Open Graph / Twitter Cards -->
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="LGBL Virtual Experience" />
+  <meta property="og:title" content="LGBL Virtual Experience Center – Accueil" />
+  <meta property="og:description" content="Simulateurs de course, bar & coin détente. Vivez la course comme un pro. Ouverture prochaine !" />
+  <meta property="og:url" content="https://lucas24galy.github.io/LGBL-VRTUAL-CENTER-EXPERIENCE/index.html" />
+  <meta property="og:image" content="assets/img/logo-lgbl.png" />
+  <meta name="twitter:card" content="summary" />
+
+  <!-- ✅ Icônes & Manifest -->
+  <link rel="icon" type="image/png" href="assets/img/logo-lgbl.png" />
+
+  <!-- ✅ Performances polices -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600;800&family=Poppins:wght@400;600;700&display=swap" rel="stylesheet" />
+
+  <!-- ✅ Feuille de style principale -->
+  <link rel="stylesheet" href="assets/css/styles.css" />
+
   <style>
-    :root{--line:rgba(255,255,255,.08)}
-    body{background:#0a0b0d;color:#e9ecef}
-    header{position:sticky;top:0;z-index:50;background:rgba(10,11,13,.7);backdrop-filter:saturate(120%) blur(8px);border-bottom:1px solid var(--line)}
-    .container{max-width:1150px;margin:0 auto;padding:0 16px}
-    .nav{display:flex;align-items:center;justify-content:space-between;height:64px}
-    .nav .links a{color:#cfd6dc;margin-left:16px;text-decoration:none;padding:8px 10px;border:1px solid transparent;border-radius:999px}
-    .nav .links a:hover,.nav .links a.active{border-color:rgba(0,170,255,.35);color:#fff}
-    .logo{display:flex;align-items:center;gap:.6rem;text-decoration:none;color:#fff;font-weight:700}
-    .logo img{height:42px;border-radius:50%;vertical-align:middle;transition:transform .3s ease,filter .3s ease}
-    .logo img:hover{transform:scale(1.06);filter:drop-shadow(0 0 8px rgba(0,150,255,.5))}
-    .alert{border-radius:10px;padding:.6rem 1rem;border:1px solid var(--line)}
-    .alert.info{background:#0e1b22;color:#cfefff;border-color:rgba(0,170,255,.25)}
-    .hero{position:relative;overflow:hidden;padding:72px 0;border-bottom:1px solid var(--line);background:
-      radial-gradient(1200px 400px at 30% -20%, rgba(255,0,78,.25), transparent 60%),
-      radial-gradient(1000px 400px at 80% -30%, rgba(0,170,255,.22), transparent 60%)}
-    .hero h1{font-family:'Orbitron',system-ui;font-size:clamp(32px,5vw,48px);letter-spacing:1px;margin:0 0 .6rem}
-    .subtitle{color:#a9b3bb;margin:0 0 1rem}
-    .btn{display:inline-block;background:linear-gradient(90deg,#ff2d6f,#00aaff);padding:.7rem 1rem;border-radius:999px;color:#fff;text-decoration:none;font-weight:700}
-    .btn:hover{opacity:.95}
-    .btn.btn-outline{background:transparent;border:1px solid rgba(0,170,255,.35)}
-    .section{padding:46px 0;border-top:1px solid var(--line)}
-    .grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
-    .grid-2{display:grid;grid-template-columns:repeat(2,1fr);gap:22px}
-    .card{background:#0f1115;border:1px solid var(--line);border-radius:16px;padding:18px}
-    .footer-grid{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:22px;padding:24px 0}
-    .copy{color:#8f98a1;margin-top:.5rem}
-    .small{color:#a9b3bb}
-    /* section features (fond image) */
-    .features{position:relative;z-index:1;color:#fff;padding:56px 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line);
-      background-image:url('assets/img/bg-simracing.jpg');background-size:cover;background-position:center;background-attachment:fixed}
-    .features::before{content:"";position:absolute;inset:0;background:rgba(0,0,0,.58);z-index:0}
-    .features .container{position:relative;z-index:2}
-    /* responsive */
-    @media (max-width:900px){.grid-3{grid-template-columns:1fr}.grid-2{grid-template-columns:1fr}.footer-grid{grid-template-columns:1fr 1fr}}
+    :root {
+      --line: rgba(255, 255, 255, .08);
+      --brand-rose: #ff2d6f;
+      --brand-cyan: #00aaff;
+      --bg: #0a0b0d;
+      --panel: #0f1115;
+      --text: #e9ecef;
+      --muted: #a9b3bb;
+    }
+    html { scroll-behavior: smooth; }
+    body { background: var(--bg); color: var(--text); font-family: Poppins, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji"; }
+
+    /* Header */
+    header { position: sticky; top: 0; z-index: 50; background: rgba(10, 11, 13, .7); backdrop-filter: saturate(120%) blur(8px); border-bottom: 1px solid var(--line); }
+    .container { max-width: 1150px; margin: 0 auto; padding: 0 16px; }
+    .nav { display: flex; align-items: center; justify-content: space-between; height: 64px; }
+    .nav .links a { color: #cfd6dc; margin-left: 16px; text-decoration: none; padding: 8px 10px; border: 1px solid transparent; border-radius: 999px; }
+    .nav .links a:hover, .nav .links a[aria-current="page"] { border-color: rgba(0, 170, 255, .35); color: #fff; }
+    .logo { display: inline-flex; align-items: center; gap: .6rem; text-decoration: none; color: #fff; font-weight: 700; }
+    .logo img { height: 42px; border-radius: 50%; vertical-align: middle; transition: transform .3s ease, filter .3s ease; }
+    .logo img:hover { transform: scale(1.06); filter: drop-shadow(0 0 8px rgba(0, 150, 255, .5)); }
+
+    /* Alert */
+    .alert { border-radius: 10px; padding: .6rem 1rem; border: 1px solid var(--line); }
+    .alert.info { background: #0e1b22; color: #cfefff; border-color: rgba(0, 170, 255, .25); }
+
+    /* Hero */
+    .hero { position: relative; overflow: hidden; padding: 72px 0; border-bottom: 1px solid var(--line);
+      background:
+        radial-gradient(1200px 400px at 30% -20%, rgba(255, 0, 78, .25), transparent 60%),
+        radial-gradient(1000px 400px at 80% -30%, rgba(0, 170, 255, .22), transparent 60%);
+    }
+    .hero h1 { font-family: 'Orbitron', system-ui; font-size: clamp(32px, 5vw, 48px); letter-spacing: 1px; margin: 0 0 .6rem; }
+    .subtitle { color: var(--muted); margin: 0 0 1rem; }
+    .btn { display: inline-block; background: linear-gradient(90deg, var(--brand-rose), var(--brand-cyan)); padding: .7rem 1rem; border-radius: 999px; color: #fff; text-decoration: none; font-weight: 700; }
+    .btn:hover { opacity: .95; }
+    .btn.btn-outline { background: transparent; border: 1px solid rgba(0, 170, 255, .35); }
+
+    /* Sections */
+    .section { padding: 46px 0; border-top: 1px solid var(--line); }
+    .grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; }
+    .grid-2 { display: grid; grid-template-columns: repeat(2, 1fr); gap: 22px; }
+    .card { background: var(--panel); border: 1px solid var(--line); border-radius: 16px; padding: 18px; }
+    .small { color: var(--muted); }
+
+    /* Features (fond image) */
+    .features { position: relative; z-index: 1; color: #fff; padding: 56px 0; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line);
+      background-image: url('assets/img/bg-simracing.jpg'); background-size: cover; background-position: center; background-attachment: fixed; }
+    .features::before { content: ""; position: absolute; inset: 0; background: rgba(0, 0, 0, .58); z-index: 0; }
+    .features .container { position: relative; z-index: 2; }
+
+    /* Footer */
+    .footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 22px; padding: 24px 0; }
+    .copy { color: #8f98a1; margin-top: .5rem; font-size: .9rem; }
+
+    /* Responsif */
+    @media (max-width: 900px) {
+      .grid-3, .grid-2 { grid-template-columns: 1fr; }
+      .footer-grid { grid-template-columns: 1fr 1fr; }
+      .nav .links a { margin-left: 8px; }
+    }
+
+    /* iOS fix: parallax lourd sur mobile */
+    @media (max-width: 768px) {
+      .features { background-attachment: scroll; }
+    }
+
+    /* Accessibilité: réduire les animations si demandé */
+    @media (prefers-reduced-motion: reduce) {
+      * { animation: none !important; transition: none !important; }
+    }
   </style>
 </head>
 <body>
+  <a href="#main" class="sr-only" style="position:absolute;left:-9999px;top:auto;width:1px;height:1px;overflow:hidden;">Aller au contenu principal</a>
 
   <!-- Header -->
-  <header>
+  <header role="banner">
     <div class="container nav">
-      <a class="logo" href="index.html" aria-label="LGBL Accueil" style="display:flex; align-items:center; gap:0.6rem;">
-        <img src="assets/img/logo-lgbl.png" alt="Logo LGBL">
+      <a class="logo" href="index.html" aria-label="LGBL Accueil">
+        <img src="assets/img/logo-lgbl.png" alt="Logo LGBL" loading="lazy" decoding="async" />
         <span style="font-size:1.05rem;letter-spacing:.5px">LGBL Virtual Experience</span>
       </a>
-      <nav>
+      <nav aria-label="Navigation principale">
         <div class="links">
-          <a href="index.html">Accueil</a>
+          <a href="index.html" aria-current="page">Accueil</a>
           <a href="tarifs.html">Tarifs</a>
           <a href="evenements.html">Événements</a>
           <a href="communaute.html">Communauté</a>
           <a href="contact.html">Contact</a>
-          <a href="https://www.youtube.com/@LucasGaly24/streams" target="_blank" rel="noopener">LIVE</a>
+          <a href="https://www.youtube.com/@LucasGaly24/streams" target="_blank" rel="noopener noreferrer">LIVE</a>
         </div>
       </nav>
     </div>
@@ -77,117 +134,164 @@
   <section class="section" style="padding:12px 0;border-top:none;background:#0d0f12">
     <div class="container">
       <div class="alert info" style="display:flex;gap:.6rem;align-items:center;justify-content:center">
-        <strong>ℹ️ En préparation :</strong>
-        <span>le centre n’est pas encore ouvert au public. Ouverture prochaine — restez connectés !</span>
+        <strong aria-hidden="true">ℹ️ En préparation :</strong>
+        <span>Le centre n’est pas encore ouvert au public. Ouverture prochaine — restez connectés !</span>
       </div>
     </div>
   </section>
 
-  <!-- Hero -->
-  <section class="hero">
-    <div class="container">
-      <h1>Vivez la course comme un pro</h1>
-      <p class="subtitle">Simulateurs – Bar – coin détente</p>
-      <div style="display:flex;gap:.6rem;flex-wrap:wrap">
-        <a class="btn" href="tarifs.html">Voir les tarifs</a>
-        <a class="btn btn-outline" href="evenements.html">Événements & lives</a>
+  <main id="main" role="main">
+    <!-- Hero -->
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="container">
+        <h1 id="hero-title">Vivez la course comme un pro</h1>
+        <p class="subtitle">Simulateurs – Bar – Coin détente</p>
+        <div style="display:flex;gap:.6rem;flex-wrap:wrap">
+          <a class="btn" href="tarifs.html" aria-label="Voir les tarifs">Voir les tarifs</a>
+          <a class="btn btn-outline" href="evenements.html" aria-label="Voir les événements et les lives">Événements & lives</a>
+        </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- Features avec image de fond -->
-  <section class="features">
-    <div class="container">
-      <div class="grid-3">
-        <article class="card">
-          <h3>Sim Racing Pro</h3>
-          <ul style="margin:0;padding-left:1.1rem;line-height:1.8">
-            <li>Simulateurs <strong>statiques et dynamiques</strong></li>
-            <li><strong>Volant type F1</strong> & <strong>pédalier pro</strong></li>
-            <li><strong>Cockpit pro</strong> (structure rigide)</li>
-            <li><strong>Simple écran</strong> pour une immersion totale</li>
-          </ul>
-        </article>
+    <!-- Features avec image de fond -->
+    <section class="features" aria-labelledby="features-title">
+      <div class="container">
+        <h2 id="features-title" class="sr-only" style="position:absolute;left:-9999px;">Caractéristiques du centre</h2>
+        <div class="grid-3">
+          <article class="card" aria-labelledby="simracing-title">
+            <h3 id="simracing-title">Sim Racing Pro</h3>
+            <ul style="margin:0;padding-left:1.1rem;line-height:1.8">
+              <li>Simulateurs <strong>statiques et dynamiques</strong></li>
+              <li><strong>Volant type F1</strong> &amp; <strong>pédalier pro</strong></li>
+              <li><strong>Cockpit pro</strong> (structure rigide)</li>
+              <li><strong>Simple écran</strong> pour une immersion totale</li>
+            </ul>
+          </article>
 
-        <article class="card">
-          <h3>Bar</h3>
-          <p>Boissons soft & <strong>snacking sucré</strong> rapide pour recharger entre deux sessions.</p>
-        </article>
+          <article class="card" aria-labelledby="bar-title">
+            <h3 id="bar-title">Bar</h3>
+            <p>Boissons soft &amp; <strong>snacking sucré</strong> rapide pour recharger entre deux sessions.</p>
+          </article>
 
-        <article class="card">
-          <h3>Détente & Ambiance</h3>
-          <ul style="margin:0;padding-left:1.1rem;line-height:1.8">
-            <li><strong>Fond sonore</strong> ambiance paddock</li>
-            <li><strong>Coin console</strong> pour patienter</li>
-            <li><strong>Baby-foot</strong> pour le fun</li>
-          </ul>
-        </article>
+          <article class="card" aria-labelledby="detente-title">
+            <h3 id="detente-title">Détente &amp; Ambiance</h3>
+            <ul style="margin:0;padding-left:1.1rem;line-height:1.8">
+              <li><strong>Fond sonore</strong> ambiance paddock</li>
+              <li><strong>Coin console</strong> pour patienter</li>
+              <li><strong>Baby-foot</strong> pour le fun</li>
+            </ul>
+          </article>
+        </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- LIVE -->
-  <section class="section">
-    <div class="container">
-      <h2>🎥 LIVE – Diffusions</h2>
-      <p class="small">Si un live est en cours, il s’affiche automatiquement. Sinon, tu peux lancer une vidéo aléatoire de la chaîne.</p>
+    <!-- LIVE -->
+    <section class="section" aria-labelledby="live-title">
+      <div class="container">
+        <h2 id="live-title">🎥 LIVE – Diffusions</h2>
+        <p class="small">Si un live est en cours, il s’affiche automatiquement. Sinon, tu peux lancer une vidéo aléatoire de la chaîne.</p>
 
-      <div class="video-embed" style="margin-top:.8rem;border-radius:14px;overflow:hidden;border:1px solid var(--line)">
-        <iframe
-          id="liveFrame"
-          title="LGBL Diffusion"
-          width="100%" height="520"
-          src="https://www.youtube.com/embed/live_stream?channel=@LucasGaly24&autoplay=0"
-          frameborder="0"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-          allowfullscreen>
-        </iframe>
+        <div class="video-embed" style="margin-top:.8rem;border-radius:14px;overflow:hidden;border:1px solid var(--line)">
+          <iframe
+            id="liveFrame"
+            title="LGBL Diffusion"
+            width="100%"
+            height="520"
+            src="https://www.youtube-nocookie.com/embed/live_stream?channel=@LucasGaly24&autoplay=0"
+            loading="lazy"
+            referrerpolicy="strict-origin-when-cross-origin"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen>
+          </iframe>
+        </div>
+
+        <p style="margin-top:.8rem" class="small">
+          <button class="btn btn-outline" id="randomBtn" type="button" aria-controls="liveFrame">🎲 Charger une vidéo aléatoire</button>
+          <a class="btn" href="https://www.youtube.com/@LucasGaly24/streams" target="_blank" rel="noopener noreferrer">Tous les lives & replays</a>
+        </p>
       </div>
-
-      <p style="margin-top:.8rem" class="small">
-        <button class="btn btn-outline" id="randomBtn" type="button">🎲 Charger une vidéo aléatoire</button>
-        <a class="btn" href="https://www.youtube.com/@LucasGaly24/streams" target="_blank" rel="noopener">Tous les lives & replays</a>
-      </p>
-    </div>
-  </section>
+    </section>
+  </main>
 
   <!-- Footer -->
-  <footer style="border-top:1px solid var(--line)">
+  <footer style="border-top:1px solid var(--line)" role="contentinfo">
     <div class="container footer-grid">
       <div>
         <div class="logo" style="display:flex;align-items:center;gap:.5rem">
-          <img src="assets/img/logo-lgbl.png" alt="LGBL" style="height:22px;border-radius:50%">
+          <img src="assets/img/logo-lgbl.png" alt="Logo LGBL" style="height:22px;border-radius:50%" loading="lazy" decoding="async" />
           <span>LGBL Virtual Experience</span>
         </div>
         <p class="copy">© 2025 LGBL Virtual Experience Center — Conception : Lucas Galy</p>
       </div>
       <div>
         <h4>Le site</h4>
-        <p><a href="index.html">Accueil</a><br><a href="tarifs.html">Tarifs</a><br><a href="evenements.html">Événements</a></p>
+        <p>
+          <a href="index.html" aria-current="page">Accueil</a><br />
+          <a href="tarifs.html">Tarifs</a><br />
+          <a href="evenements.html">Événements</a>
+        </p>
       </div>
       <div>
         <h4>Contact</h4>
-        <p><a href="mailto:contact@lgbl-experience.fr">contact@lgbl-experience.fr</a><br><a href="tel:+33672392264">06 72 39 22 64</a></p>
+        <p>
+          <a href="mailto:contact@lgbl-experience.fr">contact@lgbl-experience.fr</a><br />
+          <a href="tel:+33672392264">06 72 39 22 64</a>
+        </p>
       </div>
       <div>
         <h4>LIVE</h4>
-        <p><a href="https://www.youtube.com/@LucasGaly24/streams" target="_blank" rel="noopener">YouTube</a></p>
+        <p><a href="https://www.youtube.com/@LucasGaly24/streams" target="_blank" rel="noopener noreferrer">YouTube</a></p>
       </div>
+    </div>
+
+    <div class="container" style="padding-bottom:24px">
+      <p class="small"><a href="mentions-legales.html">Mentions légales</a> · <a href="confidentialite.html">Confidentialité</a></p>
     </div>
   </footer>
 
+  <!-- ✅ JSON-LD (données structurées) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SportsActivityLocation",
+    "name": "LGBL Virtual Experience Center",
+    "url": "https://lucas24galy.github.io/LGBL-VRTUAL-CENTER-EXPERIENCE/",
+    "logo": "https://lucas24galy.github.io/LGBL-VRTUAL-CENTER-EXPERIENCE/assets/img/logo-lgbl.png",
+    "description": "Centre de simulation de course avec bar et coin détente. Ouverture prochaine.",
+    "areaServed": "Agen, Lot-et-Garonne, France",
+    "telephone": "+33 6 72 39 22 64"
+  }
+  </script>
+
+  <!-- ✅ JS: vidéo aléatoire + marquage du lien actif -->
   <script>
-    const LGBL_VIDEOS = [
-      "3FpLX8IgXa8",
-    ];
-    document.getElementById("randomBtn").addEventListener("click", () => {
-      if (!LGBL_VIDEOS.length) return alert("Ajoute des IDs de vidéos dans LGBL_VIDEOS.");
-      const id = LGBL_VIDEOS[Math.floor(Math.random() * LGBL_VIDEOS.length)];
-      const iframe = document.getElementById("liveFrame");
-      iframe.src = `https://www.youtube.com/embed/${id}`;
+    const LGBL_VIDEOS = ["3FpLX8IgXa8"]; // Ajoute d'autres IDs ici
+
+    document.addEventListener('DOMContentLoaded', () => {
+      const randomBtn = document.getElementById('randomBtn');
+      const iframe = document.getElementById('liveFrame');
+      if (randomBtn && iframe) {
+        randomBtn.addEventListener('click', () => {
+          if (!LGBL_VIDEOS.length) {
+            alert('Ajoute des IDs de vidéos dans LGBL_VIDEOS.');
+            return;
+          }
+          const id = LGBL_VIDEOS[Math.floor(Math.random() * LGBL_VIDEOS.length)];
+          iframe.src = `https://www.youtube-nocookie.com/embed/${id}`;
+          iframe.focus();
+        });
+      }
+
+      // Marque le lien actif si même pathname
+      const path = location.pathname.split('/').pop() || 'index.html';
+      document.querySelectorAll('.links a[href]')
+        .forEach(a => { if (a.getAttribute('href') === path) a.setAttribute('aria-current', 'page'); });
     });
   </script>
 
-  <script src="assets/js/main.js"></script>
+  <!-- Votre JS (déféré) -->
+  <script src="assets/js/main.js" defer></script>
+
+  <noscript><div class="container" style="padding:1rem"><p class="alert info">Pour l’expérience complète (menus, lecteur vidéo), activez JavaScript.</p></div></noscript>
 </body>
 </html>
