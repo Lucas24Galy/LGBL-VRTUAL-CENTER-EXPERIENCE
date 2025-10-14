@@ -307,32 +307,23 @@
     "telephone": "+33 6 72 39 22 64",
     "email": "mailto:lucasgaly.47510@gmail.com"
   }
-  </script>
+ <script>
+  // Liste d'images de fond possibles pour le hero
+  const bgImages = [
+    "assets/img/bg-simracing.jpg", // ton fond actuel
+    "assets/img/bg-lm2.jpg"        // ton image LM2
+  ];
 
-  <!-- ✅ JS: vidéo aléatoire + marquage du lien actif -->
-  <script>
-    const LGBL_VIDEOS = ["3FpLX8IgXa8"]; // Ajoute d'autres IDs ici
+  const hero = document.querySelector(".hero");
+  if (hero) {
+    const randomImg = bgImages[Math.floor(Math.random() * bgImages.length)];
+    hero.style.backgroundImage = `url('${randomImg}')`;
+    hero.style.backgroundSize = "cover";
+    hero.style.backgroundPosition = "center";
+    hero.style.backgroundAttachment = "fixed";
+  }
+</script>
 
-    document.addEventListener('DOMContentLoaded', () => {
-      const randomBtn = document.getElementById('randomBtn');
-      const iframe = document.getElementById('liveFrame');
-      if (randomBtn && iframe) {
-        randomBtn.addEventListener('click', () => {
-          if (!LGBL_VIDEOS.length) {
-            alert('Ajoute des IDs de vidéos dans LGBL_VIDEOS.');
-            return;
-          }
-          const id = LGBL_VIDEOS[Math.floor(Math.random() * LGBL_VIDEOS.length)];
-          iframe.src = `https://www.youtube-nocookie.com/embed/${id}`;
-          iframe.focus();
-        });
-      }
-
-      // Marque le lien actif si même pathname
-      const path = location.pathname.split('/').pop() || 'index.html';
-      document.querySelectorAll('.links a[href]')
-        .forEach(a => { if (a.getAttribute('href') === path) a.setAttribute('aria-current', 'page'); });
-    });
   </script>
 
   <!-- Votre JS (déféré) -->
