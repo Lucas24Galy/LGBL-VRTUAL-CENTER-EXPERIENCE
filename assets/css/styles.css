@@ -241,3 +241,12 @@ footer { border-top: 1px solid var(--line); }
 .card--sim::before { background-image:url("assets/img/cards/simracing.jpg"); }
 .card--bar::before { background-image:url("assets/img/cards/bar.jpg"); }
 .card--detente::before { background-image:url("assets/img/cards/detente.jpg"); }
+
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(0,0,0,.55), rgba(0,0,0,.75));
+  z-index: 0;
+}
+.hero * { position: relative; z-index: 1; }
