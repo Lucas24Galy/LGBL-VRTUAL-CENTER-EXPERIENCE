@@ -3,168 +3,147 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>LGBL Virtual Experience — Tarifs</title>
+  <title>LGBL Virtual Experience – Tarifs</title>
   <style>
     body {
       font-family: 'Poppins', sans-serif;
-      background: #0b0b0b;
-      color: #fff;
+      background-color: #111;
+      color: #f2f2f2;
       margin: 0;
       padding: 0;
     }
     h1 {
       text-align: center;
-      font-size: 2.4rem;
-      margin-top: 50px;
       color: #d60000;
+      margin-top: 40px;
       text-transform: uppercase;
-      letter-spacing: 1px;
     }
-    .tarif-section {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      margin: 40px auto;
-      max-width: 1200px;
+    .category {
+      margin: 60px auto;
+      max-width: 1100px;
+    }
+    .category h2 {
+      border-left: 6px solid #d60000;
+      padding-left: 15px;
+      color: #fff;
+      margin-bottom: 20px;
+    }
+    .tarif-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
       gap: 20px;
     }
-    .tarif-card {
-      background: linear-gradient(135deg, #141414, #1e1e1e);
-      border: 1px solid rgba(255,255,255,0.1);
-      border-radius: 18px;
-      width: 270px;
-      padding: 25px;
-      box-shadow: 0 0 15px rgba(0,0,0,0.4);
-      transition: transform 0.3s, box-shadow 0.3s, border-color 0.3s;
+    .tarif-box {
+      background: linear-gradient(145deg, #1c1c1c, #151515);
+      border: 1px solid #222;
+      border-radius: 12px;
+      padding: 20px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.6);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
-    .tarif-card:hover {
+    .tarif-box:hover {
       transform: translateY(-6px);
-      border-color: #d60000;
-      box-shadow: 0 0 25px rgba(214,0,0,0.5);
+      box-shadow: 0 0 20px rgba(214,0,0,0.4);
     }
-    .tarif-card h2 {
+    .tarif-box h3 {
+      color: #d60000;
+      font-size: 1.4rem;
+      margin-bottom: 5px;
+    }
+    .tarif-box p {
+      margin: 4px 0;
+      color: #ddd;
+      font-size: 0.95rem;
+    }
+    .tarif-box .price {
       font-size: 1.3rem;
       color: #fff;
-      margin-bottom: 10px;
-      border-bottom: 2px solid #d60000;
-      padding-bottom: 5px;
+      font-weight: bold;
+      margin: 6px 0;
     }
-    .tarif-card h3 {
-      font-size: 1.1rem;
-      color: #d60000;
-      margin: 8px 0;
-    }
-    .tarif-card p {
-      margin: 4px 0;
-      font-size: 0.95rem;
-      color: #ddd;
-    }
-    .tarif-note {
+    .tarif-box .note {
       font-size: 0.85rem;
       color: #aaa;
-      margin-top: 10px;
-      border-top: 1px dashed rgba(255,255,255,0.2);
-      padding-top: 8px;
-    }
-    .category-title {
-      width: 100%;
-      text-align: center;
-      font-size: 1.8rem;
-      margin-top: 60px;
-      color: #00bfff;
-      letter-spacing: 1px;
-      border-bottom: 2px solid #d60000;
-      display: inline-block;
+      margin-top: 8px;
     }
   </style>
 </head>
 <body>
-  <h1>LGBL Virtual Experience — Grille Tarifaire</h1>
+  <h1>LGBL Virtual Experience – Grille Tarifaire</h1>
 
-  <div class="category-title">LIBRE – Châssis Standard</div>
-  <section class="tarif-section">
-    <div class="tarif-card">
-      <h2>10 min</h2>
-      <h3>€10</h3>
-      <p>Tarif unitaire</p>
-      <p>€1,00 / min</p>
-    </div>
-    <div class="tarif-card">
-      <h2>20 min</h2>
-      <h3>€18</h3>
-      <p>–2 € vs 2×10</p>
-      <p>€0,90 / min</p>
-    </div>
-    <div class="tarif-card">
-      <h2>30 min</h2>
-      <h3>€25</h3>
-      <p>–5 € vs 3×10</p>
-      <p>€0,83 / min</p>
-      <div class="tarif-note">Panier cible ~25–30€</div>
-    </div>
-    <div class="tarif-card">
-      <h2>Pack 3×10 min</h2>
-      <h3>€27</h3>
-      <p>–3 € (TOP VENTE)</p>
-      <p>€0,90 / min</p>
-    </div>
-    <div class="tarif-card">
-      <h2>Pack 5×10 min</h2>
-      <h3>€40</h3>
-      <p>–10 €</p>
-      <p>€0,80 / min</p>
+  <section class="category">
+    <h2>LIBRE – Châssis Standard</h2>
+    <div class="tarif-grid">
+      <div class="tarif-box">
+        <h3>Session – 10 min</h3>
+        <div class="price">€10</div>
+        <p>Tarif unitaire</p>
+        <p>€1,00 / min</p>
+      </div>
+      <div class="tarif-box">
+        <h3>Session – 20 min</h3>
+        <div class="price">€18</div>
+        <p>–2 € vs 2×10</p>
+        <p>€0,90 / min</p>
+      </div>
+      <div class="tarif-box">
+        <h3>Session – 30 min</h3>
+        <div class="price">€25</div>
+        <p>–5 € vs 3×10</p>
+        <p>€0,83 / min</p>
+        <div class="note">Panier cible ~25–30€</div>
+      </div>
+      <div class="tarif-box">
+        <h3>Pack 3×10 min</h3>
+        <div class="price">€27</div>
+        <p>–3 €</p>
+        <p>€0,90 / min</p>
+        <div class="note">TOP VENTE</div>
+      </div>
+      <div class="tarif-box">
+        <h3>Pack 5×10 min</h3>
+        <div class="price">€40</div>
+        <p>–10 €</p>
+        <p>€0,80 / min</p>
+      </div>
     </div>
   </section>
 
-  <div class="category-title">LIBRE – Châssis Dynamique Pro</div>
-  <section class="tarif-section">
-    <div class="tarif-card">
-      <h2>10 min</h2>
-      <h3>€12</h3>
-      <p>Tarif unitaire</p>
-      <p>€1,20 / min</p>
-    </div>
-    <div class="tarif-card">
-      <h2>30 min</h2>
-      <h3>€30</h3>
-      <p>–6 € vs 3×10</p>
-      <p>€1,00 / min</p>
-    </div>
-    <div class="tarif-card">
-      <h2>Pack 3×10 min</h2>
-      <h3>€33</h3>
-      <p>–3 € (TOP VENTE)</p>
-      <p>€1,10 / min</p>
-    </div>
-    <div class="tarif-card">
-      <h2>Pack 5×10 min</h2>
-      <h3>€50</h3>
-      <p>–10 €</p>
-      <p>€1,00 / min</p>
-    </div>
-  </section>
-
-  <div class="category-title">GRAND PRIX IA (BOTS)</div>
-  <section class="tarif-section">
-    <div class="tarif-card">
-      <h2>Standard</h2>
-      <h3>€32</h3>
-      <p>Qualifs + Course (30 min)</p>
-    </div>
-    <div class="tarif-card">
-      <h2>Pro</h2>
-      <h3>€36</h3>
-      <p>Qualifs + Course (30 min)</p>
-    </div>
-    <div class="tarif-card">
-      <h2>Standard</h2>
-      <h3>€55</h3>
-      <p>Qualifs + 2× Course (2×30 min)</p>
-    </div>
-    <div class="tarif-card">
-      <h2>Pro</h2>
-      <h3>€62</h3>
-      <p>Qualifs + 2× Course (2×30 min)</p>
+  <section class="category">
+    <h2>LIBRE – Châssis Dynamique Pro</h2>
+    <div class="tarif-grid">
+      <div class="tarif-box">
+        <h3>Session – 10 min</h3>
+        <div class="price">€12</div>
+        <p>Tarif unitaire</p>
+        <p>€1,20 / min</p>
+      </div>
+      <div class="tarif-box">
+        <h3>Session – 20 min</h3>
+        <div class="price">€22</div>
+        <p>–2 € vs 2×10</p>
+        <p>€1,10 / min</p>
+      </div>
+      <div class="tarif-box">
+        <h3>Session – 30 min</h3>
+        <div class="price">€30</div>
+        <p>–6 € vs 3×10</p>
+        <p>€1,00 / min</p>
+        <div class="note">Panier cible ~30–35€</div>
+      </div>
+      <div class="tarif-box">
+        <h3>Pack 3×10 min</h3>
+        <div class="price">€33</div>
+        <p>–3 €</p>
+        <p>€1,10 / min</p>
+        <div class="note">TOP VENTE</div>
+      </div>
+      <div class="tarif-box">
+        <h3>Pack 5×10 min</h3>
+        <div class="price">€50</div>
+        <p>–10 €</p>
+        <p>€1,00 / min</p>
+      </div>
     </div>
   </section>
 </body>
