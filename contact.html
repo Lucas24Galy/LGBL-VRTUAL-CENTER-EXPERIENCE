@@ -167,6 +167,15 @@
               <span>J’accepte d’être recontacté à propos de ma demande (voir <a href="confidentialite.html">confidentialité</a>).</span>
             </label>
             <button class="btn" type="submit">Envoyer</button>
+            <div class="help" id="alt-senders" style="display:none;margin-top:10px">
+              Problème d'ouverture ? Essayez :
+              <div style="display:flex;gap:8px;flex-wrap:wrap;margin-top:6px">
+                <button class="btn btn-outline" type="button" id="send-mailto">Client e‑mail (mailto)</button>
+                <button class="btn btn-outline" type="button" id="send-gmail">Gmail Web</button>
+                <button class="btn btn-outline" type="button" id="send-outlook">Outlook Web</button>
+              </div>
+              <p class="help" id="debug-link" style="margin-top:6px;word-break:break-all"></p>
+            </div>
             <p id="form-help" class="help">Si l’application mail ne s’ouvre pas, écrivez‑nous à <a href="mailto:lucasgaly.47510@gmail.com">lucasgaly.47510@gmail.com</a> ou appelez le <a href="tel:+33672392264">06 72 39 22 64</a>.</p>
           </form>
 
@@ -247,17 +256,13 @@
       const params = new URLSearchParams(location.search);
       const sujetUrl = params.get('sujet');
       const prefill = sessionStorage.getItem('lgbl_prefill');
-
       const topic = document.getElementById('topic');
       const msg   = document.getElementById('message');
-
-      // Sujet depuis l'URL
       if (sujetUrl && topic) {
         for (const opt of topic.options) {
           if (opt.text.toLowerCase().includes(sujetUrl.toLowerCase())) { opt.selected = true; break; }
         }
       }
-      // Détails depuis sessionStorage (JSON)
       try{
         if (prefill && msg) {
           const data = JSON.parse(prefill);
@@ -265,40 +270,73 @@
           msg.value = (msg.value ? msg.value + '\n' : '') + lines;
         }
       }catch(_){/* ignore */}
-
-      // Focus direct sur le formulaire si #form dans l'URL
       if (location.hash === '#form' && form) form.scrollIntoView({behavior:'smooth'});
     })();
 
-    // -------- Envoi par e‑mail (mailto:) robuste --------
+    // -------- Composition des liens (mailto / Gmail / Outlook) --------
+    function buildPayload(){
+      const form = document.getElementById('form');
+      const data = new FormData(form);
+      const to = 'lucasgaly.47510@gmail.com';
+      const subject = `[Contact] ${data.get('Sujet')||''}`.trim();
+      const lines = [];
+      for (const [k,v] of data.entries()) { lines.push(`${k}: ${v}`); }
+      const bodyRaw = lines.join('\r\n'); // utiliser CRLF
+      return {to, subject, bodyRaw};
+    }
+    function links(){
+      const {to, subject, bodyRaw} = buildPayload();
+      const su = encodeURIComponent(subject);
+      const bo = encodeURIComponent(bodyRaw);
+      return {
+        mailto: `mailto:${to}?subject=${su}&body=${bo}`,
+        gmail: `https://mail.google.com/mail/?view=cm&fs=1&to=${encodeURIComponent(to)}&su=${su}&body=${bo}`,
+        outlook: `https://outlook.office.com/mail/deeplink/compose?to=${encodeURIComponent(to)}&subject=${su}&body=${bo}`
+      };
+    }
+
+    // -------- Envoi & gestion des cas où le navigateur ouvre Google --------
     (function(){
       const form = document.getElementById('form');
-      if(!form) return;
-      form.addEventListener('submit', function(e){
-        e.preventDefault();
-        const data = new FormData(form);
-        // Validation légère
-        const required = ['Nom','Email','Sujet','Message'];
-        for (const r of required){ if(!(data.get(r)||'').trim()){ alert('Merci de remplir tous les champs obligatoires.'); return; } }
-        if(!document.getElementById('consent').checked){ alert('Merci d\'accepter d\'être recontacté.'); return; }
+      const alt = document.getElementById('alt-senders');
+      const debug = document.getElementById('debug-link');
+      const btnMailto = document.getElementById('send-mailto');
+      const btnGmail = document.getElementById('send-gmail');
+      const btnOutlook = document.getElementById('send-outlook');
 
-        const sujet = encodeURIComponent(`[Contact] ${data.get('Sujet')}`);
-        const lignes = [];
-        for (const [k,v] of data.entries()) { lignes.push(`${k}: ${v}`); }
-        const corps = encodeURIComponent(lignes.join('\n'));
-        const mailto = `mailto:lucasgaly.47510@gmail.com?subject=${sujet}&body=${corps}`;
+      function openMail(kind){
+        const l = links();
+        const url = kind==='gmail'? l.gmail : kind==='outlook'? l.outlook : l.mailto;
+        // pour mailto on essaye _self, sinon nouvelle fenêtre
+        if(kind==='mailto'){
+          window.location.href = l.mailto;
+        } else {
+          window.open(url, '_blank');
+        }
+        // afficher alternatives/debug
+        if (alt) {
+          alt.style.display = 'block';
+          if (debug) debug.innerHTML = `<span class="muted">Lien direct :</span> <code>${url}</code>`;
+        }
+      }
 
-        // Tentative d'ouverture du client mail
-        window.location.href = mailto;
-        // Filet de sécu : proposer copie des infos si l'appli mail ne s'ouvre pas
-        setTimeout(()=>{
-          if(confirm('Si votre application e‑mail ne s\'est pas ouverte, souhaitez‑vous copier votre message ?')){
-            navigator.clipboard.writeText(decodeURIComponent(corps)).then(()=>{
-              alert('Contenu copié. Envoyez‑le à : lucasgaly.47510@gmail.com');
-            }).catch(()=>{});
+      if (form) {
+        form.addEventListener('submit', function(e){
+          e.preventDefault();
+          // Validation légère
+          const data = new FormData(form);
+          for (const k of ['Nom','Email','Sujet','Message']){
+            if(!(data.get(k)||'').trim()){ alert('Merci de remplir tous les champs obligatoires.'); return; }
           }
-        }, 1200);
-      });
+          if(!document.getElementById('consent').checked){ alert("Merci d'accepter d'être recontacté."); return; }
+          openMail('mailto');
+          // Filet de sécu: proposer Gmail/Outlook si rien ne s'est ouvert
+          setTimeout(()=>{ if(alt && alt.style.display!=='block'){ alt.style.display='block'; } }, 1200);
+        });
+      }
+      if(btnMailto) btnMailto.addEventListener('click', ()=>openMail('mailto'));
+      if(btnGmail) btnGmail.addEventListener('click', ()=>openMail('gmail'));
+      if(btnOutlook) btnOutlook.addEventListener('click', ()=>openMail('outlook'));
     })();
   </script>
 
