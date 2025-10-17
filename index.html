@@ -3,20 +3,20 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>LGBL Virtual Experience Center – Accueil</title>
+  <title>LGBL VIRTUAL CENTER EXPERIENCE – Accueil</title>
 
   <!-- Google Search Console -->
   <meta name="google-site-verification" content="wlRHbf8WsgIWybuijJHohaG3y2jh4_bokztoDcf79aU" />
 
-  <!-- SEO de base -->
-  <meta name="description" content="Vivez la course comme un pro — simulateurs, bar et coin détente. Pas un simple jeu : de la simulation pure. Ouverture prochaine." />
+  <!-- SEO -->
+  <meta name="description" content="LGBL VIRTUAL CENTER EXPERIENCE : simulateurs de course pro, bar & coin détente. Pas un simple jeu : de la simulation pure. Ouverture prochaine." />
   <meta name="robots" content="index,follow" />
   <link rel="canonical" href="https://lucas24galy.github.io/LGBL-VRTUAL-CENTER-EXPERIENCE/index.html" />
 
   <!-- Open Graph -->
   <meta property="og:type" content="website" />
-  <meta property="og:site_name" content="LGBL Virtual Experience" />
-  <meta property="og:title" content="LGBL Virtual Experience Center – Accueil" />
+  <meta property="og:site_name" content="LGBL VIRTUAL CENTER EXPERIENCE" />
+  <meta property="og:title" content="LGBL VIRTUAL CENTER EXPERIENCE – Accueil" />
   <meta property="og:description" content="Simulateurs de course, bar & coin détente. Vivez la course comme un pro." />
   <meta property="og:url" content="https://lucas24galy.github.io/LGBL-VRTUAL-CENTER-EXPERIENCE/index.html" />
   <meta property="og:image" content="assets/img/logo-lgbl.png" />
@@ -32,21 +32,19 @@
   <style>
     :root{
       --line: rgba(255,255,255,.08);
-      --brand-rose:#ff2d6f;
-      --brand-cyan:#00aaff;
+      --brand-rose:#ff2d6f; --brand-cyan:#00aaff;
       --bg:#0a0b0d; --panel:#0f1115; --text:#e9ecef; --muted:#a9b3bb;
     }
     html{scroll-behavior:smooth}
-    body{background:var(--bg);color:var(--text);font-family:Poppins,system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial;line-height:1.75}
+    body{background:var(--bg);color:var(--text);font-family:Poppins,system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial;line-height:1.8}
 
-    /* Layout de base */
     .container{max-width:1150px;margin:0 auto;padding:0 20px}
     @media (max-width:480px){.container{padding:0 12px}}
 
-    /* Header responsive */
+    /* Header */
     header{position:sticky;top:0;z-index:60;background:rgba(10,11,13,.7);backdrop-filter:saturate(120%) blur(8px);border-bottom:1px solid var(--line)}
     .nav{display:flex;align-items:center;justify-content:space-between;height:64px}
-    .logo{display:inline-flex;align-items:center;gap:.6rem;color:#fff;text-decoration:none;font-weight:700}
+    .logo{display:inline-flex;align-items:center;gap:.6rem;color:#fff;text-decoration:none;font-weight:800;letter-spacing:.5px}
     .logo img{height:42px;border-radius:50%;transition:transform .3s ease,filter .3s ease}
     .logo img:hover{transform:scale(1.06);filter:drop-shadow(0 0 8px rgba(0,150,255,.5))}
 
@@ -56,7 +54,6 @@
     nav .links a::after{content:"";position:absolute;left:12px;right:12px;bottom:4px;height:2px;transform:scaleX(0);transform-origin:left;background:linear-gradient(90deg,var(--brand-rose),var(--brand-cyan));transition:transform .25s ease}
     nav .links a:hover::after,nav .links a[aria-current="page"]::after{transform:scaleX(1)}
 
-    /* Burger */
     .mobile-toggle{display:none;background:transparent;border:1px solid var(--line);color:#cfd6dc;padding:6px 10px;border-radius:8px}
     @media (max-width:900px){
       .mobile-toggle{display:inline-block}
@@ -69,26 +66,7 @@
     .alert{border-radius:10px;padding:.7rem 1rem;border:1px solid var(--line)}
     .alert.info{background:#0e1b22;color:#cfefff;border-color:rgba(0,170,255,.25)}
 
-    /* Hero + overlay + alternance d'images */
-    .hero{position:relative;overflow:hidden;padding:78px 0;border-bottom:1px solid var(--line);background:#0b0d11}
-    .hero::before{content:"";position:absolute;inset:0;background:
-      radial-gradient(1200px 400px at 30% -20%, rgba(255,0,78,.22), transparent 60%),
-      radial-gradient(1000px 400px at 80% -30%, rgba(0,170,255,.18), transparent 60%);z-index:0}
-    .hero::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.35),rgba(0,0,0,.65));z-index:1}
-    .hero > .container{position:relative;z-index:2}
-    .hero h1{font-family:'Orbitron',system-ui;font-size:clamp(32px,5.6vw,52px);letter-spacing:1px;margin:0 0 .6rem}
-    .subtitle{color:var(--muted);margin:.2rem 0 1.1rem}
-
-    /* Tags (bulles) + effet */
-    .tag{display:inline-block;font-size:.9rem;line-height:1;border:1px solid var(--line);padding:.5rem .7rem;border-radius:999px;background:rgba(0,170,255,.08);transition:transform .18s ease, box-shadow .18s ease}
-    .tag:hover{transform:translateY(-2px);box-shadow:0 10px 24px rgba(0,170,255,.14)}
-    .tag + .tag{margin-left:.4rem}
-
-    .btn{display:inline-block;background:linear-gradient(90deg,var(--brand-rose),var(--brand-cyan));padding:.75rem 1.05rem;border-radius:999px;color:#fff;text-decoration:none;font-weight:700}
-    .btn:hover{box-shadow:0 8px 22px rgba(0,170,255,.2)}
-    .btn.btn-outline{background:transparent;border:1px solid rgba(0,170,255,.35)}
-
-    /* Sections / grilles / cartes */
+    /* Sections */
     .section{padding:50px 0;border-top:1px solid var(--line)}
     .grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
     .grid-2{display:grid;grid-template-columns:repeat(2,1fr);gap:24px}
@@ -97,7 +75,21 @@
     .card{background:var(--panel);border:1px solid var(--line);border-radius:16px;padding:20px;transition:transform .18s ease, box-shadow .18s ease}
     .card.hoverable:hover{transform:translateY(-3px);box-shadow:0 16px 36px rgba(0,0,0,.35)}
 
-    /* Cartes avec image de fond (sim/bar/détente) */
+    /* Hero */
+    .hero{position:relative;overflow:hidden;padding:64px 0;border-bottom:1px solid var(--line);background:#0b0d11}
+    .hero::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.3),rgba(0,0,0,.62));z-index:1}
+    .hero > .container{position:relative;z-index:2}
+    .hero h1{font-family:'Orbitron',system-ui;font-size:clamp(28px,5.6vw,44px);letter-spacing:1px;margin:0 0 .6rem;text-transform:uppercase}
+    .subtitle{color:var(--muted);margin:.3rem 0 1.2rem}
+
+    /* Tags */
+    .tag{display:inline-block;font-size:.9rem;line-height:1;border:1px solid var(--line);padding:.5rem .7rem;border-radius:999px;background:rgba(0,170,255,.08);transition:transform .18s ease, box-shadow .18s ease}
+    .tag:hover{transform:translateY(-2px);box-shadow:0 10px 24px rgba(0,170,255,.14)}
+    .btn{display:inline-block;background:linear-gradient(90deg,var(--brand-rose),var(--brand-cyan));padding:.75rem 1.05rem;border-radius:999px;color:#fff;text-decoration:none;font-weight:700}
+    .btn:hover{box-shadow:0 8px 22px rgba(0,170,255,.2)}
+    .btn.btn-outline{background:transparent;border:1px solid rgba(0,170,255,.35)}
+
+    /* Cards with background */
     .card--bg{position:relative;isolation:isolate;overflow:hidden;min-height:190px}
     .card--bg::before{content:"";position:absolute;inset:0;background-size:cover;background-position:center;transform:scale(1.02);z-index:-2}
     .card--bg::after{content:"";position:absolute;inset:0;background:
@@ -108,19 +100,24 @@
     .card--bar::before{background-image:url("assets/img/cards/bar.jpg")}
     .card--detente::before{background-image:url("assets/img/cards/detente.jpg")}
 
-    /* LIVE header badge */
+    /* LIVE badge */
     .live-header{display:inline-flex;align-items:center;gap:8px;font-weight:700;color:#ff4a4a;font-family:'Orbitron',sans-serif;letter-spacing:1px;margin-bottom:10px}
     .live-dot{width:10px;height:10px;border-radius:50%;background:#ff0000;box-shadow:0 0 10px rgba(255,0,0,.6);animation:pulseLive 1.4s infinite ease-in-out}
     @keyframes pulseLive{0%,100%{transform:scale(1);opacity:1}50%{transform:scale(1.4);opacity:.5}}
 
-    /* Horaires */
+    /* Hours */
     .hours{display:grid;grid-template-columns:1fr 1fr;gap:18px}
     @media (max-width:700px){.hours{grid-template-columns:1fr}}
     .hours .day{display:flex;justify-content:space-between;align-items:center;background:#0c0f14;border:1px solid var(--line);border-radius:12px;padding:12px 14px}
     .hours .day.current{border-color:rgba(0,170,255,.45);box-shadow:0 0 0 2px rgba(0,170,255,.15) inset}
-    .hours .label{color:#cfd6dc;font-weight:600}
+    .hours .label{color:#cfd6dc;font-weight:700}
     .hours .time{color:#e9f3ff}
     .note{color:#a9b3bb;font-size:.95rem;margin-top:8px}
+
+    /* Partners placeholder */
+    .partners{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+    @media (max-width:900px){.partners{grid-template-columns:repeat(2,1fr)}}
+    .partner{height:72px;border:1px dashed rgba(255,255,255,.18);border-radius:12px;display:flex;align-items:center;justify-content:center;color:#a9b3bb}
 
     /* Footer */
     .footer-grid{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:22px;padding:26px 0}
@@ -136,7 +133,7 @@
     <div class="container nav">
       <a class="logo" href="index.html" aria-label="LGBL Accueil">
         <img src="assets/img/logo-lgbl.png" alt="Logo LGBL" loading="lazy" decoding="async" />
-        <span style="font-size:1.05rem;letter-spacing:.5px">LGBL Virtual Experience</span>
+        <span>LGBL VIRTUAL CENTER EXPERIENCE</span>
       </a>
       <nav aria-label="Navigation principale">
         <button class="mobile-toggle" id="mobileToggle" aria-expanded="false" aria-controls="mainNav">Menu</button>
@@ -164,11 +161,28 @@
   </section>
 
   <main id="main" role="main">
+    <!-- Horaires (remontés en haut) -->
+    <section class="section" aria-labelledby="hours-title">
+      <div class="container">
+        <h2 id="hours-title">🕒 Horaires d’ouverture</h2>
+        <div class="hours" id="hoursList" style="margin-top:12px">
+          <div class="day" data-day="1"><span class="label">Lundi</span><span class="time">Fermé</span></div>
+          <div class="day" data-day="2"><span class="label">Mardi</span><span class="time">Fermé <span class="note">/ réservation</span></span></div>
+          <div class="day" data-day="3"><span class="label">Mercredi</span><span class="time">13:00 – 22:30</span></div>
+          <div class="day" data-day="4"><span class="label">Jeudi</span><span class="time">14:00 – 01:00</span></div>
+          <div class="day" data-day="5"><span class="label">Vendredi ⭐</span><span class="time">14:00 – 01:00</span></div>
+          <div class="day" data-day="6"><span class="label">Samedi</span><span class="time">14:00 – 01:00</span></div>
+          <div class="day" data-day="0"><span class="label">Dimanche</span><span class="time">14:00 – 22:30</span></div>
+        </div>
+        <p class="note">* ⭐ Vendredi : soirées événements. Les horaires peuvent varier les jours spéciaux.</p>
+      </div>
+    </section>
+
     <!-- Hero -->
     <section class="hero" aria-labelledby="hero-title">
       <div class="container">
-        <h1 id="hero-title">Vivez la course comme un pro</h1>
-        <p class="subtitle">Pas juste un simple jeu — <strong>de la simulation pure</strong>.</p>
+        <h1 id="hero-title">LGBL VIRTUAL CENTER EXPERIENCE</h1>
+        <p class="subtitle">Pas un simple jeu — <strong>de la simulation pure</strong>.</p>
         <div aria-label="étiquettes" style="display:flex;gap:.55rem;flex-wrap:wrap;margin:.75rem 0 1rem">
           <span class="tag">Simulateurs dynamiques</span>
           <span class="tag">Volants F1</span>
@@ -183,6 +197,51 @@
       </div>
     </section>
 
+    <!-- Informations directes -->
+    <section class="section" aria-labelledby="infos-directes">
+      <div class="container grid-2">
+        <div class="card hoverable">
+          <h2 id="infos-directes">Informations</h2>
+          <ul style="margin:0;padding-left:1.1rem;line-height:1.95">
+            <li>Téléphone : <a href="tel:+33672392264">06.72.39.22.64</a></li>
+            <li>Email : <a href="mailto:lucasgaly.47510@gmail.com">lucasgaly.47510@gmail.com</a></li>
+          </ul>
+          <p class="note" style="margin-top:.6rem">Conception : <strong>Lucas Galy</strong></p>
+        </div>
+        <aside class="card hoverable" aria-label="Statut">
+          <h3>Statut</h3>
+          <ul style="margin:0;padding-left:1.1rem;line-height:1.95">
+            <li><strong>Lucas Galy</strong></li>
+            <li>Chef de l’établissement</li>
+            <li>21 ans</li>
+            <li>Entreprise en cours de création</li>
+          </ul>
+        </aside>
+      </div>
+    </section>
+
+    <!-- Pourquoi cette salle ? -->
+    <section class="section" aria-labelledby="pourquoi-title">
+      <div class="container grid-2">
+        <div>
+          <h2 id="pourquoi-title">Pourquoi cette salle de simulation ?</h2>
+          <p class="small" style="font-size:1rem">
+            L’objectif est de faire découvrir un <strong>nouveau divertissement</strong> dans une zone où l’offre d’activités est limitée — et de <strong>donner le goût du sim racing</strong> aussi bien aux plus jeunes qu’aux adultes.
+            Pas un simple jeu : une <strong>véritable simulation</strong> avec matériel professionnel, ambiance paddock, et un cadre convivial (bar & coin détente).
+          </p>
+          <div style="display:flex;gap:.55rem;flex-wrap:wrap;margin-top:.5rem">
+            <span class="tag">Matériel pro</span><span class="tag">Coaching</span><span class="tag">Esprit fair-play</span>
+          </div>
+        </div>
+        <aside class="card hoverable" aria-label="Pourquoi LGBL ?">
+          <h3>Pourquoi LGBL ?</h3>
+          <p class="small" style="font-size:1rem">
+            L’idée vient principalement de <strong>Lucas Galy</strong>. Le projet a été enrichi par les contributions de <strong>Baptiste Lecerf</strong> (concept & formats) et <strong>Noé Pelletier</strong> (communication & publicité).
+          </p>
+        </aside>
+      </div>
+    </section>
+
     <!-- Features avec image de fond -->
     <section class="features" aria-labelledby="features-title" style="background-image:url('assets/img/bg-simracing.jpg');background-size:cover;background-position:center;background-attachment:fixed;">
       <div class="container">
@@ -190,22 +249,20 @@
         <div class="grid-3">
           <article class="card card--bg card--sim hoverable" aria-labelledby="simracing-title">
             <h3 id="simracing-title">Sim Racing Pro</h3>
-            <ul style="margin:0;padding-left:1.1rem;line-height:1.9">
+            <ul style="margin:0;padding-left:1.1rem;line-height:1.95">
               <li>Simulateurs <strong>statiques et dynamiques</strong></li>
               <li><strong>Volant type F1</strong> &amp; <strong>pédalier pro</strong></li>
               <li><strong>Cockpit pro</strong> (structure rigide)</li>
               <li><strong>Simple écran</strong> pour une immersion totale</li>
             </ul>
           </article>
-
           <article class="card card--bg card--bar hoverable" aria-labelledby="bar-title">
             <h3 id="bar-title">Bar</h3>
             <p>Boissons soft &amp; <strong>snacking sucré</strong> pour se restaurer entre deux sessions.</p>
           </article>
-
           <article class="card card--bg card--detente hoverable" aria-labelledby="detente-title">
             <h3 id="detente-title">Détente &amp; Ambiance</h3>
-            <ul style="margin:0;padding-left:1.1rem;line-height:1.9">
+            <ul style="margin:0;padding-left:1.1rem;line-height:1.95">
               <li><strong>Fond sonore</strong> ambiance paddock</li>
               <li><strong>Coin console</strong> pour patienter</li>
               <li><strong>Baby-foot</strong> pour le fun</li>
@@ -220,7 +277,7 @@
       <div class="container">
         <h2 id="live-title">🎥 LIVE – Diffusions</h2>
         <div class="live-header"><span class="live-dot"></span><span>EN DIRECT</span></div>
-        <p class="small">Si un live est en cours, il s’affiche automatiquement. À défaut, vous pouvez lancer une vidéo aléatoire de la chaîne.</p>
+        <p class="small">Si un live est en cours, il s’affiche automatiquement. Vous pouvez aussi lancer une vidéo aléatoire de la chaîne.</p>
 
         <div class="video-embed" style="margin-top:.8rem;border-radius:14px;overflow:hidden;border:1px solid var(--line)">
           <iframe
@@ -243,48 +300,17 @@
       </div>
     </section>
 
-    <!-- Horaires -->
-    <section class="section" aria-labelledby="hours-title">
+    <!-- Partenaires (placeholder) -->
+    <section class="section" aria-labelledby="partners-title">
       <div class="container">
-        <h2 id="hours-title">🕒 Horaires d’ouverture</h2>
-        <div class="hours" id="hoursList" style="margin-top:12px">
-          <div class="day" data-day="1"><span class="label">Lundi</span><span class="time">Fermé</span></div>
-          <div class="day" data-day="2"><span class="label">Mardi</span><span class="time">Fermé <span class="note">/ réservation</span></span></div>
-          <div class="day" data-day="3"><span class="label">Mercredi</span><span class="time">13:00 – 22:30</span></div>
-          <div class="day" data-day="4"><span class="label">Jeudi</span><span class="time">14:00 – 01:00</span></div>
-          <div class="day" data-day="5"><span class="label">Vendredi</span><span class="time">14:00 – 01:00</span></div>
-          <div class="day" data-day="6"><span class="label">Samedi</span><span class="time">14:00 – 01:00</span></div>
-          <div class="day" data-day="0"><span class="label">Dimanche</span><span class="time">14:00 – 22:30</span></div>
+        <h2 id="partners-title">Partenaires</h2>
+        <div class="partners" style="margin-top:12px">
+          <div class="partner">Logo partenaire</div>
+          <div class="partner">Logo partenaire</div>
+          <div class="partner">Logo partenaire</div>
+          <div class="partner">Logo partenaire</div>
         </div>
-        <p class="note">* Les horaires peuvent varier les jours d’événements spéciaux. Contactez-nous pour confirmer.</p>
-      </div>
-    </section>
-
-    <!-- Infos pratiques -->
-    <section class="section" aria-labelledby="infos-title">
-      <div class="container grid-2">
-        <div>
-          <h2 id="infos-title">ℹ️ Infos pratiques</h2>
-          <ul style="margin:0;padding-left:1.1rem;line-height:1.95">
-            <li>Email : <a href="mailto:lucasgaly.47510@gmail.com">lucasgaly.47510@gmail.com</a></li>
-            <li>Téléphone : <a href="tel:+33672392264">06 72 39 22 64</a></li>
-            <li>Statut : centre en préparation — ouverture à venir</li>
-          </ul>
-          <div style="margin-top:.9rem;display:flex;gap:.6rem;flex-wrap:wrap">
-            <a class="btn" href="mailto:lucasgaly.47510@gmail.com">Être prévenu de l’ouverture</a>
-            <a class="btn btn-outline" href="tarifs.html">Consulter les tarifs</a>
-          </div>
-        </div>
-        <aside class="card hoverable" aria-label="Pourquoi nous ?">
-          <h3>Pourquoi LGBL ?</h3>
-          <p class="small">Pas un simple jeu : une véritable <strong>simulation</strong>, avec matériel professionnel, ambiance paddock et un cadre convivial (bar & coin détente).</p>
-          <div style="display:flex;gap:.55rem;flex-wrap:wrap">
-            <span class="tag">Setup rigide</span>
-            <span class="tag">Volant F1</span>
-            <span class="tag">Pédalier hydraulique</span>
-            <span class="tag">Baby-foot</span>
-          </div>
-        </aside>
+        <p class="note">Espace réservé – ajout des partenaires prochainement.</p>
       </div>
     </section>
   </main>
@@ -295,9 +321,9 @@
       <div>
         <div class="logo" style="display:flex;align-items:center;gap:.5rem">
           <img src="assets/img/logo-lgbl.png" alt="Logo LGBL" style="height:22px;border-radius:50%" loading="lazy" decoding="async" />
-          <span>LGBL Virtual Experience</span>
+          <span>LGBL VIRTUAL CENTER EXPERIENCE</span>
         </div>
-        <p class="copy">© 2025 LGBL Virtual Experience Center — Conception : Lucas Galy</p>
+        <p class="copy">© 2025 LGBL VIRTUAL CENTER EXPERIENCE — Conception : Lucas Galy</p>
       </div>
       <div>
         <h4>Le site</h4>
@@ -310,7 +336,7 @@
       <div>
         <h4>Contact</h4>
         <p>
-          <a href="mailto:lucasgaly.47510@gmail.com">contact@lgbl-experience.fr</a><br />
+          <a href="mailto:lucasgaly.47510@gmail.com">lucasgaly.47510@gmail.com</a><br />
           <a href="tel:+33672392264">06 72 39 22 64</a>
         </p>
       </div>
@@ -330,7 +356,7 @@
   {
     "@context": "https://schema.org",
     "@type": "SportsActivityLocation",
-    "name": "LGBL Virtual Experience Center",
+    "name": "LGBL VIRTUAL CENTER EXPERIENCE",
     "url": "https://lucas24galy.github.io/LGBL-VRTUAL-CENTER-EXPERIENCE/",
     "logo": "https://lucas24galy.github.io/LGBL-VRTUAL-CENTER-EXPERIENCE/assets/img/logo-lgbl.png",
     "description": "Centre de simulation de course avec bar et coin détente. Ouverture prochaine.",
@@ -342,7 +368,7 @@
 
   <!-- Scripts -->
   <script>
-    // Burger menu
+    // Burger
     (function(){
       const btn = document.getElementById('mobileToggle');
       const menu = document.getElementById('mainNav');
@@ -353,14 +379,11 @@
       });
     })();
 
-    // Alternance d'image de fond dans le hero (LM2 / simracing) au chargement
+    // Alternance d'image de fond du hero (LM2 / simracing) au chargement
     (function(){
       const hero = document.querySelector('.hero');
       if(!hero) return;
-      const bgImages = [
-        'assets/img/bg-simracing.jpg',
-        'assets/img/bg-lm2.jpg'
-      ];
+      const bgImages = ['assets/img/bg-simracing.jpg','assets/img/bg-lm2.jpg'];
       const img = bgImages[Math.floor(Math.random()*bgImages.length)];
       hero.style.backgroundImage = `url('${img}')`;
       hero.style.backgroundSize = 'cover';
@@ -368,11 +391,12 @@
       hero.style.backgroundAttachment = 'fixed';
     })();
 
-    // YouTube: bouton vidéo aléatoire (évite répétition + cache-buster)
+    // YouTube : vidéos aléatoires (tes 3 liens)
     (function(){
       const LGBL_VIDEOS = [
-        "3FpLX8IgXa8"
-        // Ajoute ici d'autres IDs de vidéos publiques
+        "_cHsgCjn3U8",
+        "KoLfHUJlgQo",
+        "qMpRpCHy1y0"
       ];
       const randomBtn = document.getElementById("randomBtn");
       const iframe = document.getElementById("liveFrame");
@@ -404,18 +428,17 @@
       });
     })();
 
-    // Horaires: mise en évidence du jour courant (Europe/Paris)
+    // Horaires : surbrillance du jour courant (Europe/Paris)
     (function(){
       const now = new Date();
       const day = now.getDay(); // 0=dimanche ... 6=samedi
-      const nodes = document.querySelectorAll('.hours .day');
-      nodes.forEach(n => {
+      document.querySelectorAll('.hours .day').forEach(n=>{
         const d = parseInt(n.getAttribute('data-day'),10);
         if(d === day){ n.classList.add('current'); }
       });
     })();
 
-    // Marquer le lien actif si même pathname
+    // Lien actif
     (function(){
       const path = location.pathname.split('/').pop() || 'index.html';
       document.querySelectorAll('.links a[href]')
@@ -424,11 +447,6 @@
   </script>
 
   <script src="assets/js/main.js" defer></script>
-
-  <noscript>
-    <div class="container" style="padding:1rem">
-      <p class="alert info">Pour l’expérience complète (menus, lecteur vidéo), activez JavaScript.</p>
-    </div>
-  </noscript>
+  <noscript><div class="container" style="padding:1rem"><p class="alert info">Pour l’expérience complète (menus, lecteur vidéo), activez JavaScript.</p></div></noscript>
 </body>
 </html>
