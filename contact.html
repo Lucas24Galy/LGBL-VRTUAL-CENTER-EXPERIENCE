@@ -5,19 +5,18 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>LGBL Virtual Experience Center – Contact & Accès</title>
 
-  <!-- SEO de base -->
-  <meta name="description" content="Contactez LGBL Virtual Experience Center à Agen : téléphone, email, réseaux, carte. Réservations, privatisations et questions." />
+  <!-- SEO -->
+  <meta name="description" content="Contactez LGBL Virtual Experience Center à Agen : téléphone, e‑mail, réseaux, carte. Réservations, privatisations et questions." />
   <meta name="robots" content="index,follow" />
   <link rel="canonical" href="https://lucas24galy.github.io/LGBL-VRTUAL-CENTER-EXPERIENCE/contact.html" />
 
-  <!-- Open Graph / Twitter -->
+  <!-- Open Graph -->
   <meta property="og:type" content="website" />
-  <meta property="og:site_name" content="LGBL Virtual Experience" />
+  <meta property="og:site_name" content="LGBL VIRTUAL CENTER EXPERIENCE" />
   <meta property="og:title" content="LGBL – Contact & Accès" />
-  <meta property="og:description" content="Téléphone, email, réseaux, carte Google. Privatisations, réservations, questions." />
+  <meta property="og:description" content="Téléphone, e‑mail, réseaux, carte Google. Privatisations, réservations, questions." />
   <meta property="og:url" content="https://lucas24galy.github.io/LGBL-VRTUAL-CENTER-EXPERIENCE/contact.html" />
   <meta property="og:image" content="assets/img/logo-lgbl.png" />
-  <meta name="twitter:card" content="summary" />
 
   <link rel="icon" type="image/png" href="assets/img/logo-lgbl.png" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -71,7 +70,7 @@
   </style>
 </head>
 <body>
-  <a href="#main" class="sr-only" style="position:absolute;left:-9999px">Aller au contenu</a>
+  <a href="#form" class="sr-only" style="position:absolute;left:-9999px">Aller au formulaire</a>
 
   <header role="banner">
     <div class="container nav">
@@ -101,10 +100,10 @@
     </section>
 
     <!-- Coordonnées rapides -->
-    <section class="section">
+    <section class="section" aria-labelledby="quick">
       <div class="container grid-3">
         <article class="card">
-          <h3>Nous appeler</h3>
+          <h3 id="quick">Nous appeler</h3>
           <p class="big">06 72 39 22 64</p>
           <a class="btn" href="tel:+33672392264">Appeler maintenant</a>
         </article>
@@ -112,26 +111,26 @@
         <article class="card">
           <h3>Nous écrire</h3>
           <p class="big">lucasgaly.47510@gmail.com</p>
-          <a class="btn btn-outline" href="mailto:lucasgaly.47510@gmail.com?subject=Infos%20LGBL%20Virtual%20Experience">Envoyer un email</a>
+          <a class="btn btn-outline" href="mailto:lucasgaly.47510@gmail.com?subject=Infos%20LGBL%20Virtual%20Experience">Envoyer un e‑mail</a>
         </article>
 
         <article class="card">
           <h3>Réseaux</h3>
           <p><a href="https://www.instagram.com/lgbl_virtual_center_experience/" target="_blank" rel="noopener">Instagram</a></p>
-          <p><a href="https://www.tiktok.com/@lgbl_virtual_center_experience" target="_blank" rel="noopener">TikTok</a></p>
+          <p><a href="https://www.tiktok.com/@lucasgaly1" target="_blank" rel="noopener">TikTok</a></p>
           <p><a href="https://www.youtube.com/@LucasGaly24/streams" target="_blank" rel="noopener">YouTube (Live & Replays)</a></p>
         </article>
       </div>
     </section>
 
-    <!-- Formulaire de contact (sans backend) -->
+    <!-- Formulaire de contact (mailto robuste + pré‑remplissage) -->
     <section class="section" aria-labelledby="form-title">
       <div class="container grid-2">
         <div>
           <h2 id="form-title">📬 Formulaire</h2>
-          <p class="small">Sur GitHub Pages, il n’y a pas de serveur. Ce formulaire utilise <code>mailto:</code> (ouvre votre messagerie). Option : branchez un service comme <a href="https://formspree.io" target="_blank" rel="noopener">Formspree</a> (voir commentaire dans le code).</p>
+          <p class="small">L’envoi se fait via votre application e‑mail (compatibles : Outlook, Gmail, Mail). Pas de serveur requis sur GitHub Pages.</p>
 
-          <form id="contactForm" action="mailto:lucasgaly.47510@gmail.com" method="POST" enctype="text/plain">
+          <form id="form" name="contact" aria-describedby="form-help">
             <div class="form-row">
               <div>
                 <label for="name">Nom / Prénom</label>
@@ -155,36 +154,32 @@
                   <option>Réservation</option>
                   <option>Privatisation</option>
                   <option>eSport / Tournoi</option>
+                  <option>Media (photo / clip)</option>
                 </select>
               </div>
             </div>
             <div>
               <label for="message">Message</label>
-              <textarea id="message" name="Message" required placeholder="Dites-nous tout…"></textarea>
+              <textarea id="message" name="Message" required placeholder="Dites‑nous tout…"></textarea>
             </div>
             <label class="consent">
-              <input type="checkbox" required />
+              <input id="consent" type="checkbox" required />
               <span>J’accepte d’être recontacté à propos de ma demande (voir <a href="confidentialite.html">confidentialité</a>).</span>
             </label>
             <button class="btn" type="submit">Envoyer</button>
-            <p class="help">Si l’application mail ne s’ouvre pas, écrivez-nous directement à <a href="mailto:lucasgaly.47510@gmail.com">lucasgaly.47510@gmail.com</a>.</p>
+            <p id="form-help" class="help">Si l’application mail ne s’ouvre pas, écrivez‑nous à <a href="mailto:lucasgaly.47510@gmail.com">lucasgaly.47510@gmail.com</a> ou appelez le <a href="tel:+33672392264">06 72 39 22 64</a>.</p>
           </form>
 
-          <!-- Alternative Formspree (décommentez et remplacez l'URL) -->
-          <!--
-          <form action="https://formspree.io/f/XXXXXXXX" method="POST">
-            <input type="hidden" name="_subject" value="Contact via LGBL" />
-            … mêmes champs …
-          </form>
-          -->
+          <!-- Option backend (désactivé) : Formspree / Netlify / Google Apps Script -->
+          <!-- <form action="https://formspree.io/f/XXXXXXX" method="POST"></form> -->
         </div>
 
         <aside class="card" aria-labelledby="info-form">
           <h3 id="info-form">Infos utiles</h3>
           <ul class="small" style="margin:0;padding-left:1.1rem;line-height:1.9">
-            <li>Réponse rapide (jour ouvré).</li>
-            <li>Privatisation : précisez la date, le créneau et le nombre de personnes.</li>
-            <li>Compétitions eSport : indiquez votre plateforme/jeu si pertinent.</li>
+            <li>Réponse rapide (jours ouvrés).</li>
+            <li>Privatisation : date, créneau, nombre de personnes.</li>
+            <li>eSport : format choisi (Sprint/Endurance/Thème) + niveau.</li>
           </ul>
         </aside>
       </div>
@@ -194,7 +189,7 @@
     <section class="section" aria-labelledby="map-title">
       <div class="container">
         <h2 id="map-title">Nous trouver</h2>
-        <p class="small">Agen (47000) — Nouvelle-Aquitaine. Parking à proximité. Salle accessible PMR.</p>
+        <p class="small">Agen (47000) — Nouvelle‑Aquitaine. Parking à proximité. Salle accessible PMR.</p>
         <div class="card" style="overflow:hidden">
           <iframe
             title="Carte LGBL Virtual Experience"
@@ -232,7 +227,7 @@
     </div>
   </footer>
 
-  <!-- Données structurées (simplifiées) -->
+  <!-- Données structurées -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -245,20 +240,66 @@
   }
   </script>
 
-  <script defer>
-    // Améliore l'action mailto: compose un email avec sujet + contenu depuis le formulaire
-    const form = document.getElementById('contactForm');
-    if (form) {
-      form.addEventListener('submit', function (e) {
+  <script>
+    // -------- Pré‑remplissage (depuis les autres pages) --------
+    (function(){
+      const form = document.getElementById('form');
+      const params = new URLSearchParams(location.search);
+      const sujetUrl = params.get('sujet');
+      const prefill = sessionStorage.getItem('lgbl_prefill');
+
+      const topic = document.getElementById('topic');
+      const msg   = document.getElementById('message');
+
+      // Sujet depuis l'URL
+      if (sujetUrl && topic) {
+        for (const opt of topic.options) {
+          if (opt.text.toLowerCase().includes(sujetUrl.toLowerCase())) { opt.selected = true; break; }
+        }
+      }
+      // Détails depuis sessionStorage (JSON)
+      try{
+        if (prefill && msg) {
+          const data = JSON.parse(prefill);
+          const lines = Object.entries(data).map(([k,v])=>`${k}: ${v}`).join('\n');
+          msg.value = (msg.value ? msg.value + '\n' : '') + lines;
+        }
+      }catch(_){/* ignore */}
+
+      // Focus direct sur le formulaire si #form dans l'URL
+      if (location.hash === '#form' && form) form.scrollIntoView({behavior:'smooth'});
+    })();
+
+    // -------- Envoi par e‑mail (mailto:) robuste --------
+    (function(){
+      const form = document.getElementById('form');
+      if(!form) return;
+      form.addEventListener('submit', function(e){
         e.preventDefault();
         const data = new FormData(form);
-        const sujet = encodeURIComponent(`[Contact] ${data.get('Sujet') || ''}`);
+        // Validation légère
+        const required = ['Nom','Email','Sujet','Message'];
+        for (const r of required){ if(!(data.get(r)||'').trim()){ alert('Merci de remplir tous les champs obligatoires.'); return; } }
+        if(!document.getElementById('consent').checked){ alert('Merci d\'accepter d\'être recontacté.'); return; }
+
+        const sujet = encodeURIComponent(`[Contact] ${data.get('Sujet')}`);
         const lignes = [];
-        for (const [k,v] of data.entries()) { if (k !== 'Sujet') lignes.push(`${k}: ${v}`); }
+        for (const [k,v] of data.entries()) { lignes.push(`${k}: ${v}`); }
         const corps = encodeURIComponent(lignes.join('\n'));
-        window.location.href = `mailto:lucasgaly.47510@gmail.com?subject=${sujet}&body=${corps}`;
+        const mailto = `mailto:lucasgaly.47510@gmail.com?subject=${sujet}&body=${corps}`;
+
+        // Tentative d'ouverture du client mail
+        window.location.href = mailto;
+        // Filet de sécu : proposer copie des infos si l'appli mail ne s'ouvre pas
+        setTimeout(()=>{
+          if(confirm('Si votre application e‑mail ne s\'est pas ouverte, souhaitez‑vous copier votre message ?')){
+            navigator.clipboard.writeText(decodeURIComponent(corps)).then(()=>{
+              alert('Contenu copié. Envoyez‑le à : lucasgaly.47510@gmail.com');
+            }).catch(()=>{});
+          }
+        }, 1200);
       });
-    }
+    })();
   </script>
 
   <script src="assets/js/main.js" defer></script>
