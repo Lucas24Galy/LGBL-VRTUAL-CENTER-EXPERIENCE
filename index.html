@@ -75,7 +75,7 @@
     .card{background:var(--panel);border:1px solid var(--line);border-radius:16px;padding:20px;transition:transform .18s ease, box-shadow .18s ease}
     .card.hoverable:hover{transform:translateY(-3px);box-shadow:0 16px 36px rgba(0,0,0,.35)}
 
-    /* Hero */
+    /* Hero (Titre) */
     .hero{position:relative;overflow:hidden;padding:64px 0;border-bottom:1px solid var(--line);background:#0b0d11}
     .hero::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.3),rgba(0,0,0,.62));z-index:1}
     .hero > .container{position:relative;z-index:2}
@@ -114,10 +114,11 @@
     .hours .time{color:#e9f3ff}
     .note{color:#a9b3bb;font-size:.95rem;margin-top:8px}
 
-    /* Partners placeholder */
-    .partners{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
-    @media (max-width:900px){.partners{grid-template-columns:repeat(2,1fr)}}
-    .partner{height:72px;border:1px dashed rgba(255,255,255,.18);border-radius:12px;display:flex;align-items:center;justify-content:center;color:#a9b3bb}
+    /* Partners */
+    .partners{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}
+    .partner{background:#0c0f14;border:1px solid var(--line);border-radius:12px;display:flex;align-items:center;justify-content:center;padding:18px}
+    .partner img{max-height:56px;max-width:100%;object-fit:contain;filter:drop-shadow(0 2px 12px rgba(0,0,0,.35))}
+    .partner .placeholder{color:#a9b3bb}
 
     /* Footer */
     .footer-grid{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:22px;padding:26px 0}
@@ -161,24 +162,7 @@
   </section>
 
   <main id="main" role="main">
-    <!-- Horaires (remontés en haut) -->
-    <section class="section" aria-labelledby="hours-title">
-      <div class="container">
-        <h2 id="hours-title">🕒 Horaires d’ouverture</h2>
-        <div class="hours" id="hoursList" style="margin-top:12px">
-          <div class="day" data-day="1"><span class="label">Lundi</span><span class="time">Fermé</span></div>
-          <div class="day" data-day="2"><span class="label">Mardi</span><span class="time">Fermé <span class="note">/ réservation</span></span></div>
-          <div class="day" data-day="3"><span class="label">Mercredi</span><span class="time">13:00 – 22:30</span></div>
-          <div class="day" data-day="4"><span class="label">Jeudi</span><span class="time">14:00 – 01:00</span></div>
-          <div class="day" data-day="5"><span class="label">Vendredi ⭐</span><span class="time">14:00 – 01:00</span></div>
-          <div class="day" data-day="6"><span class="label">Samedi</span><span class="time">14:00 – 01:00</span></div>
-          <div class="day" data-day="0"><span class="label">Dimanche</span><span class="time">14:00 – 22:30</span></div>
-        </div>
-        <p class="note">* ⭐ Vendredi : soirées événements. Les horaires peuvent varier les jours spéciaux.</p>
-      </div>
-    </section>
-
-    <!-- Hero -->
+    <!-- 1) Titre -->
     <section class="hero" aria-labelledby="hero-title">
       <div class="container">
         <h1 id="hero-title">LGBL VIRTUAL CENTER EXPERIENCE</h1>
@@ -197,52 +181,24 @@
       </div>
     </section>
 
-    <!-- Informations directes -->
-    <section class="section" aria-labelledby="infos-directes">
-      <div class="container grid-2">
-        <div class="card hoverable">
-          <h2 id="infos-directes">Informations</h2>
-          <ul style="margin:0;padding-left:1.1rem;line-height:1.95">
-            <li>Téléphone : <a href="tel:+33672392264">06.72.39.22.64</a></li>
-            <li>Email : <a href="mailto:lucasgaly.47510@gmail.com">lucasgaly.47510@gmail.com</a></li>
-          </ul>
-          <p class="note" style="margin-top:.6rem">Conception : <strong>Lucas Galy</strong></p>
+    <!-- 2) Horaires -->
+    <section class="section" aria-labelledby="hours-title">
+      <div class="container">
+        <h2 id="hours-title">🕒 Horaires d’ouverture</h2>
+        <div class="hours" id="hoursList" style="margin-top:12px">
+          <div class="day" data-day="1"><span class="label">Lundi</span><span class="time">Fermé</span></div>
+          <div class="day" data-day="2"><span class="label">Mardi</span><span class="time">Fermé <span class="note">/ réservation</span></span></div>
+          <div class="day" data-day="3"><span class="label">Mercredi</span><span class="time">13:00 – 22:30</span></div>
+          <div class="day" data-day="4"><span class="label">Jeudi</span><span class="time">14:00 – 01:00</span></div>
+          <div class="day" data-day="5"><span class="label">Vendredi ⭐</span><span class="time">14:00 – 01:00</span></div>
+          <div class="day" data-day="6"><span class="label">Samedi</span><span class="time">14:00 – 01:00</span></div>
+          <div class="day" data-day="0"><span class="label">Dimanche</span><span class="time">14:00 – 22:30</span></div>
         </div>
-        <aside class="card hoverable" aria-label="Statut">
-          <h3>Statut</h3>
-          <ul style="margin:0;padding-left:1.1rem;line-height:1.95">
-            <li><strong>Lucas Galy</strong></li>
-            <li>Chef de l’établissement</li>
-            <li>21 ans</li>
-            <li>Entreprise en cours de création</li>
-          </ul>
-        </aside>
+        <p class="note">* ⭐ Vendredi : soirées événements. Les horaires peuvent varier les jours spéciaux.</p>
       </div>
     </section>
 
-    <!-- Pourquoi cette salle ? -->
-    <section class="section" aria-labelledby="pourquoi-title">
-      <div class="container grid-2">
-        <div>
-          <h2 id="pourquoi-title">Pourquoi cette salle de simulation ?</h2>
-          <p class="small" style="font-size:1rem">
-            L’objectif est de faire découvrir un <strong>nouveau divertissement</strong> dans une zone où l’offre d’activités est limitée — et de <strong>donner le goût du sim racing</strong> aussi bien aux plus jeunes qu’aux adultes.
-            Pas un simple jeu : une <strong>véritable simulation</strong> avec matériel professionnel, ambiance paddock, et un cadre convivial (bar & coin détente).
-          </p>
-          <div style="display:flex;gap:.55rem;flex-wrap:wrap;margin-top:.5rem">
-            <span class="tag">Matériel pro</span><span class="tag">Coaching</span><span class="tag">Esprit fair-play</span>
-          </div>
-        </div>
-        <aside class="card hoverable" aria-label="Pourquoi LGBL ?">
-          <h3>Pourquoi LGBL ?</h3>
-          <p class="small" style="font-size:1rem">
-            L’idée vient principalement de <strong>Lucas Galy</strong>. Le projet a été enrichi par les contributions de <strong>Baptiste Lecerf</strong> (concept & formats) et <strong>Noé Pelletier</strong> (communication & publicité).
-          </p>
-        </aside>
-      </div>
-    </section>
-
-    <!-- Features avec image de fond -->
+    <!-- 3) Matériel | BAR | Détente -->
     <section class="features" aria-labelledby="features-title" style="background-image:url('assets/img/bg-simracing.jpg');background-size:cover;background-position:center;background-attachment:fixed;">
       <div class="container">
         <h2 id="features-title" class="sr-only">Caractéristiques du centre</h2>
@@ -272,10 +228,50 @@
       </div>
     </section>
 
-    <!-- LIVE -->
+    <!-- 4) Pourquoi cette salle & Pourquoi LGBL ? -->
+    <section class="section" aria-labelledby="pourquoi-title">
+      <div class="container grid-2">
+        <div>
+          <h2 id="pourquoi-title">Pourquoi cette salle de simulation ?</h2>
+          <p class="small" style="font-size:1rem">
+            L’objectif est de faire découvrir un <strong>nouveau divertissement</strong> dans une zone où l’offre d’activités est limitée — et de <strong>donner le goût du sim racing</strong> aussi bien aux plus jeunes qu’aux adultes.
+            Pas un simple jeu : une <strong>véritable simulation</strong> avec matériel professionnel, ambiance paddock, et un cadre convivial (bar & coin détente).
+          </p>
+          <div style="display:flex;gap:.55rem;flex-wrap:wrap;margin-top:.5rem">
+            <span class="tag">Matériel pro</span><span class="tag">Coaching</span><span class="tag">Esprit fair-play</span>
+          </div>
+        </div>
+        <aside class="card hoverable" aria-label="Pourquoi LGBL ?">
+          <h3>Pourquoi LGBL ?</h3>
+          <p class="small" style="font-size:1rem">
+            L’idée vient principalement de <strong>Lucas Galy</strong>. Le projet a été enrichi par les contributions de <strong>Baptiste Lecerf</strong> (concept & formats) et <strong>Noé Pelletier</strong> (communication & publicité).
+          </p>
+        </aside>
+      </div>
+    </section>
+
+    <!-- 5) Partenaires (2 logos) -->
+    <section class="section" aria-labelledby="partners-title">
+      <div class="container">
+        <h2 id="partners-title">Partenaires</h2>
+        <div class="partners" style="margin-top:12px">
+          <div class="partner">
+            <!-- Ajoute ton fichier ici : assets/img/partners/lfkarting.png -->
+            <img src="assets/img/partners/lfkarting.png" alt="LFKarting" onerror="this.replaceWith(Object.assign(document.createElement('div'),{className:'placeholder',textContent:'LFKarting (à venir)'}));">
+          </div>
+          <div class="partner">
+            <!-- Ajoute ton fichier ici : assets/img/partners/au-bureau-boe.png -->
+            <img src="assets/img/partners/au-bureau-boe.png" alt="Au Bureau Boé" onerror="this.replaceWith(Object.assign(document.createElement('div'),{className:'placeholder',textContent:'Au Bureau Boé (à venir)'}));">
+          </div>
+        </div>
+        <p class="note">Espace réservé — logos en cours d’intégration.</p>
+      </div>
+    </section>
+
+    <!-- 6) Vidéos (LIVE + aléatoire) -->
     <section class="section" aria-labelledby="live-title">
       <div class="container">
-        <h2 id="live-title">🎥 LIVE – Diffusions</h2>
+        <h2 id="live-title">🎥 LIVE & Vidéos</h2>
         <div class="live-header"><span class="live-dot"></span><span>EN DIRECT</span></div>
         <p class="small">Si un live est en cours, il s’affiche automatiquement. Vous pouvez aussi lancer une vidéo aléatoire de la chaîne.</p>
 
@@ -299,20 +295,6 @@
         </p>
       </div>
     </section>
-
-    <!-- Partenaires (placeholder) -->
-    <section class="section" aria-labelledby="partners-title">
-      <div class="container">
-        <h2 id="partners-title">Partenaires</h2>
-        <div class="partners" style="margin-top:12px">
-          <div class="partner">Logo partenaire</div>
-          <div class="partner">Logo partenaire</div>
-          <div class="partner">Logo partenaire</div>
-          <div class="partner">Logo partenaire</div>
-        </div>
-        <p class="note">Espace réservé – ajout des partenaires prochainement.</p>
-      </div>
-    </section>
   </main>
 
   <!-- Footer -->
@@ -320,7 +302,7 @@
     <div class="container footer-grid">
       <div>
         <div class="logo" style="display:flex;align-items:center;gap:.5rem">
-          <img src="assets/img/logo-lgbl.png" alt="Logo LGBL" style="height:22px;border-radius:50%" loading="lazy" decoding="async" />
+          <img src="assets/img/logo-lgbl.png" alt="LGBL" style="height:22px;border-radius:50%" loading="lazy" decoding="async" />
           <span>LGBL VIRTUAL CENTER EXPERIENCE</span>
         </div>
         <p class="copy">© 2025 LGBL VIRTUAL CENTER EXPERIENCE — Conception : Lucas Galy</p>
