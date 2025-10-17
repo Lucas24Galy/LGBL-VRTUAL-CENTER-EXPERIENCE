@@ -1,290 +1,171 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>LGBL Virtual Experience Center – Tarifs</title>
-
-  <!-- SEO de base -->
-  <meta name="description" content="Tarifs provisoires : sessions libres, Grand Prix IA, coaching, soirées, abonnements, privatisations et mini race esport." />
-  <meta name="robots" content="index,follow" />
-  <link rel="canonical" href="https://lucas24galy.github.io/LGBL-VRTUAL-CENTER-EXPERIENCE/tarifs.html" />
-
-  <!-- Open Graph / Twitter -->
-  <meta property="og:type" content="website" />
-  <meta property="og:site_name" content="LGBL Virtual Experience" />
-  <meta property="og:title" content="Tarifs – LGBL Virtual Experience Center" />
-  <meta property="og:description" content="Pas juste un simple jeu — de la simulation pure. Découvrez nos formules : libre, Grand Prix IA, coaching, soirées, abonnements, privatisations et mini race esport." />
-  <meta property="og:url" content="https://lucas24galy.github.io/LGBL-VRTUAL-CENTER-EXPERIENCE/tarifs.html" />
-  <meta property="og:image" content="assets/img/logo-lgbl.png" />
-  <meta name="twitter:card" content="summary" />
-
-  <!-- Styles & Polices -->
-  <link rel="icon" type="image/png" href="assets/img/logo-lgbl.png" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600;800&family=Poppins:wght@400;600;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="assets/css/styles.css" />
-
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LGBL Virtual Experience — Tarifs</title>
   <style>
-    :root{--line:rgba(255,255,255,.08);--bg:#0a0b0d;--panel:#0f1115;--text:#e9ecef;--muted:#a9b3bb;--rose:#ff2d6f;--cyan:#00aaff}
-    body{background:var(--bg);color:var(--text);font-family:Poppins,system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial}
-    header{position:sticky;top:0;background:rgba(10,11,13,.7);backdrop-filter:saturate(120%) blur(8px);border-bottom:1px solid var(--line);z-index:50}
-    .container{max-width:1150px;margin:0 auto;padding:0 16px}
-    .nav{display:flex;align-items:center;justify-content:space-between;height:64px}
-    .links a{color:#cfd6dc;margin-left:16px;text-decoration:none;padding:8px 10px;border:1px solid transparent;border-radius:999px;position:relative}
-    .links a:hover,.links a[aria-current="page"]{color:#fff;border-color:rgba(0,170,255,.35)}
-    .links a::after{content:"";position:absolute;left:10px;right:10px;bottom:4px;height:2px;transform:scaleX(0);transform-origin:left;background:linear-gradient(90deg,var(--rose),var(--cyan));transition:transform .25s ease}
-    .links a:hover::after,.links a[aria-current="page"]::after{transform:scaleX(1)}
-    .logo{display:inline-flex;align-items:center;gap:.6rem;color:#fff;text-decoration:none;font-weight:700}
-    .logo img{height:42px;border-radius:50%}
-
-    .hero{padding:56px 0;border-bottom:1px solid var(--line);background:
-      radial-gradient(1200px 400px at 30% -20%, rgba(255,0,78,.22), transparent 60%),
-      radial-gradient(1000px 400px at 80% -30%, rgba(0,170,255,.18), transparent 60%)}
-    .hero h1{font-family:'Orbitron',system-ui;font-size:clamp(28px,4.5vw,44px);margin:0 0 .6rem}
-    .subtitle{color:var(--muted)}
-
-    .alert{border-radius:10px;padding:.6rem 1rem;border:1px solid var(--line)}
-    .alert.warning{background:rgba(255,200,0,.08);border-color:rgba(255,200,0,.35);color:#ffe28d}
-
-    .pricing{padding:38px 0;display:grid;grid-template-columns:repeat(2,1fr);gap:22px}
-    .tarif-card{background:var(--panel);border:1px solid var(--line);border-radius:16px;overflow:hidden}
-    .tarif-card .head{padding:14px 16px;border-bottom:1px solid var(--line);background:linear-gradient(90deg,rgba(255,45,111,.2),rgba(0,170,255,.2))}
-    .tarif-card h3{margin:0}
-    .tarif-card table{width:100%;border-collapse:collapse}
-    .tarif-card th,.tarif-card td{padding:10px 12px;border-bottom:1px solid var(--line);text-align:left;vertical-align:top}
-    .tarif-card thead th{font-size:.95rem;color:#cfefff;background:rgba(0,170,255,.06)}
-    .tarif-card tbody tr:nth-child(odd){background:rgba(255,255,255,.02)}
-
-    .tag{display:inline-block;font-size:.8rem;line-height:1;border:1px solid var(--line);padding:.35rem .55rem;border-radius:999px;background:rgba(0,170,255,.08)}
-    .badge{display:inline-block;font-size:.75rem;font-weight:700;border:1px solid rgba(0,170,255,.35);padding:.2rem .45rem;border-radius:6px}
-    .badge.pro{border-color:rgba(255,45,111,.45)}
-
-    .cta{display:flex;gap:.6rem;flex-wrap:wrap;margin-top:.8rem}
-    .btn{display:inline-block;background:linear-gradient(90deg,var(--rose),var(--cyan));padding:.7rem 1rem;border-radius:999px;color:#fff;text-decoration:none;font-weight:700}
-    .btn-outline{background:transparent;border:1px solid rgba(0,170,255,.35)}
-    .btn:hover{box-shadow:0 6px 18px rgba(0,170,255,.18)}
-
-    footer{border-top:1px solid var(--line);margin-top:28px}
-    .footer-grid{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:22px;padding:24px 0}
-    .copy{color:#8f98a1}
-
-    @media (max-width:1000px){.pricing{grid-template-columns:1fr}}
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: #0b0b0b;
+      color: #fff;
+      margin: 0;
+      padding: 0;
+    }
+    h1 {
+      text-align: center;
+      font-size: 2.4rem;
+      margin-top: 50px;
+      color: #d60000;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+    .tarif-section {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin: 40px auto;
+      max-width: 1200px;
+      gap: 20px;
+    }
+    .tarif-card {
+      background: linear-gradient(135deg, #141414, #1e1e1e);
+      border: 1px solid rgba(255,255,255,0.1);
+      border-radius: 18px;
+      width: 270px;
+      padding: 25px;
+      box-shadow: 0 0 15px rgba(0,0,0,0.4);
+      transition: transform 0.3s, box-shadow 0.3s, border-color 0.3s;
+    }
+    .tarif-card:hover {
+      transform: translateY(-6px);
+      border-color: #d60000;
+      box-shadow: 0 0 25px rgba(214,0,0,0.5);
+    }
+    .tarif-card h2 {
+      font-size: 1.3rem;
+      color: #fff;
+      margin-bottom: 10px;
+      border-bottom: 2px solid #d60000;
+      padding-bottom: 5px;
+    }
+    .tarif-card h3 {
+      font-size: 1.1rem;
+      color: #d60000;
+      margin: 8px 0;
+    }
+    .tarif-card p {
+      margin: 4px 0;
+      font-size: 0.95rem;
+      color: #ddd;
+    }
+    .tarif-note {
+      font-size: 0.85rem;
+      color: #aaa;
+      margin-top: 10px;
+      border-top: 1px dashed rgba(255,255,255,0.2);
+      padding-top: 8px;
+    }
+    .category-title {
+      width: 100%;
+      text-align: center;
+      font-size: 1.8rem;
+      margin-top: 60px;
+      color: #00bfff;
+      letter-spacing: 1px;
+      border-bottom: 2px solid #d60000;
+      display: inline-block;
+    }
   </style>
 </head>
 <body>
-  <a href="#main" class="sr-only" style="position:absolute;left:-9999px">Aller au contenu</a>
+  <h1>LGBL Virtual Experience — Grille Tarifaire</h1>
 
-  <header role="banner">
-    <div class="container nav">
-      <a class="logo" href="index.html" aria-label="LGBL Accueil">
-        <img src="assets/img/logo-lgbl.png" alt="Logo LGBL" loading="lazy" decoding="async" />
-        <span>LGBL Virtual Experience</span>
-      </a>
-      <nav aria-label="Navigation principale">
-        <div class="links">
-          <a href="index.html">Accueil</a>
-          <a href="tarifs.html" aria-current="page">Tarifs</a>
-          <a href="evenements.html">Événements</a>
-          <a href="communaute.html">Communauté</a>
-          <a href="contact.html">Contact</a>
-          <a href="https://www.youtube.com/@LucasGaly24/streams" target="_blank" rel="noopener noreferrer">LIVE</a>
-        </div>
-      </nav>
+  <div class="category-title">LIBRE – Châssis Standard</div>
+  <section class="tarif-section">
+    <div class="tarif-card">
+      <h2>10 min</h2>
+      <h3>€10</h3>
+      <p>Tarif unitaire</p>
+      <p>€1,00 / min</p>
     </div>
-  </header>
-
-  <main id="main" role="main">
-    <section class="hero hero--small hero--neutral">
-      <div class="container">
-        <h1>Nos Tarifs &amp; Formules</h1>
-        <div class="alert warning" role="status" aria-live="polite">⚠️ Tarifs provisoires — susceptibles d’être ajustés avant l’ouverture officielle.</div>
-        <p class="subtitle">Pas juste un simple jeu — <strong>de la simulation pure</strong>. Sessions libres, Grand Prix IA, coaching, soirées, abonnements, privatisations et mini race esport.</p>
-        <div class="cta">
-          <a class="btn" href="mailto:lucasgaly.47510@gmail.com">Demander un devis / info</a>
-          <a class="btn btn-outline" href="index.html#infos-title">Être prévenu de l’ouverture</a>
-        </div>
-      </div>
-    </section>
-
-    <section class="pricing container" aria-label="Liste des tarifs">
-      <!-- LIBRE -->
-      <div class="tarif-card" aria-labelledby="t-libre">
-        <div class="head"><h3 id="t-libre">LIBRE <span class="badge">Standard</span> <span class="badge pro">Dynamique Pro</span></h3></div>
-        <table>
-          <thead><tr><th>Catégorie</th><th>Offre</th><th>Tarif (€)</th><th>Notes</th></tr></thead>
-          <tbody>
-            <tr>
-              <td>Châssis Standard</td>
-              <td>Session 10 minutes</td>
-              <td><strong>à partir de 10,00</strong></td>
-              <td class="small">Durées multiples disponibles (2×10, 3×10…).</td>
-            </tr>
-            <tr>
-              <td>Châssis Dynamique Pro</td>
-              <td>Session 10 minutes</td>
-              <td><strong>à partir de 12,00</strong></td>
-              <td class="small">Durées multiples disponibles (2×10, 3×10…).</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-
-      <!-- GRAND PRIX IA (BOTS) -->
-      <div class="tarif-card" aria-labelledby="t-gp">
-        <div class="head"><h3 id="t-gp">GRAND PRIX IA (BOTS)</h3></div>
-        <table>
-          <thead><tr><th>Catégorie</th><th>Format</th><th>Tarif (€)</th><th>Notes</th></tr></thead>
-          <tbody>
-            <tr>
-              <td>Châssis Standard</td>
-              <td>Qualifications + course (30’)</td>
-              <td><strong>à partir de 32,00</strong></td>
-              <td class="small">Option 2×30’ disponible.</td>
-            </tr>
-            <tr>
-              <td>Châssis Dynamique Pro</td>
-              <td>Qualifications + course (30’)</td>
-              <td><strong>à partir de 36,00</strong></td>
-              <td class="small">Option 2×30’ disponible.</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-
-      <!-- COACHING INDIVIDUELS (épuré) -->
-      <div class="tarif-card" aria-labelledby="t-coach">
-        <div class="head"><h3 id="t-coach">COACHING INDIVIDUELS</h3></div>
-        <table>
-          <thead><tr><th>Catégorie</th><th>Offre</th><th>Tarif (€)</th><th>Notes</th></tr></thead>
-          <tbody>
-            <tr>
-              <td>Coaching</td>
-              <td>1h, 2h, 4h, 6h</td>
-              <td><strong>à partir de 60,00 / h</strong></td>
-              <td class="small">Tarif horaire constant.</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-
-      <!-- FORMULE MERCREDI (–16 ans) -->
-      <div class="tarif-card" aria-labelledby="t-mercredi">
-        <div class="head"><h3 id="t-mercredi">FORMULE MERCREDI (–16 ans)</h3></div>
-        <table>
-          <thead><tr><th>Catégorie</th><th>Offre</th><th>Tarif (€)</th><th>Notes</th></tr></thead>
-          <tbody>
-            <tr>
-              <td>Châssis Standard</td>
-              <td>Découverte 5 minutes (collèges)</td>
-              <td>5,00</td>
-              <td>Présenter carte d’établissement • Meilleur chrono = 1 session offerte</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-
-      <!-- SOIRÉES / ÉVÉNEMENTS (offres distinctes → plusieurs lignes pertinentes) -->
-      <div class="tarif-card" aria-labelledby="t-soirees">
-        <div class="head"><h3 id="t-soirees">SOIRÉES / ÉVÉNEMENTS</h3></div>
-        <table>
-          <thead><tr><th>Catégorie</th><th>Offre</th><th>Tarif (€)</th><th>Notes</th></tr></thead>
-          <tbody>
-            <tr><td>Soirées &amp; Spéciaux</td><td>Diffusion F1 – entrée</td><td>6,00</td><td>Conso obligatoire</td></tr>
-            <tr><td>Soirées &amp; Spéciaux</td><td>Soirée Ambiance Pro</td><td>28,00</td><td>2 sessions Pro + boisson</td></tr>
-            <tr><td>Soirées &amp; Spéciaux</td><td>Soirée Couple</td><td>35,00</td><td>2×20 min + boissons</td></tr>
-            <tr><td>Soirées &amp; Spéciaux</td><td>Abonnement mensuel (Standard)</td><td>60,00</td><td>4 × 30 min</td></tr>
-            <tr><td>Family</td><td>Family Pack</td><td>20,00</td><td>1 adulte + 1 enfant, 2×10 min</td></tr>
-            <tr><td>Soirées &amp; Spéciaux</td><td>Tournoi mensuel (inscription)</td><td>18,00</td><td>Variable selon la durée</td></tr>
-          </tbody>
-        </table>
-      </div>
-
-      <!-- ABONNEMENTS (offres distinctes) -->
-      <div class="tarif-card" aria-labelledby="t-abos">
-        <div class="head"><h3 id="t-abos">ABONNEMENTS</h3></div>
-        <table>
-          <thead><tr><th>Catégorie</th><th>Offre</th><th>Tarif (€)</th><th>Notes</th></tr></thead>
-          <tbody>
-            <tr><td>Licence à l'année</td><td>Accès aux sessions dynamiques aux tarifs standards</td><td>350,00</td><td></td></tr>
-            <tr><td>Carte fidélité</td><td>Bon cadeau à offrir (valeur 10€)</td><td>10,00</td><td></td></tr>
-          </tbody>
-        </table>
-      </div>
-
-      <!-- PRIVATISATION (linéaire → 1 ligne “à partir de…”) -->
-      <div class="tarif-card" aria-labelledby="t-privi">
-        <div class="head"><h3 id="t-privi">PRIVATISATION</h3></div>
-        <table>
-          <thead><tr><th>Catégorie</th><th>Offre</th><th>Tarif (€)</th><th>Notes</th></tr></thead>
-          <tbody>
-            <tr>
-              <td>Groupes &amp; Événements</td>
-              <td>2h, 4h, 6h, 8h</td>
-              <td><strong>à partir de 120,00</strong></td>
-              <td class="small">Durées supérieures disponibles.</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-
-      <!-- MINI RACE ESPORT (deux packs, mais non dégressif → 1 ligne “à partir de…”) -->
-      <div class="tarif-card" aria-labelledby="t-mini">
-        <div class="head"><h3 id="t-mini">MINI RACE ESPORT (confirmé)</h3></div>
-        <table>
-          <thead><tr><th>Catégorie</th><th>Format</th><th>Tarif (€)</th><th>Notes</th></tr></thead>
-          <tbody>
-            <tr>
-              <td>Mini Race</td>
-              <td>2 à 4 courses (selon formule)</td>
-              <td><strong>à partir de 40,00</strong></td>
-              <td class="small">Formats Sprint/Endurance disponibles.</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-    </section>
-  </main>
-
-  <footer role="contentinfo">
-    <div class="container footer-grid">
-      <div>
-        <div class="logo" style="display:flex;align-items:center;gap:.5rem">
-          <img src="assets/img/logo-lgbl.png" alt="LGBL" style="height:22px;border-radius:50%" loading="lazy" decoding="async" />
-          <span>LGBL Virtual Experience</span>
-        </div>
-        <p class="copy">© 2025 LGBL Virtual Experience Center — Conception : Lucas Galy</p>
-      </div>
-      <div>
-        <h4>Le site</h4>
-        <p><a href="index.html">Accueil</a><br><a href="tarifs.html" aria-current="page">Tarifs</a><br><a href="evenements.html">Événements</a></p>
-      </div>
-      <div>
-        <h4>Contact</h4>
-        <p><a href="mailto:lucasgaly.47510@gmail.com">lucasgaly.47510@gmail.com</a><br><a href="tel:+33672392264">06 72 39 22 64</a></p>
-      </div>
-      <div>
-        <h4>LIVE</h4>
-        <p><a href="https://www.youtube.com/@LucasGaly24/streams" target="_blank" rel="noopener noreferrer">YouTube</a></p>
-      </div>
+    <div class="tarif-card">
+      <h2>20 min</h2>
+      <h3>€18</h3>
+      <p>–2 € vs 2×10</p>
+      <p>€0,90 / min</p>
     </div>
-  </footer>
+    <div class="tarif-card">
+      <h2>30 min</h2>
+      <h3>€25</h3>
+      <p>–5 € vs 3×10</p>
+      <p>€0,83 / min</p>
+      <div class="tarif-note">Panier cible ~25–30€</div>
+    </div>
+    <div class="tarif-card">
+      <h2>Pack 3×10 min</h2>
+      <h3>€27</h3>
+      <p>–3 € (TOP VENTE)</p>
+      <p>€0,90 / min</p>
+    </div>
+    <div class="tarif-card">
+      <h2>Pack 5×10 min</h2>
+      <h3>€40</h3>
+      <p>–10 €</p>
+      <p>€0,80 / min</p>
+    </div>
+  </section>
 
-  <!-- Données structurées (simplifiées) -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Service",
-    "name": "Sim Racing – LGBL Virtual Experience",
-    "provider": {"@type": "LocalBusiness", "name": "LGBL Virtual Experience Center"},
-    "areaServed": "Agen, Lot-et-Garonne, France",
-    "url": "https://lucas24galy.github.io/LGBL-VRTUAL-CENTER-EXPERIENCE/tarifs.html",
-    "telephone": "+33 6 72 39 22 64",
-    "email": "mailto:lucasgaly.47510@gmail.com"
-  }
-  </script>
+  <div class="category-title">LIBRE – Châssis Dynamique Pro</div>
+  <section class="tarif-section">
+    <div class="tarif-card">
+      <h2>10 min</h2>
+      <h3>€12</h3>
+      <p>Tarif unitaire</p>
+      <p>€1,20 / min</p>
+    </div>
+    <div class="tarif-card">
+      <h2>30 min</h2>
+      <h3>€30</h3>
+      <p>–6 € vs 3×10</p>
+      <p>€1,00 / min</p>
+    </div>
+    <div class="tarif-card">
+      <h2>Pack 3×10 min</h2>
+      <h3>€33</h3>
+      <p>–3 € (TOP VENTE)</p>
+      <p>€1,10 / min</p>
+    </div>
+    <div class="tarif-card">
+      <h2>Pack 5×10 min</h2>
+      <h3>€50</h3>
+      <p>–10 €</p>
+      <p>€1,00 / min</p>
+    </div>
+  </section>
 
-  <script src="assets/js/main.js" defer></script>
+  <div class="category-title">GRAND PRIX IA (BOTS)</div>
+  <section class="tarif-section">
+    <div class="tarif-card">
+      <h2>Standard</h2>
+      <h3>€32</h3>
+      <p>Qualifs + Course (30 min)</p>
+    </div>
+    <div class="tarif-card">
+      <h2>Pro</h2>
+      <h3>€36</h3>
+      <p>Qualifs + Course (30 min)</p>
+    </div>
+    <div class="tarif-card">
+      <h2>Standard</h2>
+      <h3>€55</h3>
+      <p>Qualifs + 2× Course (2×30 min)</p>
+    </div>
+    <div class="tarif-card">
+      <h2>Pro</h2>
+      <h3>€62</h3>
+      <p>Qualifs + 2× Course (2×30 min)</p>
+    </div>
+  </section>
 </body>
 </html>
