@@ -4,136 +4,215 @@
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <title>LGBL – Événements & eSport</title>
-  <meta name="description" content="Soirées eSport, privatisation groupe/entreprise, diffusion F1 & matchs (conso obligatoire).">
-  <link rel="stylesheet" href="assets/css/styles.css"/>
-  <link rel="icon" type="image/png" href="assets/img/logo-lgbl.png"/>
+  <meta name="description" content="Soirées eSport (vendredi), privatisation groupe/entreprise, diffusions F1 & grands matchs, lives & replays. Demandez un devis en 1 clic."/>
+
+  <!-- SEO / Social -->
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="LGBL VIRTUAL CENTER EXPERIENCE" />
+  <meta property="og:title" content="LGBL – Événements & eSport" />
+  <meta property="og:description" content="Vendredi: soirées eSport (Sprint/Endurance/Thème). Privatisations. Diffusions F1 (8€ conso obligatoire), Endurance, Moto, Matchs, Lives & replays." />
+  <meta property="og:image" content="assets/img/logo-lgbl.png" />
+
+  <link rel="icon" type="image/png" href="assets/img/logo-lgbl.png" />
   <link rel="preconnect" href="https://fonts.googleapis.com"/>
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
   <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600;800&family=Poppins:wght@400;600;700&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="assets/css/styles.css"/>
+
+  <style>
+    :root{--line:rgba(255,255,255,.08);--bg:#0a0b0d;--panel:#0f1115;--text:#e9ecef;--muted:#a9b3bb;--accent:#00aaff;--accent2:#ff2d6f}
+    body{background:var(--bg);color:var(--text);font-family:Poppins,system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial;margin:0}
+    .container{max-width:1150px;margin:0 auto;padding:0 20px}
+    header{position:sticky;top:0;z-index:60;background:rgba(10,11,13,.7);backdrop-filter:saturate(120%) blur(8px);border-bottom:1px solid var(--line)}
+    .nav{display:flex;align-items:center;justify-content:space-between;height:64px}
+    .logo{display:inline-flex;align-items:center;gap:.6rem;color:#fff;text-decoration:none;font-weight:800;letter-spacing:.5px}
+    .logo img{height:42px;border-radius:50%}
+    nav .links a{color:#cfd6dc;text-decoration:none;padding:8px 12px;border:1px solid transparent;border-radius:999px}
+    nav .links a:hover,nav .links a[aria-current="page"]{color:#fff;border-color:rgba(0,170,255,.35)}
+
+    .hero{position:relative;overflow:hidden;padding:56px 0;border-bottom:1px solid var(--line);background:#0b0d11}
+    .hero>.container{position:relative;z-index:2;text-align:center}
+    .hero h1{font-family:'Orbitron';font-size:clamp(28px,5.6vw,44px);letter-spacing:1px;margin:0 0 .6rem;text-transform:uppercase}
+    .subtitle{color:var(--muted)}
+
+    .section{padding:40px 0;border-top:1px solid var(--line)}
+    .section h2{font-family:'Orbitron';letter-spacing:.5px;margin:0 0 14px}
+    .grid-2{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}
+    .grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+    @media (max-width:960px){.grid-2,.grid-3{grid-template-columns:1fr}}
+
+    .card{background:var(--panel);border:1px solid var(--line);border-radius:16px;padding:18px;transition:.18s ease;transition-property:transform,box-shadow,border-color}
+    .card.hoverable:hover{transform:translateY(-4px);box-shadow:0 16px 36px rgba(0,0,0,.35);border-color:rgba(0,170,255,.35)}
+    .card h3{margin:.2rem 0 .4rem}
+    .big{font-weight:700}
+    .muted{color:var(--muted)}
+
+    .tag{display:inline-flex;align-items:center;gap:6px;border:1px solid var(--line);padding:.35rem .6rem;border-radius:999px;background:rgba(0,170,255,.08);color:#cfefff;font-size:.9rem}
+    .btn{display:inline-block;background:linear-gradient(90deg,var(--accent2),var(--accent));padding:.6rem .9rem;border-radius:999px;color:#fff;text-decoration:none;font-weight:700}
+    .btn.btn-outline{background:transparent;border:1px solid rgba(0,170,255,.35)}
+
+    .alert{border-radius:10px;padding:.7rem 1rem;border:1px solid var(--line)}
+    .alert.info{background:#0e1b22;color:#cfefff;border-color:rgba(0,170,255,.25)}
+
+    .list-clean{margin:.2rem 0 0;padding-left:1.1rem;line-height:1.9}
+  </style>
 </head>
 <body class="page-evenements">
 
 <header>
   <div class="container nav">
-    <a class="logo" href="index.html" aria-label="LGBL Accueil" style="display:flex;align-items:center;gap:.6rem;">
-      <img src="assets/img/logo-lgbl.png" alt="Logo LGBL" style="height:42px;border-radius:50%;">
-      <span style="font-weight:700;font-size:1.2rem;letter-spacing:1px;">LGBL Virtual Experience</span>
+    <a class="logo" href="index.html" aria-label="LGBL Accueil">
+      <img src="assets/img/logo-lgbl.png" alt="Logo LGBL"/>
+      <span>LGBL VIRTUAL CENTER EXPERIENCE</span>
     </a>
-    <nav>
-      <button class="mobile-toggle" aria-label="Ouvrir le menu">Menu</button>
-      <div class="links">
-        <a href="index.html">Accueil</a>
-        <a href="tarifs.html">Tarifs</a>
-        <a class="active" href="evenements.html">Événements</a>
-        <a href="communaute.html">Communauté</a>
-        <a href="contact.html">Contact</a>
-        <a href="https://www.youtube.com/@LucasGaly24/streams" target="_blank" rel="noopener">LIVE</a>
-      </div>
+    <nav class="links" aria-label="Navigation principale">
+      <a href="index.html">Accueil</a>
+      <a href="tarifs.html">Tarifs</a>
+      <a href="evenements.html" aria-current="page">Événements</a>
+      <a href="communaute.html">Communauté</a>
+      <a href="contact.html">Contact</a>
+      <a href="https://www.youtube.com/@LucasGaly24/streams" target="_blank" rel="noopener">LIVE</a>
     </nav>
   </div>
 </header>
 
 <section class="hero hero--evenements">
-  <div class="overlay"></div>
   <div class="container">
     <h1>Événements & Soirées</h1>
-    <p class="subtitle">
-      Soirées eSport, diffusions F1 et événements privés — vivez la passion du sport automobile autrement.
-    </p>
-  </div>
-</section>
-
-
-<section class="section">
-  <div class="container">
-    <h2>🎮 Soirées eSport</h2>
-    <p class="small">Deux formats au choix. Classement, fair-play, et bonne ambiance !</p>
-
-    <div class="grid-2" style="margin-top:.8rem">
-      <article class="card hoverable">
-        <h3>Format Sprint</h3>
-        <p class="big">2 courses • 2 circuits</p>
-        <p class="small">5' practice • 8' qualif • 10' course</p>
-      </article>
-
-      <article class="card hoverable">
-        <h3>Format Endurance</h3>
-        <p class="big">4 courses • 4 circuits</p>
-        <p class="small">10' practice • 10' qualif • 2×15' course (grille inversée)</p>
-      </article>
-    </div>
-
-    <div class="alert info" style="margin-top:1rem">
-      💡 Les soirées eSport sont ouvertes aux débutants comme aux pilotes confirmés. Inscriptions sur place ou via nos réseaux — matos fourni.
+    <p class="subtitle">Le vendredi soir est <strong>réservé aux événements</strong> : eSport, thèmes spéciaux et privatisations.</p>
+    <div style="display:flex;gap:8px;justify-content:center;flex-wrap:wrap;margin-top:8px">
+      <span class="tag">Vendredi 19:30 → fermeture</span>
+      <span class="tag">Classements & fair‑play</span>
+      <span class="tag">Matériel fourni</span>
     </div>
   </div>
 </section>
 
-<section class="section">
-  <div class="container">
-    <h2>🏢 Privatisation groupe / entreprise</h2>
-    <div class="grid-2" style="margin-top:.8rem">
-      <article class="card hoverable">
-        <h3>Team building & anniversaires</h3>
-        <p>Privatisez l’espace pour vos évènements (2h, 4h, 6h, 8h). Formats sur mesure : mini-championnats, relais, hot-lap, etc.</p>
-        <p class="small">Nous contacter pour un devis adapté au nombre de personnes et au planning.</p>
-        <a class="btn" href="contact.html" style="margin-top:.6rem">Demander un devis</a>
-      </article>
+<main>
+  <!-- Soirées eSport -->
+  <section class="section" id="esport">
+    <div class="container">
+      <h2>🎮 Soirées eSport (vendredi)</h2>
+      <p class="muted">Choisissez votre format. Inscriptions sur place ou <a href="contact.html?sujet=Inscription%20Soir%C3%A9e%20eSport#form">via le formulaire</a>.</p>
 
-      <article class="card hoverable">
-        <h3>Options</h3>
-        <ul class="small" style="margin:0; padding-left:1.1rem; line-height:1.8">
-          <li>Classements & podiums personnalisés</li>
-          <li>Briefing découverte & encadrement</li>
-          <li>Bar soft & snacking sucré rapide</li>
-          <li>Coin détente : fond sonore, console, baby-foot</li>
-        </ul>
-      </article>
+      <div class="grid-3" style="margin-top:.8rem">
+        <article class="card hoverable">
+          <h3>Format Sprint</h3>
+          <p class="big">2 courses • 2 circuits</p>
+          <p class="muted">5' practice • 8' qualif • 10' course</p>
+          <div style="display:flex;gap:8px;margin-top:10px;flex-wrap:wrap">
+            <a class="btn btn-devis" href="contact.html?sujet=Soir%C3%A9e%20eSport%20Sprint&source=evenements#form" data-prefill='{"type":"eSport Sprint","jour":"Vendredi","heure":"19:30"}'>S'inscrire</a>
+            <a class="btn btn-outline" href="tarifs.html#mini-race">Voir tarifs Mini Race</a>
+          </div>
+        </article>
+
+        <article class="card hoverable">
+          <h3>Format Endurance</h3>
+          <p class="big">4 courses • 4 circuits</p>
+          <p class="muted">10' practice • 10' qualif • 2×15' course (grille inversée)</p>
+          <div style="display:flex;gap:8px;margin-top:10px;flex-wrap:wrap">
+            <a class="btn btn-devis" href="contact.html?sujet=Soir%C3%A9e%20eSport%20Endurance&source=evenements#form" data-prefill='{"type":"eSport Endurance","jour":"Vendredi","heure":"19:30"}'>S'inscrire</a>
+            <a class="btn btn-outline" href="tarifs.html#mini-race">Voir détails</a>
+          </div>
+        </article>
+
+        <article class="card hoverable">
+          <h3>Soirées Thème</h3>
+          <p class="big">Anniversaire de marque, rétro F1, circuits mythiques…</p>
+          <ul class="list-clean">
+            <li><strong>Anniv. de marque :</strong> Ferrari, McLaren, Alpine…</li>
+            <li><strong>Special Track :</strong> Spa, Monza, Nürburgring…</li>
+            <li><strong>Rétro :</strong> saisons historiques F1 / Endu</li>
+          </ul>
+          <div style="display:flex;gap:8px;margin-top:10px;flex-wrap:wrap">
+            <a class="btn btn-devis" href="contact.html?sujet=Soir%C3%A9e%20Th%C3%A8me&source=evenements#form" data-prefill='{"type":"Soirée Thème","jour":"Vendredi","heure":"19:30"}'>Proposer un thème</a>
+          </div>
+        </article>
+      </div>
+
+      <div class="alert info" style="margin-top:1rem">💡 Débutants bienvenus. Nous fournissons le matériel et un briefing rapide.</div>
     </div>
-  </div>
-</section>
+  </section>
 
-<section class="section">
-  <div class="container">
-    <h2>📺 Diffusion</h2>
-    <div class="grid-2" style="margin-top:.8rem">
-      <article class="card hoverable">
-        <h3>Formule 1</h3>
-        <p>Diffusion des Grands Prix (selon calendrier).</p>
-        <p class="small"><strong>Conso obligatoire</strong> au bar.</p>
-      </article>
-
-      <article class="card hoverable">
-        <h3>Matchs</h3>
-        <p>Soirées sportives (sélection de grands rendez-vous).</p>
-        <p class="small"><strong>Conso obligatoire</strong> au bar.</p>
-      </article>
+  <!-- Privatisation / Groupe -->
+  <section class="section" id="prive">
+    <div class="container">
+      <h2>🏢 Privatisation groupe / entreprise</h2>
+      <div class="grid-2" style="margin-top:.8rem">
+        <article class="card hoverable">
+          <h3>Formules 2h / 4h / 6h / 8h</h3>
+          <p>Mini‑championnats, relais, hot‑lap, podiums. Formats sur mesure selon effectif et niveau.</p>
+          <p class="muted">Devis rapide par e‑mail/tél. Réservation validée à confirmation.</p>
+          <a class="btn btn-devis" href="contact.html?sujet=Devis%20Privatisation&source=evenements#form" data-prefill='{"type":"Privatisation","duree":"2-8h","effectif":"10-32"}'>Demander un devis</a>
+        </article>
+        <article class="card hoverable">
+          <h3>Options</h3>
+          <ul class="list-clean">
+            <li>Classements & podiums personnalisés</li>
+            <li>Briefing & encadrement dédié</li>
+            <li>Bar soft & snacking sucré</li>
+            <li>Coin détente : fond sonore, console, baby‑foot</li>
+          </ul>
+        </article>
+      </div>
     </div>
+  </section>
 
-    <div class="card" style="margin-top:1rem">
-      <h3>Live & replays</h3>
-      <p class="small">Retrouvez nos diffusions et streams en direct sur la chaîne :</p>
-      <a class="btn" href="https://www.youtube.com/@LucasGaly24/streams" target="_blank" rel="noopener">Voir le LIVE</a>
+  <!-- Diffusions -->
+  <section class="section" id="diffusions">
+    <div class="container">
+      <h2>📺 Diffusions</h2>
+      <div class="grid-3" style="margin-top:.8rem">
+        <article class="card hoverable">
+          <h3>Formule 1</h3>
+          <p class="big">Entrée : 8 €</p>
+          <p class="muted">Selon calendrier. <strong>1 consommation obligatoire</strong> au bar.</p>
+        </article>
+        <article class="card hoverable">
+          <h3>Endurance</h3>
+          <p>WEC, 24h, ELMS — grandes affiches selon calendrier.</p>
+          <p class="muted">Conso obligatoire.</p>
+        </article>
+        <article class="card hoverable">
+          <h3>Moto</h3>
+          <p>MotoGP & grands rendez‑vous moto.</p>
+          <p class="muted">Conso obligatoire.</p>
+        </article>
+        <article class="card hoverable">
+          <h3>Matchs</h3>
+          <p>Grands matchs selon l'actu.</p>
+          <p class="muted">Conso obligatoire.</p>
+        </article>
+        <article class="card hoverable">
+          <h3>Lives & replays</h3>
+          <p class="muted">Retrouvez nos diffusions et streams sur YouTube.</p>
+          <a class="btn" href="https://www.youtube.com/@LucasGaly24/streams" target="_blank" rel="noopener">Voir le LIVE</a>
+        </article>
+      </div>
+
+      <div class="alert info" style="margin-top:1rem">
+        ℹ️ Infos & réservations : <a href="mailto:lucasgaly.47510@gmail.com">lucasgaly.47510@gmail.com</a> · <a href="tel:+33672392264">06 72 39 22 64</a>
+      </div>
     </div>
-  </div>
-</section>
+  </section>
+</main>
 
-<footer>
-  <div class="container footer-grid">
+<footer style="border-top:1px solid var(--line)">
+  <div class="container" style="padding:26px 0;display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:22px">
     <div>
       <div class="logo" style="display:flex;align-items:center;gap:.5rem">
         <img src="assets/img/logo-lgbl.png" alt="LGBL" style="height:22px;border-radius:50%">
         <span>LGBL Virtual Experience</span>
       </div>
-      <p class="copy">© 2025 LGBL Virtual Experience Center — Conception : Lucas Galy</p>
+      <p class="muted" style="margin-top:.5rem">© 2025 LGBL Virtual Experience Center — Conception : Lucas Galy</p>
     </div>
     <div>
       <h4>Le site</h4>
-      <p><a href="index.html">Accueil</a><br><a href="tarifs.html">Tarifs</a><br><a class="active" href="evenements.html">Événements</a></p>
+      <p><a href="index.html">Accueil</a><br><a href="tarifs.html">Tarifs</a><br><a href="evenements.html" aria-current="page">Événements</a></p>
     </div>
     <div>
       <h4>Contact</h4>
-      <p><a href="mailto:contact@lgbl-experience.fr">contact@lgbl-experience.fr</a><br><a href="tel:+33672392264">06 72 39 22 64</a></p>
+      <p><a href="mailto:lucasgaly.47510@gmail.com">lucasgaly.47510@gmail.com</a><br><a href="tel:+33672392264">06 72 39 22 64</a></p>
     </div>
     <div>
       <h4>LIVE</h4>
@@ -142,6 +221,18 @@
   </div>
 </footer>
 
-<script src="assets/js/main.js"></script>
+<script>
+  // Enregistrement d'un pré-remplissage pour le formulaire de contact.
+  // Les liens .btn-devis stockent un objet dans sessionStorage, lu ensuite par contact.html.
+  document.querySelectorAll('.btn-devis').forEach(btn => {
+    btn.addEventListener('click', (e) => {
+      try {
+        const data = btn.getAttribute('data-prefill');
+        if(data){ sessionStorage.setItem('lgbl_prefill', data); }
+      } catch(_){}
+    });
+  });
+</script>
+
 </body>
 </html>
