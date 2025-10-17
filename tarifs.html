@@ -5,27 +5,17 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>LGBL VIRTUAL CENTER EXPERIENCE – Tarifs</title>
 
-  <!-- Google Search Console -->
-  <meta name="google-site-verification" content="wlRHbf8WsgIWybuijJHohaG3y2jh4_bokztoDcf79aU" />
-
-  <!-- SEO -->
-  <meta name="description" content="Tarifs LGBL VIRTUAL CENTER EXPERIENCE : sessions libres (Standard & Pro), packs, Grand Prix IA, coaching, formules mercredi -16 ans, soirées, abonnements, privatisation." />
+  <meta name="description" content="Tarifs officiels LGBL Virtual Center Experience – Sessions libres, packs, événements, coaching, abonnements et privatisations à Agen." />
   <meta name="robots" content="index,follow" />
   <link rel="canonical" href="https://lucas24galy.github.io/LGBL-VRTUAL-CENTER-EXPERIENCE/tarifs.html" />
 
-  <!-- Open Graph -->
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="LGBL VIRTUAL CENTER EXPERIENCE" />
   <meta property="og:title" content="LGBL VIRTUAL CENTER EXPERIENCE – Tarifs" />
   <meta property="og:description" content="Simulateurs de course, packs, événements, coaching et privatisations." />
-  <meta property="og:url" content="https://lucas24galy.github.io/LGBL-VRTUAL-CENTER-EXPERIENCE/tarifs.html" />
   <meta property="og:image" content="assets/img/logo-lgbl.png" />
-  <meta name="twitter:card" content="summary" />
 
-  <!-- Icône & styles -->
   <link rel="icon" type="image/png" href="assets/img/logo-lgbl.png" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600;800&family=Poppins:wght@400;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="assets/css/styles.css" />
 
@@ -34,342 +24,161 @@
       --line: rgba(255,255,255,.08);
       --brand-rose:#ff2d6f; --brand-cyan:#00aaff;
       --bg:#0a0b0d; --panel:#0f1115; --text:#e9ecef; --muted:#a9b3bb;
-      --accent:#d60000;
     }
-    html{scroll-behavior:smooth}
-    body{background:var(--bg);color:var(--text);font-family:Poppins,system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial;line-height:1.8}
-
+    body{background:var(--bg);color:var(--text);font-family:Poppins,sans-serif;margin:0;padding:0}
     .container{max-width:1150px;margin:0 auto;padding:0 20px}
-    @media (max-width:480px){.container{padding:0 12px}}
 
-    /* Header (repris index) */
     header{position:sticky;top:0;z-index:60;background:rgba(10,11,13,.7);backdrop-filter:saturate(120%) blur(8px);border-bottom:1px solid var(--line)}
     .nav{display:flex;align-items:center;justify-content:space-between;height:64px}
-    .logo{display:inline-flex;align-items:center;gap:.6rem;color:#fff;text-decoration:none;font-weight:800;letter-spacing:.5px}
-    .logo img{height:42px;border-radius:50%;transition:transform .3s ease,filter .3s ease}
-    .logo img:hover{transform:scale(1.06);filter:drop-shadow(0 0 8px rgba(0,150,255,.5))}
+    .logo{display:inline-flex;align-items:center;gap:.6rem;color:#fff;text-decoration:none;font-weight:800}
+    .logo img{height:42px;border-radius:50%}
 
-    nav .links{display:flex;align-items:center;gap:6px}
-    nav .links a{color:#cfd6dc;text-decoration:none;padding:8px 12px;border:1px solid transparent;border-radius:999px;position:relative}
-    nav .links a:hover,nav .links a[aria-current="page"]{color:#fff;border-color:rgba(0,170,255,.35)}
-    nav .links a::after{content:"";position:absolute;left:12px;right:12px;bottom:4px;height:2px;transform:scaleX(0);transform-origin:left;background:linear-gradient(90deg,var(--brand-rose),var(--brand-cyan));transition:transform .25s ease}
-    nav .links a:hover::after,nav .links a[aria-current="page"]::after{transform:scaleX(1)}
+    .hero{padding:60px 0;border-bottom:1px solid var(--line);text-align:center;background:#0b0d11}
+    .hero h1{font-family:'Orbitron';font-size:2rem;color:#fff;text-transform:uppercase;margin-bottom:10px}
+    .hero p{color:#a9b3bb}
 
-    .mobile-toggle{display:none;background:transparent;border:1px solid var(--line);color:#cfd6dc;padding:6px 10px;border-radius:8px}
-    @media (max-width:900px){
-      .mobile-toggle{display:inline-block}
-      nav .links{display:none;position:absolute;left:0;right:0;top:64px;background:#0c0e12;border-bottom:1px solid var(--line);padding:10px 16px;flex-direction:column;gap:4px}
-      nav .links.open{display:flex}
-      nav .links a{width:100%;text-align:center}
-    }
+    .section{padding:50px 0;border-top:1px solid var(--line)}
+    .section h2{font-family:'Orbitron';letter-spacing:1px;color:#fff;margin-bottom:25px}
 
-    /* Hero */
-    .hero{position:relative;overflow:hidden;padding:56px 0;border-bottom:1px solid var(--line);background:#0b0d11}
-    .hero::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.22),rgba(0,0,0,.6));z-index:1}
-    .hero>.container{position:relative;z-index:2}
-    .hero h1{font-family:'Orbitron',system-ui;font-size:clamp(28px,5.6vw,44px);letter-spacing:1px;margin:0 0 .6rem;text-transform:uppercase}
-    .subtitle{color:var(--muted)}
-
-    /* Pills / cards tarifs */
-    .chips{display:flex;flex-wrap:wrap;gap:10px;margin:16px 0}
-    .chip{border:1px solid var(--line);background:rgba(255,255,255,.03);padding:.45rem .7rem;border-radius:999px;color:#cfd6dc}
-
-    .section{padding:40px 0;border-top:1px solid var(--line)}
-    .section h2{font-family:'Orbitron',system-ui;letter-spacing:.5px;margin:0 0 14px}
-
-    .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
-    @media (max-width:1000px){.grid{grid-template-columns:repeat(2,1fr)}}
-    @media (max-width:640px){.grid{grid-template-columns:1fr}}
-
-    .pill{position:relative;background:var(--panel);border:1px solid var(--line);border-radius:16px;padding:16px 16px 14px;transition:transform .18s ease, box-shadow .18s ease, border-color .18s ease}
-    .pill:hover{transform:translateY(-4px);box-shadow:0 16px 36px rgba(0,0,0,.35);border-color:rgba(0,170,255,.35)}
-    .pill h3{margin:0 0 6px;font-size:1.05rem;color:#fff}
-    .price{font-weight:800;font-size:1.25rem;color:#fff}
-    .muted{color:var(--muted);font-size:.94rem}
-    .meta{display:flex;gap:10px;flex-wrap:wrap;margin-top:8px}
-    .badge{display:inline-flex;align-items:center;gap:6px;border:1px solid var(--line);padding:.3rem .55rem;border-radius:999px;font-size:.85rem;color:#cfefff;background:#0e1b22}
-    .badge.rose{background:rgba(255,45,111,.12);color:#ffd7e5;border-color:rgba(255,45,111,.25)}
-    .badge.green{background:rgba(0,170,100,.12);color:#d1ffe7;border-color:rgba(0,170,100,.3)}
-
-    /* Subnav */
-    .subnav{position:sticky;top:64px;z-index:50;background:#0c0e12;border-bottom:1px solid var(--line)}
-    .subnav .container{display:flex;gap:8px;flex-wrap:wrap;padding:10px 20px}
-    .subnav a{border:1px solid var(--line);border-radius:999px;padding:.5rem .75rem;color:#cfd6dc;text-decoration:none}
-    .subnav a:hover{border-color:rgba(0,170,255,.35);color:#fff}
-
-    /* Table aux options privatisation */
-    table{width:100%;border-collapse:collapse}
-    th,td{border:1px solid var(--line);padding:10px 12px;text-align:left}
-    th{background:#12151a}
+    .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:20px}
+    .pill{background:var(--panel);border:1px solid var(--line);border-radius:16px;padding:18px;transition:.3s}
+    .pill:hover{transform:translateY(-4px);box-shadow:0 12px 24px rgba(0,0,0,.3)}
+    .pill h3{margin:0 0 6px;color:#fff;font-size:1.1rem}
+    .price{font-weight:700;font-size:1.25rem;color:#fff;margin-bottom:4px}
+    .muted{color:var(--muted);font-size:.95rem}
   </style>
 </head>
 <body>
-  <a href="#main" class="sr-only" style="position:absolute;left:-9999px;top:auto;width:1px;height:1px;overflow:hidden;">Aller au contenu principal</a>
-
-  <!-- Header -->
-  <header role="banner">
+  <header>
     <div class="container nav">
-      <a class="logo" href="index.html" aria-label="LGBL Accueil">
-        <img src="assets/img/logo-lgbl.png" alt="Logo LGBL" loading="lazy" decoding="async" />
-        <span>LGBL VIRTUAL CENTER EXPERIENCE</span>
-      </a>
-      <nav aria-label="Navigation principale">
-        <button class="mobile-toggle" id="mobileToggle" aria-expanded="false" aria-controls="mainNav">Menu</button>
-        <div class="links" id="mainNav">
-          <a href="index.html">Accueil</a>
-          <a href="tarifs.html" aria-current="page">Tarifs</a>
-          <a href="evenements.html">Événements</a>
-          <a href="communaute.html">Communauté</a>
-          <a href="contact.html">Contact</a>
-          <a href="https://www.youtube.com/@LucasGaly24/videos" target="_blank" rel="noopener">Vidéos</a>
-          <a href="https://www.youtube.com/@LucasGaly24/streams" target="_blank" rel="noopener">LIVE</a>
-        </div>
+      <a class="logo" href="index.html"><img src="assets/img/logo-lgbl.png" alt="Logo"/>LGBL VIRTUAL CENTER EXPERIENCE</a>
+      <nav class="links">
+        <a href="index.html">Accueil</a>
+        <a href="tarifs.html" aria-current="page">Tarifs</a>
+        <a href="evenements.html">Événements</a>
+        <a href="communaute.html">Communauté</a>
+        <a href="contact.html">Contact</a>
       </nav>
     </div>
   </header>
 
-  <!-- Subnav catégories -->
-  <div class="subnav" role="navigation" aria-label="Raccourcis tarifs">
+  <section class="hero">
     <div class="container">
-      <a href="#libre">LIBRE</a>
-      <a href="#bundles">Bundles</a>
-      <a href="#gp">Grand Prix IA</a>
-      <a href="#coaching">Coaching</a>
-      <a href="#mercredi">Mercredi -16 ans</a>
-      <a href="#soirees">Soirées</a>
-      <a href="#abos">Abonnements</a>
-      <a href="#prive">Privatisation</a>
-      <a href="#mini-race">Mini Race eSport</a>
+      <h1>Tarifs 2025</h1>
+      <p>Sessions libres, packs, coaching, abonnements et privatisations.</p>
     </div>
-  </div>
+  </section>
 
-  <main id="main" role="main">
-    <section class="hero" aria-labelledby="hero-title">
+  <main>
+    <section class="section">
       <div class="container">
-        <h1 id="hero-title">Tarifs 2025</h1>
-        <p class="subtitle">Sessions libres, packs avantage, événements, coaching et privatisation. <span class="chip">TTC</span> <span class="chip">Dernière MAJ : Oct. 2025</span></p>
-        <div class="chips"><span class="chip">Panier moyen visé ≈ 30 €</span><span class="chip">Packs -3 à -20 %</span><span class="chip">Standard & Dynamique Pro</span></div>
-      </div>
-    </section>
-
-    <!-- LIBRE -->
-    <section class="section" id="libre" aria-labelledby="libre-title">
-      <div class="container">
-        <h2 id="libre-title">LIBRE</h2>
-        <h3 style="margin:8px 0 12px">Châssis Standard</h3>
+        <h2>LIBRE – Châssis Standard</h2>
         <div class="grid">
-          <article class="pill"><h3>Session • 10 min</h3><div class="price">€ 10,00</div><div class="meta"><span class="badge">€ 1,00 / min</span><span class="badge">Tarif unitaire</span></div></article>
-          <article class="pill"><h3>Session • 20 min</h3><div class="price">€ 18,00</div><div class="meta"><span class="badge green">–2 € vs 2×10</span><span class="badge">€ 0,90 / min</span></div></article>
-          <article class="pill"><h3>Session • 30 min</h3><div class="price">€ 25,00</div><div class="meta"><span class="badge green">–5 € vs 3×10</span><span class="badge">€ 0,83 / min</span></div><p class="muted">Panier cible ~25–30 €</p></article>
-          <article class="pill"><h3>Pack • 2×10 min</h3><div class="price">€ 19,00</div><div class="meta"><span class="badge green">–1 €</span><span class="badge">€ 0,95 / min</span></div></article>
-          <article class="pill"><h3>Pack • 3×10 min</h3><div class="price">€ 27,00</div><div class="meta"><span class="badge rose">TOP VENTE</span><span class="badge green">–3 €</span><span class="badge">€ 0,90 / min</span></div></article>
-          <article class="pill"><h3>Pack • 4×10 min</h3><div class="price">€ 34,00</div><div class="meta"><span class="badge green">–6 €</span><span class="badge">€ 0,85 / min</span></div></article>
-          <article class="pill"><h3>Pack • 5×10 min</h3><div class="price">€ 40,00</div><div class="meta"><span class="badge green">–10 €</span><span class="badge">€ 0,80 / min</span></div></article>
+          <div class="pill"><h3>Session 10 min</h3><div class="price">10 €</div></div>
+          <div class="pill"><h3>Session 20 min</h3><div class="price">18 €</div></div>
+          <div class="pill"><h3>Session 30 min</h3><div class="price">25 €</div></div>
+          <div class="pill"><h3>Pack 3×10 min</h3><div class="price">27 €</div></div>
+          <div class="pill"><h3>Pack 5×10 min</h3><div class="price">40 €</div></div>
         </div>
 
-        <h3 style="margin:24px 0 12px">Châssis Dynamique Pro</h3>
+        <h2 style="margin-top:50px">LIBRE – Châssis Dynamique Pro</h2>
         <div class="grid">
-          <article class="pill"><h3>Session • 10 min</h3><div class="price">€ 12,00</div><div class="meta"><span class="badge">€ 1,20 / min</span><span class="badge">Tarif unitaire</span></div></article>
-          <article class="pill"><h3>Session • 20 min</h3><div class="price">€ 22,00</div><div class="meta"><span class="badge green">–2 € vs 2×10</span><span class="badge">€ 1,10 / min</span></div></article>
-          <article class="pill"><h3>Session • 30 min</h3><div class="price">€ 30,00</div><div class="meta"><span class="badge green">–6 € vs 3×10</span><span class="badge">€ 1,00 / min</span></div><p class="muted">Panier cible ~30–35 €</p></article>
-          <article class="pill"><h3>Pack • 2×10 min</h3><div class="price">€ 23,00</div><div class="meta"><span class="badge green">–1 €</span><span class="badge">€ 1,15 / min</span></div></article>
-          <article class="pill"><h3>Pack • 3×10 min</h3><div class="price">€ 33,00</div><div class="meta"><span class="badge rose">TOP VENTE</span><span class="badge green">–3 €</span><span class="badge">€ 1,10 / min</span></div></article>
-          <article class="pill"><h3>Pack • 4×10 min</h3><div class="price">€ 42,00</div><div class="meta"><span class="badge green">–6 €</span><span class="badge">€ 1,05 / min</span></div></article>
-          <article class="pill"><h3>Pack • 5×10 min</h3><div class="price">€ 50,00</div><div class="meta"><span class="badge green">–10 €</span><span class="badge">€ 1,00 / min</span></div></article>
+          <div class="pill"><h3>Session 10 min</h3><div class="price">12 €</div></div>
+          <div class="pill"><h3>Session 20 min</h3><div class="price">22 €</div></div>
+          <div class="pill"><h3>Session 30 min</h3><div class="price">30 €</div></div>
+          <div class="pill"><h3>Pack 3×10 min</h3><div class="price">33 €</div></div>
+          <div class="pill"><h3>Pack 5×10 min</h3><div class="price">50 €</div></div>
         </div>
       </div>
     </section>
 
-    <!-- BUNDLES -->
-    <section class="section" id="bundles" aria-labelledby="bundles-title">
+    <section class="section">
       <div class="container">
-        <h2 id="bundles-title">Bundles – Panier moyen ≈ 30 €</h2>
+        <h2>Bundles</h2>
         <div class="grid">
-          <article class="pill"><h3>Starter Standard</h3><div class="price">€ 29,00</div><p class="muted">3×10 min + boisson • Boisson soft 33cl incluse</p><div class="meta"><span class="badge green">–4 € vs 3×10</span></div></article>
-          <article class="pill"><h3>Starter Pro</h3><div class="price">€ 35,00</div><p class="muted">3×10 min + boisson • Boisson soft 33cl incluse</p><div class="meta"><span class="badge green">–5 € vs 3×10</span></div></article>
+          <div class="pill"><h3>Starter Standard</h3><div class="price">29 €</div><p class="muted">3×10 min + boisson</p></div>
+          <div class="pill"><h3>Starter Pro</h3><div class="price">35 €</div><p class="muted">3×10 min + boisson</p></div>
         </div>
       </div>
     </section>
 
-    <!-- GRAND PRIX IA -->
-    <section class="section" id="gp" aria-labelledby="gp-title">
+    <section class="section">
       <div class="container">
-        <h2 id="gp-title">GRAND PRIX IA (BOTS)</h2>
+        <h2>Grand Prix IA</h2>
         <div class="grid">
-          <article class="pill"><h3>Standard</h3><div class="price">€ 32,00</div><p class="muted">Qualifications + Course (30 min)</p></article>
-          <article class="pill"><h3>Pro</h3><div class="price">€ 36,00</div><p class="muted">Qualifications + Course (30 min)</p></article>
-          <article class="pill"><h3>Standard</h3><div class="price">€ 55,00</div><p class="muted">Qualifs + 2× Course (2×30 min)</p><div class="meta"><span class="badge green">–9 € vs 2×(30')</span></div></article>
-          <article class="pill"><h3>Pro</h3><div class="price">€ 62,00</div><p class="muted">Qualifs + 2× Course (2×30 min)</p><div class="meta"><span class="badge green">–10 € vs 2×(30')</span></div></article>
+          <div class="pill"><h3>Standard</h3><div class="price">32 €</div><p class="muted">Qualifs + Course (30 min)</p></div>
+          <div class="pill"><h3>Pro</h3><div class="price">36 €</div><p class="muted">Qualifs + Course (30 min)</p></div>
         </div>
       </div>
     </section>
 
-    <!-- COACHING -->
-    <section class="section" id="coaching" aria-labelledby="coach-title">
+    <section class="section">
       <div class="container">
-        <h2 id="coach-title">COACHING INDIVIDUELS</h2>
+        <h2>Coaching</h2>
         <div class="grid">
-          <article class="pill"><h3>Coaching 1 h</h3><div class="price">€ 60,00</div><p class="muted">Pilotage, télémétrie, réglages</p></article>
-          <article class="pill"><h3>Coaching 2 h</h3><div class="price">€ 120,00</div></article>
-          <article class="pill"><h3>Pack 3×1 h</h3><div class="price">€ 165,00</div><div class="meta"><span class="badge green">–15 €</span></div><p class="muted">≈ 55 €/h</p></article>
-          <article class="pill"><h3>Pack 5×1 h</h3><div class="price">€ 250,00</div><div class="meta"><span class="badge green">–50 €</span></div><p class="muted">≈ 50 €/h — best value</p></article>
+          <div class="pill"><h3>1h Individuel</h3><div class="price">60 €</div></div>
+          <div class="pill"><h3>2h Intensif</h3><div class="price">120 €</div></div>
+          <div class="pill"><h3>Pack 3×1h</h3><div class="price">165 €</div></div>
+          <div class="pill"><h3>Pack 5×1h</h3><div class="price">250 €</div></div>
         </div>
       </div>
     </section>
 
-    <!-- MERCREDI -16 ANS -->
-    <section class="section" id="mercredi" aria-labelledby="wed-title">
+    <section class="section">
       <div class="container">
-        <h2 id="wed-title">FORMULE MERCREDI APRÈS-MIDI (Collège-Lycée) – (–16 ans)</h2>
+        <h2>Formule Mercredi -16 ans</h2>
         <div class="grid">
-          <article class="pill"><h3>Découverte 5 min (Standard)</h3><div class="price">€ 5,00</div><div class="meta"><span class="badge">€ 1,00 / min</span></div><p class="muted">Présenter carte de l'établissement</p></article>
-          <article class="pill"><h3>Bonus chrono</h3><div class="price">€ 0,00</div><div class="meta"><span class="badge green">Offert</span></div><p class="muted">Meilleur temps de l'après‑midi (mercredi) — 1 session 10 min</p></article>
+          <div class="pill"><h3>Découverte 5 min</h3><div class="price">5 €</div></div>
+          <div class="pill"><h3>Bonus chrono</h3><div class="price">Offert</div></div>
         </div>
       </div>
     </section>
 
-    <!-- SOIRÉES / ÉVÉNEMENTS -->
-    <section class="section" id="soirees" aria-labelledby="events-title">
+    <section class="section">
       <div class="container">
-        <h2 id="events-title">SOIRÉES / ÉVÉNEMENTS</h2>
+        <h2>Soirées & Événements</h2>
         <div class="grid">
-          <article class="pill"><h3>Diffusion F1 — entrée</h3><div class="price">€ 6,00</div><p class="muted">Conso obligatoire</p></article>
-          <article class="pill"><h3>Soirée Ambiance Pro</h3><div class="price">€ 28,00</div><p class="muted">2 sessions Pro + boisson</p></article>
-          <article class="pill"><h3>Soirée Couple</h3><div class="price">€ 35,00</div><p class="muted">2×20 min + boissons</p></article>
-          <article class="pill"><h3>Family Pack</h3><div class="price">€ 22,00</div><p class="muted">1 adulte + 1 enfant — 2×10 min</p></article>
-          <article class="pill"><h3>Tournoi mensuel (inscription)</h3><div class="price">€ 18,00</div><p class="muted">Variable selon la durée</p></article>
+          <div class="pill"><h3>Diffusion F1 (Entrée)</h3><div class="price">6 €</div></div>
+          <div class="pill"><h3>Soirée Pro</h3><div class="price">28 €</div></div>
+          <div class="pill"><h3>Soirée Couple</h3><div class="price">35 €</div></div>
+          <div class="pill"><h3>Family Pack</h3><div class="price">22 €</div></div>
         </div>
       </div>
     </section>
 
-    <!-- ABONNEMENTS & FIDÉLITÉ -->
-    <section class="section" id="abos" aria-labelledby="abo-title">
+    <section class="section">
       <div class="container">
-        <h2 id="abo-title">ABONNEMENTS & FIDÉLITÉ</h2>
+        <h2>Abonnements & Fidélité</h2>
         <div class="grid">
-          <article class="pill"><h3>Mensuel Standard</h3><div class="price">€ 79,00</div><p class="muted">4×30 min • valeur ~108 €</p><div class="meta"><span class="badge green">–29 € vs 4×30</span></div></article>
-          <article class="pill"><h3>Mensuel Pro</h3><div class="price">€ 95,00</div><p class="muted">4×30 min • valeur ~132 €</p><div class="meta"><span class="badge green">–37 € vs 4×30</span></div></article>
-          <article class="pill"><h3>Licence annuelle</h3><div class="price">€ 350,00</div><p class="muted">Accès tarifs Standard sur Pro</p></article>
-          <article class="pill"><h3>Carte fidélité</h3><div class="price">€ 0,00</div><p class="muted">10 tampons → 1 session offerte</p></article>
-          <article class="pill"><h3>Bons cadeaux</h3><div class="price">€ 10,00</div><p class="muted">Valeur 10/20/30/50/100 € (montants multiples)</p></article>
+          <div class="pill"><h3>Mensuel Standard</h3><div class="price">79 €</div></div>
+          <div class="pill"><h3>Mensuel Pro</h3><div class="price">95 €</div></div>
+          <div class="pill"><h3>Licence annuelle</h3><div class="price">350 €</div></div>
+          <div class="pill"><h3>Carte fidélité</h3><div class="price">Gratuite</div></div>
         </div>
       </div>
     </section>
 
-    <!-- PRIVATISATION -->
-    <section class="section" id="prive" aria-labelledby="prive-title">
+    <section class="section">
       <div class="container">
-        <h2 id="prive-title">PRIVATISATION</h2>
+        <h2>Privatisation</h2>
         <div class="grid">
-          <article class="pill"><h3>Privatisation 2 h</h3><div class="price">€ 220,00</div><p class="muted">Jusqu’à ~10 pers. — 4 simulateurs + staff — hors boissons</p></article>
-          <article class="pill"><h3>Privatisation 4 h</h3><div class="price">€ 420,00</div><p class="muted">Jusqu’à ~16 pers.</p></article>
-          <article class="pill"><h3>Privatisation 6 h</h3><div class="price">€ 620,00</div><p class="muted">Jusqu’à ~24 pers.</p></article>
-          <article class="pill"><h3>Privatisation 8 h</h3><div class="price">€ 820,00</div><p class="muted">Jusqu’à ~32 pers.</p></article>
-        </div>
-        <div style="margin-top:14px">
-          <table aria-label="Options privatisation">
-            <thead><tr><th>Option</th><th>Format</th><th>Tarif</th><th>Notes</th></tr></thead>
-            <tbody>
-              <tr><td>Simulateur additionnel</td><td>par heure</td><td>€ 50,00</td><td></td></tr>
-              <tr><td>Coach / Animateur</td><td>par heure</td><td>€ 30,00</td><td></td></tr>
-              <tr><td>Pack boissons soft (10)</td><td>—</td><td>€ 25,00</td><td></td></tr>
-            </tbody>
-          </table>
+          <div class="pill"><h3>2h – jusqu’à 10 pers.</h3><div class="price">220 €</div></div>
+          <div class="pill"><h3>4h – jusqu’à 16 pers.</h3><div class="price">420 €</div></div>
+          <div class="pill"><h3>6h – jusqu’à 24 pers.</h3><div class="price">620 €</div></div>
+          <div class="pill"><h3>8h – jusqu’à 32 pers.</h3><div class="price">820 €</div></div>
         </div>
       </div>
     </section>
 
-    <!-- MINI RACE ESPORT -->
-    <section class="section" id="mini-race" aria-labelledby="mini-title">
+    <section class="section">
       <div class="container">
-        <h2 id="mini-title">MINI RACE ESPORT (confirmé – soirée)</h2>
+        <h2>Mini Race eSport</h2>
         <div class="grid">
-          <article class="pill"><h3>2 courses / 2 circuits</h3><div class="price">€ 40,00</div><p class="muted">5' Practice | 8' Qualif | 10' Course</p></article>
-          <article class="pill"><h3>4 courses / 4 circuits</h3><div class="price">€ 85,00</div><p class="muted">10' Practice | 10' Qualif | 2×15' Course • Grille inversée C2</p></article>
+          <div class="pill"><h3>2 courses / 2 circuits</h3><div class="price">40 €</div></div>
+          <div class="pill"><h3>4 courses / 4 circuits</h3><div class="price">85 €</div></div>
         </div>
-      </div>
-    </section>
-
-    <section class="section" aria-label="Mentions tarifs">
-      <div class="container">
-        <p class="muted">Tarifs TTC – susceptibles d’évoluer • Dernière mise à jour : Octobre 2025.</p>
       </div>
     </section>
   </main>
-
-  <!-- Footer (repris index) -->
-  <footer style="border-top:1px solid var(--line)" role="contentinfo">
-    <div class="container" style="padding:26px 0;display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:22px">
-      <div>
-        <div class="logo" style="display:flex;align-items:center;gap:.5rem">
-          <img src="assets/img/logo-lgbl.png" alt="LGBL" style="height:22px;border-radius:50%" loading="lazy" decoding="async" />
-          <span>LGBL VIRTUAL CENTER EXPERIENCE</span>
-        </div>
-        <p class="copy">© 2025 LGBL VIRTUAL CENTER EXPERIENCE — Conception : Lucas Galy</p>
-      </div>
-      <div>
-        <h4>Le site</h4>
-        <p>
-          <a href="index.html">Accueil</a><br />
-          <a href="tarifs.html" aria-current="page">Tarifs</a><br />
-          <a href="evenements.html">Événements</a>
-        </p>
-      </div>
-      <div>
-        <h4>Contact</h4>
-        <p>
-          <a href="mailto:lucasgaly.47510@gmail.com">lucasgaly.47510@gmail.com</a><br />
-          <a href="tel:+33672392264">06 72 39 22 64</a>
-        </p>
-      </div>
-      <div>
-        <h4>LIVE</h4>
-        <p><a href="https://www.youtube.com/@LucasGaly24/streams" target="_blank" rel="noopener">YouTube</a></p>
-      </div>
-    </div>
-
-    <div class="container" style="padding-bottom:24px">
-      <p class="small"><a href="mentions-legales.html">Mentions légales</a> · <a href="confidentialite.html">Confidentialité</a></p>
-    </div>
-  </footer>
-
-  <!-- Données structurées -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "SportsActivityLocation",
-    "name": "LGBL VIRTUAL CENTER EXPERIENCE",
-    "url": "https://lucas24galy.github.io/LGBL-VRTUAL-CENTER-EXPERIENCE/",
-    "logo": "https://lucas24galy.github.io/LGBL-VRTUAL-CENTER-EXPERIENCE/assets/img/logo-lgbl.png",
-    "description": "Centre de simulation de course avec bar et coin détente.",
-    "areaServed": "Agen, Lot-et-Garonne, France",
-    "telephone": "+33 6 72 39 22 64",
-    "email": "mailto:lucasgaly.47510@gmail.com"
-  }
-  </script>
-
-  <!-- Scripts (repris index) -->
-  <script>
-    // Burger
-    (function(){
-      const btn = document.getElementById('mobileToggle');
-      const menu = document.getElementById('mainNav');
-      if(!btn || !menu) return;
-      btn.addEventListener('click', () => {
-        const open = menu.classList.toggle('open');
-        btn.setAttribute('aria-expanded', String(open));
-      });
-    })();
-
-    // Lien actif (sécurité si nav non sticky)
-    (function(){
-      const path = location.pathname.split('/').pop() || 'tarifs.html';
-      document.querySelectorAll('.links a[href]')
-        .forEach(a => { if (a.getAttribute('href') === path) a.setAttribute('aria-current', 'page'); });
-    })();
-  </script>
-
-  <script src="assets/js/main.js" defer></script>
-  <noscript><div class="container" style="padding:1rem"><p class="alert info">Pour l’expérience complète (menus), activez JavaScript.</p></div></noscript>
 </body>
 </html>
