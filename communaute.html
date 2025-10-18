@@ -20,7 +20,7 @@
   <link rel="stylesheet" href="assets/css/styles.css"/>
 
   <style>
-    :root{--line:rgba(255,255,255,.08);--bg:#0a0b0d;--panel:#0f1115;--text:#e9ecef;--muted:#a9b3bb;--rose:#ff2d6f;--cyan:#00aaff;--green:#00c389}
+    :root{--line:rgba(255,255,255,.08);--bg:#0a0b0d;--panel:#0f1115;--text:#e9ecef;--muted:#a9b3bb;--rose:#ff2d6f;--cyan:#00aaff}
     body{background:var(--bg);color:var(--text);font-family:Poppins,system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial;margin:0}
     .container{max-width:1150px;margin:0 auto;padding:0 20px}
 
@@ -54,6 +54,18 @@
     .review{display:flex;gap:12px}
     .avatar{width:42px;height:42px;border-radius:50%;background:#151a20;border:1px solid var(--line);display:flex;align-items:center;justify-content:center;font-weight:700}
     .review-head{display:flex;align-items:center;gap:8px;justify-content:space-between}
+    .reviews-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+    @media(max-width:960px){.reviews-grid{grid-template-columns:1fr}}
+    .summary{display:flex;align-items:center;gap:12px}
+    .summary .score{font-size:1.6rem;font-weight:800}
+
+    .stars-input{display:flex;flex-direction:row-reverse;justify-content:flex-end;gap:6px}
+    .stars-input input{display:none}
+    .stars-input label{cursor:pointer;font-size:1.4rem;transition:transform .1s ease}
+    .stars-input label:hover{transform:scale(1.1)}
+    .stars-input input:checked ~ label,
+    .stars-input label:hover,
+    .stars-input label:hover ~ label { color:#ffd166; }
 
     /* Live timing */
     .lt-toolbar{display:flex;gap:8px;align-items:center;flex-wrap:wrap;margin-bottom:10px}
@@ -96,28 +108,57 @@
   <section class="section" id="avis">
     <div class="container">
       <h2>⭐ Avis de la communauté</h2>
-      <div class="grid-3" style="margin-top:.8rem">
-        <!-- 5★ -->
+
+      <!-- Résumé note / compteur -->
+      <div class="card" style="margin-bottom:14px;display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap">
+        <div class="summary">
+          <span class="score" id="avgScore">5.0</span>
+          <div>
+            <div id="avgStars" class="rating" aria-label="Note moyenne">★★★★★</div>
+            <div class="muted"><span id="reviewsCount">0</span> avis</div>
+          </div>
+        </div>
+        <!-- Formulaire d'avis -->
+        <form id="reviewForm" style="display:grid;grid-template-columns:220px 1fr auto;gap:10px;align-items:center">
+          <input id="revName" type="text" placeholder="Votre prénom (ou nom)" required style="background:#0e1218;border:1px solid var(--line);color:#fff;border-radius:10px;padding:8px 10px">
+          <div style="display:flex;gap:10px;align-items:center">
+            <div class="stars-input" aria-label="Choisir une note sur 5">
+              <input type="radio" id="star5" name="rate" value="5" required><label for="star5">★</label>
+              <input type="radio" id="star4" name="rate" value="4"><label for="star4">★</label>
+              <input type="radio" id="star3" name="rate" value="3"><label for="star3">★</label>
+              <input type="radio" id="star2" name="rate" value="2"><label for="star2">★</label>
+              <input type="radio" id="star1" name="rate" value="1"><label for="star1">★</label>
+            </div>
+            <small class="muted">(cliquez une étoile)</small>
+          </div>
+          <button class="btn" type="submit">Publier</button>
+          <textarea id="revText" placeholder="Votre avis (max 300 caractères)" required maxlength="300" style="grid-column:1/-1;background:#0e1218;border:1px solid var(--line);color:#fff;border-radius:10px;padding:10px 12px"></textarea>
+          <div style="grid-column:1/-1;display:flex;gap:8px;align-items:center;flex-wrap:wrap">
+            <button class="btn secondary" type="button" id="sendToTeam">Envoyer à l’équipe</button>
+            <small class="muted">Vos avis s’affichent localement sur votre navigateur. “Envoyer à l’équipe” ouvre votre e-mail pour modération.</small>
+          </div>
+        </form>
+      </div>
+
+      <!-- Grille d’avis (prédéfinis + utilisateurs) -->
+      <div class="reviews-grid" id="reviewsGrid" style="margin-top:.8rem">
+        <!-- Exemples existants -->
         <article class="card hoverable">
           <div class="review-head">
             <div class="review">
               <div class="avatar">AG</div>
-              <div>
-                <strong>Anaïs G.</strong><div class="muted">Pilote débutante</div>
-              </div>
+              <div><strong>Anaïs G.</strong><div class="muted">Pilote débutante</div></div>
             </div>
             <div class="rating" aria-label="Note 5 sur 5">★★★★★</div>
           </div>
           <p>Matériel propre et prise en main rapide. Le staff est super sympa, je reviendrai !</p>
         </article>
-        
+
         <article class="card hoverable">
           <div class="review-head">
             <div class="review">
               <div class="avatar">JM</div>
-              <div>
-                <strong>Jean M.</strong><div class="muted">Habitué</div>
-              </div>
+              <div><strong>Jean M.</strong><div class="muted">Habitué</div></div>
             </div>
             <div class="rating" aria-label="Note 5 sur 5">★★★★★</div>
           </div>
@@ -128,23 +169,18 @@
           <div class="review-head">
             <div class="review">
               <div class="avatar">CL</div>
-              <div>
-                <strong>Chloé L.</strong><div class="muted">Visite en famille</div>
-              </div>
+              <div><strong>Chloé L.</strong><div class="muted">Visite en famille</div></div>
             </div>
             <div class="rating" aria-label="Note 4 sur 5">★★★★☆</div>
           </div>
           <p>On a passé un super moment, les enfants ont adoré. Vivement les prochains tournois !</p>
         </article>
 
-        <!-- Avis sur les prix -->
         <article class="card hoverable">
           <div class="review-head">
             <div class="review">
               <div class="avatar">NB</div>
-              <div>
-                <strong>Noé B.</strong><div class="muted">Local</div>
-              </div>
+              <div><strong>Noé B.</strong><div class="muted">Local</div></div>
             </div>
             <div class="rating" aria-label="Note 5 sur 5">★★★★★</div>
           </div>
@@ -155,13 +191,11 @@
           <div class="review-head">
             <div class="review">
               <div class="avatar">BL</div>
-              <div>
-                <strong>Baptiste L.</strong><div class="muted">Esport</div>
-              </div>
+              <div><strong>Baptiste L.</strong><div class="muted">Esport</div></div>
             </div>
             <div class="rating" aria-label="Note 4 sur 5">★★★★☆</div>
           </div>
-          <p>Format Sprint du vendredi = top ! Bonne rotation de circuits et fair‑play.</p>
+          <p>Format Sprint du vendredi = top ! Bonne rotation de circuits et fair-play.</p>
         </article>
 
         <!-- 1★ unique -->
@@ -169,9 +203,7 @@
           <div class="review-head">
             <div class="review">
               <div class="avatar">DP</div>
-              <div>
-                <strong>David P.</strong><div class="muted">Motard</div>
-              </div>
+              <div><strong>David P.</strong><div class="muted">Motard</div></div>
             </div>
             <div class="rating" aria-label="Note 1 sur 5">★☆☆☆☆</div>
           </div>
@@ -284,6 +316,112 @@
       const def = 'http://80.11.31.77:8772/live-timing?server=0';
       input.value = def; frame.src = def;
       try{ localStorage.removeItem(KEY); }catch(_){ }
+    });
+  })();
+
+  // ---------- Avis : stockage local + moyenne + envoi mail ----------
+  (function(){
+    const KEY = 'lgbl_reviews';
+    const form = document.getElementById('reviewForm');
+    const nameEl = document.getElementById('revName');
+    const textEl = document.getElementById('revText');
+    const grid = document.getElementById('reviewsGrid');
+    const avgScore = document.getElementById('avgScore');
+    const avgStars = document.getElementById('avgStars');
+    const reviewsCount = document.getElementById('reviewsCount');
+    const sendBtn = document.getElementById('sendToTeam');
+
+    function getReviews(){
+      try{ return JSON.parse(localStorage.getItem(KEY) || '[]'); }catch(e){ return []; }
+    }
+    function saveReviews(arr){
+      try{ localStorage.setItem(KEY, JSON.stringify(arr)); }catch(_){}
+    }
+    function initials(name){
+      const p = (name||'').trim().split(/\s+/);
+      return (p[0]?.[0]||'U').toUpperCase() + (p[1]?.[0]||'').toUpperCase();
+    }
+    function starLine(n){
+      const full = '★★★★★'.slice(0, n);
+      const rest = '☆☆☆☆☆'.slice(n);
+      return full + rest;
+    }
+    function renderUserReview(r){
+      const card = document.createElement('article');
+      card.className = 'card hoverable';
+      card.innerHTML = `
+        <div class="review-head">
+          <div class="review">
+            <div class="avatar">${initials(r.name)}</div>
+            <div><strong>${escapeHtml(r.name)}</strong><div class="muted">Avis utilisateur</div></div>
+          </div>
+          <div class="rating" aria-label="Note ${r.rate} sur 5">${starLine(r.rate)}</div>
+        </div>
+        <p>${escapeHtml(r.text)}</p>
+      `;
+      grid.prepend(card); // dernier avis en premier
+    }
+    function escapeHtml(s){ return (s||'').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c])); }
+
+    function updateSummary(){
+      const baseCount = grid.querySelectorAll('.card.hoverable').length; // contient aussi les 6 exemples
+      const custom = getReviews();
+      const total = 6 + custom.length; // 6 avis statiques ci-dessus
+      reviewsCount.textContent = total;
+
+      // Moyenne basée sur : 5,5,4,5,4,1 (exemples) + avis utilisateurs
+      const baseSum = 5+5+4+5+4+1;
+      const userSum = custom.reduce((a,b)=>a+ (b.rate||0),0);
+      const avg = ((baseSum + userSum) / total) || 0;
+      avgScore.textContent = avg.toFixed(1);
+      const rounded = Math.round(avg);
+      avgStars.textContent = starLine(rounded);
+      avgStars.setAttribute('aria-label', `Note moyenne ${avg.toFixed(1)} sur 5`);
+    }
+
+    // Charger les avis utilisateurs existants
+    getReviews().forEach(renderUserReview);
+    updateSummary();
+
+    // Soumission
+    form.addEventListener('submit', (e)=>{
+      e.preventDefault();
+      const name = nameEl.value.trim().slice(0,50);
+      const text = textEl.value.trim().slice(0,300);
+      const rateEl = form.querySelector('input[name="rate"]:checked');
+      if(!name || !text || !rateEl){ alert('Merci de remplir votre nom, une note et un avis.'); return; }
+
+      const rate = parseInt(rateEl.value,10);
+      const reviews = getReviews();
+      const rec = {name, text, rate, ts: Date.now()};
+      reviews.push(rec);
+      saveReviews(reviews);
+      renderUserReview(rec);
+      updateSummary();
+
+      form.reset();
+      // focus visuel
+      nameEl.blur();
+    });
+
+    // Envoyer à l’équipe (ouvre e-mail)
+    sendBtn.addEventListener('click', ()=>{
+      const rateEl = form.querySelector('input[name="rate"]:checked');
+      const name = nameEl.value.trim() || '(anonyme)';
+      const rate = rateEl ? `${rateEl.value}/5` : '(non renseigné)';
+      const text = textEl.value.trim() || '(vide)';
+      const body = encodeURIComponent(
+`Nouvel avis communauté LGBL
+
+Nom: ${name}
+Note: ${rate}
+Avis:
+${text}
+
+(Envoyé depuis la page Communauté)`
+      );
+      const mailto = `mailto:lucasgaly.47510@gmail.com?subject=${encodeURIComponent('[Avis] Communauté LGBL')}&body=${body}`;
+      window.location.href = mailto;
     });
   })();
 </script>
