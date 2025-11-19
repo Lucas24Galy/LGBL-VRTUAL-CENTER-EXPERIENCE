@@ -1,248 +1,978 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1"/>
-  <title>LGBL – Événements & eSport</title>
-  <meta name="description" content="Soirées eSport (vendredi), privatisation groupe/entreprise, diffusions F1 & grands matchs, lives & replays. Demandez un devis en 1 clic."/>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Événements | VIRTUAL CENTER EXPERIENCE</title>
 
-  <!-- SEO / Social -->
-  <meta property="og:type" content="website" />
-  <meta property="og:site_name" content="LGBL VIRTUAL CENTER EXPERIENCE" />
-  <meta property="og:title" content="LGBL – Événements & eSport" />
-  <meta property="og:description" content="Vendredi: soirées eSport (Sprint/Endurance/Thème). Privatisations. Diffusions F1 (8€ conso obligatoire), Endurance, Moto, Matchs, Lives & replays." />
-  <meta property="og:image" content="assets/img/logo-lgbl.png" />
+    <meta name="description" content="Tournois, événements, entreprises, anniversaires et coaching simracing chez Virtual Center Experience.">
+    <meta name="keywords" content="tournois simracing, événements, team building, anniversaires, coaching, entreprise, virtual center experience">
 
-  <link rel="icon" type="image/png" href="assets/img/logo-lgbl.png" />
-  <link rel="preconnect" href="https://fonts.googleapis.com"/>
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
-  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600;800&family=Poppins:wght@400;600;700&display=swap" rel="stylesheet"/>
-  <link rel="stylesheet" href="assets/css/styles.css"/>
+    <!-- Police -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
 
-  <style>
-    :root{--line:rgba(255,255,255,.08);--bg:#0a0b0d;--panel:#0f1115;--text:#e9ecef;--muted:#a9b3bb;--accent:#00aaff;--accent2:#ff2d6f}
-    body{background:var(--bg);color:var(--text);font-family:Poppins,system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial;margin:0}
-    .container{max-width:1150px;margin:0 auto;padding:0 20px}
-    header{position:sticky;top:0;z-index:60;background:rgba(10,11,13,.7);backdrop-filter:saturate(120%) blur(8px);border-bottom:1px solid var(--line)}
-    .nav{display:flex;align-items:center;justify-content:space-between;height:64px}
-    .logo{display:inline-flex;align-items:center;gap:.6rem;color:#fff;text-decoration:none;font-weight:800;letter-spacing:.5px}
-    .logo img{height:42px;border-radius:50%}
-    nav .links a{color:#cfd6dc;text-decoration:none;padding:8px 12px;border:1px solid transparent;border-radius:999px}
-    nav .links a:hover,nav .links a[aria-current="page"]{color:#fff;border-color:rgba(0,170,255,.35)}
+    <style>
+        :root {
+            --bg-main: #050814;
+            --bg-soft: #0c1224;
+            --card-bg: #111729;
+            --card-soft: #151c30;
+            --accent-blue: #2f80ed;
+            --accent-red: #d62839;
+            --text-main: #f9fafb;
+            --text-muted: #a0aecb;
+            --border-soft: #262f45;
+            --radius-lg: 14px;
+            --shadow-soft: 0 18px 40px rgba(0, 0, 0, 0.6);
+            --transition-fast: 0.18s ease-out;
+        }
 
-    .hero{position:relative;overflow:hidden;padding:56px 0;border-bottom:1px solid var(--line);background:#0b0d11}
-    .hero>.container{position:relative;z-index:2;text-align:center}
-    .hero h1{font-family:'Orbitron';font-size:clamp(28px,5.6vw,44px);letter-spacing:1px;margin:0 0 .6rem;text-transform:uppercase}
-    .subtitle{color:var(--muted)}
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        html, body { height: 100%; }
 
-    .section{padding:40px 0;border-top:1px solid var(--line)}
-    .section h2{font-family:'Orbitron';letter-spacing:.5px;margin:0 0 14px}
-    .grid-2{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}
-    .grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
-    @media (max-width:960px){.grid-2,.grid-3{grid-template-columns:1fr}}
+        body {
+            font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+            background: var(--bg-main);
+            color: var(--text-main);
+            line-height: 1.6;
+        }
 
-    .card{background:var(--panel);border:1px solid var(--line);border-radius:16px;padding:18px;transition:.18s ease;transition-property:transform,box-shadow,border-color}
-    .card.hoverable:hover{transform:translateY(-4px);box-shadow:0 16px 36px rgba(0,0,0,.35);border-color:rgba(0,170,255,.35)}
-    .card h3{margin:.2rem 0 .4rem}
-    .big{font-weight:700}
-    .muted{color:var(--muted)}
+        a { color: inherit; text-decoration: none; }
+        img { max-width: 100%; display: block; }
 
-    .tag{display:inline-flex;align-items:center;gap:6px;border:1px solid var(--line);padding:.35rem .6rem;border-radius:999px;background:rgba(0,170,255,.08);color:#cfefff;font-size:.9rem}
-    .btn{display:inline-block;background:linear-gradient(90deg,var(--accent2),var(--accent));padding:.6rem .9rem;border-radius:999px;color:#fff;text-decoration:none;font-weight:700}
-    .btn.btn-outline{background:transparent;border:1px solid rgba(0,170,255,.35)}
+        .container {
+            width: 100%;
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 1.5rem;
+        }
 
-    .alert{border-radius:10px;padding:.7rem 1rem;border:1px solid var(--line)}
-    .alert.info{background:#0e1b22;color:#cfefff;border-color:rgba(0,170,255,.25)}
+        /* ============ HEADER (même que index) ============ */
 
-    .list-clean{margin:.2rem 0 0;padding-left:1.1rem;line-height:1.9}
-  </style>
+        header {
+            position: sticky;
+            top: 0;
+            z-index: 30;
+            backdrop-filter: blur(12px);
+            background: rgba(5, 8, 20, 0.96);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+        }
+
+        .nav {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0.7rem 0;
+        }
+
+        .nav-left {
+            display: flex;
+            align-items: center;
+            gap: 0.9rem;
+        }
+
+        .logo-img {
+            height: 40px;
+            width: auto;
+        }
+
+        .brand-text {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .brand-title {
+            font-weight: 800;
+            font-size: 0.95rem;
+            letter-spacing: 0.16em;
+            text-transform: uppercase;
+        }
+
+        .brand-subtitle {
+            font-size: 0.8rem;
+            color: var(--text-muted);
+        }
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            list-style: none;
+        }
+
+        .nav-links a {
+            font-size: 0.86rem;
+            text-transform: uppercase;
+            letter-spacing: 0.14em;
+            padding: 0.5rem 0.95rem;
+            border-radius: 999px;
+            border: 1px solid transparent;
+            cursor: pointer;
+            transition:
+                transform var(--transition-fast),
+                box-shadow var(--transition-fast),
+                border-color var(--transition-fast),
+                background 0.2s ease-out;
+        }
+
+        .nav-links a:hover {
+            transform: translateY(-1px);
+            box-shadow: 0 10px 24px rgba(0, 0, 0, 0.5);
+            border-color: rgba(255, 255, 255, 0.12);
+            background: rgba(16, 22, 44, 0.9);
+        }
+
+        .nav-links a.active {
+            border-color: var(--accent-red);
+            background: linear-gradient(120deg, #163761, var(--accent-red));
+        }
+
+        .nav-toggle {
+            display: none;
+            background: none;
+            border: 1px solid rgba(255, 255, 255, 0.22);
+            border-radius: 999px;
+            padding: 0.3rem 0.6rem;
+            color: var(--text-main);
+            cursor: pointer;
+        }
+
+        .nav-toggle span {
+            display: block;
+            width: 20px;
+            height: 2px;
+            background: var(--text-main);
+            margin: 3px 0;
+            border-radius: 999px;
+        }
+
+        /* ============ TRANSITION LOGO ============ */
+
+        #page-transition {
+            position: fixed;
+            inset: 0;
+            background: #050814;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 50;
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 0.35s ease-out;
+        }
+
+        #page-transition.active {
+            opacity: 1;
+            pointer-events: auto;
+        }
+
+        #page-transition img {
+            width: 80px;
+            height: auto;
+            opacity: 0;
+            transform: scale(0.92);
+            transition: opacity 0.35s ease-out, transform 0.35s ease-out;
+        }
+
+        #page-transition.active img {
+            opacity: 1;
+            transform: scale(1);
+        }
+
+        /* ============ MAIN ============ */
+
+        main { padding-bottom: 3.2rem; }
+
+        /* HERO (plus bas que l'accueil, mais même style) */
+
+        .hero {
+            position: relative;
+            min-height: 55vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background:
+                linear-gradient(to bottom, rgba(5, 8, 20, 0.35), rgba(5, 8, 20, 0.95)),
+                url("assets/img/lmp2-bg.jpg") center/cover no-repeat;
+            z-index: -1;
+        }
+
+        .hero-inner {
+            max-width: 780px;
+            padding: 3rem 1.5rem 2.2rem;
+        }
+
+        .hero-eyebrow {
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 0.18em;
+            color: #d1d5e5;
+            margin-bottom: 0.7rem;
+        }
+
+        .hero-title-main {
+            font-size: clamp(2rem, 3.4vw, 2.6rem);
+            font-weight: 800;
+            text-transform: uppercase;
+            line-height: 1.18;
+            margin-bottom: 0.5rem;
+        }
+
+        .hero-title-main span.highlight {
+            color: var(--accent-blue);
+        }
+
+        .hero-subtitle {
+            font-size: 0.96rem;
+            color: #e5e7f5;
+            margin-bottom: 1.6rem;
+        }
+
+        .hero-tags {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 0.5rem;
+        }
+
+        .hero-tag-pill {
+            font-size: 0.8rem;
+            padding: 0.35rem 0.8rem;
+            border-radius: 999px;
+            border: 1px solid rgba(255, 255, 255, 0.18);
+            background: rgba(5, 8, 20, 0.85);
+        }
+
+        /* SECTIONS GÉNÉRALES */
+
+        .section {
+            margin-top: 2.7rem;
+        }
+
+        .section-header {
+            max-width: 780px;
+            margin: 0 auto 1.2rem;
+            text-align: center;
+        }
+
+        .section-title {
+            font-size: 1.02rem;
+            text-transform: uppercase;
+            letter-spacing: 0.18em;
+            margin-bottom: 0.35rem;
+        }
+
+        .section-title span {
+            color: var(--accent-blue);
+        }
+
+        .section-subtitle {
+            font-size: 0.86rem;
+            color: var(--text-muted);
+        }
+
+        /* GRIDS + CARDS ÉVÉNEMENTS */
+
+        .event-grid-2 {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 1rem;
+        }
+
+        .event-grid-3 {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 1rem;
+        }
+
+        .event-card {
+            background: var(--card-bg);
+            border-radius: var(--radius-lg);
+            padding: 1rem 1rem 1.1rem;
+            border: 1px solid var(--border-soft);
+            box-shadow: var(--shadow-soft);
+            font-size: 0.9rem;
+            display: flex;
+            flex-direction: column;
+            gap: 0.55rem;
+        }
+
+        .event-card-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .event-card-title {
+            font-size: 0.95rem;
+            font-weight: 600;
+        }
+
+        .event-card-badge {
+            font-size: 0.7rem;
+            padding: 0.17rem 0.6rem;
+            border-radius: 999px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            color: var(--accent-blue);
+        }
+
+        .event-card p {
+            color: var(--text-muted);
+            font-size: 0.86rem;
+        }
+
+        .event-list {
+            list-style: none;
+            margin-top: 0.2rem;
+            padding-left: 0;
+        }
+
+        .event-list li {
+            position: relative;
+            padding-left: 1rem;
+            margin-bottom: 0.2rem;
+            font-size: 0.84rem;
+            color: var(--text-muted);
+        }
+
+        .event-list li::before {
+            content: "•";
+            position: absolute;
+            left: 0;
+            color: var(--accent-blue);
+        }
+
+        .event-card-footer {
+            margin-top: 0.4rem;
+        }
+
+        .btn-small {
+            display: inline-block;
+            border-radius: 999px;
+            padding: 0.45rem 0.95rem;
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 0.12em;
+            border: 1px solid transparent;
+            cursor: pointer;
+            transition: background 0.18s ease-out, border-color 0.18s ease-out, transform 0.16s ease-out;
+        }
+
+        .btn-small-main {
+            background: linear-gradient(120deg, var(--accent-blue), var(--accent-red));
+            border-color: var(--accent-blue);
+            color: #ffffff;
+        }
+
+        .btn-small-main:hover {
+            transform: translateY(-1px);
+        }
+
+        .btn-small-ghost {
+            background: transparent;
+            border-color: rgba(255, 255, 255, 0.18);
+            color: var(--text-main);
+        }
+
+        .btn-small-ghost:hover {
+            transform: translateY(-1px);
+            background: rgba(5, 8, 20, 0.9);
+        }
+
+        .event-note {
+            margin-top: 0.7rem;
+            font-size: 0.8rem;
+            color: var(--text-muted);
+            text-align: center;
+        }
+
+        /* FOOTER */
+
+        footer {
+            border-top: 1px solid rgba(255, 255, 255, 0.08);
+            padding: 1.1rem 0 1.4rem;
+            background: #050814;
+        }
+
+        .footer-inner {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: space-between;
+            gap: 0.7rem;
+            font-size: 0.8rem;
+            color: var(--text-muted);
+        }
+
+        .footer-links {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.9rem;
+        }
+
+        .footer-links a {
+            position: relative;
+            cursor: pointer;
+        }
+
+        .footer-links a::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: -2px;
+            width: 0;
+            height: 1px;
+            background: var(--accent-blue);
+            transition: width 0.18s ease-out;
+        }
+
+        .footer-links a:hover::after {
+            width: 100%;
+        }
+
+        /* COOKIE BANNER */
+
+        .cookie-banner {
+            position: fixed;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            z-index: 40;
+            background: rgba(5, 8, 20, 0.96);
+            border-top: 1px solid rgba(255, 255, 255, 0.12);
+            padding: 0.8rem 1.5rem;
+            display: none;
+        }
+
+        .cookie-inner {
+            max-width: 1100px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 0.9rem;
+            font-size: 0.8rem;
+            color: var(--text-muted);
+        }
+
+        .cookie-actions {
+            display: flex;
+            gap: 0.5rem;
+            flex-shrink: 0;
+        }
+
+        .btn-cookie-main,
+        .btn-cookie-secondary {
+            border-radius: 999px;
+            padding: 0.4rem 0.9rem;
+            font-size: 0.8rem;
+            border: 1px solid transparent;
+            cursor: pointer;
+            white-space: nowrap;
+        }
+
+        .btn-cookie-main {
+            background: var(--accent-blue);
+            color: #ffffff;
+            border-color: var(--accent-blue);
+        }
+
+        .btn-cookie-secondary {
+            background: transparent;
+            color: var(--text-muted);
+            border-color: rgba(255, 255, 255, 0.2);
+        }
+
+        /* RESPONSIVE */
+
+        @media (max-width: 960px) {
+            .event-grid-3 {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+            }
+        }
+
+        @media (max-width: 840px) {
+            .nav-links {
+                position: absolute;
+                inset: 100% 0 auto 0;
+                background: rgba(4, 8, 20, 0.98);
+                border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+                padding: 0.75rem 1.5rem 1rem;
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 0.25rem;
+                transform-origin: top;
+                transform: scaleY(0.7);
+                opacity: 0;
+                pointer-events: none;
+                transition: opacity 0.18s ease-out, transform 0.18s ease-out;
+            }
+
+            .nav-links.open {
+                opacity: 1;
+                transform: scaleY(1);
+                pointer-events: auto;
+            }
+
+            .nav-toggle {
+                display: inline-flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                gap: 2px;
+            }
+
+            .event-grid-2 {
+                grid-template-columns: 1fr;
+            }
+
+            .event-grid-3 {
+                grid-template-columns: 1fr;
+            }
+
+            .cookie-inner {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .cookie-actions {
+                align-self: stretch;
+                justify-content: flex-end;
+            }
+        }
+
+        @media (max-width: 520px) {
+            .footer-inner {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+        }
+    </style>
 </head>
-<body class="page-evenements">
+<body>
+<div id="page-transition">
+    <img src="assets/img/logo-lgbl.png" alt="Logo LGBL Virtual Center Experience">
+</div>
 
 <header>
-  <div class="container nav">
-    <a class="logo" href="index.html" aria-label="LGBL Accueil">
-      <img src="assets/img/logo-lgbl.png" alt="Logo LGBL"/>
-      <span>LGBL VIRTUAL CENTER EXPERIENCE</span>
-    </a>
-    <nav class="links" aria-label="Navigation principale">
-      <a href="index.html">Accueil</a>
-      <a href="tarifs.html">Tarifs</a>
-      <a href="evenements.html" aria-current="page">Événements</a>
-      <a href="communaute.html">Communauté</a>
-      <a href="contact.html">Contact</a>
-      <a href="https://www.youtube.com/@LucasGaly24/streams" target="_blank" rel="noopener">LIVE</a>
-    </nav>
-  </div>
+    <div class="container nav">
+        <div class="nav-left">
+            <img src="assets/img/logo-lgbl.png" alt="Logo VIRTUAL CENTER EXPERIENCE" class="logo-img">
+            <div class="brand-text">
+                <span class="brand-title">VIRTUAL CENTER EXPERIENCE</span>
+                <span class="brand-subtitle">Salle de simulation virtuelle</span>
+            </div>
+        </div>
+
+        <button class="nav-toggle" aria-label="Ouvrir le menu">
+            <span></span><span></span><span></span>
+        </button>
+
+        <ul class="nav-links">
+            <li><a href="index.html" class="page-link">Accueil</a></li>
+            <li><a href="tarifs.html" class="page-link">Tarifs</a></li>
+            <li><a href="evenements.html" class="active">Événements</a></li>
+            <li><a href="communaute.html" class="page-link">Communauté</a></li>
+            <li><a href="contact.html" class="page-link">Contact</a></li>
+        </ul>
+    </div>
 </header>
 
-<section class="hero hero--evenements">
-  <div class="container">
-    <h1>Événements & Soirées</h1>
-    <p class="subtitle">Le vendredi soir est <strong>réservé aux événements</strong> : eSport, thèmes spéciaux et privatisations.</p>
-    <div style="display:flex;gap:8px;justify-content:center;flex-wrap:wrap;margin-top:8px">
-      <span class="tag">Vendredi 19:30 → fermeture</span>
-      <span class="tag">Classements & fair‑play</span>
-      <span class="tag">Matériel fourni</span>
-    </div>
-  </div>
-</section>
-
 <main>
-  <!-- Soirées eSport -->
-  <section class="section" id="esport">
+    <!-- HERO -->
+    <section class="hero">
+        <div class="hero-inner">
+            <div class="hero-eyebrow">Événements & expériences</div>
+            <h1 class="hero-title-main">
+                <span class="highlight">Tournois & événements SimRacing</span><br>
+                Vivez la compétition comme sur un vrai circuit.
+            </h1>
+            <p class="hero-subtitle">
+                Tournois, soirées à thème, team building, anniversaires et coaching :
+                toutes nos formules sont pensées pour offrir immersion, fun et sensations fortes.
+            </p>
+            <div class="hero-tags">
+                <span class="hero-tag-pill">Tournois</span>
+                <span class="hero-tag-pill">Entreprises & CSE</span>
+                <span class="hero-tag-pill">Anniversaires</span>
+                <span class="hero-tag-pill">Coaching</span>
+            </div>
+        </div>
+    </section>
+
     <div class="container">
-      <h2>🎮 Soirées eSport (vendredi)</h2>
-      <p class="muted">Choisissez votre format. Inscriptions sur place ou <a href="contact.html?sujet=Inscription%20Soir%C3%A9e%20eSport#form">via le formulaire</a>.</p>
+        <!-- TOURNOIS -->
+        <section class="section" id="tournois">
+            <div class="section-header">
+                <h2 class="section-title"><span>Tournois</span> & formats de course</h2>
+                <p class="section-subtitle">
+                    Du fun entre amis aux challenges d’endurance : choisissez le format qui vous ressemble.
+                </p>
+            </div>
 
-      <div class="grid-3" style="margin-top:.8rem">
-        <article class="card hoverable">
-          <h3>Format Sprint</h3>
-          <p class="big">2 courses • 2 circuits</p>
-          <p class="muted">5' practice • 8' qualif • 10' course</p>
-          <div style="display:flex;gap:8px;margin-top:10px;flex-wrap:wrap">
-            <a class="btn btn-devis" href="contact.html?sujet=Soir%C3%A9e%20eSport%20Sprint&source=evenements#form" data-prefill='{"type":"eSport Sprint","jour":"Vendredi","heure":"19:30"}'>S'inscrire</a>
-            <a class="btn btn-outline" href="tarifs.html#mini-race">Voir tarifs Mini Race</a>
-          </div>
-        </article>
+            <div class="event-grid-2">
+                <!-- Sprint -->
+                <article class="event-card">
+                    <div class="event-card-header">
+                        <h3 class="event-card-title">Format Sprint</h3>
+                        <span class="event-card-badge">Accès libre</span>
+                    </div>
+                    <p>Courses courtes, intenses et accessibles à tous. Idéales pour se challenger sans prise de tête.</p>
+                    <ul class="event-list">
+                        <li>Essais + qualification courte</li>
+                        <li>Course de 5 à 10 minutes</li>
+                        <li>Parfait entre amis ou pour lancer une soirée</li>
+                    </ul>
+                    <div class="event-card-footer">
+                        <a href="contact.html" class="btn-small btn-small-ghost page-link">Infos & organisation</a>
+                    </div>
+                </article>
 
-        <article class="card hoverable">
-          <h3>Format Endurance</h3>
-          <p class="big">4 courses • 4 circuits</p>
-          <p class="muted">10' practice • 10' qualif • 2×15' course (grille inversée)</p>
-          <div style="display:flex;gap:8px;margin-top:10px;flex-wrap:wrap">
-            <a class="btn btn-devis" href="contact.html?sujet=Soir%C3%A9e%20eSport%20Endurance&source=evenements#form" data-prefill='{"type":"eSport Endurance","jour":"Vendredi","heure":"19:30"}'>S'inscrire</a>
-            <a class="btn btn-outline" href="tarifs.html#mini-race">Voir détails</a>
-          </div>
-        </article>
+                <!-- Endurance -->
+                <article class="event-card">
+                    <div class="event-card-header">
+                        <h3 class="event-card-title">Format Endurance</h3>
+                        <span class="event-card-badge">Sur réservation</span>
+                    </div>
+                    <p>Pour les pilotes qui veulent vivre un vrai défi de performance et de régularité.</p>
+                    <ul class="event-list">
+                        <li>Courses de 15 à 60 minutes</li>
+                        <li>Relais en équipe possibles</li>
+                        <li>Gestion pneus, carburant et stratégie</li>
+                    </ul>
+                    <div class="event-card-footer">
+                        <a href="contact.html" class="btn-small btn-small-main page-link">Réserver un format endurance</a>
+                    </div>
+                </article>
 
-        <article class="card hoverable">
-          <h3>Soirées Thème</h3>
-          <p class="big">Anniversaire de marque, rétro F1, circuits mythiques…</p>
-          <ul class="list-clean">
-            <li><strong>Anniv. de marque :</strong> Ferrari, McLaren, Alpine…</li>
-            <li><strong>Special Track :</strong> Spa, Monza, Nürburgring…</li>
-            <li><strong>Rétro :</strong> saisons historiques F1 / Endu</li>
-          </ul>
-          <div style="display:flex;gap:8px;margin-top:10px;flex-wrap:wrap">
-            <a class="btn btn-devis" href="contact.html?sujet=Soir%C3%A9e%20Th%C3%A8me&source=evenements#form" data-prefill='{"type":"Soirée Thème","jour":"Vendredi","heure":"19:30"}'>Proposer un thème</a>
-          </div>
-        </article>
-      </div>
+                <!-- Time Attack -->
+                <article class="event-card">
+                    <div class="event-card-header">
+                        <h3 class="event-card-title">Time Attack</h3>
+                        <span class="event-card-badge">Meilleur chrono</span>
+                    </div>
+                    <p>Un seul objectif : signer le meilleur tour de la journée ou de la semaine.</p>
+                    <ul class="event-list">
+                        <li>Tentatives selon votre formule</li>
+                        <li>Classement affiché dans le centre</li>
+                        <li>Idéal pour créer une rivalité entre potes</li>
+                    </ul>
+                    <div class="event-card-footer">
+                        <a href="contact.html" class="btn-small btn-small-ghost page-link">Participer au Time Attack</a>
+                    </div>
+                </article>
 
-      <div class="alert info" style="margin-top:1rem">💡 Débutants bienvenus. Nous fournissons le matériel et un briefing rapide.</div>
+                <!-- Soirées à thème -->
+                <article class="event-card">
+                    <div class="event-card-header">
+                        <h3 class="event-card-title">Soirées à thème</h3>
+                        <span class="event-card-badge">Évents spéciaux</span>
+                    </div>
+                    <p>Des soirées complètes autour d’une catégorie ou d’un univers précis.</p>
+                    <ul class="event-list">
+                        <li>Soirées F1, GT3, Rallye, 24H, rétro…</li>
+                        <li>Classement dédié & ambiance paddock</li>
+                        <li>Décor et animations spécifiques</li>
+                    </ul>
+                    <div class="event-card-footer">
+                        <a href="contact.html" class="btn-small btn-small-main page-link">Recevoir le calendrier des soirées</a>
+                    </div>
+                </article>
+            </div>
+
+            <p class="event-note">
+                Les formats <strong>Endurance</strong>, <strong>Soirées à thème</strong> et certains tournois complets se font
+                sur inscription via le formulaire de <a href="contact.html" class="page-link"><strong>Contact</strong></a>.
+            </p>
+        </section>
+
+        <!-- ENTREPRISES / TEAM BUILDING -->
+        <section class="section" id="entreprises">
+            <div class="section-header">
+                <h2 class="section-title"><span>Entreprises</span> & Team Building</h2>
+                <p class="section-subtitle">
+                    Renforcez la cohésion de vos équipes dans un cadre inspiré des paddocks et des stands de course.
+                </p>
+            </div>
+
+            <div class="event-grid-3">
+                <!-- Privatisation -->
+                <article class="event-card">
+                    <div class="event-card-header">
+                        <h3 class="event-card-title">Privatisation</h3>
+                        <span class="event-card-badge">Sur devis</span>
+                    </div>
+                    <p>
+                        Centre réservé pour votre entreprise : idéal pour une soirée, un lancement de produit
+                        ou un événement CSE.
+                    </p>
+                    <ul class="event-list">
+                        <li>Accès complet aux simulateurs et à l’espace détente</li>
+                        <li>Possibilité de personnaliser circuits & catégories</li>
+                        <li>Créneaux dédiés (dont le mardi pour les pros)</li>
+                    </ul>
+                    <div class="event-card-footer">
+                        <a href="contact.html" class="btn-small btn-small-main page-link">Demander un devis</a>
+                    </div>
+                </article>
+
+                <!-- Team Building / CSE -->
+                <article class="event-card">
+                    <div class="event-card-header">
+                        <h3 class="event-card-title">Team Building / CSE</h3>
+                        <span class="event-card-badge">Cohésion</span>
+                    </div>
+                    <p>
+                        Formules clés en main pour renforcer l’esprit d’équipe autour de formats ludiques et compétitifs.
+                    </p>
+                    <ul class="event-list">
+                        <li>Tournois internes avec classement en direct</li>
+                        <li>Courses en relais & défis par équipes</li>
+                        <li>Podium, remise de prix et photos souvenir</li>
+                    </ul>
+                    <div class="event-card-footer">
+                        <a href="contact.html" class="btn-small btn-small-ghost page-link">Organiser un team building</a>
+                    </div>
+                </article>
+
+                <!-- Entreprises -->
+                <article class="event-card">
+                    <div class="event-card-header">
+                        <h3 class="event-card-title">Entreprises</h3>
+                        <span class="event-card-badge">Motivation</span>
+                    </div>
+                    <p>
+                        Une expérience innovante qui marque les esprits et renforce la motivation de vos équipes.
+                    </p>
+                    <ul class="event-list">
+                        <li>Activité accessible à tous niveaux</li>
+                        <li>Cohésion, engagement et bien-être au travail</li>
+                        <li>Accompagnement par nos coachs simracing</li>
+                    </ul>
+                    <div class="event-card-footer">
+                        <a href="contact.html" class="btn-small btn-small-main page-link">Parler de votre projet</a>
+                    </div>
+                </article>
+            </div>
+
+            <p class="event-note">
+                Toutes les formules entreprises & CSE se réservent via le formulaire de <a href="contact.html" class="page-link"><strong>Contact</strong></a>.
+            </p>
+        </section>
+
+        <!-- ANNIVERSAIRES -->
+        <section class="section" id="anniversaires">
+            <div class="section-header">
+                <h2 class="section-title"><span>Anniversaires</span> & Formule Jeunes</h2>
+                <p class="section-subtitle">
+                    Offrez un anniversaire unique dans l’univers du simracing : immersion, fun et souvenirs garantis.
+                </p>
+            </div>
+
+            <div class="event-grid-2">
+                <article class="event-card">
+                    <div class="event-card-header">
+                        <h3 class="event-card-title">Formule Anniversaire</h3>
+                        <span class="event-card-badge">Jeunes</span>
+                    </div>
+                    <p>
+                        Une formule pensée pour les enfants et ados, encadrée par un animateur simracing.
+                    </p>
+                    <ul class="event-list">
+                        <li>Briefing & initiation au pilotage</li>
+                        <li>Essais, qualifications et course finale</li>
+                        <li>Classement, podium et photo souvenir</li>
+                    </ul>
+                    <div class="event-card-footer">
+                        <a href="contact.html" class="btn-small btn-small-main page-link">Demander la formule</a>
+                    </div>
+                </article>
+
+                <article class="event-card">
+                    <div class="event-card-header">
+                        <h3 class="event-card-title">Goûter & espace détente</h3>
+                        <span class="event-card-badge">Convivial</span>
+                    </div>
+                    <p>
+                        Après la course, place au moment de fête dans notre espace détente en ambiance paddock.
+                    </p>
+                    <ul class="event-list">
+                        <li>Table réservée pour le groupe</li>
+                        <li>Possibilité d’apporter le gâteau</li>
+                        <li>Bar (softs) et musique d’ambiance</li>
+                    </ul>
+                    <div class="event-card-footer">
+                        <a href="contact.html" class="btn-small btn-small-ghost page-link">Infos & disponibilités</a>
+                    </div>
+                </article>
+            </div>
+
+            <p class="event-note">
+                Formule idéale pour <strong>4 à 8 enfants</strong> (adaptable). Réservation obligatoire via la page
+                <a href="contact.html" class="page-link"><strong>Contact</strong></a>.
+            </p>
+        </section>
+
+        <!-- COACHING -->
+        <section class="section" id="coaching">
+            <div class="section-header">
+                <h2 class="section-title"><span>Coaching</span> SimRacing</h2>
+                <p class="section-subtitle">
+                    Débutants, intermédiaires ou pilotes confirmés : progressez avec un accompagnement personnalisé.
+                </p>
+            </div>
+
+            <div class="event-grid-2">
+                <article class="event-card">
+                    <div class="event-card-header">
+                        <h3 class="event-card-title">Coaching individuel</h3>
+                        <span class="event-card-badge">Personnalisé</span>
+                    </div>
+                    <p>
+                        Une séance taillée pour votre niveau, vos objectifs et votre style de pilotage.
+                    </p>
+                    <ul class="event-list">
+                        <li>Analyse de vos habitudes et de vos points faibles</li>
+                        <li>Travail des bases : position, freinage, trajectoires</li>
+                        <li>Rythme, régularité et confiance au volant</li>
+                    </ul>
+                    <div class="event-card-footer">
+                        <a href="contact.html" class="btn-small btn-small-main page-link">Réserver un coaching</a>
+                    </div>
+                </article>
+
+                <article class="event-card">
+                    <div class="event-card-header">
+                        <h3 class="event-card-title">Perf & préparation</h3>
+                        <span class="event-card-badge">Performance</span>
+                    </div>
+                    <p>
+                        Pour les pilotes qui veulent aller plus loin : chronos, endurance ou championnats en ligne.
+                    </p>
+                    <ul class="event-list">
+                        <li>Techniques avancées : trail-braking, appuis, gestion pneus</li>
+                        <li>Débriefing complet avec conseils concrets</li>
+                        <li>Formules 30 min, 1h, 2h et sessions compétition</li>
+                    </ul>
+                    <div class="event-card-footer">
+                        <a href="contact.html" class="btn-small btn-small-ghost page-link">Parler de votre niveau</a>
+                    </div>
+                </article>
+            </div>
+
+            <p class="event-note">
+                Les coachings se font uniquement sur réservation via le formulaire de 
+                <a href="contact.html" class="page-link"><strong>Contact</strong></a>.
+            </p>
+        </section>
     </div>
-  </section>
-
-  <!-- Privatisation / Groupe -->
-  <section class="section" id="prive">
-    <div class="container">
-      <h2>🏢 Privatisation groupe / entreprise</h2>
-      <div class="grid-2" style="margin-top:.8rem">
-        <article class="card hoverable">
-          <h3>Formules 2h / 4h / 6h / 8h</h3>
-          <p>Mini‑championnats, relais, hot‑lap, podiums. Formats sur mesure selon effectif et niveau.</p>
-          <p class="muted">Devis rapide par e‑mail/tél. Réservation validée à confirmation.</p>
-          <a class="btn btn-devis" href="contact.html?sujet=Devis%20Privatisation&source=evenements#form" data-prefill='{"type":"Privatisation","duree":"2-8h","effectif":"10-32"}'>Demander un devis</a>
-        </article>
-        <article class="card hoverable">
-          <h3>Options</h3>
-          <ul class="list-clean">
-            <li>Classements & podiums personnalisés</li>
-            <li>Briefing & encadrement dédié</li>
-            <li>Bar soft & snacking sucré</li>
-            <li>Coin détente : fond sonore, console, baby‑foot</li>
-          </ul>
-        </article>
-      </div>
-    </div>
-  </section>
-
-  <!-- Diffusions -->
-  <section class="section" id="diffusions">
-    <div class="container">
-      <h2>📺 Diffusions</h2>
-      <div class="grid-3" style="margin-top:.8rem">
-        <article class="card hoverable">
-          <h3>Formule 1</h3>
-          <p class="big">Entrée : 8 €</p>
-          <p class="muted">Selon calendrier. <strong>1 consommation obligatoire</strong> au bar.</p>
-        </article>
-        <article class="card hoverable">
-          <h3>Endurance</h3>
-          <p>WEC, 24h, ELMS — grandes affiches selon calendrier.</p>
-          <p class="muted">Conso obligatoire.</p>
-        </article>
-        <article class="card hoverable">
-          <h3>Moto</h3>
-          <p>MotoGP & grands rendez‑vous moto.</p>
-          <p class="muted">Conso obligatoire.</p>
-        </article>
-        <article class="card hoverable">
-          <h3>Grands Matchs</h3>
-          <p class="big">Entrée : 8 €</p>
-          <p class="muted">Sélection selon l'actu. <strong>1 consommation obligatoire</strong>.</p>
-        </article>
-        <article class="card hoverable">
-          <h3>Lives & replays</h3>
-          <p class="muted">Retrouvez nos diffusions et streams sur YouTube.</p>
-          <a class="btn" href="https://www.youtube.com/@LucasGaly24/streams" target="_blank" rel="noopener">Voir le LIVE</a>
-        </article>
-      </div>
-
-      <div class="alert info" style="margin-top:1rem">
-        ℹ️ <strong>Entrée 8 € :</strong> valable pour les soirées <strong>Grand Prix F1</strong> et <strong>Grands matchs</strong>. <strong>Consommation obligatoire</strong> pour toutes les diffusions. <br/>
-        Infos & réservations : <a href="mailto:lucasgaly.47510@gmail.com">lucasgaly.47510@gmail.com</a> · <a href="tel:+33672392264">06 72 39 22 64</a>
-      </div>
-    </div>
-  </section>
 </main>
 
-<footer style="border-top:1px solid var(--line)">
-  <div class="container" style="padding:26px 0;display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:22px">
-    <div>
-      <div class="logo" style="display:flex;align-items:center;gap:.5rem">
-        <img src="assets/img/logo-lgbl.png" alt="LGBL" style="height:22px;border-radius:50%">
-        <span>LGBL Virtual Experience</span>
-      </div>
-      <p class="muted" style="margin-top:.5rem">© 2025 LGBL Virtual Experience Center — Conception : Lucas Galy</p>
+<footer>
+    <div class="container footer-inner">
+        <div class="footer-links">
+            <a href="mentions-legales.html" class="page-link">Mentions légales</a>
+            <a href="contact.html" class="page-link">Contact</a>
+            <a href="confidentialite.html" class="page-link">Confidentialité</a>
+        </div>
+        <div>
+            © <span id="year"></span> VIRTUAL CENTER EXPERIENCE. Tous droits réservés.
+        </div>
     </div>
-    <div>
-      <h4>Le site</h4>
-      <p><a href="index.html">Accueil</a><br><a href="tarifs.html">Tarifs</a><br><a href="evenements.html" aria-current="page">Événements</a></p>
-    </div>
-    <div>
-      <h4>Contact</h4>
-      <p><a href="mailto:lucasgaly.47510@gmail.com">lucasgaly.47510@gmail.com</a><br><a href="tel:+33672392264">06 72 39 22 64</a></p>
-    </div>
-    <div>
-      <h4>LIVE</h4>
-      <p><a href="https://www.youtube.com/@LucasGaly24/streams" target="_blank" rel="noopener">YouTube</a></p>
-    </div>
-  </div>
 </footer>
-<div style="border-top:1px solid var(--line)">
-  <div class="container" style="padding:14px 0 22px;display:flex;gap:12px;flex-wrap:wrap;justify-content:center;font-size:.95rem">
-    <a href="mentions-legales.html">Mentions légales</a>
-    ·
-    <a href="confidentialite.html">Confidentialité</a>
-    ·
-    <a href="contact.html#form">Contact</a>
-  </div>
+
+<!-- COOKIE BANNER -->
+<div class="cookie-banner" id="cookie-banner">
+    <div class="cookie-inner">
+        <div>
+            Nous utilisons des cookies pour améliorer votre expérience sur le site.
+            En continuant votre navigation, vous acceptez leur utilisation.
+        </div>
+        <div class="cookie-actions">
+            <button class="btn-cookie-secondary" id="cookie-more">En savoir plus</button>
+            <button class="btn-cookie-main" id="cookie-accept">OK</button>
+        </div>
+    </div>
 </div>
 
 <script>
-  // Enregistrement d'un pré-remplissage pour le formulaire de contact.
-  // Les liens .btn-devis stockent un objet dans sessionStorage, lu ensuite par contact.html.
-  document.querySelectorAll('.btn-devis').forEach(btn => {
-    btn.addEventListener('click', (e) => {
-      try {
-        const data = btn.getAttribute('data-prefill');
-        if(data){ sessionStorage.setItem('lgbl_prefill', data); }
-      } catch(_){}
-    });
-  });
-</script>
+    // Année dynamique
+    document.getElementById("year").textContent = new Date().getFullYear();
 
+    // Menu burger
+    (function navToggle() {
+        const toggle = document.querySelector(".nav-toggle");
+        const links = document.querySelector(".nav-links");
+        if (!toggle || !links) return;
+        toggle.addEventListener("click", () => {
+            links.classList.toggle("open");
+        });
+    })();
+
+    // Cookie banner (localStorage)
+    (function cookieBanner() {
+        const banner = document.getElementById("cookie-banner");
+        if (!banner) return;
+        const accepted = localStorage.getItem("vcx_cookies_accepted");
+        if (!accepted) {
+            banner.style.display = "block";
+        }
+        const btnAccept = document.getElementById("cookie-accept");
+        const btnMore = document.getElementById("cookie-more");
+
+        if (btnAccept) {
+            btnAccept.addEventListener("click", () => {
+                localStorage.setItem("vcx_cookies_accepted", "yes");
+                banner.style.display = "none";
+            });
+        }
+        if (btnMore) {
+            btnMore.addEventListener("click", () => {
+                window.location.href = "confidentialite.html";
+            });
+        }
+    })();
+
+    // Transition logo entre les pages
+    (function pageTransition() {
+        const overlay = document.getElementById("page-transition");
+        if (!overlay) return;
+
+        window.addEventListener("load", () => {
+            overlay.classList.remove("active");
+        });
+
+        const links = document.querySelectorAll("a.page-link, .nav-links a");
+
+        links.forEach(link => {
+            const href = link.getAttribute("href");
+            if (!href || href.startsWith("#")) return;
+
+            link.addEventListener("click", (e) => {
+                if (e.button !== 0 || e.metaKey || e.ctrlKey || e.shiftKey || e.altKey) return;
+                e.preventDefault();
+                overlay.classList.add("active");
+                setTimeout(() => {
+                    window.location.href = href;
+                }, 350);
+            });
+        });
+
+        overlay.classList.add("active");
+    })();
+</script>
 </body>
 </html>
