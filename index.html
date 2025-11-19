@@ -1,434 +1,882 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>LGBL VIRTUAL CENTER EXPERIENCE – Accueil</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>VIRTUAL CENTER EXPERIENCE | Salle de simulation virtuelle</title>
 
-  <!-- Google Search Console -->
-  <meta name="google-site-verification" content="wlRHbf8WsgIWybuijJHohaG3y2jh4_bokztoDcf79aU" />
+    <meta name="description" content="VIRTUAL CENTER EXPERIENCE - Salle de simulation virtuelle avec simulateurs de qualité, ambiance paddock, bar & snacking, événements et tournois.">
+    <meta name="keywords" content="simulation, simracing, simulateurs de qualité, ambiance paddock, bar, snacking, événements, tournois, virtuel">
 
-  <!-- SEO -->
-  <meta name="description" content="LGBL VIRTUAL CENTER EXPERIENCE : simulateurs de course pro, bar & coin détente. Pas un simple jeu : de la simulation pure. Ouverture prochaine." />
-  <meta name="robots" content="index,follow" />
-  <link rel="canonical" href="https://lucas24galy.github.io/LGBL-VRTUAL-CENTER-EXPERIENCE/index.html" />
+    <style>
+        :root {
+            --bg-main: #050914;
+            --bg-alt: #0b1020;
+            --card-bg: #111729;
+            --accent-red: #ff2140;
+            --accent-blue: #2b6bff;
+            --accent-soft: #7280ff;
+            --text-main: #f5f7ff;
+            --text-muted: #a5afc9;
+            --border-soft: rgba(255, 255, 255, 0.06);
+            --radius-lg: 18px;
+            --shadow-soft: 0 18px 40px rgba(0, 0, 0, 0.6);
+            --transition-fast: 0.18s ease-out;
+        }
 
-  <!-- Open Graph -->
-  <meta property="og:type" content="website" />
-  <meta property="og:site_name" content="LGBL VIRTUAL CENTER EXPERIENCE" />
-  <meta property="og:title" content="LGBL VIRTUAL CENTER EXPERIENCE – Accueil" />
-  <meta property="og:description" content="Simulateurs de course, bar & coin détente. Vivez la course comme un pro." />
-  <meta property="og:url" content="https://lucas24galy.github.io/LGBL-VRTUAL-CENTER-EXPERIENCE/index.html" />
-  <meta property="og:image" content="assets/img/logo-lgbl.png" />
-  <meta name="twitter:card" content="summary" />
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
 
-  <!-- Icône & styles -->
-  <link rel="icon" type="image/png" href="assets/img/logo-lgbl.png" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600;800&family=Poppins:wght@400;600;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="assets/css/styles.css" />
+        html, body {
+            height: 100%;
+        }
 
-  <style>
-    :root{
-      --line: rgba(255,255,255,.08);
-      --brand-rose:#ff2d6f; --brand-cyan:#00aaff;
-      --bg:#0a0b0d; --panel:#0f1115; --text:#e9ecef; --muted:#a9b3bb;
-    }
-    html{scroll-behavior:smooth}
-    body{background:var(--bg);color:var(--text);font-family:Poppins,system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial;line-height:1.8}
+        body {
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+            background: radial-gradient(circle at top left, #101a33 0, #050914 45%, #020308 100%);
+            color: var(--text-main);
+            line-height: 1.6;
+        }
 
-    .container{max-width:1150px;margin:0 auto;padding:0 20px}
-    @media (max-width:480px){.container{padding:0 12px}}
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
 
-    /* Header */
-    header{position:sticky;top:0;z-index:60;background:rgba(10,11,13,.7);backdrop-filter:saturate(120%) blur(8px);border-bottom:1px solid var(--line)}
-    .nav{display:flex;align-items:center;justify-content:space-between;height:64px}
-    .logo{display:inline-flex;align-items:center;gap:.6rem;color:#fff;text-decoration:none;font-weight:800;letter-spacing:.5px}
-    .logo img{height:42px;border-radius:50%;transition:transform .3s ease,filter .3s ease}
-    .logo img:hover{transform:scale(1.06);filter:drop-shadow(0 0 8px rgba(0,150,255,.5))}
+        img {
+            max-width: 100%;
+            display: block;
+        }
 
-    nav .links{display:flex;align-items:center;gap:6px}
-    nav .links a{color:#cfd6dc;text-decoration:none;padding:8px 12px;border:1px solid transparent;border-radius:999px;position:relative}
-    nav .links a:hover,nav .links a[aria-current="page"]{color:#fff;border-color:rgba(0,170,255,.35)}
-    nav .links a::after{content:"";position:absolute;left:12px;right:12px;bottom:4px;height:2px;transform:scaleX(0);transform-origin:left;background:linear-gradient(90deg,var(--brand-rose),var(--brand-cyan));transition:transform .25s ease}
-    nav .links a:hover::after,nav .links a[aria-current="page"]::after{transform:scaleX(1)}
+        .container {
+            width: 100%;
+            max-width: 1180px;
+            margin: 0 auto;
+            padding: 0 1.5rem;
+        }
 
-    .mobile-toggle{display:none;background:transparent;border:1px solid var(--line);color:#cfd6dc;padding:6px 10px;border-radius:8px}
-    @media (max-width:900px){
-      .mobile-toggle{display:inline-block}
-      nav .links{display:none;position:absolute;left:0;right:0;top:64px;background:#0c0e12;border-bottom:1px solid var(--line);padding:10px 16px;flex-direction:column;gap:4px}
-      nav .links.open{display:flex}
-      nav .links a{width:100%;text-align:center}
-    }
+        /* HEADER / NAVBAR */
 
-    /* Alert */
-    .alert{border-radius:10px;padding:.7rem 1rem;border:1px solid var(--line)}
-    .alert.info{background:#0e1b22;color:#cfefff;border-color:rgba(0,170,255,.25)}
+        header {
+            position: sticky;
+            top: 0;
+            z-index: 20;
+            backdrop-filter: blur(16px);
+            background: linear-gradient(
+                to bottom,
+                rgba(4, 8, 20, 0.96),
+                rgba(4, 8, 20, 0.75),
+                transparent
+            );
+            border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+        }
 
-    /* Sections */
-    .section{padding:50px 0;border-top:1px solid var(--line)}
-    .grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
-    .grid-2{display:grid;grid-template-columns:repeat(2,1fr);gap:24px}
-    @media (max-width:900px){.grid-3,.grid-2{grid-template-columns:1fr}}
+        .nav {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0.75rem 0;
+        }
 
-    .card{background:var(--panel);border:1px solid var(--line);border-radius:16px;padding:20px;transition:transform .18s ease, box-shadow .18s ease}
-    .card.hoverable:hover{transform:translateY(-3px);box-shadow:0 16px 36px rgba(0,0,0,.35)}
+        .nav-left {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
 
-    /* Hero (Titre) */
-    .hero{position:relative;overflow:hidden;padding:64px 0;border-bottom:1px solid var(--line);background:#0b0d11}
-    .hero::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.3),rgba(0,0,0,.62));z-index:1}
-    .hero > .container{position:relative;z-index:2}
-    .hero h1{font-family:'Orbitron',system-ui;font-size:clamp(28px,5.6vw,44px);letter-spacing:1px;margin:0 0 .6rem;text-transform:uppercase}
-    .subtitle{color:var(--muted);margin:.3rem 0 1.2rem}
+        .logo-circle {
+            width: 40px;
+            height: 40px;
+            border-radius: 999px;
+            background: conic-gradient(from 210deg, var(--accent-red), var(--accent-blue), #ffffff22, var(--accent-red));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 0 18px rgba(255, 33, 64, 0.5);
+            position: relative;
+            overflow: hidden;
+        }
 
-    /* Tags */
-    .tag{display:inline-block;font-size:.9rem;line-height:1;border:1px solid var(--line);padding:.5rem .7rem;border-radius:999px;background:rgba(0,170,255,.08);transition:transform .18s ease, box-shadow .18s ease}
-    .tag:hover{transform:translateY(-2px);box-shadow:0 10px 24px rgba(0,170,255,.14)}
-    .btn{display:inline-block;background:linear-gradient(90deg,var(--brand-rose),var(--brand-cyan));padding:.75rem 1.05rem;border-radius:999px;color:#fff;text-decoration:none;font-weight:700}
-    .btn:hover{box-shadow:0 8px 22px rgba(0,170,255,.2)}
-    .btn.btn-outline{background:transparent;border:1px solid rgba(0,170,255,.35)}
+        .logo-circle::after {
+            content: "VC";
+            font-size: 0.9rem;
+            font-weight: 800;
+            letter-spacing: 0.05em;
+            color: #ffffff;
+            text-shadow: 0 0 8px rgba(0, 0, 0, 0.8);
+        }
 
-    /* Cards with background */
-    .card--bg{position:relative;isolation:isolate;overflow:hidden;min-height:190px}
-    .card--bg::before{content:"";position:absolute;inset:0;background-size:cover;background-position:center;transform:scale(1.02);z-index:-2}
-    .card--bg::after{content:"";position:absolute;inset:0;background:
-      radial-gradient(80% 100% at 50% 100%, rgba(0,0,0,.45), rgba(0,0,0,.78)),
-      linear-gradient(180deg, rgba(0,0,0,.15), rgba(0,0,0,.55));z-index:-1}
-    .card--bg h3,.card--bg p,.card--bg li{color:#eef3f7}
-    .card--sim::before{background-image:url("assets/img/cards/simracing.jpg")}
-    .card--bar::before{background-image:url("assets/img/cards/bar.jpg")}
-    .card--detente::before{background-image:url("assets/img/cards/detente.jpg")}
+        .brand-text {
+            display: flex;
+            flex-direction: column;
+        }
 
-    /* LIVE badge */
-    .live-header{display:inline-flex;align-items:center;gap:8px;font-weight:700;color:#ff4a4a;font-family:'Orbitron',sans-serif;letter-spacing:1px;margin-bottom:10px}
-    .live-dot{width:10px;height:10px;border-radius:50%;background:#ff0000;box-shadow:0 0 10px rgba(255,0,0,.6);animation:pulseLive 1.4s infinite ease-in-out}
-    @keyframes pulseLive{0%,100%{transform:scale(1);opacity:1}50%{transform:scale(1.4);opacity:.5}}
+        .brand-title {
+            font-weight: 800;
+            font-size: 0.95rem;
+            letter-spacing: 0.16em;
+            text-transform: uppercase;
+        }
 
-    /* Hours */
-    .hours{display:grid;grid-template-columns:1fr 1fr;gap:18px}
-    @media (max-width:700px){.hours{grid-template-columns:1fr}}
-    .hours .day{display:flex;justify-content:space-between;align-items:center;background:#0c0f14;border:1px solid var(--line);border-radius:12px;padding:12px 14px}
-    .hours .day.current{border-color:rgba(0,170,255,.45);box-shadow:0 0 0 2px rgba(0,170,255,.15) inset}
-    .hours .label{color:#cfd6dc;font-weight:700}
-    .hours .time{color:#e9f3ff}
-    .note{color:#a9b3bb;font-size:.95rem;margin-top:8px}
+        .brand-subtitle {
+            font-size: 0.8rem;
+            color: var(--text-muted);
+        }
 
-    /* Partners */
-    .partners{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}
-    .partner{background:#0c0f14;border:1px solid var(--line);border-radius:12px;display:flex;align-items:center;justify-content:center;padding:18px}
-    .partner img{max-height:56px;max-width:100%;object-fit:contain;filter:drop-shadow(0 2px 12px rgba(0,0,0,.35))}
-    .partner .placeholder{color:#a9b3bb}
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            list-style: none;
+        }
 
-    /* Footer */
-    .footer-grid{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:22px;padding:26px 0}
-    @media (max-width:900px){.footer-grid{grid-template-columns:1fr 1fr}}
-    .copy{color:#8f98a1;margin-top:.5rem;font-size:.95rem}
-  </style>
+        .nav-links a {
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 0.14em;
+            padding: 0.6rem 0.85rem;
+            border-radius: 999px;
+            border: 1px solid transparent;
+            position: relative;
+            overflow: hidden;
+            cursor: pointer;
+            transition: transform var(--transition-fast), box-shadow var(--transition-fast), border-color var(--transition-fast), background 0.2s ease-out;
+        }
+
+        .nav-links a::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(120deg, rgba(255, 33, 64, 0.6), rgba(43, 107, 255, 0.7));
+            opacity: 0;
+            transition: opacity 0.18s ease-out;
+            z-index: -1;
+        }
+
+        .nav-links a:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 24px rgba(0, 0, 0, 0.7);
+            border-color: rgba(255, 255, 255, 0.12);
+        }
+
+        .nav-links a:hover::before {
+            opacity: 0.18;
+        }
+
+        .nav-links a.active {
+            border-color: rgba(255, 255, 255, 0.16);
+            background: linear-gradient(120deg, rgba(255, 33, 64, 0.18), rgba(43, 107, 255, 0.18));
+        }
+
+        .nav-toggle {
+            display: none;
+            background: none;
+            border: 1px solid rgba(255, 255, 255, 0.18);
+            border-radius: 999px;
+            padding: 0.3rem 0.6rem;
+            color: var(--text-main);
+            cursor: pointer;
+        }
+
+        .nav-toggle span {
+            display: block;
+            width: 20px;
+            height: 2px;
+            background: var(--text-main);
+            margin: 3px 0;
+            border-radius: 999px;
+            transition: transform 0.2s ease-out, opacity 0.2s ease-out;
+        }
+
+        /* HERO SECTION */
+
+        main {
+            padding: 1.25rem 0 3.5rem;
+        }
+
+        .hero {
+            display: grid;
+            grid-template-columns: minmax(0, 3fr) minmax(0, 2.4fr);
+            gap: 2.5rem;
+            align-items: center;
+            margin-top: 0.75rem;
+        }
+
+        .hero-text-eyebrow {
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 0.2em;
+            color: var(--accent-soft);
+            margin-bottom: 0.4rem;
+        }
+
+        .hero-title {
+            font-size: clamp(1.9rem, 3vw, 2.5rem);
+            font-weight: 800;
+            text-transform: uppercase;
+            line-height: 1.15;
+            margin-bottom: 0.7rem;
+        }
+
+        .hero-title span.highlight {
+            background: linear-gradient(120deg, var(--accent-red), var(--accent-blue));
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+
+        .hero-tagline {
+            font-size: 1rem;
+            color: var(--text-muted);
+            max-width: 30rem;
+            margin-bottom: 1.25rem;
+        }
+
+        .hero-keywords {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.55rem;
+            margin-bottom: 1.8rem;
+        }
+
+        .hero-pill {
+            font-size: 0.8rem;
+            padding: 0.45rem 0.75rem;
+            border-radius: 999px;
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            background: linear-gradient(135deg, rgba(17, 23, 41, 0.85), rgba(8, 12, 26, 0.95));
+            display: inline-flex;
+            align-items: center;
+            gap: 0.4rem;
+            cursor: default;
+        }
+
+        .hero-pill::before {
+            content: "";
+            width: 8px;
+            height: 8px;
+            border-radius: 999px;
+            background: radial-gradient(circle, var(--accent-red), var(--accent-blue));
+        }
+
+        .hero-cta-group {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.75rem;
+        }
+
+        .btn-main,
+        .btn-ghost {
+            border-radius: 999px;
+            padding: 0.7rem 1.4rem;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 0.16em;
+            border: 1px solid transparent;
+            cursor: pointer;
+            transition: transform var(--transition-fast), box-shadow var(--transition-fast), background 0.18s ease-out, border-color 0.18s ease-out;
+        }
+
+        .btn-main {
+            background: linear-gradient(120deg, var(--accent-red), var(--accent-blue));
+            color: #ffffff;
+            box-shadow: 0 14px 30px rgba(0, 0, 0, 0.9);
+        }
+
+        .btn-main:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 18px 40px rgba(0, 0, 0, 0.95);
+        }
+
+        .btn-ghost {
+            border-color: rgba(255, 255, 255, 0.2);
+            background: rgba(5, 9, 20, 0.6);
+            color: var(--text-main);
+        }
+
+        .btn-ghost:hover {
+            transform: translateY(-2px);
+            background: rgba(12, 18, 36, 0.9);
+            box-shadow: 0 10px 26px rgba(0, 0, 0, 0.8);
+        }
+
+        /* HERO VISUAL – 24H DU MANS CAR ANIMATION */
+
+        .hero-visual {
+            background: radial-gradient(circle at top, rgba(43, 107, 255, 0.1), transparent 55%),
+                        radial-gradient(circle at bottom, rgba(255, 33, 64, 0.1), transparent 60%);
+            border-radius: var(--radius-lg);
+            border: 1px solid var(--border-soft);
+            padding: 1.25rem 1.4rem;
+            box-shadow: var(--shadow-soft);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero-visual-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 0.75rem;
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 0.12em;
+            color: var(--text-muted);
+        }
+
+        .hero-visual-tag {
+            padding: 0.3rem 0.7rem;
+            border-radius: 999px;
+            border: 1px solid rgba(255, 255, 255, 0.16);
+            background: linear-gradient(120deg, rgba(255, 33, 64, 0.2), rgba(43, 107, 255, 0.2));
+            font-size: 0.75rem;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.3rem;
+        }
+
+        .hero-visual-tag span.dot {
+            width: 8px;
+            height: 8px;
+            border-radius: 999px;
+            background: #00ff9c;
+            box-shadow: 0 0 8px rgba(0, 255, 156, 0.8);
+        }
+
+        .track {
+            position: relative;
+            height: 170px;
+            border-radius: 999px;
+            background: linear-gradient(90deg, #050914, #050914),
+                        repeating-linear-gradient(
+                            90deg,
+                            transparent 0,
+                            transparent 14px,
+                            rgba(255, 255, 255, 0.08) 14px,
+                            rgba(255, 255, 255, 0.08) 18px
+                        );
+            border: 1px solid rgba(255, 255, 255, 0.06);
+            overflow: hidden;
+        }
+
+        .track-glow {
+            position: absolute;
+            inset: 0;
+            background: radial-gradient(circle at 20% 50%, rgba(43, 107, 255, 0.2), transparent 55%),
+                        radial-gradient(circle at 70% 50%, rgba(255, 33, 64, 0.25), transparent 60%);
+            pointer-events: none;
+        }
+
+        .car-wrapper {
+            position: absolute;
+            top: 50%;
+            left: -30%;
+            transform: translateY(-50%);
+            animation: car-lap 6s linear infinite;
+        }
+
+        @keyframes car-lap {
+            0%   { left: -35%; transform: translateY(-50%) scale(1);}
+            45%  { left: 55%; transform: translateY(-52%) scale(1.02);}
+            55%  { left: 60%; transform: translateY(-48%) scale(1.02);}
+            100% { left: 130%; transform: translateY(-50%) scale(1);}
+        }
+
+        .car-body {
+            position: relative;
+            width: 180px;
+            height: 38px;
+            border-radius: 999px;
+            background: linear-gradient(90deg, var(--accent-red), var(--accent-blue));
+            box-shadow:
+                0 0 24px rgba(43, 107, 255, 0.9),
+                0 0 40px rgba(255, 33, 64, 0.8);
+        }
+
+        .car-cockpit {
+            position: absolute;
+            left: 32%;
+            top: -16px;
+            width: 70px;
+            height: 26px;
+            border-radius: 999px 999px 50px 50px;
+            background: linear-gradient(145deg, #10182c, #060914);
+        }
+
+        .car-fin {
+            position: absolute;
+            right: 10px;
+            top: -12px;
+            width: 32px;
+            height: 26px;
+            border-radius: 6px;
+            background: linear-gradient(140deg, rgba(255, 255, 255, 0.9), rgba(43, 107, 255, 0.5));
+            opacity: 0.9;
+        }
+
+        .car-wheel {
+            position: absolute;
+            bottom: -14px;
+            width: 28px;
+            height: 28px;
+            border-radius: 50%;
+            background: #05070c;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.9);
+            overflow: hidden;
+        }
+
+        .car-wheel::before {
+            content: "";
+            position: absolute;
+            inset: 4px;
+            border-radius: 50%;
+            border: 3px solid rgba(255, 255, 255, 0.3);
+        }
+
+        .car-wheel.front {
+            left: 25px;
+        }
+
+        .car-wheel.rear {
+            right: 25px;
+        }
+
+        .car-light-front {
+            position: absolute;
+            left: 0;
+            top: 6px;
+            width: 32px;
+            height: 10px;
+            border-radius: 0 999px 999px 0;
+            background: radial-gradient(circle at 0, #ffffff, rgba(255, 255, 255, 0.1));
+            box-shadow:
+                0 0 18px rgba(255, 255, 255, 0.8),
+                0 0 26px rgba(0, 200, 255, 0.9);
+        }
+
+        .car-streak {
+            position: absolute;
+            left: -120px;
+            top: 12px;
+            width: 260px;
+            height: 20px;
+            background: linear-gradient(90deg, rgba(255, 255, 255, 0.22), transparent);
+            opacity: 0.8;
+            filter: blur(2px);
+        }
+
+        .hero-caption {
+            margin-top: 0.8rem;
+            font-size: 0.8rem;
+            color: var(--text-muted);
+        }
+
+        /* HORAIRES SECTION */
+
+        .section {
+            margin-top: 2.5rem;
+        }
+
+        .section-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            gap: 1rem;
+            margin-bottom: 1.1rem;
+        }
+
+        .section-title {
+            font-size: 1.1rem;
+            text-transform: uppercase;
+            letter-spacing: 0.18em;
+        }
+
+        .section-title span {
+            background: linear-gradient(120deg, var(--accent-red), var(--accent-blue));
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+
+        .section-subtitle {
+            font-size: 0.85rem;
+            color: var(--text-muted);
+        }
+
+        .hours-card {
+            background: linear-gradient(135deg, rgba(10, 16, 35, 0.98), rgba(6, 10, 24, 0.98));
+            border-radius: var(--radius-lg);
+            padding: 1.1rem 1.2rem;
+            border: 1px solid var(--border-soft);
+            box-shadow: var(--shadow-soft);
+        }
+
+        .hours-note {
+            font-size: 0.8rem;
+            color: var(--accent-soft);
+            margin-bottom: 0.85rem;
+        }
+
+        .hours-list {
+            list-style: none;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+            gap: 0.5rem;
+        }
+
+        .hours-item {
+            padding: 0.6rem 0.75rem;
+            border-radius: 12px;
+            border: 1px solid rgba(255, 255, 255, 0.06);
+            background: radial-gradient(circle at top left, rgba(43, 107, 255, 0.08), transparent 55%);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 0.85rem;
+            position: relative;
+            overflow: hidden;
+            transition: transform var(--transition-fast), box-shadow var(--transition-fast), border-color 0.18s ease-out, background 0.18s ease-out;
+        }
+
+        .hours-item:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 26px rgba(0, 0, 0, 0.8);
+            border-color: rgba(255, 255, 255, 0.12);
+        }
+
+        .hours-item-day {
+            font-weight: 600;
+        }
+
+        .hours-item-time {
+            color: var(--text-muted);
+        }
+
+        .hours-item-tag {
+            font-size: 0.7rem;
+            margin-left: 0.45rem;
+            padding: 0.15rem 0.45rem;
+            border-radius: 999px;
+            border: 1px solid rgba(255, 255, 255, 0.18);
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            color: var(--accent-soft);
+        }
+
+        .hours-legend {
+            margin-top: 0.7rem;
+            font-size: 0.78rem;
+            color: var(--text-muted);
+        }
+
+        .hours-legend span {
+            padding: 0.14rem 0.5rem;
+            border-radius: 999px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            font-size: 0.78rem;
+        }
+
+        .hours-item.is-today {
+            border-color: rgba(255, 255, 255, 0.4);
+            background: linear-gradient(135deg, rgba(255, 33, 64, 0.4), rgba(43, 107, 255, 0.35));
+            box-shadow:
+                0 0 20px rgba(43, 107, 255, 0.7),
+                0 14px 34px rgba(0, 0, 0, 0.95);
+        }
+
+        .hours-item.is-today::before {
+            content: "Aujourd'hui";
+            position: absolute;
+            inset: 2px;
+            border-radius: inherit;
+            border: 1px dashed rgba(255, 255, 255, 0.45);
+            pointer-events: none;
+        }
+
+        /* FOOTER */
+
+        footer {
+            border-top: 1px solid rgba(255, 255, 255, 0.06);
+            padding: 1.2rem 0 1.4rem;
+            background: radial-gradient(circle at top, rgba(43, 107, 255, 0.06), transparent 60%);
+        }
+
+        .footer-inner {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: space-between;
+            gap: 0.75rem;
+            font-size: 0.8rem;
+            color: var(--text-muted);
+        }
+
+        .footer-links {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.75rem;
+        }
+
+        .footer-links a {
+            position: relative;
+            cursor: pointer;
+        }
+
+        .footer-links a::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: -2px;
+            width: 0;
+            height: 1px;
+            background: linear-gradient(90deg, var(--accent-red), var(--accent-blue));
+            transition: width 0.18s ease-out;
+        }
+
+        .footer-links a:hover::after {
+            width: 100%;
+        }
+
+        /* RESPONSIVE */
+
+        @media (max-width: 840px) {
+            .nav-links {
+                position: absolute;
+                inset: 100% 0 auto 0;
+                background: rgba(3, 6, 14, 0.98);
+                border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+                padding: 0.75rem 1.5rem 1rem;
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 0.25rem;
+                transform-origin: top;
+                transform: scaleY(0.6);
+                opacity: 0;
+                pointer-events: none;
+                transition: opacity 0.18s ease-out, transform 0.18s ease-out;
+            }
+
+            .nav-links.open {
+                opacity: 1;
+                transform: scaleY(1);
+                pointer-events: auto;
+            }
+
+            .nav-toggle {
+                display: inline-flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                gap: 2px;
+            }
+
+            .hero {
+                grid-template-columns: 1fr;
+                margin-top: 1.5rem;
+            }
+
+            .hero-visual {
+                order: -1;
+            }
+        }
+
+        @media (max-width: 520px) {
+            .hero-title {
+                font-size: 1.65rem;
+            }
+
+            .hero-cta-group {
+                flex-direction: column;
+                align-items: stretch;
+            }
+
+            .hours-list {
+                grid-template-columns: 1fr;
+            }
+
+            .footer-inner {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+        }
+    </style>
 </head>
 <body>
-  <a href="#main" class="sr-only" style="position:absolute;left:-9999px;top:auto;width:1px;height:1px;overflow:hidden;">Aller au contenu principal</a>
-
-  <!-- Header -->
-  <header role="banner">
+<header>
     <div class="container nav">
-      <a class="logo" href="index.html" aria-label="LGBL Accueil">
-        <img src="assets/img/logo-lgbl.png" alt="Logo LGBL" loading="lazy" decoding="async" />
-        <span>LGBL VIRTUAL CENTER EXPERIENCE</span>
-      </a>
-      <nav aria-label="Navigation principale">
-        <button class="mobile-toggle" id="mobileToggle" aria-expanded="false" aria-controls="mainNav">Menu</button>
-        <div class="links" id="mainNav">
-          <a href="index.html" aria-current="page">Accueil</a>
-          <a href="tarifs.html">Tarifs</a>
-          <a href="evenements.html">Événements</a>
-          <a href="communaute.html">Communauté</a>
-          <a href="contact.html">Contact</a>
-          <a href="https://www.youtube.com/@LucasGaly24/videos" target="_blank" rel="noopener">Vidéos</a>
-          <a href="https://www.youtube.com/@LucasGaly24/streams" target="_blank" rel="noopener">LIVE</a>
+        <div class="nav-left">
+            <div class="logo-circle" aria-hidden="true"></div>
+            <div class="brand-text">
+                <span class="brand-title">VIRTUAL CENTER EXPERIENCE</span>
+                <span class="brand-subtitle">Salle de simulation virtuelle</span>
+            </div>
         </div>
-      </nav>
-    </div>
-  </header>
 
-  <!-- Bandeau info -->
-  <section class="section" style="padding:12px 0;border-top:none;background:#0d0f12">
+        <button class="nav-toggle" aria-label="Ouvrir le menu">
+            <span></span><span></span><span></span>
+        </button>
+
+        <ul class="nav-links">
+            <li><a href="index.html" class="active">Accueil</a></li>
+            <li><a href="tarifs.html">Tarifs</a></li>
+            <li><a href="evenements.html">Événements</a></li>
+            <li><a href="communaute.html">Communauté</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </div>
+</header>
+
+<main>
     <div class="container">
-      <div class="alert info" style="display:flex;gap:.6rem;align-items:center;justify-content:center">
-        <strong aria-hidden="true">ℹ️ En préparation :</strong>
-        <span>Le centre n’est pas encore ouvert au public. Ouverture prochaine — restez informés.</span>
-      </div>
+        <!-- HERO -->
+        <section class="hero">
+            <div>
+                <div class="hero-text-eyebrow">Simracing & VR à Agen</div>
+                <h1 class="hero-title">
+                    <span class="highlight">Virtual Center Experience</span><br>
+                    Plonge dans l’ambiance paddock.
+                </h1>
+                <p class="hero-tagline">
+                    Salle de simulation virtuelle avec simulateurs haut de gamme, bar & snacking, soirées événements et tournois
+                    pour pilotes débutants comme confirmés.
+                </p>
+
+                <div class="hero-keywords">
+                    <span class="hero-pill">Simulateurs de qualité</span>
+                    <span class="hero-pill">Ambiance paddock</span>
+                    <span class="hero-pill">Bar &amp; snacking</span>
+                    <span class="hero-pill">Événements &amp; tournois</span>
+                </div>
+
+                <div class="hero-cta-group">
+                    <a href="tarifs.html" class="btn-main">Voir les tarifs</a>
+                    <a href="contact.html" class="btn-ghost">Réserver une session</a>
+                </div>
+            </div>
+
+            <aside class="hero-visual" aria-label="Voiture virtuelle victorieuse aux 24h du Mans">
+                <div class="hero-visual-header">
+                    <span>24h du Mans – Virtual Edition</span>
+                    <span class="hero-visual-tag">
+                        <span class="dot"></span> Live timing on
+                    </span>
+                </div>
+                <div class="track">
+                    <div class="track-glow"></div>
+                    <div class="car-wrapper">
+                        <div class="car-body">
+                            <div class="car-cockpit"></div>
+                            <div class="car-fin"></div>
+                            <div class="car-light-front"></div>
+                            <div class="car-wheel front"></div>
+                            <div class="car-wheel rear"></div>
+                            <div class="car-streak"></div>
+                        </div>
+                    </div>
+                </div>
+                <p class="hero-caption">
+                    Animation inspirée de notre voiture virtuelle victorieuse des 24h du Mans.  
+                    Bientôt sur les simulateurs, à vivre en immersion totale.
+                </p>
+            </aside>
+        </section>
+
+        <!-- HORAIRES -->
+        <section class="section" id="horaires">
+            <div class="section-header">
+                <h2 class="section-title">Nos <span>horaires</span></h2>
+                <p class="section-subtitle">Des plages larges pour rouler en journée, en soirée ou en nocturne.</p>
+            </div>
+
+            <div class="hours-card">
+                <p class="hours-note">
+                    ⭐ <strong>Vendredi : soirées événements</strong>. Les horaires peuvent varier les jours spéciaux
+                    (tournois, privatisations, événements endurance, etc.).
+                </p>
+                <ul class="hours-list">
+                    <li class="hours-item" data-day="1">
+                        <span class="hours-item-day">Lundi</span>
+                        <span class="hours-item-time">Fermé</span>
+                    </li>
+                    <li class="hours-item" data-day="2">
+                        <span class="hours-item-day">Mardi</span>
+                        <span class="hours-item-time">Fermé ou sur réservation</span>
+                    </li>
+                    <li class="hours-item" data-day="3">
+                        <span class="hours-item-day">Mercredi</span>
+                        <span class="hours-item-time">10:00 – 22:30</span>
+                    </li>
+                    <li class="hours-item" data-day="4">
+                        <span class="hours-item-day">Jeudi</span>
+                        <span class="hours-item-time">14:00 – 01:00</span>
+                    </li>
+                    <li class="hours-item" data-day="5">
+                        <span class="hours-item-day">Vendredi
+                            <span class="hours-item-tag">Événements</span>
+                        </span>
+                        <span class="hours-item-time">12:00 – 01:00</span>
+                    </li>
+                    <li class="hours-item" data-day="6">
+                        <span class="hours-item-day">Samedi</span>
+                        <span class="hours-item-time">12:00 – 01:00</span>
+                    </li>
+                    <li class="hours-item" data-day="7">
+                        <span class="hours-item-day">Dimanche</span>
+                        <span class="hours-item-time">12:00 – 22:30</span>
+                    </li>
+                </ul>
+                <p class="hours-legend">
+                    <span>Le jour actuel est automatiquement mis en avant.</span>
+                </p>
+            </div>
+        </section>
     </div>
-  </section>
+</main>
 
-  <main id="main" role="main">
-    <!-- 1) Titre -->
-    <section class="hero" aria-labelledby="hero-title">
-      <div class="container">
-        <h1 id="hero-title">LGBL VIRTUAL CENTER EXPERIENCE</h1>
-        <p class="subtitle">Pas un simple jeu — <strong>de la simulation pure</strong>.</p>
-        <div aria-label="étiquettes" style="display:flex;gap:.55rem;flex-wrap:wrap;margin:.75rem 0 1rem">
-          <span class="tag">Simulateurs dynamiques</span>
-          <span class="tag">Volants F1</span>
-          <span class="tag">Pédaliers pros</span>
-          <span class="tag">Ambiance paddock</span>
-          <span class="tag">Bar & Snacking</span>
+<footer>
+    <div class="container footer-inner">
+        <div class="footer-links">
+            <a href="mentions-legales.html">Mentions légales</a>
+            <a href="contact.html">Contact</a>
+            <a href="confidentialite.html">Confidentialité</a>
         </div>
-        <div style="display:flex;gap:.6rem;flex-wrap:wrap">
-          <a class="btn" href="tarifs.html" aria-label="Voir les tarifs">Voir les tarifs</a>
-          <a class="btn btn-outline" href="evenements.html" aria-label="Voir les événements et les lives">Événements & lives</a>
-        </div>
-      </div>
-    </section>
-
-    <!-- 2) Horaires -->
-    <section class="section" aria-labelledby="hours-title">
-      <div class="container">
-        <h2 id="hours-title">🕒 Horaires d’ouverture</h2>
-        <div class="hours" id="hoursList" style="margin-top:12px">
-          <div class="day" data-day="1"><span class="label">Lundi</span><span class="time">Fermé</span></div>
-          <div class="day" data-day="2"><span class="label">Mardi</span><span class="time">Fermé <span class="note">/ réservation</span></span></div>
-          <div class="day" data-day="3"><span class="label">Mercredi</span><span class="time">13:00 – 22:30</span></div>
-          <div class="day" data-day="4"><span class="label">Jeudi</span><span class="time">14:00 – 01:00</span></div>
-          <div class="day" data-day="5"><span class="label">Vendredi ⭐</span><span class="time">14:00 – 01:00</span></div>
-          <div class="day" data-day="6"><span class="label">Samedi</span><span class="time">14:00 – 01:00</span></div>
-          <div class="day" data-day="0"><span class="label">Dimanche</span><span class="time">14:00 – 22:30</span></div>
-        </div>
-        <p class="note">* ⭐ Vendredi : soirées événements. Les horaires peuvent varier les jours spéciaux.</p>
-      </div>
-    </section>
-
-    <!-- 3) Matériel | BAR | Détente -->
-    <section class="features" aria-labelledby="features-title" style="background-image:url('assets/img/bg-simracing.jpg');background-size:cover;background-position:center;background-attachment:fixed;">
-      <div class="container">
-        <h2 id="features-title" class="sr-only">Caractéristiques du centre</h2>
-        <div class="grid-3">
-          <article class="card card--bg card--sim hoverable" aria-labelledby="simracing-title">
-            <h3 id="simracing-title">Sim Racing Pro</h3>
-            <ul style="margin:0;padding-left:1.1rem;line-height:1.95">
-              <li>Simulateurs <strong>statiques et dynamiques</strong></li>
-              <li><strong>Volant type F1</strong> &amp; <strong>pédalier pro</strong></li>
-              <li><strong>Cockpit pro</strong> (structure rigide)</li>
-              <li><strong>Simple écran</strong> pour une immersion totale</li>
-            </ul>
-          </article>
-          <article class="card card--bg card--bar hoverable" aria-labelledby="bar-title">
-            <h3 id="bar-title">Bar</h3>
-            <p>Boissons soft &amp; <strong>snacking sucré</strong> pour se restaurer entre deux sessions.</p>
-          </article>
-          <article class="card card--bg card--detente hoverable" aria-labelledby="detente-title">
-            <h3 id="detente-title">Détente &amp; Ambiance</h3>
-            <ul style="margin:0;padding-left:1.1rem;line-height:1.95">
-              <li><strong>Fond sonore</strong> ambiance paddock</li>
-              <li><strong>Coin console</strong> pour patienter</li>
-              <li><strong>Baby-foot</strong> pour le fun</li>
-            </ul>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <!-- 4) Pourquoi cette salle & Pourquoi LGBL ? -->
-    <section class="section" aria-labelledby="pourquoi-title">
-      <div class="container grid-2">
         <div>
-          <h2 id="pourquoi-title">Pourquoi cette salle de simulation ?</h2>
-          <p class="small" style="font-size:1rem">
-            L’objectif est de faire découvrir un <strong>nouveau divertissement</strong> dans une zone où l’offre d’activités est limitée — et de <strong>donner le goût du sim racing</strong> aussi bien aux plus jeunes qu’aux adultes.
-            Pas un simple jeu : une <strong>véritable simulation</strong> avec matériel professionnel, ambiance paddock, et un cadre convivial (bar & coin détente).
-          </p>
-          <div style="display:flex;gap:.55rem;flex-wrap:wrap;margin-top:.5rem">
-            <span class="tag">Matériel pro</span><span class="tag">Coaching</span><span class="tag">Esprit fair-play</span>
-          </div>
+            © <span id="year"></span> VIRTUAL CENTER EXPERIENCE. Tous droits réservés.
         </div>
-        <aside class="card hoverable" aria-label="Pourquoi LGBL ?">
-          <h3>Pourquoi LGBL ?</h3>
-          <p class="small" style="font-size:1rem">
-            L’idée vient principalement de <strong>Lucas Galy</strong>. Le projet a été enrichi par les contributions de <strong>Baptiste Lecerf</strong> (concept & formats) et <strong>Noé Pelletier</strong> (communication & publicité).
-          </p>
-        </aside>
-      </div>
-    </section>
-
-    <!-- 5) Partenaires (2 logos) -->
-    <section class="section" aria-labelledby="partners-title">
-      <div class="container">
-        <h2 id="partners-title">Partenaires</h2>
-        <div class="partners" style="margin-top:12px">
-          <div class="partner">
-            <!-- Ajoute ton fichier ici : assets/img/partners/lfkarting.png -->
-            <img src="assets/img/partners/lfkarting.png" alt="LFKarting" onerror="this.replaceWith(Object.assign(document.createElement('div'),{className:'placeholder',textContent:'LFKarting (à venir)'}));">
-          </div>
-          <div class="partner">
-            <!-- Ajoute ton fichier ici : assets/img/partners/au-bureau-boe.png -->
-            <img src="assets/img/partners/au-bureau-boe.png" alt="Au Bureau Boé" onerror="this.replaceWith(Object.assign(document.createElement('div'),{className:'placeholder',textContent:'Au Bureau Boé (à venir)'}));">
-          </div>
-        </div>
-        <p class="note">Espace réservé — logos en cours d’intégration.</p>
-      </div>
-    </section>
-
-    <!-- 6) Vidéos (LIVE + aléatoire) -->
-    <section class="section" aria-labelledby="live-title">
-      <div class="container">
-        <h2 id="live-title">🎥 LIVE & Vidéos</h2>
-        <div class="live-header"><span class="live-dot"></span><span>EN DIRECT</span></div>
-        <p class="small">Si un live est en cours, il s’affiche automatiquement. Vous pouvez aussi lancer une vidéo aléatoire de la chaîne.</p>
-
-        <div class="video-embed" style="margin-top:.8rem;border-radius:14px;overflow:hidden;border:1px solid var(--line)">
-          <iframe
-            id="liveFrame"
-            title="LGBL Diffusion"
-            width="100%"
-            height="520"
-            src="https://www.youtube-nocookie.com/embed/live_stream?channel=@LucasGaly24&autoplay=0"
-            loading="lazy"
-            referrerpolicy="strict-origin-when-cross-origin"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            allowfullscreen>
-          </iframe>
-        </div>
-
-        <p style="margin-top:.9rem" class="small">
-          <button class="btn btn-outline" id="randomBtn" type="button" aria-controls="liveFrame">🎲 Charger une vidéo aléatoire</button>
-          <a class="btn" href="https://www.youtube.com/@LucasGaly24/videos" target="_blank" rel="noopener">Voir toutes les vidéos</a>
-        </p>
-      </div>
-    </section>
-  </main>
-
-  <!-- Footer -->
-  <footer style="border-top:1px solid var(--line)" role="contentinfo">
-    <div class="container footer-grid">
-      <div>
-        <div class="logo" style="display:flex;align-items:center;gap:.5rem">
-          <img src="assets/img/logo-lgbl.png" alt="LGBL" style="height:22px;border-radius:50%" loading="lazy" decoding="async" />
-          <span>LGBL VIRTUAL CENTER EXPERIENCE</span>
-        </div>
-        <p class="copy">© 2025 LGBL VIRTUAL CENTER EXPERIENCE — Conception : Lucas Galy</p>
-      </div>
-      <div>
-        <h4>Le site</h4>
-        <p>
-          <a href="index.html" aria-current="page">Accueil</a><br />
-          <a href="tarifs.html">Tarifs</a><br />
-          <a href="evenements.html">Événements</a>
-        </p>
-      </div>
-      <div>
-        <h4>Contact</h4>
-        <p>
-          <a href="mailto:lucasgaly.47510@gmail.com">lucasgaly.47510@gmail.com</a><br />
-          <a href="tel:+33672392264">06 72 39 22 64</a>
-        </p>
-      </div>
-      <div>
-        <h4>LIVE</h4>
-        <p><a href="https://www.youtube.com/@LucasGaly24/streams" target="_blank" rel="noopener">YouTube</a></p>
-      </div>
     </div>
+</footer>
 
-    <div class="container" style="padding-bottom:24px">
-      <p class="small"><a href="mentions-legales.html">Mentions légales</a> · <a href="confidentialite.html">Confidentialité</a></p>
-    </div>
-  </footer>
+<script>
+    // Année dynamique dans le footer
+    document.getElementById("year").textContent = new Date().getFullYear();
 
-  <!-- Données structurées -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "SportsActivityLocation",
-    "name": "LGBL VIRTUAL CENTER EXPERIENCE",
-    "url": "https://lucas24galy.github.io/LGBL-VRTUAL-CENTER-EXPERIENCE/",
-    "logo": "https://lucas24galy.github.io/LGBL-VRTUAL-CENTER-EXPERIENCE/assets/img/logo-lgbl.png",
-    "description": "Centre de simulation de course avec bar et coin détente. Ouverture prochaine.",
-    "areaServed": "Agen, Lot-et-Garonne, France",
-    "telephone": "+33 6 72 39 22 64",
-    "email": "mailto:lucasgaly.47510@gmail.com"
-  }
-  </script>
-
-  <!-- Scripts -->
-  <script>
-    // Burger
-    (function(){
-      const btn = document.getElementById('mobileToggle');
-      const menu = document.getElementById('mainNav');
-      if(!btn || !menu) return;
-      btn.addEventListener('click', () => {
-        const open = menu.classList.toggle('open');
-        btn.setAttribute('aria-expanded', String(open));
-      });
+    // Mise en avant automatique du jour actuel dans les horaires
+    (function highlightToday() {
+        const now = new Date();
+        const jsDay = now.getDay(); // 0 dimanche – 6 samedi
+        // Conversion en 1 (lundi) – 7 (dimanche)
+        const mapJSDayToData = {1:1, 2:2, 3:3, 4:4, 5:5, 6:6, 0:7};
+        const today = mapJSDayToData[jsDay];
+        const todayItem = document.querySelector('.hours-item[data-day="' + today + '"]');
+        if (todayItem) {
+            todayItem.classList.add("is-today");
+        }
     })();
 
-    // Alternance d'image de fond du hero (LM2 / simracing) au chargement
-    (function(){
-      const hero = document.querySelector('.hero');
-      if(!hero) return;
-      const bgImages = ['assets/img/bg-simracing.jpg','assets/img/bg-lm2.jpg'];
-      const img = bgImages[Math.floor(Math.random()*bgImages.length)];
-      hero.style.backgroundImage = `url('${img}')`;
-      hero.style.backgroundSize = 'cover';
-      hero.style.backgroundPosition = 'center';
-      hero.style.backgroundAttachment = 'fixed';
+    // Menu burger pour smartphone
+    (function navToggle() {
+        const toggle = document.querySelector(".nav-toggle");
+        const links = document.querySelector(".nav-links");
+
+        if (!toggle || !links) return;
+
+        toggle.addEventListener("click", () => {
+            links.classList.toggle("open");
+        });
     })();
-
-    // YouTube : vidéos aléatoires (tes 3 liens)
-    (function(){
-      const LGBL_VIDEOS = [
-        "_cHsgCjn3U8",
-        "KoLfHUJlgQo",
-        "qMpRpCHy1y0"
-      ];
-      const randomBtn = document.getElementById("randomBtn");
-      const iframe = document.getElementById("liveFrame");
-      if(!randomBtn || !iframe) return;
-
-      const YT_BASE = "https://www.youtube-nocookie.com/embed/";
-      let lastId = null;
-
-      function pickRandomDifferent(){
-        if(LGBL_VIDEOS.length === 0) return null;
-        if(LGBL_VIDEOS.length === 1) return LGBL_VIDEOS[0];
-        let id;
-        do { id = LGBL_VIDEOS[Math.floor(Math.random()*LGBL_VIDEOS.length)]; }
-        while(id === lastId);
-        return id;
-      }
-      function setVideo(id){
-        if(!id) return;
-        const params = "autoplay=0&rel=0&modestbranding=1&playsinline=1";
-        const cb = "cb="+Math.random().toString(36).slice(2);
-        iframe.src = `${YT_BASE}${id}?${params}&${cb}`;
-        lastId = id;
-      }
-      randomBtn.addEventListener("click", () => {
-        const next = pickRandomDifferent();
-        if(!next) return alert("Ajoute des IDs de vidéos dans LGBL_VIDEOS.");
-        setVideo(next);
-        iframe.focus();
-      });
-    })();
-
-    // Horaires : surbrillance du jour courant (Europe/Paris)
-    (function(){
-      const now = new Date();
-      const day = now.getDay(); // 0=dimanche ... 6=samedi
-      document.querySelectorAll('.hours .day').forEach(n=>{
-        const d = parseInt(n.getAttribute('data-day'),10);
-        if(d === day){ n.classList.add('current'); }
-      });
-    })();
-
-    // Lien actif
-    (function(){
-      const path = location.pathname.split('/').pop() || 'index.html';
-      document.querySelectorAll('.links a[href]')
-        .forEach(a => { if (a.getAttribute('href') === path) a.setAttribute('aria-current', 'page'); });
-    })();
-  </script>
-
-  <script src="assets/js/main.js" defer></script>
-  <noscript><div class="container" style="padding:1rem"><p class="alert info">Pour l’expérience complète (menus, lecteur vidéo), activez JavaScript.</p></div></noscript>
+</script>
 </body>
 </html>
