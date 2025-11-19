@@ -8,18 +8,23 @@
     <meta name="description" content="VIRTUAL CENTER EXPERIENCE - Salle de simulation virtuelle avec simulateurs de qualité, ambiance paddock, bar & snacking, événements et tournois.">
     <meta name="keywords" content="simulation, simracing, simulateurs de qualité, ambiance paddock, bar, snacking, événements, tournois, virtuel">
 
+    <!-- Police pro (Inter) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
     <style>
         :root {
-            --bg-main: #050914;
+            --bg-main: #050814;
             --bg-alt: #0b1020;
-            --card-bg: #111729;
-            --accent-red: #ff2140;
-            --accent-blue: #2b6bff;
-            --accent-soft: #7280ff;
-            --text-main: #f5f7ff;
-            --text-muted: #a5afc9;
+            --card-bg: #101525;
+            --accent-red: #e53935;
+            --accent-blue: #1b3d7c;
+            --accent-blue-soft: #2850a7;
+            --text-main: #f3f4f9;
+            --text-muted: #98a0b8;
             --border-soft: rgba(255, 255, 255, 0.06);
-            --radius-lg: 18px;
+            --radius-lg: 16px;
             --shadow-soft: 0 18px 40px rgba(0, 0, 0, 0.6);
             --transition-fast: 0.18s ease-out;
         }
@@ -35,8 +40,8 @@
         }
 
         body {
-            font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-            background: radial-gradient(circle at top left, #101a33 0, #050914 45%, #020308 100%);
+            font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+            background: radial-gradient(circle at top, #11172a 0, #050814 50%, #020308 100%);
             color: var(--text-main);
             line-height: 1.6;
         }
@@ -64,49 +69,32 @@
             position: sticky;
             top: 0;
             z-index: 20;
-            backdrop-filter: blur(16px);
+            backdrop-filter: blur(14px);
             background: linear-gradient(
                 to bottom,
-                rgba(4, 8, 20, 0.96),
-                rgba(4, 8, 20, 0.75),
-                transparent
+                rgba(5, 10, 24, 0.96),
+                rgba(5, 10, 24, 0.88),
+                rgba(5, 10, 24, 0.75)
             );
-            border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.06);
         }
 
         .nav {
             display: flex;
             align-items: center;
             justify-content: space-between;
-            padding: 0.75rem 0;
+            padding: 0.7rem 0;
         }
 
         .nav-left {
             display: flex;
             align-items: center;
-            gap: 0.75rem;
+            gap: 0.85rem;
         }
 
-        .logo-circle {
-            width: 40px;
-            height: 40px;
-            border-radius: 999px;
-            background: conic-gradient(from 210deg, var(--accent-red), var(--accent-blue), #ffffff22, var(--accent-red));
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            box-shadow: 0 0 18px rgba(255, 33, 64, 0.5);
-            position: relative;
-            overflow: hidden;
-        }
-
-        .logo-circle::after {
-            content: "VC";
-            font-size: 0.9rem;
-            font-weight: 800;
-            letter-spacing: 0.05em;
-            color: #ffffff;
-            text-shadow: 0 0 8px rgba(0, 0, 0, 0.8);
+        .logo-img {
+            height: 42px;
+            width: auto;
         }
 
         .brand-text {
@@ -134,47 +122,37 @@
         }
 
         .nav-links a {
-            font-size: 0.9rem;
+            font-size: 0.88rem;
             text-transform: uppercase;
             letter-spacing: 0.14em;
-            padding: 0.6rem 0.85rem;
+            padding: 0.55rem 0.95rem;
             border-radius: 999px;
             border: 1px solid transparent;
             position: relative;
-            overflow: hidden;
             cursor: pointer;
-            transition: transform var(--transition-fast), box-shadow var(--transition-fast), border-color var(--transition-fast), background 0.2s ease-out;
-        }
-
-        .nav-links a::before {
-            content: "";
-            position: absolute;
-            inset: 0;
-            background: linear-gradient(120deg, rgba(255, 33, 64, 0.6), rgba(43, 107, 255, 0.7));
-            opacity: 0;
-            transition: opacity 0.18s ease-out;
-            z-index: -1;
+            transition:
+                transform var(--transition-fast),
+                box-shadow var(--transition-fast),
+                border-color var(--transition-fast),
+                background 0.2s ease-out;
         }
 
         .nav-links a:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 10px 24px rgba(0, 0, 0, 0.7);
-            border-color: rgba(255, 255, 255, 0.12);
-        }
-
-        .nav-links a:hover::before {
-            opacity: 0.18;
+            transform: translateY(-1px);
+            box-shadow: 0 10px 24px rgba(0, 0, 0, 0.5);
+            border-color: rgba(255, 255, 255, 0.14);
+            background: rgba(16, 22, 44, 0.9);
         }
 
         .nav-links a.active {
-            border-color: rgba(255, 255, 255, 0.16);
-            background: linear-gradient(120deg, rgba(255, 33, 64, 0.18), rgba(43, 107, 255, 0.18));
+            border-color: rgba(255, 255, 255, 0.24);
+            background: linear-gradient(120deg, rgba(27, 61, 124, 0.95), rgba(229, 57, 53, 0.9));
         }
 
         .nav-toggle {
             display: none;
             background: none;
-            border: 1px solid rgba(255, 255, 255, 0.18);
+            border: 1px solid rgba(255, 255, 255, 0.22);
             border-radius: 999px;
             padding: 0.3rem 0.6rem;
             color: var(--text-main);
@@ -191,55 +169,53 @@
             transition: transform 0.2s ease-out, opacity 0.2s ease-out;
         }
 
-        /* HERO SECTION */
+        /* MAIN */
 
         main {
-            padding: 1.25rem 0 3.5rem;
+            padding: 1.7rem 0 3.3rem;
         }
 
         .hero {
             display: grid;
-            grid-template-columns: minmax(0, 3fr) minmax(0, 2.4fr);
-            gap: 2.5rem;
+            grid-template-columns: minmax(0, 3.3fr) minmax(0, 2.7fr);
+            gap: 2.8rem;
             align-items: center;
-            margin-top: 0.75rem;
+            margin-top: 0.6rem;
         }
 
-        .hero-text-eyebrow {
-            font-size: 0.85rem;
+        .hero-eyebrow {
+            font-size: 0.82rem;
             text-transform: uppercase;
-            letter-spacing: 0.2em;
-            color: var(--accent-soft);
+            letter-spacing: 0.18em;
+            color: var(--text-muted);
             margin-bottom: 0.4rem;
         }
 
         .hero-title {
-            font-size: clamp(1.9rem, 3vw, 2.5rem);
+            font-size: clamp(2rem, 3vw, 2.5rem);
             font-weight: 800;
             text-transform: uppercase;
-            line-height: 1.15;
-            margin-bottom: 0.7rem;
+            line-height: 1.2;
+            margin-bottom: 0.75rem;
+            max-width: 26rem;
         }
 
         .hero-title span.highlight {
-            background: linear-gradient(120deg, var(--accent-red), var(--accent-blue));
-            -webkit-background-clip: text;
-            background-clip: text;
-            color: transparent;
+            color: var(--accent-blue-soft);
         }
 
         .hero-tagline {
-            font-size: 1rem;
+            font-size: 0.98rem;
             color: var(--text-muted);
-            max-width: 30rem;
-            margin-bottom: 1.25rem;
+            max-width: 32rem;
+            margin-bottom: 1.4rem;
         }
 
         .hero-keywords {
             display: flex;
             flex-wrap: wrap;
             gap: 0.55rem;
-            margin-bottom: 1.8rem;
+            margin-bottom: 1.7rem;
         }
 
         .hero-pill {
@@ -247,19 +223,18 @@
             padding: 0.45rem 0.75rem;
             border-radius: 999px;
             border: 1px solid rgba(255, 255, 255, 0.08);
-            background: linear-gradient(135deg, rgba(17, 23, 41, 0.85), rgba(8, 12, 26, 0.95));
+            background: rgba(14, 19, 38, 0.95);
             display: inline-flex;
             align-items: center;
             gap: 0.4rem;
-            cursor: default;
         }
 
         .hero-pill::before {
             content: "";
-            width: 8px;
-            height: 8px;
+            width: 7px;
+            height: 7px;
             border-radius: 999px;
-            background: radial-gradient(circle, var(--accent-red), var(--accent-blue));
+            background: var(--accent-blue-soft);
         }
 
         .hero-cta-group {
@@ -271,56 +246,59 @@
         .btn-main,
         .btn-ghost {
             border-radius: 999px;
-            padding: 0.7rem 1.4rem;
+            padding: 0.75rem 1.5rem;
             font-size: 0.9rem;
             text-transform: uppercase;
             letter-spacing: 0.16em;
             border: 1px solid transparent;
             cursor: pointer;
-            transition: transform var(--transition-fast), box-shadow var(--transition-fast), background 0.18s ease-out, border-color 0.18s ease-out;
+            transition:
+                transform var(--transition-fast),
+                box-shadow var(--transition-fast),
+                background 0.18s ease-out,
+                border-color 0.18s ease-out;
         }
 
         .btn-main {
-            background: linear-gradient(120deg, var(--accent-red), var(--accent-blue));
+            background: linear-gradient(120deg, var(--accent-blue), var(--accent-red));
             color: #ffffff;
-            box-shadow: 0 14px 30px rgba(0, 0, 0, 0.9);
+            box-shadow: 0 14px 30px rgba(0, 0, 0, 0.85);
         }
 
         .btn-main:hover {
             transform: translateY(-2px);
-            box-shadow: 0 18px 40px rgba(0, 0, 0, 0.95);
+            box-shadow: 0 18px 40px rgba(0, 0, 0, 0.9);
         }
 
         .btn-ghost {
-            border-color: rgba(255, 255, 255, 0.2);
-            background: rgba(5, 9, 20, 0.6);
+            border-color: rgba(255, 255, 255, 0.22);
+            background: rgba(8, 12, 27, 0.9);
             color: var(--text-main);
         }
 
         .btn-ghost:hover {
             transform: translateY(-2px);
-            background: rgba(12, 18, 36, 0.9);
-            box-shadow: 0 10px 26px rgba(0, 0, 0, 0.8);
+            background: rgba(16, 22, 44, 1);
+            box-shadow: 0 10px 26px rgba(0, 0, 0, 0.7);
         }
 
-        /* HERO VISUAL – 24H DU MANS CAR ANIMATION */
+        /* HERO VISUAL – IMAGE LMP2 */
 
         .hero-visual {
-            background: radial-gradient(circle at top, rgba(43, 107, 255, 0.1), transparent 55%),
-                        radial-gradient(circle at bottom, rgba(255, 33, 64, 0.1), transparent 60%);
             border-radius: var(--radius-lg);
             border: 1px solid var(--border-soft);
-            padding: 1.25rem 1.4rem;
             box-shadow: var(--shadow-soft);
-            position: relative;
             overflow: hidden;
+            background: #050814;
+            display: flex;
+            flex-direction: column;
         }
 
-        .hero-visual-header {
+        .hero-visual-top {
+            padding: 0.9rem 1.1rem 0.5rem;
             display: flex;
             justify-content: space-between;
             align-items: center;
-            margin-bottom: 0.75rem;
             font-size: 0.8rem;
             text-transform: uppercase;
             letter-spacing: 0.12em;
@@ -328,10 +306,9 @@
         }
 
         .hero-visual-tag {
-            padding: 0.3rem 0.7rem;
+            padding: 0.25rem 0.7rem;
             border-radius: 999px;
             border: 1px solid rgba(255, 255, 255, 0.16);
-            background: linear-gradient(120deg, rgba(255, 33, 64, 0.2), rgba(43, 107, 255, 0.2));
             font-size: 0.75rem;
             display: inline-flex;
             align-items: center;
@@ -342,142 +319,48 @@
             width: 8px;
             height: 8px;
             border-radius: 999px;
-            background: #00ff9c;
-            box-shadow: 0 0 8px rgba(0, 255, 156, 0.8);
+            background: #25d366;
         }
 
-        .track {
+        .hero-visual-image-wrapper {
             position: relative;
-            height: 170px;
-            border-radius: 999px;
-            background: linear-gradient(90deg, #050914, #050914),
-                        repeating-linear-gradient(
-                            90deg,
-                            transparent 0,
-                            transparent 14px,
-                            rgba(255, 255, 255, 0.08) 14px,
-                            rgba(255, 255, 255, 0.08) 18px
-                        );
-            border: 1px solid rgba(255, 255, 255, 0.06);
             overflow: hidden;
         }
 
-        .track-glow {
+        .hero-visual-image-wrapper::before {
+            content: "";
             position: absolute;
             inset: 0;
-            background: radial-gradient(circle at 20% 50%, rgba(43, 107, 255, 0.2), transparent 55%),
-                        radial-gradient(circle at 70% 50%, rgba(255, 33, 64, 0.25), transparent 60%);
+            background: linear-gradient(
+                to bottom,
+                rgba(5, 8, 20, 0.3),
+                rgba(5, 8, 20, 0.75)
+            );
             pointer-events: none;
         }
 
-        .car-wrapper {
-            position: absolute;
-            top: 50%;
-            left: -30%;
-            transform: translateY(-50%);
-            animation: car-lap 6s linear infinite;
+        .hero-visual-image {
+            width: 100%;
+            height: 220px;
+            object-fit: cover;
+            transform: scale(1.02);
+            transition: transform 4s ease-out;
         }
 
-        @keyframes car-lap {
-            0%   { left: -35%; transform: translateY(-50%) scale(1);}
-            45%  { left: 55%; transform: translateY(-52%) scale(1.02);}
-            55%  { left: 60%; transform: translateY(-48%) scale(1.02);}
-            100% { left: 130%; transform: translateY(-50%) scale(1);}
-        }
-
-        .car-body {
-            position: relative;
-            width: 180px;
-            height: 38px;
-            border-radius: 999px;
-            background: linear-gradient(90deg, var(--accent-red), var(--accent-blue));
-            box-shadow:
-                0 0 24px rgba(43, 107, 255, 0.9),
-                0 0 40px rgba(255, 33, 64, 0.8);
-        }
-
-        .car-cockpit {
-            position: absolute;
-            left: 32%;
-            top: -16px;
-            width: 70px;
-            height: 26px;
-            border-radius: 999px 999px 50px 50px;
-            background: linear-gradient(145deg, #10182c, #060914);
-        }
-
-        .car-fin {
-            position: absolute;
-            right: 10px;
-            top: -12px;
-            width: 32px;
-            height: 26px;
-            border-radius: 6px;
-            background: linear-gradient(140deg, rgba(255, 255, 255, 0.9), rgba(43, 107, 255, 0.5));
-            opacity: 0.9;
-        }
-
-        .car-wheel {
-            position: absolute;
-            bottom: -14px;
-            width: 28px;
-            height: 28px;
-            border-radius: 50%;
-            background: #05070c;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.9);
-            overflow: hidden;
-        }
-
-        .car-wheel::before {
-            content: "";
-            position: absolute;
-            inset: 4px;
-            border-radius: 50%;
-            border: 3px solid rgba(255, 255, 255, 0.3);
-        }
-
-        .car-wheel.front {
-            left: 25px;
-        }
-
-        .car-wheel.rear {
-            right: 25px;
-        }
-
-        .car-light-front {
-            position: absolute;
-            left: 0;
-            top: 6px;
-            width: 32px;
-            height: 10px;
-            border-radius: 0 999px 999px 0;
-            background: radial-gradient(circle at 0, #ffffff, rgba(255, 255, 255, 0.1));
-            box-shadow:
-                0 0 18px rgba(255, 255, 255, 0.8),
-                0 0 26px rgba(0, 200, 255, 0.9);
-        }
-
-        .car-streak {
-            position: absolute;
-            left: -120px;
-            top: 12px;
-            width: 260px;
-            height: 20px;
-            background: linear-gradient(90deg, rgba(255, 255, 255, 0.22), transparent);
-            opacity: 0.8;
-            filter: blur(2px);
+        .hero-visual:hover .hero-visual-image {
+            transform: scale(1.06);
         }
 
         .hero-caption {
-            margin-top: 0.8rem;
+            padding: 0.6rem 1.1rem 0.9rem;
             font-size: 0.8rem;
             color: var(--text-muted);
         }
 
-        /* HORAIRES SECTION */
+        /* SECTION HORAIRES */
 
         .section {
-            margin-top: 2.5rem;
+            margin-top: 3rem;
         }
 
         .section-header {
@@ -489,25 +372,22 @@
         }
 
         .section-title {
-            font-size: 1.1rem;
+            font-size: 1.05rem;
             text-transform: uppercase;
             letter-spacing: 0.18em;
         }
 
         .section-title span {
-            background: linear-gradient(120deg, var(--accent-red), var(--accent-blue));
-            -webkit-background-clip: text;
-            background-clip: text;
-            color: transparent;
+            color: var(--accent-blue-soft);
         }
 
         .section-subtitle {
-            font-size: 0.85rem;
+            font-size: 0.86rem;
             color: var(--text-muted);
         }
 
         .hours-card {
-            background: linear-gradient(135deg, rgba(10, 16, 35, 0.98), rgba(6, 10, 24, 0.98));
+            background: linear-gradient(135deg, #0a1020, #060a18);
             border-radius: var(--radius-lg);
             padding: 1.1rem 1.2rem;
             border: 1px solid var(--border-soft);
@@ -516,35 +396,39 @@
 
         .hours-note {
             font-size: 0.8rem;
-            color: var(--accent-soft);
+            color: var(--accent-blue-soft);
             margin-bottom: 0.85rem;
         }
 
         .hours-list {
             list-style: none;
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
-            gap: 0.5rem;
+            grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+            gap: 0.6rem;
         }
 
         .hours-item {
-            padding: 0.6rem 0.75rem;
+            padding: 0.65rem 0.8rem;
             border-radius: 12px;
             border: 1px solid rgba(255, 255, 255, 0.06);
-            background: radial-gradient(circle at top left, rgba(43, 107, 255, 0.08), transparent 55%);
+            background: rgba(9, 13, 26, 0.96);
             display: flex;
             justify-content: space-between;
             align-items: center;
             font-size: 0.85rem;
             position: relative;
             overflow: hidden;
-            transition: transform var(--transition-fast), box-shadow var(--transition-fast), border-color 0.18s ease-out, background 0.18s ease-out;
+            transition:
+                transform var(--transition-fast),
+                box-shadow var(--transition-fast),
+                border-color 0.18s ease-out,
+                background 0.18s ease-out;
         }
 
         .hours-item:hover {
             transform: translateY(-2px);
-            box-shadow: 0 10px 26px rgba(0, 0, 0, 0.8);
-            border-color: rgba(255, 255, 255, 0.12);
+            box-shadow: 0 10px 26px rgba(0, 0, 0, 0.85);
+            border-color: rgba(255, 255, 255, 0.16);
         }
 
         .hours-item-day {
@@ -563,7 +447,7 @@
             border: 1px solid rgba(255, 255, 255, 0.18);
             text-transform: uppercase;
             letter-spacing: 0.08em;
-            color: var(--accent-soft);
+            color: var(--accent-blue-soft);
         }
 
         .hours-legend {
@@ -572,36 +456,33 @@
             color: var(--text-muted);
         }
 
-        .hours-legend span {
-            padding: 0.14rem 0.5rem;
-            border-radius: 999px;
-            border: 1px solid rgba(255, 255, 255, 0.2);
-            font-size: 0.78rem;
-        }
-
         .hours-item.is-today {
-            border-color: rgba(255, 255, 255, 0.4);
-            background: linear-gradient(135deg, rgba(255, 33, 64, 0.4), rgba(43, 107, 255, 0.35));
+            border-color: rgba(255, 255, 255, 0.5);
+            background: linear-gradient(
+                135deg,
+                rgba(27, 61, 124, 0.85),
+                rgba(229, 57, 53, 0.78)
+            );
             box-shadow:
-                0 0 20px rgba(43, 107, 255, 0.7),
-                0 14px 34px rgba(0, 0, 0, 0.95);
+                0 0 18px rgba(27, 61, 124, 0.7),
+                0 14px 34px rgba(0, 0, 0, 0.9);
         }
 
         .hours-item.is-today::before {
-            content: "Aujourd'hui";
+            content: "";
             position: absolute;
             inset: 2px;
             border-radius: inherit;
-            border: 1px dashed rgba(255, 255, 255, 0.45);
+            border: 1px dashed rgba(255, 255, 255, 0.6);
             pointer-events: none;
         }
 
         /* FOOTER */
 
         footer {
-            border-top: 1px solid rgba(255, 255, 255, 0.06);
-            padding: 1.2rem 0 1.4rem;
-            background: radial-gradient(circle at top, rgba(43, 107, 255, 0.06), transparent 60%);
+            border-top: 1px solid rgba(255, 255, 255, 0.08);
+            padding: 1.1rem 0 1.4rem;
+            background: #050814;
         }
 
         .footer-inner {
@@ -609,7 +490,7 @@
             flex-wrap: wrap;
             align-items: center;
             justify-content: space-between;
-            gap: 0.75rem;
+            gap: 0.7rem;
             font-size: 0.8rem;
             color: var(--text-muted);
         }
@@ -617,7 +498,7 @@
         .footer-links {
             display: flex;
             flex-wrap: wrap;
-            gap: 0.75rem;
+            gap: 0.9rem;
         }
 
         .footer-links a {
@@ -632,7 +513,7 @@
             bottom: -2px;
             width: 0;
             height: 1px;
-            background: linear-gradient(90deg, var(--accent-red), var(--accent-blue));
+            background: linear-gradient(90deg, var(--accent-blue), var(--accent-red));
             transition: width 0.18s ease-out;
         }
 
@@ -642,18 +523,24 @@
 
         /* RESPONSIVE */
 
+        @media (max-width: 960px) {
+            .hero {
+                grid-template-columns: minmax(0, 1.4fr) minmax(0, 1.2fr);
+            }
+        }
+
         @media (max-width: 840px) {
             .nav-links {
                 position: absolute;
                 inset: 100% 0 auto 0;
-                background: rgba(3, 6, 14, 0.98);
-                border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+                background: rgba(4, 8, 20, 0.98);
+                border-bottom: 1px solid rgba(255, 255, 255, 0.06);
                 padding: 0.75rem 1.5rem 1rem;
                 flex-direction: column;
                 align-items: flex-start;
                 gap: 0.25rem;
                 transform-origin: top;
-                transform: scaleY(0.6);
+                transform: scaleY(0.7);
                 opacity: 0;
                 pointer-events: none;
                 transition: opacity 0.18s ease-out, transform 0.18s ease-out;
@@ -675,7 +562,8 @@
 
             .hero {
                 grid-template-columns: 1fr;
-                margin-top: 1.5rem;
+                gap: 2rem;
+                margin-top: 1.4rem;
             }
 
             .hero-visual {
@@ -685,7 +573,7 @@
 
         @media (max-width: 520px) {
             .hero-title {
-                font-size: 1.65rem;
+                font-size: 1.8rem;
             }
 
             .hero-cta-group {
@@ -708,7 +596,8 @@
 <header>
     <div class="container nav">
         <div class="nav-left">
-            <div class="logo-circle" aria-hidden="true"></div>
+            <!-- Ton logo -->
+            <img src="logo-lgbl.png" alt="Logo VIRTUAL CENTER EXPERIENCE" class="logo-img">
             <div class="brand-text">
                 <span class="brand-title">VIRTUAL CENTER EXPERIENCE</span>
                 <span class="brand-subtitle">Salle de simulation virtuelle</span>
@@ -734,14 +623,14 @@
         <!-- HERO -->
         <section class="hero">
             <div>
-                <div class="hero-text-eyebrow">Simracing & VR à Agen</div>
+                <div class="hero-eyebrow">Simracing & VR à Agen</div>
                 <h1 class="hero-title">
                     <span class="highlight">Virtual Center Experience</span><br>
-                    Plonge dans l’ambiance paddock.
+                    Salle de simulation virtuelle haut de gamme.
                 </h1>
                 <p class="hero-tagline">
-                    Salle de simulation virtuelle avec simulateurs haut de gamme, bar & snacking, soirées événements et tournois
-                    pour pilotes débutants comme confirmés.
+                    Simulateurs de pilotage dernière génération, ambiance paddock, bar & snacking,
+                    soirées événements et tournois pour particuliers, groupes et entreprises.
                 </p>
 
                 <div class="hero-keywords">
@@ -758,28 +647,19 @@
             </div>
 
             <aside class="hero-visual" aria-label="Voiture virtuelle victorieuse aux 24h du Mans">
-                <div class="hero-visual-header">
+                <div class="hero-visual-top">
                     <span>24h du Mans – Virtual Edition</span>
                     <span class="hero-visual-tag">
-                        <span class="dot"></span> Live timing on
+                        <span class="dot"></span> Résultat : victoire LMP2
                     </span>
                 </div>
-                <div class="track">
-                    <div class="track-glow"></div>
-                    <div class="car-wrapper">
-                        <div class="car-body">
-                            <div class="car-cockpit"></div>
-                            <div class="car-fin"></div>
-                            <div class="car-light-front"></div>
-                            <div class="car-wheel front"></div>
-                            <div class="car-wheel rear"></div>
-                            <div class="car-streak"></div>
-                        </div>
-                    </div>
+                <div class="hero-visual-image-wrapper">
+                    <!-- Ton image 24h -->
+                    <img src="lmp2-bg.jpg" alt="Voiture LMP2 virtuelle aux 24h du Mans" class="hero-visual-image">
                 </div>
                 <p class="hero-caption">
-                    Animation inspirée de notre voiture virtuelle victorieuse des 24h du Mans.  
-                    Bientôt sur les simulateurs, à vivre en immersion totale.
+                    Une partie de l’ADN de la salle : compétitions d’endurance, relais en équipe, 
+                    immersion sonore et visuelle sur nos simulateurs.
                 </p>
             </aside>
         </section>
@@ -788,12 +668,14 @@
         <section class="section" id="horaires">
             <div class="section-header">
                 <h2 class="section-title">Nos <span>horaires</span></h2>
-                <p class="section-subtitle">Des plages larges pour rouler en journée, en soirée ou en nocturne.</p>
+                <p class="section-subtitle">
+                    Ouvert toute la semaine pour rouler en journée, en soirée et en nocturne.
+                </p>
             </div>
 
             <div class="hours-card">
                 <p class="hours-note">
-                    ⭐ <strong>Vendredi : soirées événements</strong>. Les horaires peuvent varier les jours spéciaux
+                    ⭐ <strong>Vendredi : soirées événements.</strong> Les horaires peuvent varier les jours spéciaux
                     (tournois, privatisations, événements endurance, etc.).
                 </p>
                 <ul class="hours-list">
@@ -814,8 +696,9 @@
                         <span class="hours-item-time">14:00 – 01:00</span>
                     </li>
                     <li class="hours-item" data-day="5">
-                        <span class="hours-item-day">Vendredi
-                            <span class="hours-item-tag">Événements</span>
+                        <span class="hours-item-day">
+                            Vendredi
+                            <span class="hours-item-tag">Soirées événements</span>
                         </span>
                         <span class="hours-item-time">12:00 – 01:00</span>
                     </li>
@@ -828,8 +711,9 @@
                         <span class="hours-item-time">12:00 – 22:30</span>
                     </li>
                 </ul>
+                <!-- Légende volontairement simple, sans mention de la mise en avant automatique -->
                 <p class="hours-legend">
-                    <span>Le jour actuel est automatiquement mis en avant.</span>
+                    Pour toute privatisation en dehors de ces créneaux, n’hésitez pas à nous contacter.
                 </p>
             </div>
         </section>
@@ -857,7 +741,6 @@
     (function highlightToday() {
         const now = new Date();
         const jsDay = now.getDay(); // 0 dimanche – 6 samedi
-        // Conversion en 1 (lundi) – 7 (dimanche)
         const mapJSDayToData = {1:1, 2:2, 3:3, 4:4, 5:5, 6:6, 0:7};
         const today = mapJSDayToData[jsDay];
         const todayItem = document.querySelector('.hours-item[data-day="' + today + '"]');
