@@ -308,6 +308,12 @@
             margin-top: 1.6rem;
         }
 
+        .form-column {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
         .card {
             background: var(--card-bg);
             border-radius: var(--radius-lg);
@@ -362,7 +368,6 @@
         input[type="number"],
         input[type="date"],
         input[type="time"],
-        input[type="file"],
         select,
         textarea {
             background: var(--card-soft);
@@ -701,8 +706,8 @@
                 <span class="highlight">Besoin d’une info</span> ou d’un devis ?
             </h1>
             <p class="hero-subtitle">
-                Remplis le formulaire ou utilise les coordonnées ci-dessous.
-                Nous faisons notre maximum pour te répondre sous 24h.
+                Utilise le contact rapide pour une simple question, ou le formulaire détaillé pour
+                les entreprises, événements, anniversaires, privatisations et coaching.
             </p>
         </div>
     </section>
@@ -739,165 +744,211 @@
                 </div>
             </div>
 
-            <!-- FORM + MAP -->
+            <!-- FORMULAIRES + MAP -->
             <div class="contact-layout">
-                <!-- FORM -->
-                <div class="card">
-                    <h3 class="card-title">Formulaire de contact</h3>
-                    <p class="card-subtitle">
-                        Besoin d’une information, d’un devis ou d’une réservation ?
-                        Remplis le formulaire ci-dessous, nous te répondons dès que possible.
-                    </p>
-
-                    <!--
-                      NOTE :
-                      - Avec GitHub Pages, ce formulaire utilise "mailto:" (ouvre le client mail du visiteur).
-                      - Pour un envoi automatique vers un Excel ou un back-office, il faudra ajouter un service externe (Formspree, EmailJS, etc.).
-                    -->
-                    <form method="POST" action="mailto:virtualcenterexperience@gmail.com" enctype="text/plain">
-                        <!-- Infos principales -->
-                        <div class="field-group">
-                            <div class="form-field">
-                                <label for="name">Nom &amp; Prénom <span class="required">*</span></label>
-                                <input type="text" id="name" name="Nom_Prenom" required autocomplete="name" placeholder="Ex : Dupont Lucas">
-                            </div>
-                            <div class="form-field">
-                                <label for="phone">Téléphone <span class="required">*</span></label>
-                                <input type="tel" id="phone" name="Telephone" required autocomplete="tel" placeholder="Ex : 06 12 34 56 78">
-                            </div>
-                        </div>
-
-                        <div class="field-group">
-                            <div class="form-field">
-                                <label for="email">Adresse e-mail <span class="required">*</span></label>
-                                <input type="email" id="email" name="Email" required autocomplete="email" placeholder="Ex : vous@example.com">
-                            </div>
-                            <div class="form-field">
-                                <label for="subject">Objet de la demande <span class="required">*</span></label>
-                                <select id="subject" name="Objet" required>
-                                    <option value="">Choisir une option…</option>
-                                    <option>Réservation</option>
-                                    <option>Informations</option>
-                                    <option>Privatisation</option>
-                                    <option>Coaching</option>
-                                    <option>Anniversaire</option>
-                                    <option>Entreprise / CSE</option>
-                                    <option>Autre</option>
-                                </select>
-                            </div>
-                        </div>
-
-                        <!-- Détails / Activité -->
-                        <div class="field-group">
-                            <div class="form-field">
-                                <label for="activity">Type d’activité</label>
-                                <select id="activity" name="Type_activite">
-                                    <option value="">Choisir une activité…</option>
-                                    <option>Simracing</option>
-                                    <option>Tournoi</option>
-                                    <option>Anniversaire</option>
-                                    <option>Coaching</option>
-                                    <option>Privatisation</option>
-                                    <option>Entreprise / CSE</option>
-                                    <option>Autre</option>
-                                </select>
-                            </div>
-                            <div class="form-field">
-                                <label for="participants">Nombre de participants</label>
-                                <input type="number" id="participants" name="Nombre_participants" min="1" placeholder="Ex : 8">
-                            </div>
-                        </div>
-
-                        <div class="field-group">
-                            <div class="form-field">
-                                <label for="date">Date souhaitée</label>
-                                <input type="date" id="date" name="Date_souhaitee">
-                            </div>
-                            <div class="form-field">
-                                <label for="time">Heure souhaitée</label>
-                                <input type="time" id="time" name="Heure_souhaitee">
-                            </div>
-                        </div>
-
-                        <!-- Entreprises / CSE -->
-                        <div class="field-group">
-                            <div class="form-field">
-                                <label for="company">Entreprise (pour CSE / Team Building)</label>
-                                <input type="text" id="company" name="Entreprise" placeholder="Nom de l’entreprise">
-                            </div>
-                            <div class="form-field">
-                                <label for="collabs">Nombre de collaborateurs</label>
-                                <input type="number" id="collabs" name="Nombre_collaborateurs" min="1" placeholder="Ex : 24">
-                            </div>
-                        </div>
-
-                        <div class="field-group">
-                            <div class="form-field">
-                                <label for="event-type">Type d’événement entreprise</label>
-                                <select id="event-type" name="Type_evenement_entreprise">
-                                    <option value="">Non concerné / à définir…</option>
-                                    <option>Team Building</option>
-                                    <option>CSE</option>
-                                    <option>Privatisation complète</option>
-                                    <option>Coaching groupe</option>
-                                </select>
-                            </div>
-                            <div class="form-field">
-                                <label for="budget">Budget approximatif (optionnel)</label>
-                                <input type="text" id="budget" name="Budget" placeholder="Ex : 500 €">
-                            </div>
-                        </div>
-
-                        <!-- Anniversaires -->
-                        <div class="field-group">
-                            <div class="form-field">
-                                <label for="age">Âge de l’enfant (anniversaire)</label>
-                                <input type="number" id="age" name="Age_enfant" min="1" placeholder="Ex : 10">
-                            </div>
-                            <div class="form-field">
-                                <label for="birthday-formula">Formule anniversaire</label>
-                                <select id="birthday-formula" name="Formule_anniversaire">
-                                    <option value="">Non concerné / à définir…</option>
-                                    <option>Découverte</option>
-                                    <option>Championnat</option>
-                                    <option>Privatisation partielle</option>
-                                </select>
-                            </div>
-                        </div>
-
-                        <!-- Partenariats / fichier -->
-                        <div class="field-group">
-                            <div class="form-field">
-                                <label for="partnership">Demande de partenariat / collaboration</label>
-                                <input type="text" id="partnership" name="Partenariat" placeholder="Sponsor, visibilité, fournisseur…">
-                            </div>
-                            <div class="form-field">
-                                <label for="file">Upload de fichier (optionnel)</label>
-                                <input type="file" id="file" name="Fichier" />
-                            </div>
-                        </div>
-
-                        <!-- Message -->
-                        <div class="form-field">
-                            <label for="message">Votre message / votre demande <span class="required">*</span></label>
-                            <textarea id="message" name="Message" required placeholder="Expliquez votre demande, vos attentes, horaires possibles…"></textarea>
-                        </div>
-
-                        <!-- RGPD -->
-                        <label class="rgpd">
-                            <input type="checkbox" name="RGPD" value="OK" required />
-                            <span>
-                                J’accepte que mes informations soient utilisées uniquement pour permettre le traitement
-                                de ma demande, conformément à la politique de confidentialité du centre.
-                            </span>
-                        </label>
-
-                        <button type="submit" class="btn-submit">Envoyer ma demande</button>
-                        <p class="form-note">
-                            En cliquant sur « Envoyer ma demande », un e-mail sera préparé à destination de
-                            <strong>virtualcenterexperience@gmail.com</strong>. Vérifie bien le contenu avant envoi.
+                <!-- COLONNE FORMULAIRES -->
+                <div class="form-column">
+                    <!-- CONTACT RAPIDE -->
+                    <div class="card">
+                        <h3 class="card-title">Contact rapide</h3>
+                        <p class="card-subtitle">
+                            Pour une question simple, une petite info ou une demande de rappel.
                         </p>
-                    </form>
+
+                        <form id="quick-form">
+                            <div class="field-group">
+                                <div class="form-field">
+                                    <label for="q-name">Nom &amp; Prénom <span class="required">*</span></label>
+                                    <input type="text" id="q-name" name="Nom et prénom" required autocomplete="name" placeholder="Ex : Dupont Lucas">
+                                </div>
+                                <div class="form-field">
+                                    <label for="q-phone">Téléphone <span class="required">*</span></label>
+                                    <input type="tel" id="q-phone" name="Téléphone" required autocomplete="tel" placeholder="Ex : 06 12 34 56 78">
+                                </div>
+                            </div>
+
+                            <div class="field-group">
+                                <div class="form-field">
+                                    <label for="q-email">Adresse e-mail <span class="required">*</span></label>
+                                    <input type="email" id="q-email" name="E-mail" required autocomplete="email" placeholder="Ex : vous@example.com">
+                                </div>
+                                <div class="form-field">
+                                    <label for="q-subject">Objet de la demande <span class="required">*</span></label>
+                                    <select id="q-subject" name="Objet" required>
+                                        <option value="">Choisir une option…</option>
+                                        <option>Informations</option>
+                                        <option>Réservation</option>
+                                        <option>Coaching</option>
+                                        <option>Anniversaire</option>
+                                        <option>Autre</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="form-field">
+                                <label for="q-message">Message <span class="required">*</span></label>
+                                <textarea id="q-message" name="Message" required placeholder="Explique en quelques lignes ta demande."></textarea>
+                            </div>
+
+                            <label class="rgpd">
+                                <input type="checkbox" name="RGPD" value="OK" required />
+                                <span>J’accepte que mes informations soient utilisées uniquement pour répondre à ma demande.</span>
+                            </label>
+
+                            <button type="submit" class="btn-submit">Envoyer (contact rapide)</button>
+                            <p class="form-note">
+                                Un e-mail va s’ouvrir vers <strong>virtualcenterexperience@gmail.com</strong>.  
+                                Vérifie le contenu puis clique sur « Envoyer » dans ton application mail.
+                            </p>
+                        </form>
+                    </div>
+
+                    <!-- FORMULAIRE DÉTAILLÉ (ENTREPRISES / ÉVÉNEMENTS) -->
+                    <div class="card">
+                        <h3 class="card-title">Demande détaillée : entreprises, événements & projets</h3>
+                        <p class="card-subtitle">
+                            Pour les privatisations, team building, CSE, anniversaires, tournois ou projets sur mesure.
+                        </p>
+
+                        <form id="detail-form">
+                            <!-- Infos principales -->
+                            <div class="field-group">
+                                <div class="form-field">
+                                    <label for="d-name">Nom &amp; Prénom <span class="required">*</span></label>
+                                    <input type="text" id="d-name" name="Nom et prénom" required placeholder="Ex : Martin Julie">
+                                </div>
+                                <div class="form-field">
+                                    <label for="d-phone">Téléphone <span class="required">*</span></label>
+                                    <input type="tel" id="d-phone" name="Téléphone" required placeholder="Ex : 06 98 76 54 32">
+                                </div>
+                            </div>
+
+                            <div class="field-group">
+                                <div class="form-field">
+                                    <label for="d-email">Adresse e-mail <span class="required">*</span></label>
+                                    <input type="email" id="d-email" name="E-mail" required placeholder="Ex : vous@example.com">
+                                </div>
+                                <div class="form-field">
+                                    <label for="d-subject">Objet de la demande <span class="required">*</span></label>
+                                    <select id="d-subject" name="Objet" required>
+                                        <option value="">Choisir une option…</option>
+                                        <option>Privatisation</option>
+                                        <option>Team Building / CSE</option>
+                                        <option>Événement entreprise</option>
+                                        <option>Tournoi / endurance</option>
+                                        <option>Anniversaire</option>
+                                        <option>Coaching</option>
+                                        <option>Autre projet</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <!-- Détails / Activité -->
+                            <div class="field-group">
+                                <div class="form-field">
+                                    <label for="d-activity">Type d’activité</label>
+                                    <select id="d-activity" name="Type d’activité">
+                                        <option value="">Choisir une activité…</option>
+                                        <option>Simracing</option>
+                                        <option>Tournoi</option>
+                                        <option>Endurance 6h / 8h / 12h</option>
+                                        <option>Anniversaire</option>
+                                        <option>Coaching</option>
+                                        <option>Privatisation complète</option>
+                                        <option>Entreprise / CSE</option>
+                                        <option>Diffusion d’événement (GP, WEC, IMSA…)</option>
+                                        <option>Autre</option>
+                                    </select>
+                                </div>
+                                <div class="form-field">
+                                    <label for="d-participants">Nombre de participants</label>
+                                    <input type="number" id="d-participants" name="Nombre de participants" min="1" placeholder="Ex : 12 (max recommandé : 24)">
+                                </div>
+                            </div>
+
+                            <div class="field-group">
+                                <div class="form-field">
+                                    <label for="d-date">Date souhaitée</label>
+                                    <input type="date" id="d-date" name="Date souhaitée">
+                                </div>
+                                <div class="form-field">
+                                    <label for="d-time">Heure souhaitée</label>
+                                    <input type="time" id="d-time" name="Heure souhaitée">
+                                </div>
+                            </div>
+
+                            <!-- Entreprises / CSE -->
+                            <div class="field-group">
+                                <div class="form-field">
+                                    <label for="d-company">Nom de l’entreprise (si concerné)</label>
+                                    <input type="text" id="d-company" name="Entreprise" placeholder="Nom de l’entreprise / CSE">
+                                </div>
+                                <div class="form-field">
+                                    <label for="d-collabs">Nombre de collaborateurs</label>
+                                    <input type="number" id="d-collabs" name="Nombre de collaborateurs" min="1" placeholder="Ex : 24">
+                                </div>
+                            </div>
+
+                            <div class="field-group">
+                                <div class="form-field">
+                                    <label for="d-event-type">Type d’événement entreprise</label>
+                                    <select id="d-event-type" name="Type d’événement entreprise">
+                                        <option value="">Non concerné / à définir…</option>
+                                        <option>Team Building</option>
+                                        <option>CSE</option>
+                                        <option>Privatisation complète</option>
+                                        <option>Coaching groupe</option>
+                                    </select>
+                                </div>
+                                <div class="form-field">
+                                    <label for="d-budget">Budget approximatif (optionnel)</label>
+                                    <input type="text" id="d-budget" name="Budget approximatif" placeholder="Ex : 800 €">
+                                </div>
+                            </div>
+
+                            <!-- Anniversaires -->
+                            <div class="field-group">
+                                <div class="form-field">
+                                    <label for="d-age">Âge de l’enfant (anniversaire)</label>
+                                    <input type="number" id="d-age" name="Âge de l’enfant" min="1" placeholder="Ex : 10">
+                                </div>
+                                <div class="form-field">
+                                    <label for="d-bday-formula">Formule anniversaire</label>
+                                    <select id="d-bday-formula" name="Formule anniversaire">
+                                        <option value="">Non concerné / à définir…</option>
+                                        <option>Découverte</option>
+                                        <option>Championnat</option>
+                                        <option>Privatisation partielle</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <!-- Partenariat -->
+                            <div class="form-field">
+                                <label for="d-partnership">Demande de partenariat / collaboration</label>
+                                <input type="text" id="d-partnership" name="Partenariat" placeholder="Sponsor, visibilité, fournisseur…">
+                            </div>
+
+                            <!-- Message -->
+                            <div class="form-field">
+                                <label for="d-message">Votre message / votre demande <span class="required">*</span></label>
+                                <textarea id="d-message" name="Message" required placeholder="Détaille votre projet, vos attentes, contraintes horaires, etc."></textarea>
+                            </div>
+
+                            <!-- RGPD -->
+                            <label class="rgpd">
+                                <input type="checkbox" name="RGPD" value="OK" required />
+                                <span>J’accepte que mes informations soient utilisées uniquement pour permettre le traitement de ma demande.</span>
+                            </label>
+
+                            <button type="submit" class="btn-submit">Envoyer ma demande détaillée</button>
+                            <p class="form-note">
+                                Un e-mail récapitulatif de toutes ces infos sera généré vers
+                                <strong>virtualcenterexperience@gmail.com</strong>.  
+                                Tu pourras le relire et l’envoyer depuis ton application mail.
+                            </p>
+                        </form>
+                    </div>
                 </div>
 
                 <!-- MAP & PARKING -->
@@ -1012,6 +1063,49 @@
             });
         }
     })();
+
+    // Fonction générique pour envoyer les formulaires via mailto
+    function setupMailForm(formId, contextLabel) {
+        const form = document.getElementById(formId);
+        if (!form) return;
+
+        form.addEventListener("submit", function (e) {
+            e.preventDefault();
+
+            // Validation HTML5
+            if (!form.checkValidity()) {
+                form.reportValidity();
+                return;
+            }
+
+            const formData = new FormData(form);
+            const lines = [];
+
+            formData.forEach((value, key) => {
+                if (!value) return;
+                if (key === "RGPD") return; // on ne remet pas la case RGPD dans le texte
+                lines.push(key + " : " + value);
+            });
+
+            const subjectField = formData.get("Objet") || "Demande depuis le site";
+            const subject = "[" + contextLabel + "] " + subjectField;
+
+            const body =
+                "Nouvelle demande via le site web :\n\n" +
+                lines.join("\n") +
+                "\n\n---\nMessage envoyé depuis le formulaire en ligne VIRTUAL CENTER EXPERIENCE.";
+
+            const mailtoLink =
+                "mailto:virtualcenterexperience@gmail.com" +
+                "?subject=" + encodeURIComponent(subject) +
+                "&body=" + encodeURIComponent(body);
+
+            window.location.href = mailtoLink;
+        });
+    }
+
+    setupMailForm("quick-form", "Contact rapide");
+    setupMailForm("detail-form", "Demande détaillée");
 
     // Transition logo entre les pages
     (function pageTransition() {
