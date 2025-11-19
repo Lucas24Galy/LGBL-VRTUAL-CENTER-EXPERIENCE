@@ -1,154 +1,1045 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>LGBL Virtual Experience Center – Contact & Accès</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact | VIRTUAL CENTER EXPERIENCE</title>
 
-  <meta name="description" content="Contactez LGBL Virtual Experience Center à Agen : téléphone, e-mail, réseaux, carte. Réservations, privatisations et questions." />
-  <meta name="robots" content="index,follow" />
-  <link rel="canonical" href="https://lucas24galy.github.io/LGBL-VRTUAL-CENTER-EXPERIENCE/contact.html" />
+    <meta name="description" content="Contact, réservations, devis et informations pour Virtual Center Experience à Agen.">
+    <meta name="keywords" content="contact, réservation, devis, entreprise, anniversaire, coaching, simracing, virtual center experience">
 
-  <meta property="og:type" content="website" />
-  <meta property="og:site_name" content="LGBL VIRTUAL CENTER EXPERIENCE" />
-  <meta property="og:title" content="LGBL – Contact & Accès" />
-  <meta property="og:description" content="Téléphone, e-mail, réseaux, carte Google. Privatisations, réservations, questions." />
-  <meta property="og:url" content="https://lucas24galy.github.io/LGBL-VRTUAL-CENTER-EXPERIENCE/contact.html" />
-  <meta property="og:image" content="assets/img/logo-lgbl.png" />
+    <!-- Police -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
 
-  <link rel="icon" type="image/png" href="assets/img/logo-lgbl.png" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600;800&family=Poppins:wght@400;600;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="assets/css/styles.css" />
+    <style>
+        :root {
+            --bg-main: #050814;
+            --bg-soft: #0c1224;
+            --card-bg: #111729;
+            --card-soft: #151c30;
+            --accent-blue: #2f80ed;
+            --accent-red: #d62839;
+            --text-main: #f9fafb;
+            --text-muted: #a0aecb;
+            --border-soft: #262f45;
+            --radius-lg: 14px;
+            --shadow-soft: 0 18px 40px rgba(0, 0, 0, 0.6);
+            --transition-fast: 0.18s ease-out;
+        }
 
-  <style>
-    :root{--line:rgba(255,255,255,.08);--bg:#0a0b0d;--panel:#0f1115;--text:#e9ecef;--muted:#a9b3bb;--rose:#ff2d6f;--cyan:#00aaff}
-    body{background:var(--bg);color:var(--text);font-family:Poppins,system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial}
-    header{position:sticky;top:0;background:rgba(10,11,13,.7);backdrop-filter:saturate(120%) blur(8px);border-bottom:1px solid var(--line);z-index:50}
-    .container{max-width:1150px;margin:0 auto;padding:0 16px}
-    .nav{display:flex;align-items:center;justify-content:space-between;height:64px}
-    .links a{color:#cfd6dc;margin-left:16px;text-decoration:none;padding:8px 10px;border:1px solid transparent;border-radius:999px;position:relative}
-    .links a:hover,.links a[aria-current="page"]{color:#fff;border-color:rgba(0,170,255,.35)}
-    .links a::after{content:"";position:absolute;left:10px;right:10px;bottom:4px;height:2px;transform:scaleX(0);transform-origin:left;background:linear-gradient(90deg,var(--rose),var(--cyan));transition:transform .25s ease}
-    .links a:hover::after,.links a[aria-current="page"]::after{transform:scaleX(1)}
-    .logo{display:inline-flex;align-items:center;gap:.6rem;color:#fff;text-decoration:none;font-weight:700}
-    .logo img{height:42px;border-radius:50%}
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        html, body { height: 100%; }
 
-    .hero{padding:56px 0;border-bottom:1px solid var(--line);background:
-      radial-gradient(1200px 400px at 30% -20%, rgba(255,0,78,.22), transparent 60%),
-      radial-gradient(1000px 400px at 80% -30%, rgba(0,170,255,.18), transparent 60%)}
-    .hero h1{font-family:'Orbitron',system-ui;font-size:clamp(28px,4.5vw,44px);margin:0 0 .6rem}
-    .subtitle{color:var(--muted)}
+        body {
+            font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+            background: var(--bg-main);
+            color: var(--text-main);
+            line-height: 1.6;
+        }
 
-    .section{padding:38px 0;border-top:1px solid var(--line)}
-    .grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
-    .card{background:var(--panel);border:1px solid var(--line);border-radius:16px;padding:18px}
-    .small{color:var(--muted)}
+        a { color: inherit; text-decoration: none; }
+        img { max-width: 100%; display: block; }
 
-    .btn{display:inline-block;background:linear-gradient(90deg,var(--rose),var(--cyan));padding:.7rem 1rem;border-radius:999px;color:#fff;text-decoration:none;font-weight:700}
-    .btn-outline{background:transparent;border:1px solid rgba(0,170,255,.35)}
-    .btn:hover{box-shadow:0 6px 18px rgba(0,170,255,.18)}
+        .container {
+            width: 100%;
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 1.5rem;
+        }
 
-    footer{border-top:1px solid var(--line);margin-top:28px}
-    .footer-grid{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:22px;padding:24px 0}
-    .copy{color:#8f98a1}
+        /* ============ HEADER ============ */
 
-    @media (max-width:900px){.grid-3{grid-template-columns:1fr}}
-  </style>
+        header {
+            position: sticky;
+            top: 0;
+            z-index: 30;
+            backdrop-filter: blur(12px);
+            background: rgba(5, 8, 20, 0.96);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+        }
+
+        .nav {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0.7rem 0;
+        }
+
+        .nav-left {
+            display: flex;
+            align-items: center;
+            gap: 0.9rem;
+        }
+
+        .logo-img {
+            height: 40px;
+            width: auto;
+        }
+
+        .brand-text {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .brand-title {
+            font-weight: 800;
+            font-size: 0.95rem;
+            letter-spacing: 0.16em;
+            text-transform: uppercase;
+        }
+
+        .brand-subtitle {
+            font-size: 0.8rem;
+            color: var(--text-muted);
+        }
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            list-style: none;
+        }
+
+        .nav-links a {
+            font-size: 0.86rem;
+            text-transform: uppercase;
+            letter-spacing: 0.14em;
+            padding: 0.5rem 0.95rem;
+            border-radius: 999px;
+            border: 1px solid transparent;
+            cursor: pointer;
+            transition:
+                transform var(--transition-fast),
+                box-shadow var(--transition-fast),
+                border-color var(--transition-fast),
+                background 0.2s ease-out;
+        }
+
+        .nav-links a:hover {
+            transform: translateY(-1px);
+            box-shadow: 0 10px 24px rgba(0, 0, 0, 0.5);
+            border-color: rgba(255, 255, 255, 0.12);
+            background: rgba(16, 22, 44, 0.9);
+        }
+
+        .nav-links a.active {
+            border-color: var(--accent-red);
+            background: linear-gradient(120deg, #163761, var(--accent-red));
+        }
+
+        .nav-toggle {
+            display: none;
+            background: none;
+            border: 1px solid rgba(255, 255, 255, 0.22);
+            border-radius: 999px;
+            padding: 0.3rem 0.6rem;
+            color: var(--text-main);
+            cursor: pointer;
+        }
+
+        .nav-toggle span {
+            display: block;
+            width: 20px;
+            height: 2px;
+            background: var(--text-main);
+            margin: 3px 0;
+            border-radius: 999px;
+        }
+
+        /* ============ TRANSITION LOGO ============ */
+
+        #page-transition {
+            position: fixed;
+            inset: 0;
+            background: #050814;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 50;
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 0.35s ease-out;
+        }
+
+        #page-transition.active {
+            opacity: 1;
+            pointer-events: auto;
+        }
+
+        #page-transition img {
+            width: 80px;
+            height: auto;
+            opacity: 0;
+            transform: scale(0.92);
+            transition: opacity 0.35s ease-out, transform 0.35s ease-out;
+        }
+
+        #page-transition.active img {
+            opacity: 1;
+            transform: scale(1);
+        }
+
+        /* ============ MAIN ============ */
+
+        main { padding-bottom: 3.4rem; }
+
+        /* HERO */
+
+        .hero {
+            position: relative;
+            min-height: 45vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background:
+                linear-gradient(to bottom, rgba(5, 8, 20, 0.4), rgba(5, 8, 20, 0.96)),
+                url("assets/img/lmp2-bg.jpg") center/cover no-repeat;
+            z-index: -1;
+        }
+
+        .hero-inner {
+            max-width: 700px;
+            padding: 3rem 1.5rem 2.4rem;
+        }
+
+        .hero-eyebrow {
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 0.18em;
+            color: #d1d5e5;
+            margin-bottom: 0.7rem;
+        }
+
+        .hero-title-main {
+            font-size: clamp(2rem, 3.2vw, 2.5rem);
+            font-weight: 800;
+            text-transform: uppercase;
+            line-height: 1.2;
+            margin-bottom: 0.5rem;
+        }
+
+        .hero-title-main span.highlight {
+            color: var(--accent-blue);
+        }
+
+        .hero-subtitle {
+            font-size: 0.95rem;
+            color: #e5e7f5;
+            margin-bottom: 1.2rem;
+        }
+
+        /* SECTIONS */
+
+        .section {
+            margin-top: 3rem;
+        }
+
+        .section-header {
+            max-width: 780px;
+            margin: 0 auto 1.5rem;
+            text-align: center;
+        }
+
+        .section-title {
+            font-size: 1.02rem;
+            text-transform: uppercase;
+            letter-spacing: 0.18em;
+            margin-bottom: 0.35rem;
+        }
+
+        .section-title span {
+            color: var(--accent-blue);
+        }
+
+        .section-subtitle {
+            font-size: 0.86rem;
+            color: var(--text-muted);
+        }
+
+        /* GRID INFO */
+
+        .info-grid {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 1.2rem;
+        }
+
+        .info-card {
+            background: var(--card-bg);
+            border-radius: var(--radius-lg);
+            padding: 0.9rem 1rem 1.2rem;
+            border: 1px solid var(--border-soft);
+            box-shadow: var(--shadow-soft);
+            font-size: 0.9rem;
+        }
+
+        .info-label {
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 0.14em;
+            margin-bottom: 0.35rem;
+            color: var(--text-muted);
+        }
+
+        .info-content {
+            font-size: 0.9rem;
+        }
+
+        .info-content a {
+            color: var(--accent-blue);
+        }
+
+        /* FORM + MAP */
+
+        .contact-layout {
+            display: grid;
+            grid-template-columns: minmax(0, 1.6fr) minmax(0, 1.2fr);
+            gap: 1.4rem;
+            margin-top: 1.6rem;
+        }
+
+        .card {
+            background: var(--card-bg);
+            border-radius: var(--radius-lg);
+            padding: 1.1rem 1.1rem 1.4rem;
+            border: 1px solid var(--border-soft);
+            box-shadow: var(--shadow-soft);
+            font-size: 0.9rem;
+        }
+
+        .card-title {
+            font-size: 0.98rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+
+        .card-subtitle {
+            font-size: 0.82rem;
+            color: var(--text-muted);
+            margin-bottom: 0.7rem;
+        }
+
+        /* FORM */
+
+        form {
+            display: grid;
+            gap: 0.8rem;
+        }
+
+        .field-group {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 0.8rem;
+        }
+
+        .form-field {
+            display: flex;
+            flex-direction: column;
+            gap: 0.25rem;
+        }
+
+        label {
+            font-size: 0.82rem;
+        }
+
+        label span.required {
+            color: var(--accent-red);
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="tel"],
+        input[type="number"],
+        input[type="date"],
+        input[type="time"],
+        input[type="file"],
+        select,
+        textarea {
+            background: var(--card-soft);
+            border-radius: 9px;
+            border: 1px solid rgba(255, 255, 255, 0.12);
+            padding: 0.55rem 0.7rem;
+            font-size: 0.86rem;
+            color: var(--text-main);
+            outline: none;
+            transition: border-color 0.16s ease-out, box-shadow 0.16s ease-out, background 0.16s ease-out;
+        }
+
+        textarea {
+            min-height: 110px;
+            resize: vertical;
+        }
+
+        input::placeholder,
+        textarea::placeholder {
+            color: #6b7280;
+        }
+
+        input:focus,
+        textarea:focus,
+        select:focus {
+            border-color: var(--accent-blue);
+            box-shadow: 0 0 0 1px rgba(47, 128, 237, 0.6);
+        }
+
+        .rgpd {
+            margin-top: 0.4rem;
+            font-size: 0.78rem;
+            color: var(--text-muted);
+            display: flex;
+            align-items: flex-start;
+            gap: 0.4rem;
+        }
+
+        .rgpd input {
+            margin-top: 0.15rem;
+        }
+
+        .btn-submit {
+            margin-top: 0.4rem;
+            align-self: flex-start;
+            border-radius: 999px;
+            padding: 0.55rem 1.3rem;
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 0.12em;
+            border: 1px solid transparent;
+            cursor: pointer;
+            background: linear-gradient(120deg, var(--accent-blue), var(--accent-red));
+            color: #ffffff;
+            transition: transform 0.16s ease-out, box-shadow 0.18s ease-out;
+        }
+
+        .btn-submit:hover {
+            transform: translateY(-1px);
+            box-shadow: 0 10px 24px rgba(0, 0, 0, 0.6);
+        }
+
+        .form-note {
+            font-size: 0.78rem;
+            color: var(--text-muted);
+            margin-top: 0.2rem;
+        }
+
+        /* MAP & PARKING */
+
+        .map-frame {
+            position: relative;
+            padding-bottom: 60%;
+            height: 0;
+            overflow: hidden;
+            border-radius: 10px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            margin-bottom: 0.7rem;
+        }
+
+        .map-frame iframe {
+            position: absolute;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            border: 0;
+        }
+
+        .parking-text {
+            font-size: 0.82rem;
+            color: var(--text-muted);
+        }
+
+        /* SOCIALS */
+
+        .social-grid {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 1rem;
+            margin-top: 1.4rem;
+        }
+
+        .social-card {
+            background: var(--card-bg);
+            border-radius: var(--radius-lg);
+            padding: 0.9rem 1rem 1rem;
+            border: 1px solid var(--border-soft);
+            font-size: 0.86rem;
+        }
+
+        .social-title {
+            font-size: 0.9rem;
+            font-weight: 600;
+            margin-bottom: 0.2rem;
+        }
+
+        .social-handle {
+            font-size: 0.82rem;
+            color: var(--text-muted);
+            margin-bottom: 0.5rem;
+        }
+
+        .social-link {
+            display: inline-block;
+            border-radius: 999px;
+            padding: 0.4rem 0.9rem;
+            font-size: 0.8rem;
+            border: 1px solid rgba(255, 255, 255, 0.18);
+            cursor: pointer;
+            text-transform: uppercase;
+            letter-spacing: 0.12em;
+        }
+
+        .social-link:hover {
+            background: rgba(5, 8, 20, 0.9);
+        }
+
+        /* FOOTER */
+
+        footer {
+            border-top: 1px solid rgba(255, 255, 255, 0.08);
+            padding: 1.1rem 0 1.4rem;
+            background: #050814;
+        }
+
+        .footer-inner {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: space-between;
+            gap: 0.7rem;
+            font-size: 0.8rem;
+            color: var(--text-muted);
+        }
+
+        .footer-links {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.9rem;
+        }
+
+        .footer-links a {
+            position: relative;
+            cursor: pointer;
+        }
+
+        .footer-links a::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: -2px;
+            width: 0;
+            height: 1px;
+            background: var(--accent-blue);
+            transition: width 0.18s ease-out;
+        }
+
+        .footer-links a:hover::after {
+            width: 100%;
+        }
+
+        /* COOKIE BANNER */
+
+        .cookie-banner {
+            position: fixed;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            z-index: 40;
+            background: rgba(5, 8, 20, 0.96);
+            border-top: 1px solid rgba(255, 255, 255, 0.12);
+            padding: 0.8rem 1.5rem;
+            display: none;
+        }
+
+        .cookie-inner {
+            max-width: 1100px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 0.9rem;
+            font-size: 0.8rem;
+            color: var(--text-muted);
+        }
+
+        .cookie-actions {
+            display: flex;
+            gap: 0.5rem;
+            flex-shrink: 0;
+        }
+
+        .btn-cookie-main,
+        .btn-cookie-secondary {
+            border-radius: 999px;
+            padding: 0.4rem 0.9rem;
+            font-size: 0.8rem;
+            border: 1px solid transparent;
+            cursor: pointer;
+            white-space: nowrap;
+        }
+
+        .btn-cookie-main {
+            background: var(--accent-blue);
+            color: #ffffff;
+            border-color: var(--accent-blue);
+        }
+
+        .btn-cookie-secondary {
+            background: transparent;
+            color: var(--text-muted);
+            border-color: rgba(255, 255, 255, 0.2);
+        }
+
+        /* RESPONSIVE */
+
+        @media (max-width: 960px) {
+            .info-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .contact-layout {
+                grid-template-columns: 1fr;
+            }
+
+            .social-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 840px) {
+            .nav-links {
+                position: absolute;
+                inset: 100% 0 auto 0;
+                background: rgba(4, 8, 20, 0.98);
+                border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+                padding: 0.75rem 1.5rem 1rem;
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 0.25rem;
+                transform-origin: top;
+                transform: scaleY(0.7);
+                opacity: 0;
+                pointer-events: none;
+                transition: opacity 0.18s ease-out, transform 0.18s ease-out;
+            }
+
+            .nav-links.open {
+                opacity: 1;
+                transform: scaleY(1);
+                pointer-events: auto;
+            }
+
+            .nav-toggle {
+                display: inline-flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                gap: 2px;
+            }
+
+            .cookie-inner {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .cookie-actions {
+                align-self: stretch;
+                justify-content: flex-end;
+            }
+        }
+
+        @media (max-width: 520px) {
+            .footer-inner {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+        }
+    </style>
 </head>
 <body>
-  <header>
+<div id="page-transition">
+    <img src="assets/img/logo-lgbl.png" alt="Logo LGBL Virtual Center Experience">
+</div>
+
+<header>
     <div class="container nav">
-      <a class="logo" href="index.html">
-        <img src="assets/img/logo-lgbl.png" alt="Logo LGBL" />
-        <span>LGBL Virtual Experience</span>
-      </a>
-      <nav>
-        <div class="links">
-          <a href="index.html">Accueil</a>
-          <a href="tarifs.html">Tarifs</a>
-          <a href="evenements.html">Événements</a>
-          <a href="communaute.html">Communauté</a>
-          <a href="contact.html" aria-current="page">Contact</a>
-          <a href="https://www.youtube.com/@LucasGaly24/streams" target="_blank" rel="noopener">LIVE</a>
+        <div class="nav-left">
+            <img src="assets/img/logo-lgbl.png" alt="Logo VIRTUAL CENTER EXPERIENCE" class="logo-img">
+            <div class="brand-text">
+                <span class="brand-title">VIRTUAL CENTER EXPERIENCE</span>
+                <span class="brand-subtitle">Salle de simulation virtuelle</span>
+            </div>
         </div>
-      </nav>
-    </div>
-  </header>
 
-  <main>
+        <button class="nav-toggle" aria-label="Ouvrir le menu">
+            <span></span><span></span><span></span>
+        </button>
+
+        <ul class="nav-links">
+            <li><a href="index.html" class="page-link">Accueil</a></li>
+            <li><a href="tarifs.html" class="page-link">Tarifs</a></li>
+            <li><a href="evenements.html" class="page-link">Événements</a></li>
+            <li><a href="communaute.html" class="page-link">Communauté</a></li>
+            <li><a href="contact.html" class="active">Contact</a></li>
+        </ul>
+    </div>
+</header>
+
+<main>
+    <!-- HERO -->
     <section class="hero">
-      <div class="container">
-        <h1>Contact & Accès</h1>
-        <p class="subtitle">Besoin d’un devis, d’une privatisation ou d’une info ? On répond vite.</p>
-      </div>
-    </section>
-
-    <section class="section">
-      <div class="container grid-3">
-        <article class="card">
-          <h3>Nous appeler</h3>
-          <p class="big">06 72 39 22 64</p>
-          <a class="btn" href="tel:+33672392264">Appeler maintenant</a>
-        </article>
-
-        <article class="card">
-          <h3>Nous écrire</h3>
-          <p class="big">lucasgaly.47510@gmail.com</p>
-          <a class="btn btn-outline" href="mailto:lucasgaly.47510@gmail.com?subject=Contact%20LGBL%20Virtual%20Experience">Envoyer un e-mail</a>
-        </article>
-
-        <article class="card">
-          <h3>Réseaux</h3>
-          <p><a href="https://www.instagram.com/lgbl_virtual_center_experience/" target="_blank" rel="noopener">Instagram</a></p>
-          <p><a href="https://www.tiktok.com/@lucasgaly1" target="_blank" rel="noopener">TikTok</a></p>
-          <p><a href="https://www.youtube.com/@LucasGaly24/streams" target="_blank" rel="noopener">YouTube (Live & Replays)</a></p>
-        </article>
-      </div>
-    </section>
-
-    <section class="section">
-      <div class="container">
-        <h2>Nous trouver</h2>
-        <p class="small">Agen (47000) — Nouvelle-Aquitaine. Parking à proximité. Salle accessible PMR.</p>
-        <div class="card" style="overflow:hidden">
-          <iframe
-            title="Carte LGBL Virtual Experience"
-            width="100%" height="420"
-            style="border:0;border-radius:12px" loading="lazy" allowfullscreen
-            referrerpolicy="no-referrer-when-downgrade"
-            src="https://www.google.com/maps?q=Agen%2047000&output=embed">
-          </iframe>
+        <div class="hero-inner">
+            <div class="hero-eyebrow">Contact & réservations</div>
+            <h1 class="hero-title-main">
+                <span class="highlight">Besoin d’une info</span> ou d’un devis ?
+            </h1>
+            <p class="hero-subtitle">
+                Remplis le formulaire ou utilise les coordonnées ci-dessous.
+                Nous faisons notre maximum pour te répondre sous 24h.
+            </p>
         </div>
-      </div>
     </section>
-  </main>
 
-  <footer>
-    <div class="container footer-grid">
-      <div>
-        <div class="logo" style="display:flex;align-items:center;gap:.5rem">
-          <img src="assets/img/logo-lgbl.png" alt="LGBL" style="height:22px;border-radius:50%">
-          <span>LGBL Virtual Experience</span>
-        </div>
-        <p class="copy">© 2025 LGBL Virtual Experience Center — Conception : Lucas Galy</p>
-      </div>
-      <div>
-        <h4>Le site</h4>
-        <p><a href="index.html">Accueil</a><br><a href="tarifs.html">Tarifs</a><br><a href="evenements.html">Événements</a><br><a href="communaute.html">Communauté</a><br><a href="contact.html" aria-current="page">Contact</a></p>
-      </div>
-      <div>
-        <h4>Contact</h4>
-        <p><a href="mailto:lucasgaly.47510@gmail.com">lucasgaly.47510@gmail.com</a><br><a href="tel:+33672392264">06 72 39 22 64</a></p>
-      </div>
-      <div>
-        <h4>LIVE</h4>
-        <p><a href="https://www.youtube.com/@LucasGaly24/streams" target="_blank" rel="noopener">YouTube</a></p>
-      </div>
+    <div class="container">
+        <!-- INFOS DIRECTES -->
+        <section class="section">
+            <div class="section-header">
+                <h2 class="section-title"><span>Coordonnées</span> du centre</h2>
+                <p class="section-subtitle">
+                    Tu peux nous joindre par téléphone, par e-mail, via le formulaire ou directement sur place.
+                </p>
+            </div>
+
+            <div class="info-grid">
+                <div class="info-card">
+                    <div class="info-label">Téléphone</div>
+                    <div class="info-content">
+                        <a href="tel:+33672392264">06&nbsp;72&nbsp;39&nbsp;22&nbsp;64</a>
+                    </div>
+                </div>
+                <div class="info-card">
+                    <div class="info-label">E-mail</div>
+                    <div class="info-content">
+                        <a href="mailto:virtualcenterexperience@gmail.com">virtualcenterexperience@gmail.com</a>
+                    </div>
+                </div>
+                <div class="info-card">
+                    <div class="info-label">Adresse</div>
+                    <div class="info-content">
+                        37 avenue du Général de Gaulle<br/>
+                        47000 Agen – France
+                    </div>
+                </div>
+            </div>
+
+            <!-- FORM + MAP -->
+            <div class="contact-layout">
+                <!-- FORM -->
+                <div class="card">
+                    <h3 class="card-title">Formulaire de contact</h3>
+                    <p class="card-subtitle">
+                        Besoin d’une information, d’un devis ou d’une réservation ?
+                        Remplis le formulaire ci-dessous, nous te répondons dès que possible.
+                    </p>
+
+                    <!--
+                      NOTE :
+                      - Avec GitHub Pages, ce formulaire utilise "mailto:" (ouvre le client mail du visiteur).
+                      - Pour un envoi automatique vers un Excel ou un back-office, il faudra ajouter un service externe (Formspree, EmailJS, etc.).
+                    -->
+                    <form method="POST" action="mailto:virtualcenterexperience@gmail.com" enctype="text/plain">
+                        <!-- Infos principales -->
+                        <div class="field-group">
+                            <div class="form-field">
+                                <label for="name">Nom &amp; Prénom <span class="required">*</span></label>
+                                <input type="text" id="name" name="Nom_Prenom" required autocomplete="name" placeholder="Ex : Dupont Lucas">
+                            </div>
+                            <div class="form-field">
+                                <label for="phone">Téléphone <span class="required">*</span></label>
+                                <input type="tel" id="phone" name="Telephone" required autocomplete="tel" placeholder="Ex : 06 12 34 56 78">
+                            </div>
+                        </div>
+
+                        <div class="field-group">
+                            <div class="form-field">
+                                <label for="email">Adresse e-mail <span class="required">*</span></label>
+                                <input type="email" id="email" name="Email" required autocomplete="email" placeholder="Ex : vous@example.com">
+                            </div>
+                            <div class="form-field">
+                                <label for="subject">Objet de la demande <span class="required">*</span></label>
+                                <select id="subject" name="Objet" required>
+                                    <option value="">Choisir une option…</option>
+                                    <option>Réservation</option>
+                                    <option>Informations</option>
+                                    <option>Privatisation</option>
+                                    <option>Coaching</option>
+                                    <option>Anniversaire</option>
+                                    <option>Entreprise / CSE</option>
+                                    <option>Autre</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <!-- Détails / Activité -->
+                        <div class="field-group">
+                            <div class="form-field">
+                                <label for="activity">Type d’activité</label>
+                                <select id="activity" name="Type_activite">
+                                    <option value="">Choisir une activité…</option>
+                                    <option>Simracing</option>
+                                    <option>Tournoi</option>
+                                    <option>Anniversaire</option>
+                                    <option>Coaching</option>
+                                    <option>Privatisation</option>
+                                    <option>Entreprise / CSE</option>
+                                    <option>Autre</option>
+                                </select>
+                            </div>
+                            <div class="form-field">
+                                <label for="participants">Nombre de participants</label>
+                                <input type="number" id="participants" name="Nombre_participants" min="1" placeholder="Ex : 8">
+                            </div>
+                        </div>
+
+                        <div class="field-group">
+                            <div class="form-field">
+                                <label for="date">Date souhaitée</label>
+                                <input type="date" id="date" name="Date_souhaitee">
+                            </div>
+                            <div class="form-field">
+                                <label for="time">Heure souhaitée</label>
+                                <input type="time" id="time" name="Heure_souhaitee">
+                            </div>
+                        </div>
+
+                        <!-- Entreprises / CSE -->
+                        <div class="field-group">
+                            <div class="form-field">
+                                <label for="company">Entreprise (pour CSE / Team Building)</label>
+                                <input type="text" id="company" name="Entreprise" placeholder="Nom de l’entreprise">
+                            </div>
+                            <div class="form-field">
+                                <label for="collabs">Nombre de collaborateurs</label>
+                                <input type="number" id="collabs" name="Nombre_collaborateurs" min="1" placeholder="Ex : 24">
+                            </div>
+                        </div>
+
+                        <div class="field-group">
+                            <div class="form-field">
+                                <label for="event-type">Type d’événement entreprise</label>
+                                <select id="event-type" name="Type_evenement_entreprise">
+                                    <option value="">Non concerné / à définir…</option>
+                                    <option>Team Building</option>
+                                    <option>CSE</option>
+                                    <option>Privatisation complète</option>
+                                    <option>Coaching groupe</option>
+                                </select>
+                            </div>
+                            <div class="form-field">
+                                <label for="budget">Budget approximatif (optionnel)</label>
+                                <input type="text" id="budget" name="Budget" placeholder="Ex : 500 €">
+                            </div>
+                        </div>
+
+                        <!-- Anniversaires -->
+                        <div class="field-group">
+                            <div class="form-field">
+                                <label for="age">Âge de l’enfant (anniversaire)</label>
+                                <input type="number" id="age" name="Age_enfant" min="1" placeholder="Ex : 10">
+                            </div>
+                            <div class="form-field">
+                                <label for="birthday-formula">Formule anniversaire</label>
+                                <select id="birthday-formula" name="Formule_anniversaire">
+                                    <option value="">Non concerné / à définir…</option>
+                                    <option>Découverte</option>
+                                    <option>Championnat</option>
+                                    <option>Privatisation partielle</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <!-- Partenariats / fichier -->
+                        <div class="field-group">
+                            <div class="form-field">
+                                <label for="partnership">Demande de partenariat / collaboration</label>
+                                <input type="text" id="partnership" name="Partenariat" placeholder="Sponsor, visibilité, fournisseur…">
+                            </div>
+                            <div class="form-field">
+                                <label for="file">Upload de fichier (optionnel)</label>
+                                <input type="file" id="file" name="Fichier" />
+                            </div>
+                        </div>
+
+                        <!-- Message -->
+                        <div class="form-field">
+                            <label for="message">Votre message / votre demande <span class="required">*</span></label>
+                            <textarea id="message" name="Message" required placeholder="Expliquez votre demande, vos attentes, horaires possibles…"></textarea>
+                        </div>
+
+                        <!-- RGPD -->
+                        <label class="rgpd">
+                            <input type="checkbox" name="RGPD" value="OK" required />
+                            <span>
+                                J’accepte que mes informations soient utilisées uniquement pour permettre le traitement
+                                de ma demande, conformément à la politique de confidentialité du centre.
+                            </span>
+                        </label>
+
+                        <button type="submit" class="btn-submit">Envoyer ma demande</button>
+                        <p class="form-note">
+                            En cliquant sur « Envoyer ma demande », un e-mail sera préparé à destination de
+                            <strong>virtualcenterexperience@gmail.com</strong>. Vérifie bien le contenu avant envoi.
+                        </p>
+                    </form>
+                </div>
+
+                <!-- MAP & PARKING -->
+                <div class="card">
+                    <h3 class="card-title">Nous trouver</h3>
+                    <p class="card-subtitle">
+                        Le centre est situé à deux pas des axes principaux d’Agen, facilement accessible en voiture et en transport.
+                    </p>
+
+                    <div class="map-frame">
+                        <iframe
+                            loading="lazy"
+                            referrerpolicy="no-referrer-when-downgrade"
+                            src="https://www.google.com/maps?q=37+avenue+du+G%C3%A9n%C3%A9ral+de+Gaulle,+Agen+47000&output=embed">
+                        </iframe>
+                    </div>
+
+                    <p class="parking-text">
+                        <strong>Adresse :</strong> 37 avenue du Général de Gaulle, 47000 Agen<br/><br/>
+                        <strong>Parkings à proximité :</strong> stationnement le long de l’avenue et dans les rues
+                        adjacentes, ainsi que plusieurs parkings publics accessibles à pied (voir Google Maps pour le détail).
+                    </p>
+                </div>
+            </div>
+
+            <!-- RÉSEAUX SOCIAUX -->
+            <div class="social-grid">
+                <div class="social-card">
+                    <div class="social-title">Instagram</div>
+                    <div class="social-handle">@lgbl_virtual_center_experience</div>
+                    <a class="social-link"
+                       href="https://www.instagram.com/lgbl_virtual_center_experience/"
+                       target="_blank" rel="noreferrer">
+                        Ouvrir Instagram
+                    </a>
+                </div>
+                <div class="social-card">
+                    <div class="social-title">Facebook</div>
+                    <div class="social-handle">LGBL Virtual Center Experience</div>
+                    <a class="social-link"
+                       href="https://www.facebook.com/LGBLVirtualCenterExperience"
+                       target="_blank" rel="noreferrer">
+                        Ouvrir Facebook
+                    </a>
+                </div>
+            </div>
+        </section>
     </div>
-  </footer>
+</main>
 
-  <script src="assets/js/main.js" defer></script>
+<footer>
+    <div class="container footer-inner">
+        <div class="footer-links">
+            <a href="mentions-legales.html" class="page-link">Mentions légales</a>
+            <a href="contact.html" class="page-link">Contact</a>
+            <a href="confidentialite.html" class="page-link">Confidentialité</a>
+        </div>
+        <div>
+            © <span id="year"></span> VIRTUAL CENTER EXPERIENCE. Tous droits réservés.
+        </div>
+    </div>
+</footer>
+
+<!-- COOKIE BANNER -->
+<div class="cookie-banner" id="cookie-banner">
+    <div class="cookie-inner">
+        <div>
+            Nous utilisons des cookies pour améliorer votre expérience sur le site.
+            En continuant votre navigation, vous acceptez leur utilisation.
+        </div>
+        <div class="cookie-actions">
+            <button class="btn-cookie-secondary" id="cookie-more">En savoir plus</button>
+            <button class="btn-cookie-main" id="cookie-accept">OK</button>
+        </div>
+    </div>
+</div>
+
+<script>
+    // Année dynamique
+    document.getElementById("year").textContent = new Date().getFullYear();
+
+    // Menu burger
+    (function navToggle() {
+        const toggle = document.querySelector(".nav-toggle");
+        const links = document.querySelector(".nav-links");
+        if (!toggle || !links) return;
+        toggle.addEventListener("click", () => {
+            links.classList.toggle("open");
+        });
+    })();
+
+    // Cookie banner (localStorage)
+    (function cookieBanner() {
+        const banner = document.getElementById("cookie-banner");
+        if (!banner) return;
+        const accepted = localStorage.getItem("vcx_cookies_accepted");
+        if (!accepted) {
+            banner.style.display = "block";
+        }
+        const btnAccept = document.getElementById("cookie-accept");
+        const btnMore = document.getElementById("cookie-more");
+
+        if (btnAccept) {
+            btnAccept.addEventListener("click", () => {
+                localStorage.setItem("vcx_cookies_accepted", "yes");
+                banner.style.display = "none";
+            });
+        }
+        if (btnMore) {
+            btnMore.addEventListener("click", () => {
+                window.location.href = "confidentialite.html";
+            });
+        }
+    })();
+
+    // Transition logo entre les pages
+    (function pageTransition() {
+        const overlay = document.getElementById("page-transition");
+        if (!overlay) return;
+
+        window.addEventListener("load", () => {
+            overlay.classList.remove("active");
+        });
+
+        const links = document.querySelectorAll("a.page-link, .nav-links a");
+
+        links.forEach(link => {
+            const href = link.getAttribute("href");
+            if (!href || href.startsWith("#")) return;
+
+            link.addEventListener("click", (e) => {
+                if (e.button !== 0 || e.metaKey || e.ctrlKey || e.shiftKey || e.altKey) return;
+                e.preventDefault();
+                overlay.classList.add("active");
+                setTimeout(() => {
+                    window.location.href = href;
+                }, 350);
+            });
+        });
+
+        overlay.classList.add("active");
+    })();
+</script>
 </body>
 </html>
