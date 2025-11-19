@@ -1,430 +1,986 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>LGBL – Communauté</title>
-  <meta name="description" content="Avis des clients, live timing, liens officiels (TikTok), et envoi de clips pour la communauté LGBL Virtual Experience."/>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Communauté | VIRTUAL CENTER EXPERIENCE</title>
 
-  <!-- SEO / Social -->
-  <meta property="og:type" content="website" />
-  <meta property="og:site_name" content="LGBL VIRTUAL CENTER EXPERIENCE" />
-  <meta property="og:title" content="LGBL – Communauté" />
-  <meta property="og:description" content="Avis 5★, live timing en direct et envoi de vos clips. Rejoignez la communauté LGBL !" />
-  <meta property="og:image" content="assets/img/logo-lgbl.png" />
+    <meta name="description" content="Communauté, détente, défis et diffusion d'événements chez Virtual Center Experience.">
+    <meta name="keywords" content="communauté, simracing, défis, baby-foot, bar, snacking, diffusion, twitch, virtual center experience">
 
-  <link rel="icon" type="image/png" href="assets/img/logo-lgbl.png" />
-  <link rel="preconnect" href="https://fonts.googleapis.com"/>
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
-  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600;800&family=Poppins:wght@400;600;700&display=swap" rel="stylesheet"/>
-  <link rel="stylesheet" href="assets/css/styles.css"/>
+    <!-- Police -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
 
-  <style>
-    :root{--line:rgba(255,255,255,.08);--bg:#0a0b0d;--panel:#0f1115;--text:#e9ecef;--muted:#a9b3bb;--rose:#ff2d6f;--cyan:#00aaff}
-    body{background:var(--bg);color:var(--text);font-family:Poppins,system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial;margin:0}
-    .container{max-width:1150px;margin:0 auto;padding:0 20px}
+    <style>
+        :root {
+            --bg-main: #050814;
+            --bg-soft: #0c1224;
+            --card-bg: #111729;
+            --card-soft: #151c30;
+            --accent-blue: #2f80ed;
+            --accent-red: #d62839;
+            --text-main: #f9fafb;
+            --text-muted: #a0aecb;
+            --border-soft: #262f45;
+            --radius-lg: 14px;
+            --shadow-soft: 0 18px 40px rgba(0, 0, 0, 0.6);
+            --transition-fast: 0.18s ease-out;
+        }
 
-    header{position:sticky;top:0;z-index:60;background:rgba(10,11,13,.7);backdrop-filter:saturate(120%) blur(8px);border-bottom:1px solid var(--line)}
-    .nav{display:flex;align-items:center;justify-content:space-between;height:64px}
-    .logo{display:inline-flex;align-items:center;gap:.6rem;color:#fff;text-decoration:none;font-weight:800;letter-spacing:.5px}
-    .logo img{height:42px;border-radius:50%}
-    nav .links a{color:#cfd6dc;text-decoration:none;padding:8px 12px;border:1px solid transparent;border-radius:999px}
-    nav .links a:hover,nav .links a[aria-current="page"]{color:#fff;border-color:rgba(0,170,255,.35)}
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        html, body { height: 100%; }
 
-    .hero{position:relative;overflow:hidden;padding:56px 0;border-bottom:1px solid var(--line);background:#0b0d11}
-    .hero>.container{position:relative;z-index:2;text-align:center}
-    .hero h1{font-family:'Orbitron';font-size:clamp(28px,5.6vw,44px);letter-spacing:1px;margin:0 0 .6rem;text-transform:uppercase}
-    .subtitle{color:var(--muted)}
+        body {
+            font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+            background: var(--bg-main);
+            color: var(--text-main);
+            line-height: 1.6;
+        }
 
-    .section{padding:40px 0;border-top:1px solid var(--line)}
-    .section h2{font-family:'Orbitron';letter-spacing:.5px;margin:0 0 14px}
-    .grid-2{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}
-    .grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
-    @media (max-width:960px){.grid-2,.grid-3{grid-template-columns:1fr}}
+        a { color: inherit; text-decoration: none; }
+        img { max-width: 100%; display: block; }
 
-    .card{background:var(--panel);border:1px solid var(--line);border-radius:16px;padding:18px;transition:.18s ease;transition-property:transform,box-shadow,border-color}
-    .card.hoverable:hover{transform:translateY(-4px);box-shadow:0 16px 36px rgba(0,0,0,.35);border-color:rgba(0,170,255,.35)}
-    .card h3{margin:.2rem 0 .4rem}
-    .muted{color:var(--muted)}
+        .container {
+            width: 100%;
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 1.5rem;
+        }
 
-    /* Avis */
-    .rating{display:inline-flex;gap:2px;font-size:1.05rem;line-height:1}
-    .star{filter:drop-shadow(0 0 6px rgba(255,200,0,.2))}
-    .star.filled{color:#ffd166}
-    .review{display:flex;gap:12px}
-    .avatar{width:42px;height:42px;border-radius:50%;background:#151a20;border:1px solid var(--line);display:flex;align-items:center;justify-content:center;font-weight:700}
-    .review-head{display:flex;align-items:center;gap:8px;justify-content:space-between}
-    .reviews-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
-    @media(max-width:960px){.reviews-grid{grid-template-columns:1fr}}
-    .summary{display:flex;align-items:center;gap:12px}
-    .summary .score{font-size:1.6rem;font-weight:800}
+        /* ============ HEADER ============ */
 
-    .stars-input{display:flex;flex-direction:row-reverse;justify-content:flex-end;gap:6px}
-    .stars-input input{display:none}
-    .stars-input label{cursor:pointer;font-size:1.4rem;transition:transform .1s ease}
-    .stars-input label:hover{transform:scale(1.1)}
-    .stars-input input:checked ~ label,
-    .stars-input label:hover,
-    .stars-input label:hover ~ label { color:#ffd166; }
+        header {
+            position: sticky;
+            top: 0;
+            z-index: 30;
+            backdrop-filter: blur(12px);
+            background: rgba(5, 8, 20, 0.96);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+        }
 
-    /* Live timing */
-    .lt-toolbar{display:flex;gap:8px;align-items:center;flex-wrap:wrap;margin-bottom:10px}
-    .input{background:#0e1218;border:1px solid var(--line);color:#e9f3ff;border-radius:10px;padding:8px 10px;min-width:300px}
-    .btn{display:inline-block;background:linear-gradient(90deg,var(--rose),var(--cyan));padding:.6rem .9rem;border-radius:999px;color:#fff;text-decoration:none;font-weight:700;border:0}
-    .btn.secondary{background:transparent;border:1px solid rgba(0,170,255,.35)}
-    iframe{border:1px solid var(--line);border-radius:14px}
+        .nav {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0.7rem 0;
+        }
 
-    footer{border-top:1px solid var(--line)}
-  </style>
+        .nav-left {
+            display: flex;
+            align-items: center;
+            gap: 0.9rem;
+        }
+
+        .logo-img {
+            height: 40px;
+            width: auto;
+        }
+
+        .brand-text {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .brand-title {
+            font-weight: 800;
+            font-size: 0.95rem;
+            letter-spacing: 0.16em;
+            text-transform: uppercase;
+        }
+
+        .brand-subtitle {
+            font-size: 0.8rem;
+            color: var(--text-muted);
+        }
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            list-style: none;
+        }
+
+        .nav-links a {
+            font-size: 0.86rem;
+            text-transform: uppercase;
+            letter-spacing: 0.14em;
+            padding: 0.5rem 0.95rem;
+            border-radius: 999px;
+            border: 1px solid transparent;
+            cursor: pointer;
+            transition:
+                transform var(--transition-fast),
+                box-shadow var(--transition-fast),
+                border-color var(--transition-fast),
+                background 0.2s ease-out;
+        }
+
+        .nav-links a:hover {
+            transform: translateY(-1px);
+            box-shadow: 0 10px 24px rgba(0, 0, 0, 0.5);
+            border-color: rgba(255, 255, 255, 0.12);
+            background: rgba(16, 22, 44, 0.9);
+        }
+
+        .nav-links a.active {
+            border-color: var(--accent-red);
+            background: linear-gradient(120deg, #163761, var(--accent-red));
+        }
+
+        .nav-toggle {
+            display: none;
+            background: none;
+            border: 1px solid rgba(255, 255, 255, 0.22);
+            border-radius: 999px;
+            padding: 0.3rem 0.6rem;
+            color: var(--text-main);
+            cursor: pointer;
+        }
+
+        .nav-toggle span {
+            display: block;
+            width: 20px;
+            height: 2px;
+            background: var(--text-main);
+            margin: 3px 0;
+            border-radius: 999px;
+        }
+
+        /* ============ TRANSITION LOGO ============ */
+
+        #page-transition {
+            position: fixed;
+            inset: 0;
+            background: #050814;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 50;
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 0.35s ease-out;
+        }
+
+        #page-transition.active {
+            opacity: 1;
+            pointer-events: auto;
+        }
+
+        #page-transition img {
+            width: 80px;
+            height: auto;
+            opacity: 0;
+            transform: scale(0.92);
+            transition: opacity 0.35s ease-out, transform 0.35s ease-out;
+        }
+
+        #page-transition.active img {
+            opacity: 1;
+            transform: scale(1);
+        }
+
+        /* ============ MAIN ============ */
+
+        main { padding-bottom: 3.4rem; }
+
+        /* HERO */
+
+        .hero {
+            position: relative;
+            min-height: 55vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background:
+                linear-gradient(to bottom, rgba(5, 8, 20, 0.35), rgba(5, 8, 20, 0.96)),
+                url("assets/img/lmp2-bg.jpg") center/cover no-repeat;
+            z-index: -1;
+        }
+
+        .hero-inner {
+            max-width: 780px;
+            padding: 3rem 1.5rem 2.2rem;
+        }
+
+        .hero-eyebrow {
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 0.18em;
+            color: #d1d5e5;
+            margin-bottom: 0.7rem;
+        }
+
+        .hero-title-main {
+            font-size: clamp(2rem, 3.4vw, 2.6rem);
+            font-weight: 800;
+            text-transform: uppercase;
+            line-height: 1.2;
+            margin-bottom: 0.5rem;
+        }
+
+        .hero-title-main span.highlight {
+            color: var(--accent-blue);
+        }
+
+        .hero-subtitle {
+            font-size: 0.96rem;
+            color: #e5e7f5;
+            margin-bottom: 1.6rem;
+        }
+
+        .hero-tags {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 0.5rem;
+        }
+
+        .hero-tag-pill {
+            font-size: 0.8rem;
+            padding: 0.35rem 0.8rem;
+            border-radius: 999px;
+            border: 1px solid rgba(255, 255, 255, 0.18);
+            background: rgba(5, 8, 20, 0.85);
+        }
+
+        /* SECTIONS */
+
+        .section {
+            margin-top: 3.2rem;
+        }
+
+        .section-header {
+            max-width: 780px;
+            margin: 0 auto 1.5rem;
+            text-align: center;
+        }
+
+        .section-title {
+            font-size: 1.02rem;
+            text-transform: uppercase;
+            letter-spacing: 0.18em;
+            margin-bottom: 0.35rem;
+        }
+
+        .section-title span {
+            color: var(--accent-blue);
+        }
+
+        .section-subtitle {
+            font-size: 0.86rem;
+            color: var(--text-muted);
+        }
+
+        /* GRIDS + CARDS */
+
+        .grid-3 {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 1.2rem;
+        }
+
+        .grid-2 {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 1.2rem;
+        }
+
+        .card {
+            background: var(--card-bg);
+            border-radius: var(--radius-lg);
+            padding: 1rem 1rem 1.25rem;
+            border: 1px solid var(--border-soft);
+            box-shadow: var(--shadow-soft);
+            font-size: 0.9rem;
+            display: flex;
+            flex-direction: column;
+            gap: 0.55rem;
+        }
+
+        .card-title {
+            font-size: 0.95rem;
+            font-weight: 600;
+        }
+
+        .card-tag {
+            font-size: 0.7rem;
+            padding: 0.17rem 0.55rem;
+            border-radius: 999px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            color: var(--accent-blue);
+        }
+
+        .card-header-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .card p {
+            color: var(--text-muted);
+            font-size: 0.86rem;
+        }
+
+        .card-list {
+            list-style: none;
+            padding-left: 0;
+            margin-top: 0.2rem;
+        }
+
+        .card-list li {
+            position: relative;
+            padding-left: 1rem;
+            margin-bottom: 0.2rem;
+            font-size: 0.84rem;
+            color: var(--text-muted);
+        }
+
+        .card-list li::before {
+            content: "•";
+            position: absolute;
+            left: 0;
+            color: var(--accent-blue);
+        }
+
+        /* BUTTONS / LINKS */
+
+        .btn-small {
+            display: inline-block;
+            border-radius: 999px;
+            padding: 0.45rem 0.95rem;
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 0.12em;
+            border: 1px solid transparent;
+            cursor: pointer;
+            transition: background 0.18s ease-out, border-color 0.18s ease-out, transform 0.16s ease-out;
+        }
+
+        .btn-small-main {
+            background: linear-gradient(120deg, var(--accent-blue), var(--accent-red));
+            border-color: var(--accent-blue);
+            color: #ffffff;
+        }
+
+        .btn-small-main:hover {
+            transform: translateY(-1px);
+        }
+
+        .btn-small-ghost {
+            background: transparent;
+            border-color: rgba(255, 255, 255, 0.18);
+            color: var(--text-main);
+        }
+
+        .btn-small-ghost:hover {
+            transform: translateY(-1px);
+            background: rgba(5, 8, 20, 0.9);
+        }
+
+        .section-note {
+            margin-top: 1rem;
+            font-size: 0.8rem;
+            color: var(--text-muted);
+            text-align: center;
+        }
+
+        /* TWITCH */
+
+        .twitch-wrapper {
+            margin-top: 1.2rem;
+            background: var(--card-bg);
+            border-radius: var(--radius-lg);
+            border: 1px solid var(--border-soft);
+            box-shadow: var(--shadow-soft);
+            padding: 1rem 1rem 1.3rem;
+        }
+
+        .twitch-grid {
+            display: grid;
+            grid-template-columns: minmax(0, 2.2fr) minmax(0, 1.3fr);
+            gap: 1rem;
+            align-items: flex-start;
+        }
+
+        .twitch-embed {
+            position: relative;
+            padding-bottom: 56.25%;
+            height: 0;
+            overflow: hidden;
+            border-radius: 10px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .twitch-embed iframe {
+            position: absolute;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            border: 0;
+        }
+
+        .twitch-side-title {
+            font-size: 0.95rem;
+            font-weight: 600;
+            margin-bottom: 0.3rem;
+        }
+
+        .twitch-side-text {
+            font-size: 0.86rem;
+            color: var(--text-muted);
+            margin-bottom: 0.6rem;
+        }
+
+        .twitch-side-list {
+            list-style: none;
+            padding-left: 0;
+            margin-bottom: 0.7rem;
+        }
+
+        .twitch-side-list li {
+            position: relative;
+            padding-left: 1rem;
+            margin-bottom: 0.2rem;
+            font-size: 0.84rem;
+            color: var(--text-muted);
+        }
+
+        .twitch-side-list li::before {
+            content: "•";
+            position: absolute;
+            left: 0;
+            color: var(--accent-blue);
+        }
+
+        /* FOOTER */
+
+        footer {
+            border-top: 1px solid rgba(255, 255, 255, 0.08);
+            padding: 1.1rem 0 1.4rem;
+            background: #050814;
+        }
+
+        .footer-inner {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: space-between;
+            gap: 0.7rem;
+            font-size: 0.8rem;
+            color: var(--text-muted);
+        }
+
+        .footer-links {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.9rem;
+        }
+
+        .footer-links a {
+            position: relative;
+            cursor: pointer;
+        }
+
+        .footer-links a::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: -2px;
+            width: 0;
+            height: 1px;
+            background: var(--accent-blue);
+            transition: width 0.18s ease-out;
+        }
+
+        .footer-links a:hover::after {
+            width: 100%;
+        }
+
+        /* COOKIE BANNER */
+
+        .cookie-banner {
+            position: fixed;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            z-index: 40;
+            background: rgba(5, 8, 20, 0.96);
+            border-top: 1px solid rgba(255, 255, 255, 0.12);
+            padding: 0.8rem 1.5rem;
+            display: none;
+        }
+
+        .cookie-inner {
+            max-width: 1100px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 0.9rem;
+            font-size: 0.8rem;
+            color: var(--text-muted);
+        }
+
+        .cookie-actions {
+            display: flex;
+            gap: 0.5rem;
+            flex-shrink: 0;
+        }
+
+        .btn-cookie-main,
+        .btn-cookie-secondary {
+            border-radius: 999px;
+            padding: 0.4rem 0.9rem;
+            font-size: 0.8rem;
+            border: 1px solid transparent;
+            cursor: pointer;
+            white-space: nowrap;
+        }
+
+        .btn-cookie-main {
+            background: var(--accent-blue);
+            color: #ffffff;
+            border-color: var(--accent-blue);
+        }
+
+        .btn-cookie-secondary {
+            background: transparent;
+            color: var(--text-muted);
+            border-color: rgba(255, 255, 255, 0.2);
+        }
+
+        /* RESPONSIVE */
+
+        @media (max-width: 960px) {
+            .grid-3 {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+            }
+
+            .twitch-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 840px) {
+            .nav-links {
+                position: absolute;
+                inset: 100% 0 auto 0;
+                background: rgba(4, 8, 20, 0.98);
+                border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+                padding: 0.75rem 1.5rem 1rem;
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 0.25rem;
+                transform-origin: top;
+                transform: scaleY(0.7);
+                opacity: 0;
+                pointer-events: none;
+                transition: opacity 0.18s ease-out, transform 0.18s ease-out;
+            }
+
+            .nav-links.open {
+                opacity: 1;
+                transform: scaleY(1);
+                pointer-events: auto;
+            }
+
+            .nav-toggle {
+                display: inline-flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                gap: 2px;
+            }
+
+            .grid-3,
+            .grid-2 {
+                grid-template-columns: 1fr;
+            }
+
+            .cookie-inner {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .cookie-actions {
+                align-self: stretch;
+                justify-content: flex-end;
+            }
+        }
+
+        @media (max-width: 520px) {
+            .footer-inner {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+        }
+    </style>
 </head>
-<body class="page-communaute">
+<body>
+<div id="page-transition">
+    <img src="assets/img/logo-lgbl.png" alt="Logo LGBL Virtual Center Experience">
+</div>
 
 <header>
-  <div class="container nav">
-    <a class="logo" href="index.html" aria-label="LGBL Accueil">
-      <img src="assets/img/logo-lgbl.png" alt="Logo LGBL"/>
-      <span>LGBL VIRTUAL CENTER EXPERIENCE</span>
-    </a>
-    <nav class="links" aria-label="Navigation principale">
-      <a href="index.html">Accueil</a>
-      <a href="tarifs.html">Tarifs</a>
-      <a href="evenements.html">Événements</a>
-      <a href="communaute.html" aria-current="page">Communauté</a>
-      <a href="contact.html">Contact</a>
-      <a href="https://www.youtube.com/@LucasGaly24/streams" target="_blank" rel="noopener">LIVE</a>
-    </nav>
-  </div>
+    <div class="container nav">
+        <div class="nav-left">
+            <img src="assets/img/logo-lgbl.png" alt="Logo VIRTUAL CENTER EXPERIENCE" class="logo-img">
+            <div class="brand-text">
+                <span class="brand-title">VIRTUAL CENTER EXPERIENCE</span>
+                <span class="brand-subtitle">Salle de simulation virtuelle</span>
+            </div>
+        </div>
+
+        <button class="nav-toggle" aria-label="Ouvrir le menu">
+            <span></span><span></span><span></span>
+        </button>
+
+        <ul class="nav-links">
+            <li><a href="index.html" class="page-link">Accueil</a></li>
+            <li><a href="tarifs.html" class="page-link">Tarifs</a></li>
+            <li><a href="evenements.html" class="page-link">Événements</a></li>
+            <li><a href="communaute.html" class="active">Communauté</a></li>
+            <li><a href="contact.html" class="page-link">Contact</a></li>
+        </ul>
+    </div>
 </header>
 
-<section class="hero">
-  <div class="container">
-    <h1>Communauté</h1>
-    <p class="subtitle">Avis des pilotes, live timing temps réel, TikTok, et envoi de vos meilleurs clips.</p>
-  </div>
-</section>
-
 <main>
-  <!-- Avis -->
-  <section class="section" id="avis">
-    <div class="container">
-      <h2>⭐ Avis de la communauté</h2>
-
-      <!-- Résumé note / compteur -->
-      <div class="card" style="margin-bottom:14px;display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap">
-        <div class="summary">
-          <span class="score" id="avgScore">5.0</span>
-          <div>
-            <div id="avgStars" class="rating" aria-label="Note moyenne">★★★★★</div>
-            <div class="muted"><span id="reviewsCount">0</span> avis</div>
-          </div>
+    <!-- HERO -->
+    <section class="hero">
+        <div class="hero-inner">
+            <div class="hero-eyebrow">Communauté & divertissement</div>
+            <h1 class="hero-title-main">
+                <span class="highlight">Bien plus</span> qu’une salle de simulation.
+            </h1>
+            <p class="hero-subtitle">
+                Un lieu de vie où tu viens piloter, te détendre, regarder des courses, profiter du bar
+                et passer un bon moment avec ta communauté.
+            </p>
+            <div class="hero-tags">
+                <span class="hero-tag-pill">Simracing</span>
+                <span class="hero-tag-pill">Baby-foot</span>
+                <span class="hero-tag-pill">Zone détente</span>
+                <span class="hero-tag-pill">Diffusion d’événements</span>
+                <span class="hero-tag-pill">Bar & snacking</span>
+            </div>
         </div>
-        <!-- Formulaire d'avis -->
-        <form id="reviewForm" style="display:grid;grid-template-columns:220px 1fr auto;gap:10px;align-items:center">
-          <input id="revName" type="text" placeholder="Votre prénom (ou nom)" required style="background:#0e1218;border:1px solid var(--line);color:#fff;border-radius:10px;padding:8px 10px">
-          <div style="display:flex;gap:10px;align-items:center">
-            <div class="stars-input" aria-label="Choisir une note sur 5">
-              <input type="radio" id="star5" name="rate" value="5" required><label for="star5">★</label>
-              <input type="radio" id="star4" name="rate" value="4"><label for="star4">★</label>
-              <input type="radio" id="star3" name="rate" value="3"><label for="star3">★</label>
-              <input type="radio" id="star2" name="rate" value="2"><label for="star2">★</label>
-              <input type="radio" id="star1" name="rate" value="1"><label for="star1">★</label>
-            </div>
-            <small class="muted">(cliquez une étoile)</small>
-          </div>
-          <button class="btn" type="submit">Publier</button>
-          <textarea id="revText" placeholder="Votre avis (max 300 caractères)" required maxlength="300" style="grid-column:1/-1;background:#0e1218;border:1px solid var(--line);color:#fff;border-radius:10px;padding:10px 12px"></textarea>
-          <div style="grid-column:1/-1;display:flex;gap:8px;align-items:center;flex-wrap:wrap">
-            <button class="btn secondary" type="button" id="sendToTeam">Envoyer à l’équipe</button>
-            <small class="muted">Vos avis s’affichent localement sur votre navigateur. “Envoyer à l’équipe” ouvre votre e-mail pour modération.</small>
-          </div>
-        </form>
-      </div>
+    </section>
 
-      <!-- Grille d’avis (prédéfinis + utilisateurs) -->
-      <div class="reviews-grid" id="reviewsGrid" style="margin-top:.8rem">
-        <!-- Exemples existants -->
-        <article class="card hoverable">
-          <div class="review-head">
-            <div class="review">
-              <div class="avatar">AG</div>
-              <div><strong>Anaïs G.</strong><div class="muted">Pilote débutante</div></div>
-            </div>
-            <div class="rating" aria-label="Note 5 sur 5">★★★★★</div>
-          </div>
-          <p>Matériel propre et prise en main rapide. Le staff est super sympa, je reviendrai !</p>
-        </article>
-
-        <article class="card hoverable">
-          <div class="review-head">
-            <div class="review">
-              <div class="avatar">JM</div>
-              <div><strong>Jean M.</strong><div class="muted">Habitué</div></div>
-            </div>
-            <div class="rating" aria-label="Note 5 sur 5">★★★★★</div>
-          </div>
-          <p>Les châssis dynamiques envoient du lourd. Bonne ambiance paddock, on s’y croit.</p>
-        </article>
-
-        <article class="card hoverable">
-          <div class="review-head">
-            <div class="review">
-              <div class="avatar">CL</div>
-              <div><strong>Chloé L.</strong><div class="muted">Visite en famille</div></div>
-            </div>
-            <div class="rating" aria-label="Note 4 sur 5">★★★★☆</div>
-          </div>
-          <p>On a passé un super moment, les enfants ont adoré. Vivement les prochains tournois !</p>
-        </article>
-
-        <article class="card hoverable">
-          <div class="review-head">
-            <div class="review">
-              <div class="avatar">NB</div>
-              <div><strong>Noé B.</strong><div class="muted">Local</div></div>
-            </div>
-            <div class="rating" aria-label="Note 5 sur 5">★★★★★</div>
-          </div>
-          <p><em>“Prix corrects pour le lancement”</em>. Le pack Standard 3×10 min est parfait pour se faire plaisir.</p>
-        </article>
-
-        <article class="card hoverable">
-          <div class="review-head">
-            <div class="review">
-              <div class="avatar">BL</div>
-              <div><strong>Baptiste L.</strong><div class="muted">Esport</div></div>
-            </div>
-            <div class="rating" aria-label="Note 4 sur 5">★★★★☆</div>
-          </div>
-          <p>Format Sprint du vendredi = top ! Bonne rotation de circuits et fair-play.</p>
-        </article>
-
-        <!-- 1★ unique -->
-        <article class="card hoverable">
-          <div class="review-head">
-            <div class="review">
-              <div class="avatar">DP</div>
-              <div><strong>David P.</strong><div class="muted">Motard</div></div>
-            </div>
-            <div class="rating" aria-label="Note 1 sur 5">★☆☆☆☆</div>
-          </div>
-          <p>Pas de moto actuellement, c’est dommage.</p>
-        </article>
-      </div>
-    </div>
-  </section>
-
-  <!-- Live timing -->
-  <section class="section" id="live-timing">
     <div class="container">
-      <h2>⏱️ Live Timing</h2>
-      <p class="muted">Suivez les chronos en direct pendant les sessions et soirées eSport.</p>
-      <div class="lt-toolbar">
-        <input class="input" id="lt-url" type="url" value="http://80.11.31.77:8772/live-timing?server=0" aria-label="URL du live timing">
-        <button class="btn" id="lt-apply" type="button">Mettre à jour</button>
-        <button class="btn secondary" id="lt-reset" type="button">Réinitialiser</button>
-      </div>
-      <iframe id="lt-frame" title="Live Timing" src="http://80.11.31.77:8772/live-timing?server=0" width="100%" height="560" loading="lazy" referrerpolicy="no-referrer"></iframe>
-      <p class="muted" style="margin-top:8px">Astuce : tu peux coller ici un autre lien de live timing, il sera mémorisé pour les prochaines visites.</p>
-    </div>
-  </section>
+        <!-- ACTIVITÉS & ESPACE DÉTENTE -->
+        <section class="section" id="activites">
+            <div class="section-header">
+                <h2 class="section-title"><span>Activités</span> & espace détente</h2>
+                <p class="section-subtitle">
+                    LGBL, c’est un endroit où tu peux piloter, chiller, discuter, regarder des courses
+                    et enchaîner les défis entre amis, en famille ou en solo.
+                </p>
+            </div>
 
-  <!-- Réseaux & envoi de clips -->
-  <section class="section" id="reseaux">
-    <div class="container">
-      <h2>🔗 Réseaux & Partage</h2>
-      <div class="grid-3" style="margin-top:.8rem">
-        <article class="card hoverable">
-          <h3>TikTok officiel</h3>
-          <p class="muted">Reels, highlights et coulisses.</p>
-          <a class="btn" href="https://www.tiktok.com/@lucasgaly1" target="_blank" rel="noopener">Ouvrir TikTok</a>
-        </article>
-        <article class="card hoverable">
-          <h3>Envoyer une photo / un clip</h3>
-          <p class="muted">Passe par le formulaire de contact, on s’occupe du reste.</p>
-          <a class="btn btn-devis" href="contact.html?sujet=Envoi%20photo%20%2F%20clip#form" data-prefill='{"type":"Media","objet":"Envoi photo/clip","canal":"Site"}'>Via le formulaire</a>
-        </article>
-        <article class="card hoverable">
-          <h3>LIVE & Replays</h3>
-          <p class="muted">Nos directs et rediffusions YouTube.</p>
-          <a class="btn" href="https://www.youtube.com/@LucasGaly24/streams" target="_blank" rel="noopener">Voir le LIVE</a>
-        </article>
-      </div>
+            <div class="grid-3">
+                <!-- Simracing & défis -->
+                <article class="card">
+                    <div class="card-header-row">
+                        <h3 class="card-title">Simracing & défis chronos</h3>
+                        <span class="card-tag">Challenge</span>
+                    </div>
+                    <p>
+                        Des simulateurs haut de gamme pour te mesurer aux autres ou battre ton propre record.
+                    </p>
+                    <ul class="card-list">
+                        <li>Classements du jour ou de la semaine</li>
+                        <li>Défis entre amis, en duo ou en solo</li>
+                        <li>Idéal pour se lancer un challenge rapide</li>
+                    </ul>
+                </article>
+
+                <!-- Baby-foot -->
+                <article class="card">
+                    <div class="card-header-row">
+                        <h3 class="card-title">Baby-foot</h3>
+                        <span class="card-tag">Fun</span>
+                    </div>
+                    <p>
+                        Entre deux sessions, tu peux te poser et continuer la compétition… autrement.
+                    </p>
+                    <ul class="card-list">
+                        <li>Parties rapides pendant l’attente</li>
+                        <li>Ambiance détendue et conviviale</li>
+                        <li>Parfait pour patienter ou décompresser</li>
+                    </ul>
+                </article>
+
+                <!-- Zone détente -->
+                <article class="card">
+                    <div class="card-header-row">
+                        <h3 class="card-title">Zone détente / paddock</h3>
+                        <span class="card-tag">Confort</span>
+                    </div>
+                    <p>
+                        Un coin cosy pour discuter, regarder les autres rouler ou simplement profiter de l’ambiance.
+                    </p>
+                    <ul class="card-list">
+                        <li>Espace pour se poser entre deux courses</li>
+                        <li>Vue sur les simulateurs</li>
+                        <li>Ambiance paddock, musique & lumière</li>
+                    </ul>
+                </article>
+            </div>
+
+            <div class="grid-2" style="margin-top:1.4rem;">
+                <!-- Diffusion événements -->
+                <article class="card">
+                    <div class="card-header-row">
+                        <h3 class="card-title">Diffusion des événements sportifs</h3>
+                        <span class="card-tag">Live</span>
+                    </div>
+                    <p>
+                        Regarde les grandes courses et compétitions dans une ambiance unique.
+                    </p>
+                    <ul class="card-list">
+                        <li>Formule 1, MotoGP, endurance (WEC, IMSA…)</li>
+                        <li>Rallye, compétitions eSport et grands rendez-vous</li>
+                        <li>Possibilité de rouler avant / après la course</li>
+                    </ul>
+                </article>
+
+                <!-- Bar & snacking -->
+                <article class="card">
+                    <div class="card-header-row">
+                        <h3 class="card-title">Bar & snacking</h3>
+                        <span class="card-tag">Pause</span>
+                    </div>
+                    <p>
+                        De quoi recharger les batteries entre deux relais.
+                    </p>
+                    <ul class="card-list">
+                        <li>Boissons fraîches et softs</li>
+                        <li>Paninis, hot-dogs, petites gourmandises</li>
+                        <li>Idéal pour les groupes et soirées entre amis</li>
+                    </ul>
+                </article>
+            </div>
+        </section>
+
+        <!-- MOMENTS & DÉFIS -->
+        <section class="section" id="moments">
+            <div class="section-header">
+                <h2 class="section-title"><span>Moments</span> & défis</h2>
+                <p class="section-subtitle">
+                    Crée des souvenirs, récupère des photos, participe aux challenges
+                    et fais vraiment partie de la communauté du centre.
+                </p>
+            </div>
+
+            <div class="grid-3">
+                <!-- Photos & souvenirs -->
+                <article class="card">
+                    <div class="card-header-row">
+                        <h3 class="card-title">Photos & souvenirs</h3>
+                        <span class="card-tag">Souvenirs</span>
+                    </div>
+                    <p>
+                        On immortalise les meilleurs moments de ta session.
+                    </p>
+                    <ul class="card-list">
+                        <li>Photos podium et dans les simulateurs</li>
+                        <li>Petites vidéos de vos tours ou de la course</li>
+                        <li>Contenu parfait pour ton Insta ou tes stories</li>
+                    </ul>
+                </article>
+
+                <!-- Défis hebdomadaires -->
+                <article class="card">
+                    <div class="card-header-row">
+                        <h3 class="card-title">Défis quotidiens / hebdo</h3>
+                        <span class="card-tag">Challenges</span>
+                    </div>
+                    <p>
+                        Des objectifs qui tournent régulièrement pour garder le jeu intéressant.
+                    </p>
+                    <ul class="card-list">
+                        <li>Meilleur tour de la semaine ou du mois</li>
+                        <li>Défi Drift, Hot Lap mystère, Top 10</li>
+                        <li>À gagner : réductions, sessions, goodies…</li>
+                    </ul>
+                </article>
+
+                <!-- Esprit communauté -->
+                <article class="card">
+                    <div class="card-header-row">
+                        <h3 class="card-title">Esprit communauté</h3>
+                        <span class="card-tag">Humain</span>
+                    </div>
+                    <p>
+                        Ici, tu n’es pas juste un client : tu fais partie de l’univers LGBL.
+                    </p>
+                    <ul class="card-list">
+                        <li>On vient pour rouler, mais aussi pour se poser</li>
+                        <li>Rencontres, discussions, rigolades et partage</li>
+                        <li>Un vrai lieu de vie autour du sport auto</li>
+                    </ul>
+                </article>
+            </div>
+        </section>
+
+        <!-- TWITCH & REPLAYS -->
+        <section class="section" id="twitch">
+            <div class="section-header">
+                <h2 class="section-title"><span>Twitch</span> & replays</h2>
+                <p class="section-subtitle">
+                    Suis les événements en direct, retrouve les meilleurs moments en replay
+                    et garde un œil sur la vie du centre en ligne.
+                </p>
+            </div>
+
+            <div class="twitch-wrapper">
+                <div class="twitch-grid">
+                    <div class="twitch-embed">
+                        <!-- Twitch live player -->
+                        <iframe
+                            src="https://player.twitch.tv/?channel=virtualcenterexperience&parent=localhost&parent=127.0.0.1"
+                            allowfullscreen
+                            scrolling="no">
+                        </iframe>
+                    </div>
+                    <div>
+                        <div class="twitch-side-title">Chaîne Twitch officielle</div>
+                        <p class="twitch-side-text">
+                            Quand un événement est en direct (tournoi, endurance, soirée spéciale),
+                            la diffusion se fait sur notre chaîne Twitch.
+                        </p>
+                        <ul class="twitch-side-list">
+                            <li>Streams des événements organisés au centre</li>
+                            <li>Replays et clips des meilleurs moments</li>
+                            <li>Possibilité d’apparaître à l’écran lors de certaines sessions</li>
+                        </ul>
+                        <p class="twitch-side-text">
+                            Tu peux aussi suivre la chaîne directement ici :
+                        </p>
+                        <a href="https://www.twitch.tv/virtualcenterexperience" target="_blank" rel="noreferrer" class="btn-small btn-small-main">
+                            Ouvrir la chaîne Twitch
+                        </a>
+                        <p class="twitch-side-text" style="margin-top:0.7rem;">
+                            En dehors des lives, le lecteur peut afficher les clips ou replays déjà diffusés.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <p class="section-note">
+                Pour être informé des prochains lives, n’hésite pas à suivre la chaîne Twitch
+                et les réseaux du centre (Instagram, TikTok, etc.).
+            </p>
+        </section>
     </div>
-  </section>
 </main>
 
-<footer style="border-top:1px solid var(--line)">
-  <div class="container" style="padding:26px 0;display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:22px">
-    <div>
-      <div class="logo" style="display:flex;align-items:center;gap:.5rem">
-        <img src="assets/img/logo-lgbl.png" alt="LGBL" style="height:22px;border-radius:50%">
-        <span>LGBL Virtual Experience</span>
-      </div>
-      <p class="muted" style="margin-top:.5rem">© 2025 LGBL Virtual Experience Center — Conception : Lucas Galy</p>
+<footer>
+    <div class="container footer-inner">
+        <div class="footer-links">
+            <a href="mentions-legales.html" class="page-link">Mentions légales</a>
+            <a href="contact.html" class="page-link">Contact</a>
+            <a href="confidentialite.html" class="page-link">Confidentialité</a>
+        </div>
+        <div>
+            © <span id="year"></span> VIRTUAL CENTER EXPERIENCE. Tous droits réservés.
+        </div>
     </div>
-    <div>
-      <h4>Le site</h4>
-      <p><a href="index.html">Accueil</a><br><a href="tarifs.html">Tarifs</a><br><a href="evenements.html">Événements</a></p>
-    </div>
-    <div>
-      <h4>Contact</h4>
-      <p><a href="mailto:lucasgaly.47510@gmail.com">lucasgaly.47510@gmail.com</a><br><a href="tel:+33672392264">06 72 39 22 64</a></p>
-    </div>
-    <div>
-      <h4>LIVE</h4>
-      <p><a href="https://www.youtube.com/@LucasGaly24/streams" target="_blank" rel="noopener">YouTube</a></p>
-    </div>
-  </div>
 </footer>
 
-<div style="border-top:1px solid var(--line)">
-  <div class="container" style="padding:14px 0 22px;display:flex;gap:12px;flex-wrap:wrap;justify-content:center;font-size:.95rem">
-    <a href="mentions-legales.html">Mentions légales</a> · <a href="confidentialite.html">Confidentialité</a> · <a href="contact.html#form">Contact</a>
-  </div>
+<!-- COOKIE BANNER -->
+<div class="cookie-banner" id="cookie-banner">
+    <div class="cookie-inner">
+        <div>
+            Nous utilisons des cookies pour améliorer votre expérience sur le site.
+            En continuant votre navigation, vous acceptez leur utilisation.
+        </div>
+        <div class="cookie-actions">
+            <button class="btn-cookie-secondary" id="cookie-more">En savoir plus</button>
+            <button class="btn-cookie-main" id="cookie-accept">OK</button>
+        </div>
+    </div>
 </div>
 
 <script>
-  // Pré-remplissage bouton "Via le formulaire"
-  document.querySelectorAll('.btn-devis').forEach(btn => {
-    btn.addEventListener('click', () => {
-      const data = btn.getAttribute('data-prefill');
-      if(data){ try{ sessionStorage.setItem('lgbl_prefill', data); }catch(_){} }
-    });
-  });
+    // Année dynamique
+    document.getElementById("year").textContent = new Date().getFullYear();
 
-  // Live Timing: mémoriser l'URL et la restaurer
-  (function(){
-    const KEY = 'lgbl_livetiming_url';
-    const input = document.getElementById('lt-url');
-    const frame = document.getElementById('lt-frame');
-    const apply = document.getElementById('lt-apply');
-    const reset = document.getElementById('lt-reset');
+    // Menu burger
+    (function navToggle() {
+        const toggle = document.querySelector(".nav-toggle");
+        const links = document.querySelector(".nav-links");
+        if (!toggle || !links) return;
+        toggle.addEventListener("click", () => {
+            links.classList.toggle("open");
+        });
+    })();
 
-    try{
-      const saved = localStorage.getItem(KEY);
-      if(saved){ input.value = saved; frame.src = saved; }
-    }catch(_){}
+    // Cookie banner (localStorage)
+    (function cookieBanner() {
+        const banner = document.getElementById("cookie-banner");
+        if (!banner) return;
+        const accepted = localStorage.getItem("vcx_cookies_accepted");
+        if (!accepted) {
+            banner.style.display = "block";
+        }
+        const btnAccept = document.getElementById("cookie-accept");
+        const btnMore = document.getElementById("cookie-more");
 
-    apply.addEventListener('click', () => {
-      const url = input.value.trim();
-      if(!/^https?:\/\//.test(url)) { alert('Entre une URL valide commençant par http:// ou https://'); return; }
-      frame.src = url;
-      try{ localStorage.setItem(KEY, url); }catch(_){ }
-    });
+        if (btnAccept) {
+            btnAccept.addEventListener("click", () => {
+                localStorage.setItem("vcx_cookies_accepted", "yes");
+                banner.style.display = "none";
+            });
+        }
+        if (btnMore) {
+            btnMore.addEventListener("click", () => {
+                window.location.href = "confidentialite.html";
+            });
+        }
+    })();
 
-    reset.addEventListener('click', () => {
-      const def = 'http://80.11.31.77:8772/live-timing?server=0';
-      input.value = def; frame.src = def;
-      try{ localStorage.removeItem(KEY); }catch(_){ }
-    });
-  })();
+    // Transition logo entre les pages
+    (function pageTransition() {
+        const overlay = document.getElementById("page-transition");
+        if (!overlay) return;
 
-  // ---------- Avis : stockage local + moyenne + envoi mail ----------
-  (function(){
-    const KEY = 'lgbl_reviews';
-    const form = document.getElementById('reviewForm');
-    const nameEl = document.getElementById('revName');
-    const textEl = document.getElementById('revText');
-    const grid = document.getElementById('reviewsGrid');
-    const avgScore = document.getElementById('avgScore');
-    const avgStars = document.getElementById('avgStars');
-    const reviewsCount = document.getElementById('reviewsCount');
-    const sendBtn = document.getElementById('sendToTeam');
+        window.addEventListener("load", () => {
+            overlay.classList.remove("active");
+        });
 
-    function getReviews(){
-      try{ return JSON.parse(localStorage.getItem(KEY) || '[]'); }catch(e){ return []; }
-    }
-    function saveReviews(arr){
-      try{ localStorage.setItem(KEY, JSON.stringify(arr)); }catch(_){}
-    }
-    function initials(name){
-      const p = (name||'').trim().split(/\s+/);
-      return (p[0]?.[0]||'U').toUpperCase() + (p[1]?.[0]||'').toUpperCase();
-    }
-    function starLine(n){
-      const full = '★★★★★'.slice(0, n);
-      const rest = '☆☆☆☆☆'.slice(n);
-      return full + rest;
-    }
-    function renderUserReview(r){
-      const card = document.createElement('article');
-      card.className = 'card hoverable';
-      card.innerHTML = `
-        <div class="review-head">
-          <div class="review">
-            <div class="avatar">${initials(r.name)}</div>
-            <div><strong>${escapeHtml(r.name)}</strong><div class="muted">Avis utilisateur</div></div>
-          </div>
-          <div class="rating" aria-label="Note ${r.rate} sur 5">${starLine(r.rate)}</div>
-        </div>
-        <p>${escapeHtml(r.text)}</p>
-      `;
-      grid.prepend(card); // dernier avis en premier
-    }
-    function escapeHtml(s){ return (s||'').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c])); }
+        const links = document.querySelectorAll("a.page-link, .nav-links a");
 
-    function updateSummary(){
-      const baseCount = grid.querySelectorAll('.card.hoverable').length; // contient aussi les 6 exemples
-      const custom = getReviews();
-      const total = 6 + custom.length; // 6 avis statiques ci-dessus
-      reviewsCount.textContent = total;
+        links.forEach(link => {
+            const href = link.getAttribute("href");
+            if (!href || href.startsWith("#")) return;
 
-      // Moyenne basée sur : 5,5,4,5,4,1 (exemples) + avis utilisateurs
-      const baseSum = 5+5+4+5+4+1;
-      const userSum = custom.reduce((a,b)=>a+ (b.rate||0),0);
-      const avg = ((baseSum + userSum) / total) || 0;
-      avgScore.textContent = avg.toFixed(1);
-      const rounded = Math.round(avg);
-      avgStars.textContent = starLine(rounded);
-      avgStars.setAttribute('aria-label', `Note moyenne ${avg.toFixed(1)} sur 5`);
-    }
+            link.addEventListener("click", (e) => {
+                if (e.button !== 0 || e.metaKey || e.ctrlKey || e.shiftKey || e.altKey) return;
+                e.preventDefault();
+                overlay.classList.add("active");
+                setTimeout(() => {
+                    window.location.href = href;
+                }, 350);
+            });
+        });
 
-    // Charger les avis utilisateurs existants
-    getReviews().forEach(renderUserReview);
-    updateSummary();
-
-    // Soumission
-    form.addEventListener('submit', (e)=>{
-      e.preventDefault();
-      const name = nameEl.value.trim().slice(0,50);
-      const text = textEl.value.trim().slice(0,300);
-      const rateEl = form.querySelector('input[name="rate"]:checked');
-      if(!name || !text || !rateEl){ alert('Merci de remplir votre nom, une note et un avis.'); return; }
-
-      const rate = parseInt(rateEl.value,10);
-      const reviews = getReviews();
-      const rec = {name, text, rate, ts: Date.now()};
-      reviews.push(rec);
-      saveReviews(reviews);
-      renderUserReview(rec);
-      updateSummary();
-
-      form.reset();
-      // focus visuel
-      nameEl.blur();
-    });
-
-    // Envoyer à l’équipe (ouvre e-mail)
-    sendBtn.addEventListener('click', ()=>{
-      const rateEl = form.querySelector('input[name="rate"]:checked');
-      const name = nameEl.value.trim() || '(anonyme)';
-      const rate = rateEl ? `${rateEl.value}/5` : '(non renseigné)';
-      const text = textEl.value.trim() || '(vide)';
-      const body = encodeURIComponent(
-`Nouvel avis communauté LGBL
-
-Nom: ${name}
-Note: ${rate}
-Avis:
-${text}
-
-(Envoyé depuis la page Communauté)`
-      );
-      const mailto = `mailto:lucasgaly.47510@gmail.com?subject=${encodeURIComponent('[Avis] Communauté LGBL')}&body=${body}`;
-      window.location.href = mailto;
-    });
-  })();
+        overlay.classList.add("active");
+    })();
 </script>
-
 </body>
 </html>
