@@ -15,12 +15,12 @@
 
     <style>
         :root {
-            --bg-main: #050814;         /* bleu nuit */
+            --bg-main: #050814;
             --bg-soft: #0c1224;
             --card-bg: #111729;
             --card-soft: #151c30;
-            --accent-blue: #2f80ed;     /* bleu clair */
-            --accent-red: #d62839;      /* rouge */
+            --accent-blue: #2f80ed;
+            --accent-red: #d62839;
             --text-main: #f9fafb;
             --text-muted: #a0aecb;
             --border-soft: #262f45;
@@ -30,7 +30,6 @@
         }
 
         * { box-sizing: border-box; margin: 0; padding: 0; }
-
         html, body { height: 100%; }
 
         body {
@@ -50,7 +49,7 @@
             padding: 0 1.5rem;
         }
 
-        /* ================= HEADER ================= */
+        /* ============ HEADER ============ */
 
         header {
             position: sticky;
@@ -149,7 +148,7 @@
             border-radius: 999px;
         }
 
-        /* ================= PAGE TRANSITION ================= */
+        /* ============ TRANSITION LOGO ============ */
 
         #page-transition {
             position: fixed;
@@ -182,17 +181,15 @@
             transform: scale(1);
         }
 
-        /* ================= MAIN ================= */
+        /* ============ MAIN ============ */
 
-        main {
-            padding-bottom: 3.2rem;
-        }
+        main { padding-bottom: 3.2rem; }
 
         /* HERO plein écran */
 
         .hero {
             position: relative;
-            min-height: 65vh;
+            min-height: 100vh; /* plein écran */
             display: flex;
             align-items: center;
             justify-content: center;
@@ -201,15 +198,13 @@
             overflow: hidden;
         }
 
-        /* <--- mets ici ton image de fond (Aston / voiture) --->
-           Tu peux juste changer le nom du fichier dans url() */
         .hero::before {
             content: "";
             position: absolute;
             inset: 0;
             background:
-                linear-gradient(to bottom, rgba(5, 8, 20, 0.2), rgba(5, 8, 20, 0.85)),
-                url("assets/img/hero-aston.jpg") center/cover no-repeat;
+                linear-gradient(to bottom, rgba(5, 8, 20, 0.2), rgba(5, 8, 20, 0.88)),
+                url("assets/img/lmp2-bg.jpg") center/cover no-repeat;
             z-index: -1;
         }
 
@@ -223,24 +218,34 @@
             text-transform: uppercase;
             letter-spacing: 0.18em;
             color: #d1d5e5;
-            margin-bottom: 0.5rem;
+            margin-bottom: 0.7rem;
         }
 
         .hero-title {
-            font-size: clamp(2.4rem, 4vw, 3rem);
             font-weight: 800;
             text-transform: uppercase;
-            line-height: 1.15;
-            margin-bottom: 0.8rem;
+            line-height: 1.18;
+            margin-bottom: 0.9rem;
         }
 
-        .hero-title span.highlight {
+        .hero-title-main {
+            font-size: clamp(2.4rem, 4vw, 3rem);
+        }
+
+        .hero-title-main span.highlight {
             color: var(--accent-blue);
         }
 
+        .hero-title-sub {
+            font-size: 1.2rem;
+            font-weight: 700;
+            letter-spacing: 0.08em;
+        }
+
         .hero-tagline {
-            font-size: 1rem;
+            font-size: 0.98rem;
             color: #e5e7f5;
+            margin-top: 0.6rem;
             margin-bottom: 1.6rem;
         }
 
@@ -317,7 +322,7 @@
             box-shadow: 0 10px 26px rgba(0, 0, 0, 0.7);
         }
 
-        /* SECTION HORAIRES */
+        /* SECTION CONTENT */
 
         .section {
             margin-top: 2.5rem;
@@ -443,6 +448,26 @@
             pointer-events: none;
         }
 
+        /* PARTENAIRES */
+
+        .partners-card {
+            max-width: 820px;
+            margin: 0 auto;
+            background: var(--card-bg);
+            border-radius: var(--radius-lg);
+            padding: 1.1rem 1.3rem 1.4rem;
+            border: 1px solid var(--border-soft);
+            box-shadow: var(--shadow-soft);
+            text-align: center;
+            font-size: 0.9rem;
+            color: var(--text-muted);
+        }
+
+        .partners-placeholder {
+            margin-top: 0.6rem;
+            font-size: 0.85rem;
+        }
+
         /* FOOTER */
 
         footer {
@@ -498,7 +523,7 @@
             background: rgba(5, 8, 20, 0.96);
             border-top: 1px solid rgba(255, 255, 255, 0.12);
             padding: 0.8rem 1.5rem;
-            display: none; /* JS la passe en flex si pas acceptée */
+            display: none;
         }
 
         .cookie-inner {
@@ -589,8 +614,12 @@
         }
 
         @media (max-width: 520px) {
-            .hero-title {
+            .hero-title-main {
                 font-size: 2.1rem;
+            }
+
+            .hero-title-sub {
+                font-size: 1.05rem;
             }
 
             .hero-cta-group {
@@ -606,7 +635,6 @@
     </style>
 </head>
 <body>
-<!-- Transition logo -->
 <div id="page-transition">
     <img src="assets/img/logo-lgbl.png" alt="Logo LGBL Virtual Center Experience">
 </div>
@@ -640,10 +668,14 @@
     <section class="hero">
         <div class="hero-inner">
             <div class="hero-eyebrow">Simracing & VR à Agen</div>
-            <h1 class="hero-title">
-                <span class="highlight">Virtual Center Experience</span><br>
-                Salle de simulation virtuelle haut de gamme.
-            </h1>
+            <div class="hero-title">
+                <div class="hero-title-main">
+                    <span class="highlight">Virtual Center Experience</span>
+                </div>
+                <div class="hero-title-sub">
+                    Salle de simulation virtuelle haut de gamme.
+                </div>
+            </div>
             <p class="hero-tagline">
                 Simulateurs de pilotage dernière génération, ambiance paddock, bar & snacking,
                 soirées événements et tournois pour particuliers, groupes et entreprises.
@@ -654,6 +686,9 @@
                 <span class="hero-pill">Ambiance paddock</span>
                 <span class="hero-pill">Bar &amp; snacking</span>
                 <span class="hero-pill">Événements &amp; tournois</span>
+                <span class="hero-pill">Team buildings / entreprises</span>
+                <span class="hero-pill">Coaching</span>
+                <span class="hero-pill">Anniversaires</span>
             </div>
 
             <div class="hero-cta-group">
@@ -742,6 +777,22 @@
                 </p>
             </div>
         </section>
+
+        <!-- PARTENAIRES -->
+        <section class="section" id="partenaires">
+            <div class="section-header">
+                <h2 class="section-title">Nos <span>partenaires</span></h2>
+                <p class="section-subtitle">
+                    Marques, teams et acteurs locaux qui soutiennent le projet.
+                </p>
+            </div>
+            <div class="partners-card">
+                Logos et visuels partenaires seront affichés ici prochainement.
+                <div class="partners-placeholder">
+                    (Simulateurs, teams e-sport, commerces locaux, entreprises…)
+                </div>
+            </div>
+        </section>
     </div>
 </main>
 
@@ -776,7 +827,7 @@
     // Année dynamique
     document.getElementById("year").textContent = new Date().getFullYear();
 
-    // Mise en avant du jour actuel dans les horaires (bordure uniquement)
+    // Mise en avant du jour actuel
     (function highlightToday() {
         const now = new Date();
         const jsDay = now.getDay(); // 0 dimanche – 6 samedi
@@ -822,12 +873,11 @@
         }
     })();
 
-    // Transition logo entre les pages (simple fade + redirection)
+    // Transition logo entre les pages
     (function pageTransition() {
         const overlay = document.getElementById("page-transition");
         if (!overlay) return;
 
-        // Fade-out à l'arrivée
         window.addEventListener("load", () => {
             overlay.classList.remove("active");
         });
@@ -839,9 +889,7 @@
             if (!href || href.startsWith("#")) return;
 
             link.addEventListener("click", (e) => {
-                // laisser le clic milieu / ctrl-clic ouvrir un nouvel onglet
                 if (e.button !== 0 || e.metaKey || e.ctrlKey || e.shiftKey || e.altKey) return;
-
                 e.preventDefault();
                 overlay.classList.add("active");
                 setTimeout(() => {
@@ -850,7 +898,6 @@
             });
         });
 
-        // Activer l'overlay au tout début (il est actif par défaut dans le HTML)
         overlay.classList.add("active");
     })();
 </script>
