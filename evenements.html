@@ -49,7 +49,7 @@
             padding: 0 1.5rem;
         }
 
-        /* ============ HEADER (même que index) ============ */
+        /* ============ HEADER ============ */
 
         header {
             position: sticky;
@@ -183,9 +183,9 @@
 
         /* ============ MAIN ============ */
 
-        main { padding-bottom: 3.2rem; }
+        main { padding-bottom: 3.4rem; }
 
-        /* HERO (plus bas que l'accueil, mais même style) */
+        /* HERO : image + peu de texte */
 
         .hero {
             position: relative;
@@ -224,18 +224,12 @@
             font-size: clamp(2rem, 3.4vw, 2.6rem);
             font-weight: 800;
             text-transform: uppercase;
-            line-height: 1.18;
-            margin-bottom: 0.5rem;
+            line-height: 1.2;
+            margin-bottom: 1.4rem;
         }
 
         .hero-title-main span.highlight {
             color: var(--accent-blue);
-        }
-
-        .hero-subtitle {
-            font-size: 0.96rem;
-            color: #e5e7f5;
-            margin-bottom: 1.6rem;
         }
 
         .hero-tags {
@@ -256,12 +250,12 @@
         /* SECTIONS GÉNÉRALES */
 
         .section {
-            margin-top: 2.7rem;
+            margin-top: 3.5rem; /* plus d’espace entre blocs */
         }
 
         .section-header {
             max-width: 780px;
-            margin: 0 auto 1.2rem;
+            margin: 0 auto 1.5rem;
             text-align: center;
         }
 
@@ -286,19 +280,19 @@
         .event-grid-2 {
             display: grid;
             grid-template-columns: repeat(2, minmax(0, 1fr));
-            gap: 1rem;
+            gap: 1.2rem;
         }
 
         .event-grid-3 {
             display: grid;
             grid-template-columns: repeat(3, minmax(0, 1fr));
-            gap: 1rem;
+            gap: 1.2rem;
         }
 
         .event-card {
             background: var(--card-bg);
             border-radius: var(--radius-lg);
-            padding: 1rem 1rem 1.1rem;
+            padding: 1rem 1rem 1.2rem;
             border: 1px solid var(--border-soft);
             box-shadow: var(--shadow-soft);
             font-size: 0.9rem;
@@ -393,7 +387,7 @@
         }
 
         .event-note {
-            margin-top: 0.7rem;
+            margin-top: 1rem;
             font-size: 0.8rem;
             color: var(--text-muted);
             text-align: center;
@@ -597,13 +591,8 @@
         <div class="hero-inner">
             <div class="hero-eyebrow">Événements & expériences</div>
             <h1 class="hero-title-main">
-                <span class="highlight">Tournois & événements SimRacing</span><br>
-                Vivez la compétition comme sur un vrai circuit.
+                <span class="highlight">Tournois & événements</span>
             </h1>
-            <p class="hero-subtitle">
-                Tournois, soirées à thème, team building, anniversaires et coaching :
-                toutes nos formules sont pensées pour offrir immersion, fun et sensations fortes.
-            </p>
             <div class="hero-tags">
                 <span class="hero-tag-pill">Tournois</span>
                 <span class="hero-tag-pill">Entreprises & CSE</span>
@@ -619,7 +608,7 @@
             <div class="section-header">
                 <h2 class="section-title"><span>Tournois</span> & formats de course</h2>
                 <p class="section-subtitle">
-                    Du fun entre amis aux challenges d’endurance : choisissez le format qui vous ressemble.
+                    Formats sprint, endurance, time attack et soirées spéciales pour vivre la compétition comme sur un vrai circuit.
                 </p>
             </div>
 
@@ -627,14 +616,16 @@
                 <!-- Sprint -->
                 <article class="event-card">
                     <div class="event-card-header">
-                        <h3 class="event-card-title">Format Sprint</h3>
+                        <h3 class="event-card-title">Format Sprint / Relais</h3>
                         <span class="event-card-badge">Accès libre</span>
                     </div>
-                    <p>Courses courtes, intenses et accessibles à tous. Idéales pour se challenger sans prise de tête.</p>
+                    <p>
+                        Courses rapides, intenses et modulables : parfaites pour se challenger entre amis ou lancer une soirée.
+                    </p>
                     <ul class="event-list">
-                        <li>Essais + qualification courte</li>
-                        <li>Course de 5 à 10 minutes</li>
-                        <li>Parfait entre amis ou pour lancer une soirée</li>
+                        <li>À partir de 10 minutes jusqu’à 2h</li>
+                        <li>Relais possibles entre pilotes sur un même simulateur</li>
+                        <li>Idéal pour des défis rapides avec classement immédiat</li>
                     </ul>
                     <div class="event-card-footer">
                         <a href="contact.html" class="btn-small btn-small-ghost page-link">Infos & organisation</a>
@@ -644,17 +635,19 @@
                 <!-- Endurance -->
                 <article class="event-card">
                     <div class="event-card-header">
-                        <h3 class="event-card-title">Format Endurance</h3>
+                        <h3 class="event-card-title">Endurance (6h / 8h / 12h)</h3>
                         <span class="event-card-badge">Sur réservation</span>
                     </div>
-                    <p>Pour les pilotes qui veulent vivre un vrai défi de performance et de régularité.</p>
+                    <p>
+                        De vraies courses d’endurance avec relais, stratégie et gestion de la fatigue.
+                    </p>
                     <ul class="event-list">
-                        <li>Courses de 15 à 60 minutes</li>
-                        <li>Relais en équipe possibles</li>
-                        <li>Gestion pneus, carburant et stratégie</li>
+                        <li>Formats 6h, 8h ou 12h</li>
+                        <li>Jusqu’à 8 postes sur place + pilotes VSE à distance</li>
+                        <li>Organisation complète : relais, timing, classement final</li>
                     </ul>
                     <div class="event-card-footer">
-                        <a href="contact.html" class="btn-small btn-small-main page-link">Réserver un format endurance</a>
+                        <a href="contact.html" class="btn-small btn-small-main page-link">Réserver une endurance</a>
                     </div>
                 </article>
 
@@ -664,11 +657,11 @@
                         <h3 class="event-card-title">Time Attack</h3>
                         <span class="event-card-badge">Meilleur chrono</span>
                     </div>
-                    <p>Un seul objectif : signer le meilleur tour de la journée ou de la semaine.</p>
+                    <p>Mode simple et addictif : le but est de signer le meilleur temps sur la période donnée.</p>
                     <ul class="event-list">
+                        <li>Défi du meilleur tour de la journée ou de la semaine</li>
                         <li>Tentatives selon votre formule</li>
                         <li>Classement affiché dans le centre</li>
-                        <li>Idéal pour créer une rivalité entre potes</li>
                     </ul>
                     <div class="event-card-footer">
                         <a href="contact.html" class="btn-small btn-small-ghost page-link">Participer au Time Attack</a>
@@ -681,21 +674,50 @@
                         <h3 class="event-card-title">Soirées à thème</h3>
                         <span class="event-card-badge">Évents spéciaux</span>
                     </div>
-                    <p>Des soirées complètes autour d’une catégorie ou d’un univers précis.</p>
+                    <p>
+                        Des soirées complètes autour d’une catégorie ou d’un événement particulier.
+                    </p>
                     <ul class="event-list">
-                        <li>Soirées F1, GT3, Rallye, 24H, rétro…</li>
-                        <li>Classement dédié & ambiance paddock</li>
-                        <li>Décor et animations spécifiques</li>
+                        <li>F1, GT3, Rallye, 24H, rétro, etc.</li>
+                        <li>Décor spécifique et ambiance paddock</li>
+                        <li>Classement dédié, animations et lots possibles</li>
                     </ul>
                     <div class="event-card-footer">
-                        <a href="contact.html" class="btn-small btn-small-main page-link">Recevoir le calendrier des soirées</a>
+                        <a href="contact.html" class="btn-small btn-small-main page-link">Recevoir le calendrier</a>
                     </div>
                 </article>
             </div>
 
+            <!-- Diffusion d'événements -->
+            <div class="section-header" style="margin-top:2.2rem;">
+                <h2 class="section-title"><span>Diffusion</span> d’événements</h2>
+                <p class="section-subtitle">
+                    Vivez les grands rendez-vous du sport auto et d’autres événements sportifs dans l’ambiance du centre.
+                </p>
+            </div>
+
+            <article class="event-card">
+                <div class="event-card-header">
+                    <h3 class="event-card-title">Diffusion de courses & matchs</h3>
+                    <span class="event-card-badge">Grand écran</span>
+                </div>
+                <p>
+                    Suivez les grands prix et les grandes courses dans une ambiance conviviale : écran, sonorisation
+                    et possibilité de rouler avant ou après la course.
+                </p>
+                <ul class="event-list">
+                    <li>F1, WEC, IMSA, endurance, e-sport, etc.</li>
+                    <li>Diffusion de certains matchs ou événements spéciaux</li>
+                    <li>Possibilité de formules boisson + session simulateur</li>
+                </ul>
+                <div class="event-card-footer">
+                    <a href="contact.html" class="btn-small btn-small-ghost page-link">Connaître le programme</a>
+                </div>
+            </article>
+
             <p class="event-note">
-                Les formats <strong>Endurance</strong>, <strong>Soirées à thème</strong> et certains tournois complets se font
-                sur inscription via le formulaire de <a href="contact.html" class="page-link"><strong>Contact</strong></a>.
+                Réservations possibles par <strong>téléphone</strong>, via le formulaire de <a href="contact.html" class="page-link"><strong>Contact</strong></a>
+                ou directement sur place au centre.
             </p>
         </section>
 
@@ -704,7 +726,8 @@
             <div class="section-header">
                 <h2 class="section-title"><span>Entreprises</span> & Team Building</h2>
                 <p class="section-subtitle">
-                    Renforcez la cohésion de vos équipes dans un cadre inspiré des paddocks et des stands de course.
+                    Une activité originale pour renforcer la cohésion, la communication et l’engagement de vos équipes.
+                    Capacité idéale : jusqu’à <strong>24 personnes</strong>, avec création de groupes et de relais.
                 </p>
             </div>
 
@@ -716,13 +739,12 @@
                         <span class="event-card-badge">Sur devis</span>
                     </div>
                     <p>
-                        Centre réservé pour votre entreprise : idéal pour une soirée, un lancement de produit
-                        ou un événement CSE.
+                        Centre réservé pour votre entreprise ou votre CSE : vous profitez du lieu comme d’un paddock privé.
                     </p>
                     <ul class="event-list">
                         <li>Accès complet aux simulateurs et à l’espace détente</li>
-                        <li>Possibilité de personnaliser circuits & catégories</li>
                         <li>Créneaux dédiés (dont le mardi pour les pros)</li>
+                        <li>Personnalisation possible : voitures, circuits, affichage, etc.</li>
                     </ul>
                     <div class="event-card-footer">
                         <a href="contact.html" class="btn-small btn-small-main page-link">Demander un devis</a>
@@ -736,31 +758,31 @@
                         <span class="event-card-badge">Cohésion</span>
                     </div>
                     <p>
-                        Formules clés en main pour renforcer l’esprit d’équipe autour de formats ludiques et compétitifs.
+                        Une animation structurée autour de la course pour créer du lien et travailler la collaboration.
                     </p>
                     <ul class="event-list">
-                        <li>Tournois internes avec classement en direct</li>
-                        <li>Courses en relais & défis par équipes</li>
-                        <li>Podium, remise de prix et photos souvenir</li>
+                        <li>Groupes jusqu’à 24 personnes, avec rotations</li>
+                        <li>Tournois internes, relais, défis par équipes</li>
+                        <li>Classement en direct, podium et photos souvenir</li>
                     </ul>
                     <div class="event-card-footer">
                         <a href="contact.html" class="btn-small btn-small-ghost page-link">Organiser un team building</a>
                     </div>
                 </article>
 
-                <!-- Entreprises -->
+                <!-- Bénéfices entreprise -->
                 <article class="event-card">
                     <div class="event-card-header">
-                        <h3 class="event-card-title">Entreprises</h3>
-                        <span class="event-card-badge">Motivation</span>
+                        <h3 class="event-card-title">Bénéfices pour l’entreprise</h3>
+                        <span class="event-card-badge">Impact</span>
                     </div>
                     <p>
-                        Une expérience innovante qui marque les esprits et renforce la motivation de vos équipes.
+                        Un format ludique mais utile, qui laisse une vraie trace dans l’équipe.
                     </p>
                     <ul class="event-list">
-                        <li>Activité accessible à tous niveaux</li>
-                        <li>Cohésion, engagement et bien-être au travail</li>
-                        <li>Accompagnement par nos coachs simracing</li>
+                        <li>Cohésion renforcée, gestion de la pression et de la prise de décision</li>
+                        <li>Moment de détente marquant, loin du cadre habituel</li>
+                        <li>Image moderne et dynamique auprès des collaborateurs</li>
                     </ul>
                     <div class="event-card-footer">
                         <a href="contact.html" class="btn-small btn-small-main page-link">Parler de votre projet</a>
@@ -769,7 +791,9 @@
             </div>
 
             <p class="event-note">
-                Toutes les formules entreprises & CSE se réservent via le formulaire de <a href="contact.html" class="page-link"><strong>Contact</strong></a>.
+                Organisation possible en collaboration avec votre <strong>CSE</strong>, votre service RH ou votre direction.
+                Réservation uniquement par devis via la page <a href="contact.html" class="page-link"><strong>Contact</strong></a>
+                ou par téléphone.
             </p>
         </section>
 
@@ -778,7 +802,7 @@
             <div class="section-header">
                 <h2 class="section-title"><span>Anniversaires</span> & Formule Jeunes</h2>
                 <p class="section-subtitle">
-                    Offrez un anniversaire unique dans l’univers du simracing : immersion, fun et souvenirs garantis.
+                    Une formule clé en main pour les enfants et ados : pilotage, mini-championnat, podium et goûter en ambiance paddock.
                 </p>
             </div>
 
@@ -789,10 +813,10 @@
                         <span class="event-card-badge">Jeunes</span>
                     </div>
                     <p>
-                        Une formule pensée pour les enfants et ados, encadrée par un animateur simracing.
+                        Encadrement complet par un animateur simracing pour un groupe de jeunes passionnés.
                     </p>
                     <ul class="event-list">
-                        <li>Briefing & initiation au pilotage</li>
+                        <li>Briefing + initiation au pilotage</li>
                         <li>Essais, qualifications et course finale</li>
                         <li>Classement, podium et photo souvenir</li>
                     </ul>
@@ -807,12 +831,12 @@
                         <span class="event-card-badge">Convivial</span>
                     </div>
                     <p>
-                        Après la course, place au moment de fête dans notre espace détente en ambiance paddock.
+                        Un moment pour souffler les bougies après la course dans un espace réservé.
                     </p>
                     <ul class="event-list">
-                        <li>Table réservée pour le groupe</li>
-                        <li>Possibilité d’apporter le gâteau</li>
-                        <li>Bar (softs) et musique d’ambiance</li>
+                        <li>Table dédiée au groupe, possibilité d’apporter le gâteau</li>
+                        <li>Boissons softs disponibles au bar</li>
+                        <li>Musique et décoration légère type paddock</li>
                     </ul>
                     <div class="event-card-footer">
                         <a href="contact.html" class="btn-small btn-small-ghost page-link">Infos & disponibilités</a>
@@ -821,8 +845,8 @@
             </div>
 
             <p class="event-note">
-                Formule idéale pour <strong>4 à 8 enfants</strong> (adaptable). Réservation obligatoire via la page
-                <a href="contact.html" class="page-link"><strong>Contact</strong></a>.
+                Formule idéale pour <strong>4 à 8 enfants</strong> (adaptable). Réservation par téléphone, sur place ou via
+                le formulaire de <a href="contact.html" class="page-link"><strong>Contact</strong></a>.
             </p>
         </section>
 
@@ -831,7 +855,7 @@
             <div class="section-header">
                 <h2 class="section-title"><span>Coaching</span> SimRacing</h2>
                 <p class="section-subtitle">
-                    Débutants, intermédiaires ou pilotes confirmés : progressez avec un accompagnement personnalisé.
+                    Séances personnalisées pour apprendre, progresser ou préparer des championnats en ligne, du débutant au pilote confirmé.
                 </p>
             </div>
 
@@ -842,12 +866,12 @@
                         <span class="event-card-badge">Personnalisé</span>
                     </div>
                     <p>
-                        Une séance taillée pour votre niveau, vos objectifs et votre style de pilotage.
+                        Une séance dédiée à votre niveau et vos objectifs, avec correction en direct.
                     </p>
                     <ul class="event-list">
-                        <li>Analyse de vos habitudes et de vos points faibles</li>
-                        <li>Travail des bases : position, freinage, trajectoires</li>
-                        <li>Rythme, régularité et confiance au volant</li>
+                        <li>Analyse de votre conduite et de vos habitudes</li>
+                        <li>Bases : position, freinage, trajectoires, régularité</li>
+                        <li>Adapté aux enfants, ados et adultes</li>
                     </ul>
                     <div class="event-card-footer">
                         <a href="contact.html" class="btn-small btn-small-main page-link">Réserver un coaching</a>
@@ -856,16 +880,16 @@
 
                 <article class="event-card">
                     <div class="event-card-header">
-                        <h3 class="event-card-title">Perf & préparation</h3>
+                        <h3 class="event-card-title">Perf & compétition</h3>
                         <span class="event-card-badge">Performance</span>
                     </div>
                     <p>
-                        Pour les pilotes qui veulent aller plus loin : chronos, endurance ou championnats en ligne.
+                        Pour aller plus loin : technique avancée, gestion des pneus, préparation à l’endurance ou aux championnats.
                     </p>
                     <ul class="event-list">
-                        <li>Techniques avancées : trail-braking, appuis, gestion pneus</li>
-                        <li>Débriefing complet avec conseils concrets</li>
-                        <li>Formules 30 min, 1h, 2h et sessions compétition</li>
+                        <li>Trail-braking, vitesse d’entrée, appuis & stabilité</li>
+                        <li>Débriefing complet avec axes de travail</li>
+                        <li>Formules 30 min, 1h, 2h ou sessions sur mesure</li>
                     </ul>
                     <div class="event-card-footer">
                         <a href="contact.html" class="btn-small btn-small-ghost page-link">Parler de votre niveau</a>
@@ -874,8 +898,8 @@
             </div>
 
             <p class="event-note">
-                Les coachings se font uniquement sur réservation via le formulaire de 
-                <a href="contact.html" class="page-link"><strong>Contact</strong></a>.
+                Coaching uniquement sur réservation : <strong>téléphone</strong>, formulaire de <a href="contact.html" class="page-link"><strong>Contact</strong></a>
+                ou directement à l’accueil du centre.
             </p>
         </section>
     </div>
