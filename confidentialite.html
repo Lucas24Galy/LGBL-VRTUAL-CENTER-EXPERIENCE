@@ -1,238 +1,795 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>Politique de confidentialité – LGBL Virtual Experience Center</title>
-  <meta name="description" content="Politique de confidentialité et gestion des cookies – LGBL Virtual Experience Center">
-  <link rel="icon" type="image/png" href="assets/img/logo-lgbl.png">
-  <link rel="stylesheet" href="assets/css/styles.css">
-  <style>
-    body{font-family:Poppins,system-ui,-apple-system,Segoe UI,Roboto,sans-serif;margin:0;background:#f7f7f7;color:#222;line-height:1.7}
-    main{background:#fff;max-width:980px;margin:48px auto;padding:48px;border-radius:14px;box-shadow:0 3px 12px rgba(0,0,0,.1)}
-    h1{color:#d60000;text-align:center;margin:0 0 24px}
-    h2{color:#0056b3;margin-top:36px}
-    h3{margin-top:28px}
-    a{color:#d60000;text-decoration:none}
-    a:hover{text-decoration:underline}
-    table{width:100%;border-collapse:collapse;margin:12px 0 24px}
-    th,td{border:1px solid #e5e5e5;padding:10px 12px;text-align:left}
-    th{background:#fafafa}
-    .muted{color:#666;font-size:.95em}
-    .card{border:1px solid #eee;border-radius:10px;padding:16px;background:#fafafa}
-    .grid{display:grid;gap:14px}
-    @media(min-width:720px){.grid{grid-template-columns:repeat(2,1fr)}}
-    .banner{background:#111;color:#fff;border-radius:10px;padding:14px 16px}
-    .btn{display:inline-block;background:#d60000;color:#fff;border:none;border-radius:8px;padding:10px 16px;font-weight:600;cursor:pointer}
-    .btn.secondary{background:#555}
-    .switch{display:flex;align-items:center;gap:12px;justify-content:space-between;border:1px solid #eee;padding:12px 14px;border-radius:10px;background:#fff}
-    .switch input{transform:scale(1.2)}
-    footer{margin:56px auto 24px;text-align:center;color:#888}
-  </style>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Confidentialité & RGPD | VIRTUAL CENTER EXPERIENCE</title>
+
+    <meta name="description" content="Politique de confidentialité et informations RGPD du site VIRTUAL CENTER EXPERIENCE, salle de simulation virtuelle à Agen.">
+
+    <!-- Police -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+
+    <style>
+        :root {
+            --bg-main: #050814;
+            --bg-soft: #0c1224;
+            --card-bg: #111729;
+            --card-soft: #151c30;
+            --accent-blue: #2f80ed;
+            --accent-red: #d62839;
+            --text-main: #f9fafb;
+            --text-muted: #a0aecb;
+            --border-soft: #262f45;
+            --radius-lg: 14px;
+            --shadow-soft: 0 18px 40px rgba(0, 0, 0, 0.6);
+            --transition-fast: 0.18s ease-out;
+        }
+
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        html, body { height: 100%; }
+
+        body {
+            font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+            background: var(--bg-main);
+            color: var(--text-main);
+            line-height: 1.6;
+        }
+
+        a { color: inherit; text-decoration: none; }
+        img { max-width: 100%; display: block; }
+
+        .container {
+            width: 100%;
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 1.5rem;
+        }
+
+        /* ============ HEADER ============ */
+
+        header {
+            position: sticky;
+            top: 0;
+            z-index: 30;
+            backdrop-filter: blur(12px);
+            background: rgba(5, 8, 20, 0.96);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+        }
+
+        .nav {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0.7rem 0;
+        }
+
+        .nav-left {
+            display: flex;
+            align-items: center;
+            gap: 0.9rem;
+        }
+
+        .logo-img {
+            height: 40px;
+            width: auto;
+        }
+
+        .brand-text {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .brand-title {
+            font-weight: 800;
+            font-size: 0.95rem;
+            letter-spacing: 0.16em;
+            text-transform: uppercase;
+        }
+
+        .brand-subtitle {
+            font-size: 0.8rem;
+            color: var(--text-muted);
+        }
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            list-style: none;
+        }
+
+        .nav-links a {
+            font-size: 0.86rem;
+            text-transform: uppercase;
+            letter-spacing: 0.14em;
+            padding: 0.5rem 0.95rem;
+            border-radius: 999px;
+            border: 1px solid transparent;
+            cursor: pointer;
+            transition:
+                transform var(--transition-fast),
+                box-shadow var(--transition-fast),
+                border-color var(--transition-fast),
+                background 0.2s ease-out;
+        }
+
+        .nav-links a:hover {
+            transform: translateY(-1px);
+            box-shadow: 0 10px 24px rgba(0, 0, 0, 0.5);
+            border-color: rgba(255, 255, 255, 0.12);
+            background: rgba(16, 22, 44, 0.9);
+        }
+
+        .nav-links a.active {
+            border-color: var(--accent-red);
+            background: linear-gradient(120deg, #163761, var(--accent-red));
+        }
+
+        .nav-toggle {
+            display: none;
+            background: none;
+            border: 1px solid rgba(255, 255, 255, 0.22);
+            border-radius: 999px;
+            padding: 0.3rem 0.6rem;
+            color: var(--text-main);
+            cursor: pointer;
+        }
+
+        .nav-toggle span {
+            display: block;
+            width: 20px;
+            height: 2px;
+            background: var(--text-main);
+            margin: 3px 0;
+            border-radius: 999px;
+        }
+
+        /* ============ TRANSITION LOGO ============ */
+
+        #page-transition {
+            position: fixed;
+            inset: 0;
+            background: #050814;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 50;
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 0.35s ease-out;
+        }
+
+        #page-transition.active {
+            opacity: 1;
+            pointer-events: auto;
+        }
+
+        #page-transition img {
+            width: 80px;
+            height: auto;
+            opacity: 0;
+            transform: scale(0.92);
+            transition: opacity 0.35s ease-out, transform 0.35s ease-out;
+        }
+
+        #page-transition.active img {
+            opacity: 1;
+            transform: scale(1);
+        }
+
+        /* ============ MAIN ============ */
+
+        main { padding-bottom: 3.4rem; }
+
+        /* HERO */
+
+        .hero {
+            position: relative;
+            min-height: 40vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background:
+                linear-gradient(to bottom, rgba(5, 8, 20, 0.4), rgba(5, 8, 20, 0.96)),
+                url("assets/img/lmp2-bg.jpg") center/cover no-repeat;
+            z-index: -1;
+        }
+
+        .hero-inner {
+            max-width: 700px;
+            padding: 3rem 1.5rem 2.4rem;
+        }
+
+        .hero-eyebrow {
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 0.18em;
+            color: #d1d5e5;
+            margin-bottom: 0.7rem;
+        }
+
+        .hero-title-main {
+            font-size: clamp(2rem, 3.2vw, 2.5rem);
+            font-weight: 800;
+            text-transform: uppercase;
+            line-height: 1.2;
+            margin-bottom: 0.5rem;
+        }
+
+        .hero-title-main span.highlight {
+            color: var(--accent-blue);
+        }
+
+        .hero-subtitle {
+            font-size: 0.95rem;
+            color: #e5e7f5;
+            margin-bottom: 1.2rem;
+        }
+
+        /* CONTENT */
+
+        .legal-section {
+            margin-top: 3rem;
+        }
+
+        .legal-card {
+            background: var(--card-bg);
+            border-radius: var(--radius-lg);
+            padding: 1.3rem 1.4rem 1.4rem;
+            border: 1px solid var(--border-soft);
+            box-shadow: var(--shadow-soft);
+            font-size: 0.9rem;
+        }
+
+        .legal-title {
+            font-size: 0.98rem;
+            text-transform: uppercase;
+            letter-spacing: 0.16em;
+            margin-bottom: 0.8rem;
+        }
+
+        .legal-title span {
+            color: var(--accent-blue);
+        }
+
+        .legal-block {
+            margin-bottom: 1.2rem;
+        }
+
+        .legal-block h3 {
+            font-size: 0.92rem;
+            margin-bottom: 0.3rem;
+        }
+
+        .legal-block p {
+            font-size: 0.88rem;
+            color: var(--text-muted);
+        }
+
+        .legal-block ul {
+            margin: 0.4rem 0 0.8rem;
+            padding-left: 1.1rem;
+        }
+
+        .legal-block li {
+            font-size: 0.87rem;
+            color: var(--text-muted);
+            margin-bottom: 0.2rem;
+        }
+
+        .legal-note {
+            font-size: 0.8rem;
+            color: var(--text-muted);
+            margin-top: 0.6rem;
+        }
+
+        strong { color: #e5e7f5; }
+
+        /* FOOTER */
+
+        footer {
+            border-top: 1px solid rgba(255, 255, 255, 0.08);
+            padding: 1.1rem 0 1.4rem;
+            background: #050814;
+        }
+
+        .footer-inner {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: space-between;
+            gap: 0.7rem;
+            font-size: 0.8rem;
+            color: var(--text-muted);
+        }
+
+        .footer-links {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.9rem;
+        }
+
+        .footer-links a {
+            position: relative;
+            cursor: pointer;
+        }
+
+        .footer-links a::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: -2px;
+            width: 0;
+            height: 1px;
+            background: var(--accent-blue);
+            transition: width 0.18s ease-out;
+        }
+
+        .footer-links a:hover::after {
+            width: 100%;
+        }
+
+        /* COOKIE BANNER */
+
+        .cookie-banner {
+            position: fixed;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            z-index: 40;
+            background: rgba(5, 8, 20, 0.96);
+            border-top: 1px solid rgba(255, 255, 255, 0.12);
+            padding: 0.8rem 1.5rem;
+            display: none;
+        }
+
+        .cookie-inner {
+            max-width: 1100px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 0.9rem;
+            font-size: 0.8rem;
+            color: var(--text-muted);
+        }
+
+        .cookie-actions {
+            display: flex;
+            gap: 0.5rem;
+            flex-shrink: 0;
+        }
+
+        .btn-cookie-main,
+        .btn-cookie-secondary {
+            border-radius: 999px;
+            padding: 0.4rem 0.9rem;
+            font-size: 0.8rem;
+            border: 1px solid transparent;
+            cursor: pointer;
+            white-space: nowrap;
+        }
+
+        .btn-cookie-main {
+            background: var(--accent-blue);
+            color: #ffffff;
+            border-color: var(--accent-blue);
+        }
+
+        .btn-cookie-secondary {
+            background: transparent;
+            color: var(--text-muted);
+            border-color: rgba(255, 255, 255, 0.2);
+        }
+
+        /* RESPONSIVE */
+
+        @media (max-width: 840px) {
+            .nav-links {
+                position: absolute;
+                inset: 100% 0 auto 0;
+                background: rgba(4, 8, 20, 0.98);
+                border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+                padding: 0.75rem 1.5rem 1rem;
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 0.25rem;
+                transform-origin: top;
+                transform: scaleY(0.7);
+                opacity: 0;
+                pointer-events: none;
+                transition: opacity 0.18s ease-out, transform 0.18s ease-out;
+            }
+
+            .nav-links.open {
+                opacity: 1;
+                transform: scaleY(1);
+                pointer-events: auto;
+            }
+
+            .nav-toggle {
+                display: inline-flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                gap: 2px;
+            }
+
+            .cookie-inner {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .cookie-actions {
+                align-self: stretch;
+                justify-content: flex-end;
+            }
+        }
+
+        @media (max-width: 520px) {
+            .footer-inner {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+        }
+    </style>
 </head>
 <body>
-  <main>
-    <h1>Politique de confidentialité</h1>
-    <p class="muted"><strong>Dernière mise à jour :</strong> octobre 2025</p>
+<div id="page-transition">
+    <img src="assets/img/logo-lgbl.png" alt="Logo LGBL Virtual Center Experience">
+</div>
 
-    <p>La présente politique explique comment <strong>LGBL Virtual Experience Center</strong> (“nous”) collecte, utilise et protège vos données personnelles lorsque vous utilisez notre site.</p>
+<header>
+    <div class="container nav">
+        <div class="nav-left">
+            <img src="assets/img/logo-lgbl.png" alt="Logo VIRTUAL CENTER EXPERIENCE" class="logo-img">
+            <div class="brand-text">
+                <span class="brand-title">VIRTUAL CENTER EXPERIENCE</span>
+                <span class="brand-subtitle">Salle de simulation virtuelle</span>
+            </div>
+        </div>
 
-    <h2>1) Responsable du traitement</h2>
-    <p>
-      <strong>Lucas Galy</strong><br>
-      Agen (47000), France – Tél. : 06&nbsp;72&nbsp;39&nbsp;22&nbsp;64<br>
-      E-mail : <a href="mailto:lucasgaly.47510@gmail.com">lucasgaly.47510@gmail.com</a>
-    </p>
+        <button class="nav-toggle" aria-label="Ouvrir le menu">
+            <span></span><span></span><span></span>
+        </button>
 
-    <h2>2) Données que nous collectons</h2>
-    <ul>
-      <li><strong>Données fournies</strong> : nom, prénom, e-mail, téléphone, message (formulaire de contact / réservation / newsletter).</li>
-      <li><strong>Données techniques</strong> : adresse IP, type/versions de navigateur, pages consultées, durée/horodatage, référents.</li>
-      <li><strong>Cookies</strong> (voir §8) : préférences, mesure d’audience, marketing si vous y consentez.</li>
-    </ul>
-
-    <h2>3) Finalités et bases légales</h2>
-    <table>
-      <thead><tr><th>Finalité</th><th>Base légale (art. 6 RGPD)</th></tr></thead>
-      <tbody>
-        <tr><td>Réponse à vos demandes (contact/réservation)</td><td>Consentement (6-1-a) ou mesures précontractuelles (6-1-b)</td></tr>
-        <tr><td>Information commerciale (ouverture, événements, offres)</td><td>Consentement (6-1-a)</td></tr>
-        <tr><td>Mesure d’audience et amélioration du site</td><td>Intérêt légitime (6-1-f) pour analytics exemptés OU consentement (selon l’outil)</td></tr>
-        <tr><td>Sécurité, prévention de la fraude</td><td>Intérêt légitime (6-1-f)</td></tr>
-        <tr><td>Obligations légales (facturation, conservation)</td><td>Obligation légale (6-1-c)</td></tr>
-      </tbody>
-    </table>
-
-    <h2>4) Durées de conservation</h2>
-    <table>
-      <thead><tr><th>Type de donnée</th><th>Durée</th></tr></thead>
-      <tbody>
-        <tr><td>Données de contact (prospects)</td><td>12 mois après dernier contact</td></tr>
-        <tr><td>Pièces liées à des obligations (compta, facturation)</td><td>Jusqu’à 10 ans (obligations légales)</td></tr>
-        <tr><td>Cookies de mesure d’audience</td><td>Jusqu’à 13 mois</td></tr>
-        <tr><td>Logs techniques de sécurité</td><td>6 à 12 mois</td></tr>
-      </tbody>
-    </table>
-
-    <h2>5) Destinataires et sous-traitants</h2>
-    <p>Les données sont destinées à LGBL Virtual Experience Center. Elles peuvent être traitées par des prestataires techniques (hébergeur, e-mailing) strictement nécessaires à la fourniture du service, conformément à l’article 28 RGPD. Aucune vente de données.</p>
-
-    <h2>6) Transferts hors Union européenne</h2>
-    <p>Par défaut, <strong>aucun transfert hors UE/EEE</strong>. Si nous devions utiliser un outil impliquant un transfert (ex. analytics US), celui-ci ne serait activé <strong>qu’avec votre consentement</strong> et encadré par des garanties appropriées (clauses contractuelles types, etc.).</p>
-
-    <h2>7) Sécurité</h2>
-    <p>Mesures mises en œuvre : HTTPS/TLS, mises à jour serveur, durcissement d’accès, pare-feu, journalisation de sécurité. Malgré tout, aucun système n’est invulnérable.</p>
-
-    <h2>8) Cookies & traceurs</h2>
-    <div class="card">
-      <p>Nous utilisons des cookies pour : (i) le fonctionnement du site, (ii) la mesure d’audience, (iii) la personnalisation/marketing (désactivés par défaut).</p>
-      <div class="grid">
-        <div><strong>Fonctionnels (exemptés)*</strong><br><span class="muted">Indispensables au site (consentement mémorisé, préférences d’interface).</span></div>
-        <div><strong>Analytics</strong><br><span class="muted">Mesurer la fréquentation et améliorer le site.</span></div>
-        <div><strong>Marketing</strong><br><span class="muted">Personnalisation, réseaux sociaux, publicité.</span></div>
-        <div><span class="muted">* Sous conditions de paramétrage conforme à la CNIL ; sinon, consentement requis.</span></div>
-      </div>
+        <ul class="nav-links">
+            <li><a href="index.html" class="page-link">Accueil</a></li>
+            <li><a href="tarifs.html" class="page-link">Tarifs</a></li>
+            <li><a href="evenements.html" class="page-link">Événements</a></li>
+            <li><a href="communaute.html" class="page-link">Communauté</a></li>
+            <li><a href="contact.html" class="page-link">Contact</a></li>
+        </ul>
     </div>
+</header>
 
-    <h3 id="consent-manager">Gestion fine du consentement</h3>
-    <p>Vous pouvez modifier vos choix ci-dessous à tout moment.</p>
+<main>
+    <!-- HERO -->
+    <section class="hero">
+        <div class="hero-inner">
+            <div class="hero-eyebrow">Protection des données</div>
+            <h1 class="hero-title-main">
+                <span class="highlight">Confidentialité</span> & RGPD.
+            </h1>
+            <p class="hero-subtitle">
+                Comment nous collectons, utilisons et protégeons les informations que vous nous confiez
+                lorsque vous utilisez le site ou contactez VIRTUAL CENTER EXPERIENCE.
+            </p>
+        </div>
+    </section>
 
-    <div class="switch">
-      <div><strong>Fonctionnels</strong><div class="muted">Toujours actifs (nécessaires)</div></div>
-      <input type="checkbox" checked disabled>
+    <div class="container legal-section">
+        <div class="legal-card">
+            <!-- 1. RESPONSABLE -->
+            <h2 class="legal-title"><span>1.</span> Responsable du traitement</h2>
+            <div class="legal-block">
+                <p>
+                    Les données personnelles collectées via ce site sont traitées par&nbsp;:
+                </p>
+                <p>
+                    <strong>VIRTUAL CENTER EXPERIENCE</strong><br/>
+                    37 avenue du Général de Gaulle, 47000 Agen – France<br/>
+                    E-mail : <strong>virtualcenterexperience@gmail.com</strong><br/>
+                    Téléphone : <strong>06&nbsp;72&nbsp;39&nbsp;22&nbsp;64</strong>
+                </p>
+            </div>
+
+            <!-- 2. DONNÉES COLLECTÉES -->
+            <h2 class="legal-title"><span>2.</span> Données collectées</h2>
+            <div class="legal-block">
+                <p>
+                    Dans le cadre de l’utilisation du site et des formulaires de contact, nous pouvons collecter
+                    les catégories de données suivantes&nbsp;:
+                </p>
+                <ul>
+                    <li><strong>Identité :</strong> nom, prénom</li>
+                    <li><strong>Coordonnées :</strong> adresse e-mail, numéro de téléphone</li>
+                    <li><strong>Informations de demande :</strong> objet, type d’activité souhaitée, nombre de participants,
+                        date/heure souhaitée, détails de l’événement, informations sur l’entreprise ou le CSE le cas échéant</li>
+                    <li><strong>Informations techniques :</strong> données de navigation anonymisées (via cookies ou outils
+                        de mesure d’audience si activés)</li>
+                </ul>
+                <p>
+                    Les champs marqués comme obligatoires dans les formulaires sont nécessaires pour pouvoir traiter
+                    correctement votre demande (réservation, devis, question, etc.).
+                </p>
+            </div>
+
+            <!-- 3. FINALITÉS -->
+            <h2 class="legal-title"><span>3.</span> Finalités du traitement</h2>
+            <div class="legal-block">
+                <p>
+                    Vos données sont utilisées uniquement pour les objectifs suivants :
+                </p>
+                <ul>
+                    <li>Répondre à vos demandes d’information ou de devis</li>
+                    <li>Gérer vos réservations, privatisations, événements ou séances de coaching</li>
+                    <li>Vous recontacter dans le cadre de l’organisation ou la modification d’une prestation</li>
+                    <li>Assurer le suivi commercial lié à une demande que vous avez initiée</li>
+                    <li>Améliorer la navigation et la compréhension de l’usage du site (statistiques anonymes)</li>
+                </ul>
+                <p class="legal-note">
+                    Nous ne collectons pas de données dites « sensibles » via ce site (santé, opinions politiques,
+                    orientation, etc.).
+                </p>
+            </div>
+
+            <!-- 4. BASE LÉGALE -->
+            <h2 class="legal-title"><span>4.</span> Base légale des traitements</h2>
+            <div class="legal-block">
+                <p>
+                    Les traitements de données mis en œuvre via ce site reposent sur les bases légales suivantes :
+                </p>
+                <ul>
+                    <li><strong>Votre consentement</strong> lorsque vous remplissez volontairement un formulaire et
+                        cochez la case RGPD associée ;</li>
+                    <li><strong>L’exécution de mesures précontractuelles</strong>
+                        (réservation, demande de devis, organisation d’événement) à votre demande ;</li>
+                    <li><strong>L’intérêt légitime</strong> de l’éditeur pour assurer la bonne gestion de son activité
+                        et la sécurité du site.</li>
+                </ul>
+            </div>
+
+            <!-- 5. DURÉE DE CONSERVATION -->
+            <h2 class="legal-title"><span>5.</span> Durée de conservation</h2>
+            <div class="legal-block">
+                <p>
+                    Vos données sont conservées uniquement pour la durée nécessaire aux finalités pour lesquelles elles
+                    ont été collectées, notamment :
+                </p>
+                <ul>
+                    <li>Données de contact liées à une demande simple : le temps de traiter et clôturer la demande
+                        (quelques semaines maximum) ;</li>
+                    <li>Données liées à une réservation, un devis ou un événement : pour la durée nécessaire à la
+                        gestion de la relation commerciale et aux obligations comptables éventuelles ;</li>
+                    <li>Données techniques de navigation : selon les durées indiquées dans les paramètres des cookies
+                        ou outils de mesure d’audience.</li>
+                </ul>
+                <p class="legal-note">
+                    Vous pouvez à tout moment demander la suppression ou la rectification de vos informations,
+                    dans la limite des obligations légales de conservation.
+                </p>
+            </div>
+
+            <!-- 6. DESTINATAIRES -->
+            <h2 class="legal-title"><span>6.</span> Destinataires des données</h2>
+            <div class="legal-block">
+                <p>
+                    Les données personnelles collectées sont destinées uniquement à l’éditeur du site et aux personnes
+                    habilitées au sein de VIRTUAL CENTER EXPERIENCE pour répondre à vos demandes.
+                </p>
+                <p>
+                    Les données ne sont pas vendues ni louées à des tiers. Elles peuvent toutefois être transmises&nbsp;:
+                </p>
+                <ul>
+                    <li>à des prestataires techniques (hébergement, messagerie, outils de réservation) lorsque cela est
+                        nécessaire au fonctionnement du service ;</li>
+                    <li>aux autorités compétentes en cas d’obligation légale ou de décision judiciaire.</li>
+                </ul>
+            </div>
+
+            <!-- 7. SÉCURITÉ -->
+            <h2 class="legal-title"><span>7.</span> Sécurité des données</h2>
+            <div class="legal-block">
+                <p>
+                    Nous mettons en œuvre des mesures techniques et organisationnelles raisonnables pour protéger vos
+                    données contre l’accès non autorisé, la modification, la divulgation ou la destruction.
+                </p>
+                <p class="legal-note">
+                    Malgré ces précautions, aucun système n’est totalement infaillible.
+                    En cas de doute ou si vous suspectez un usage anormal de vos données, vous pouvez nous contacter
+                    immédiatement à <strong>virtualcenterexperience@gmail.com</strong>.
+                </p>
+            </div>
+
+            <!-- 8. COOKIES -->
+            <h2 class="legal-title"><span>8.</span> Cookies & mesure d’audience</h2>
+            <div class="legal-block">
+                <p>
+                    Lors de votre navigation sur le site, des cookies peuvent être déposés sur votre terminal
+                    (ordinateur, tablette, smartphone) afin de :
+                </p>
+                <ul>
+                    <li>assurer le bon fonctionnement du site (navigation, affichage, sécurité) ;</li>
+                    <li>mémoriser certaines préférences (par exemple votre choix concernant les cookies) ;</li>
+                    <li>éventuellement mesurer l’audience du site de manière anonymisée, pour améliorer le contenu et
+                        l’expérience utilisateur.</li>
+                </ul>
+                <p>
+                    Lors de votre première visite, un bandeau vous informe de l’utilisation de cookies.
+                    Vous pouvez :
+                </p>
+                <ul>
+                    <li>accepter les cookies ;</li>
+                    <li>poursuivre la navigation en paramétrant votre navigateur pour les bloquer ou les supprimer
+                        ultérieurement ;</li>
+                    <li>consulter cette page pour plus d’informations.</li>
+                </ul>
+                <p class="legal-note">
+                    Vous pouvez configurer votre navigateur pour être informé de la création de cookies,
+                    les limiter ou les refuser. Le refus de certains cookies peut impacter certaines fonctionnalités
+                    du site.
+                </p>
+            </div>
+
+            <!-- 9. VOS DROITS -->
+            <h2 class="legal-title"><span>9.</span> Vos droits (accès, rectification, suppression…)</h2>
+            <div class="legal-block">
+                <p>
+                    Conformément au RGPD et à la loi Informatique et Libertés, vous disposez des droits suivants
+                    sur vos données personnelles :
+                </p>
+                <ul>
+                    <li><strong>Droit d’accès :</strong> obtenir la confirmation que des données vous concernant sont
+                        traitées, et en recevoir une copie ;</li>
+                    <li><strong>Droit de rectification :</strong> corriger ou mettre à jour des données inexactes
+                        ou incomplètes ;</li>
+                    <li><strong>Droit à l’effacement :</strong> demander la suppression de vos données, dans les limites
+                        autorisées par la loi ;</li>
+                    <li><strong>Droit à la limitation :</strong> demander la suspension temporaire du traitement de vos
+                        données ;</li>
+                    <li><strong>Droit d’opposition :</strong> vous opposer, pour des motifs légitimes, à certains
+                        traitements ;</li>
+                    <li><strong>Droit à la portabilité :</strong> demander la transmission de vos données dans un format
+                        structuré, pour un usage personnel ou pour les transférer à un autre organisme (lorsque cela
+                        est applicable).</li>
+                </ul>
+                <p>
+                    Pour exercer ces droits ou pour toute question sur la gestion de vos données,
+                    vous pouvez nous contacter à :
+                </p>
+                <p>
+                    <strong>virtualcenterexperience@gmail.com</strong>
+                </p>
+                <p class="legal-note">
+                    En cas de difficulté persistante, vous disposez également du droit d’introduire une réclamation
+                    auprès de la CNIL (Commission Nationale de l’Informatique et des Libertés) en France.
+                </p>
+            </div>
+
+            <!-- 10. MISE À JOUR -->
+            <h2 class="legal-title"><span>10.</span> Mise à jour de la politique</h2>
+            <div class="legal-block">
+                <p>
+                    La présente politique de confidentialité peut être amenée à évoluer pour refléter les changements
+                    légaux, réglementaires ou les ajustements liés à l’activité de VIRTUAL CENTER EXPERIENCE.
+                </p>
+                <p>
+                    Nous vous invitons à consulter régulièrement cette page pour prendre connaissance
+                    des éventuelles modifications.
+                </p>
+                <p class="legal-note">
+                    Dernière mise à jour : <strong>2025</strong>  
+                    (Tu peux modifier cette date directement dans le fichier HTML à chaque mise à jour.)
+                </p>
+            </div>
+        </div>
     </div>
-    <div class="switch">
-      <div><strong>Analytics</strong><div class="muted">Mesure d’audience</div></div>
-      <input type="checkbox" id="consent-analytics">
+</main>
+
+<footer>
+    <div class="container footer-inner">
+        <div class="footer-links">
+            <a href="mentions-legales.html" class="page-link">Mentions légales</a>
+            <a href="contact.html" class="page-link">Contact</a>
+            <a href="confidentialite.html" class="page-link">Confidentialité</a>
+        </div>
+        <div>
+            © <span id="year"></span> VIRTUAL CENTER EXPERIENCE. Tous droits réservés.
+        </div>
     </div>
-    <div class="switch">
-      <div><strong>Marketing</strong><div class="muted">Réseaux sociaux / pub</div></div>
-      <input type="checkbox" id="consent-marketing">
+</footer>
+
+<!-- COOKIE BANNER -->
+<div class="cookie-banner" id="cookie-banner">
+    <div class="cookie-inner">
+        <div>
+            Nous utilisons des cookies pour améliorer votre expérience sur le site.
+            En continuant votre navigation, vous acceptez leur utilisation.
+        </div>
+        <div class="cookie-actions">
+            <button class="btn-cookie-secondary" id="cookie-more">En savoir plus</button>
+            <button class="btn-cookie-main" id="cookie-accept">OK</button>
+        </div>
     </div>
-    <p style="margin-top:10px">
-      <button class="btn" id="save-consents">Enregistrer mes préférences</button>
-      <button class="btn secondary" id="reset-consents">Réinitialiser</button>
-    </p>
-    <p class="muted">Vous pouvez aussi gérer les cookies via les réglages de votre navigateur. Le signal “Do Not Track” est respecté pour bloquer tout chargement non essentiel.</p>
+</div>
 
-    <h3>Exemples (à adapter)</h3>
-    <pre class="card" style="white-space:pre-wrap;font-family:ui-monospace,Consolas,monospace;font-size:.9em">
-Cookies potentiels :
-- lgbl_consent (fonctionnel) : mémorise vos choix – 6 mois
-- _auds (analytics) : mesure d’audience – 13 mois
-- _mkid (marketing) : personnalisation – 6 mois
-    </pre>
+<script>
+    // Année dynamique
+    document.getElementById("year").textContent = new Date().getFullYear();
 
-    <h2>9) Mineurs</h2>
-    <p>Le site ne cible pas spécifiquement les mineurs. Pour certaines activités en centre, l’autorisation d’un représentant légal peut être requise.</p>
+    // Menu burger
+    (function navToggle() {
+        const toggle = document.querySelector(".nav-toggle");
+        const links = document.querySelector(".nav-links");
+        if (!toggle || !links) return;
+        toggle.addEventListener("click", () => {
+            links.classList.toggle("open");
+        });
+    })();
 
-    <h2>10) Photos / vidéos / témoignages</h2>
-    <p>Nous pouvons demander votre accord pour publier des photos/vidéos prises lors d’événements. Vous pouvez retirer votre consentement à tout moment via <a href="mailto:lucasgaly.47510@gmail.com">lucasgaly.47510@gmail.com</a>.</p>
+    // Cookie banner (localStorage)
+    (function cookieBanner() {
+        const banner = document.getElementById("cookie-banner");
+        if (!banner) return;
+        const accepted = localStorage.getItem("vcx_cookies_accepted");
+        if (!accepted) {
+            banner.style.display = "block";
+        }
+        const btnAccept = document.getElementById("cookie-accept");
+        const btnMore = document.getElementById("cookie-more");
 
-    <h2>11) Vos droits</h2>
-    <ul>
-      <li>Accès, rectification, effacement</li>
-      <li>Limitation et opposition</li>
-      <li>Portabilité (si applicable)</li>
-      <li>Retrait du consentement à tout moment</li>
-    </ul>
-    <p>Pour exercer vos droits : <a href="mailto:lucasgaly.47510@gmail.com">lucasgaly.47510@gmail.com</a> – réponse sous 1 mois (prolongeable dans certains cas).</p>
-    <p>Si vous estimez, après nous avoir contactés, que vos droits ne sont pas respectés, vous pouvez saisir la <strong>CNIL</strong> : <a href="https://www.cnil.fr/fr/plaintes" target="_blank" rel="noopener">Déposer une plainte</a>.</p>
+        if (btnAccept) {
+            btnAccept.addEventListener("click", () => {
+                localStorage.setItem("vcx_cookies_accepted", "yes");
+                banner.style.display = "none";
+            });
+        }
+        if (btnMore) {
+            btnMore.addEventListener("click", () => {
+                window.location.href = "confidentialite.html";
+            });
+        }
+    })();
 
-    <h2>12) Modifications de la politique</h2>
-    <p>Nous pouvons mettre à jour cette politique à tout moment. La date de révision figure en haut de page. Les changements importants pourront faire l’objet d’une notification.</p>
+    // Transition logo entre les pages
+    (function pageTransition() {
+        const overlay = document.getElementById("page-transition");
+        if (!overlay) return;
 
-    <hr>
-    <div class="banner">
-      <strong>Contact DPO / RGPD :</strong> Lucas Galy — <a href="mailto:lucasgaly.47510@gmail.com" style="color:#fff;text-decoration:underline">lucasgaly.47510@gmail.com</a> — 06&nbsp;72&nbsp;39&nbsp;22&nbsp;64
-    </div>
+        window.addEventListener("load", () => {
+            overlay.classList.remove("active");
+        });
 
-    <p class="muted" style="margin-top:18px">Liens utiles : <a href="mentions-legales.html">Mentions légales</a> • <a href="contact.html">Contact</a> • <a href="https://www.instagram.com/lgbl_virtual_center_experience" target="_blank" rel="noopener">Instagram</a></p>
-  </main>
+        const links = document.querySelectorAll("a.page-link, .nav-links a");
 
-  <footer>
-    <p class="muted">© 2025 LGBL Virtual Experience Center – Tous droits réservés.</p>
-  </footer>
+        links.forEach(link => {
+            const href = link.getAttribute("href");
+            if (!href || href.startsWith("#")) return;
 
-  <script>
-    // --- Respect du "Do Not Track" ---
-    const DNT = (navigator.doNotTrack === "1" || window.doNotTrack === "1");
+            link.addEventListener("click", (e) => {
+                if (e.button !== 0 || e.metaKey || e.ctrlKey || e.shiftKey || e.altKey) return;
+                e.preventDefault();
+                overlay.classList.add("active");
+                setTimeout(() => {
+                    window.location.href = href;
+                }, 350);
+            });
+        });
 
-    // --- Store/restore consentements ---
-    const key = "lgbl_consent_v1";
-    const defaults = {functional:true, analytics:false, marketing:false};
-    const saved = JSON.parse(localStorage.getItem(key) || "null") || defaults;
-
-    const elAnalytics = document.getElementById("consent-analytics");
-    const elMarketing = document.getElementById("consent-marketing");
-    const btnSave    = document.getElementById("save-consents");
-    const btnReset   = document.getElementById("reset-consents");
-
-    // init UI
-    if (DNT) {
-      // Si DNT actif, bloquer par défaut tout non essentiel
-      elAnalytics.checked = false;
-      elMarketing.checked = false;
-      elAnalytics.disabled = true;
-      elMarketing.disabled = true;
-    } else {
-      elAnalytics.checked = !!saved.analytics;
-      elMarketing.checked = !!saved.marketing;
-    }
-
-    btnSave.addEventListener("click", () => {
-      const consents = {
-        functional: true,
-        analytics: !DNT && elAnalytics.checked,
-        marketing: !DNT && elMarketing.checked
-      };
-      localStorage.setItem(key, JSON.stringify(consents));
-      applyConsents(consents);
-      alert("Préférences enregistrées.");
-    });
-
-    btnReset.addEventListener("click", () => {
-      localStorage.removeItem(key);
-      if (!DNT) {
-        elAnalytics.checked = false;
-        elMarketing.checked = false;
-      }
-      // Optionnel : supprimer cookies non essentiels déjà posés
-      clearCookie("_auds");
-      clearCookie("_mkid");
-      alert("Préférences réinitialisées.");
-    });
-
-    function clearCookie(name){
-      document.cookie = name + "=; Max-Age=0; path=/; SameSite=Lax";
-    }
-
-    // --- Chargement conditionnel des scripts (exemples à ADAPTER) ---
-    function loadScript(src, attrs = {}) {
-      return new Promise((resolve, reject) => {
-        const s = document.createElement("script");
-        s.src = src;
-        Object.entries(attrs).forEach(([k,v]) => s.setAttribute(k,v));
-        s.onload = resolve; s.onerror = reject;
-        document.head.appendChild(s);
-      });
-    }
-
-    async function applyConsents(c) {
-      // Analytics : n’activer que si consentement et pas DNT
-      if (c.analytics && !DNT) {
-        // EXEMPLE : Matomo self-hosted / Plausible / GA4 -> à adapter
-        // await loadScript("https://example.com/analytics.js", {defer:""});
-      }
-      // Marketing : pixels, widgets sociaux, etc.
-      if (c.marketing && !DNT) {
-        // EXEMPLE : Pixel Meta/TikTok/YouTube consent mode -> à adapter
-        // await loadScript("https://example.com/marketing.js", {async:""});
-      }
-    }
-
-    // Appliquer au chargement
-    applyConsents(saved);
-  </script>
+        overlay.classList.add("active");
+    })();
+</script>
 </body>
 </html>
