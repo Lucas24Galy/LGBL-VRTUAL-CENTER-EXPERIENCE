@@ -323,7 +323,7 @@
             margin-bottom: 0.7rem;
         }
 
-        /* FORMULAIRE SIMPLE */
+        /* FORM */
 
         form {
             display: grid;
@@ -731,21 +731,22 @@
 
             <!-- FORMULAIRE + MAP -->
             <div class="contact-layout">
-                <!-- COLONNE FORMULAIRE SIMPLE -->
+                <!-- FORMULAIRE SIMPLE -->
                 <div class="card">
                     <h3 class="card-title">Formulaire de contact</h3>
                     <p class="card-subtitle">
                         Pour toute question, demande d’information ou premier contact, remplis ce formulaire.
                     </p>
 
-                    <!-- ✅ FormSubmit : envoi direct vers ta boîte mail -->
+                    <!-- ✅ FormSubmit : envoi direct vers ta boîte mail avec captcha -->
                     <form action="https://formsubmit.co/virtualcenterexperience@gmail.com" method="POST">
                         <!-- Config FormSubmit -->
                         <input type="hidden" name="_subject" value="Nouveau message - Virtual Center Experience">
                         <input type="hidden" name="_template" value="table">
-                        <input type="hidden" name="_captcha" value="false">
-                        <!-- Tu peux mettre l’URL de remerciement ici si tu crées une page merci.html -->
-                        <!-- <input type="hidden" name="_next" value="https://lucas24galy.github.io/LGBL-VRTUAL-CENTER-EXPERIENCE/merci.html"> -->
+                        <!-- captcha activé -->
+                        <input type="hidden" name="_captcha" value="true">
+                        <!-- page de retour après envoi -->
+                        <input type="hidden" name="_next" value="https://lucas24galy.github.io/LGBL-VRTUAL-CENTER-EXPERIENCE/contact.html?sent=1">
 
                         <div class="field-group">
                             <div class="form-field">
