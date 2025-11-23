@@ -266,6 +266,13 @@
             display: inline-flex;
             align-items: center;
             gap: 0.35rem;
+            cursor: default;
+            transition:
+                transform var(--transition-fast),
+                box-shadow var(--transition-fast),
+                border-color var(--transition-fast),
+                background 0.2s ease-out,
+                color 0.2s ease-out;
         }
 
         .hero-pill::before {
@@ -274,6 +281,22 @@
             height: 7px;
             border-radius: 999px;
             background: var(--accent-blue);
+            transition:
+                background 0.2s ease-out,
+                transform var(--transition-fast);
+        }
+
+        .hero-pill:hover {
+            transform: translateY(-2px) scale(1.03);
+            border-color: rgba(47, 128, 237, 0.9);
+            background: radial-gradient(circle at top left, rgba(47, 128, 237, 0.35), rgba(10, 16, 30, 0.95));
+            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.85);
+            color: #ffffff;
+        }
+
+        .hero-pill:hover::before {
+            background: var(--accent-red);
+            transform: scale(1.2);
         }
 
         .hero-cta-group {
