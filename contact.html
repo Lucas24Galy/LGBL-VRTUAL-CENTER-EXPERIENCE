@@ -323,6 +323,19 @@
             margin-bottom: 0.7rem;
         }
 
+        /* BANNIÈRE SUCCÈS */
+        .alert-success {
+            display: none;
+            margin: 1.2rem auto 0;
+            max-width: 780px;
+            padding: 0.8rem 1rem;
+            border-radius: 8px;
+            background: rgba(34, 197, 94, 0.12);
+            border: 1px solid rgba(34, 197, 94, 0.5);
+            font-size: 0.86rem;
+            color: #bbf7d0;
+        }
+
         /* FORM */
 
         form {
@@ -419,18 +432,6 @@
             font-size: 0.78rem;
             color: var(--text-muted);
             margin-top: 0.2rem;
-        }
-
-        /* message de statut */
-        .form-status {
-            margin-top: 0.6rem;
-            font-size: 0.8rem;
-        }
-        .form-status.success {
-            color: #4ade80; /* vert */
-        }
-        .form-status.error {
-            color: #fb7185; /* rouge */
         }
 
         /* MAP */
@@ -709,6 +710,13 @@
         </div>
     </section>
 
+    <!-- Bannière de succès -->
+    <div class="container">
+        <div id="form-success" class="alert-success">
+            ✅ Merci ! Ton message a bien été envoyé. Nous te répondrons dès que possible.
+        </div>
+    </div>
+
     <div class="container">
         <!-- INFOS DIRECTES -->
         <section class="section">
@@ -750,13 +758,13 @@
                         Pour toute question, demande d’information ou premier contact, remplis ce formulaire.
                     </p>
 
-                    <!-- ✅ FormSubmit : envoi AJAX direct vers ta boîte mail -->
-                    <form id="contact-form" action="https://formsubmit.co/ajax/virtualcenterexperience@gmail.com" method="POST">
-                        <!-- Config FormSubmit -->
+                    <!-- FormSubmit -->
+                    <form action="https://formsubmit.co/virtualcenterexperience@gmail.com" method="POST">
+                        <!-- config -->
                         <input type="hidden" name="_subject" value="Nouveau message - Virtual Center Experience">
                         <input type="hidden" name="_template" value="table">
-                        <!-- captcha (si tu veux le désactiver, passe à false) -->
                         <input type="hidden" name="_captcha" value="true">
+                        <input type="hidden" name="_next" value="https://lucas24galy.github.io/LGBL-VRTUAL-CENTER-EXPERIENCE/contact.html?sent=1">
 
                         <div class="field-group">
                             <div class="form-field">
@@ -800,12 +808,9 @@
                         <button type="submit" class="btn-submit">Envoyer le message</button>
                         <p class="form-note">
                             Ton message sera envoyé directement à
-                            <strong>virtualcenterexperience@gmail.com</strong>.  
+                            <strong>virtualcenterexperience@gmail.com</strong>.<br>
                             Nous te répondrons dans les plus brefs délais.
                         </p>
-
-                        <!-- Message de statut -->
-                        <div id="form-status" class="form-status"></div>
                     </form>
                 </div>
 
@@ -888,6 +893,15 @@
     // Année dynamique
     document.getElementById("year").textContent = new Date().getFullYear();
 
+    // Affichage du message de succès si ?sent=1 dans l'URL
+    (function showSuccessBanner() {
+        const params = new URLSearchParams(window.location.search);
+        if (params.get("sent") === "1") {
+            const alert = document.getElementById("form-success");
+            if (alert) alert.style.display = "block";
+        }
+    })();
+
     // Menu burger
     (function navToggle() {
         const toggle = document.querySelector(".nav-toggle");
@@ -948,45 +962,6 @@
         });
 
         overlay.classList.add("active");
-    })();
-
-    // ✅ Envoi AJAX du formulaire via FormSubmit
-    (function handleContactForm() {
-        const form = document.getElementById("contact-form");
-        const status = document.getElementById("form-status");
-        if (!form || !status) return;
-
-        form.addEventListener("submit", function (e) {
-            e.preventDefault();
-            status.textContent = "";
-            status.className = "form-status";
-
-            if (!form.checkValidity()) {
-                form.reportValidity();
-                return;
-            }
-
-            fetch(form.action, {
-                method: "POST",
-                body: new FormData(form),
-                headers: {
-                    "Accept": "application/json"
-                }
-            }).then(response => {
-                if (response.ok) {
-                    status.textContent = "✅ Message envoyé avec succès. Merci, nous revenons vers vous rapidement.";
-                    status.classList.add("success");
-                    form.reset();
-                } else {
-                    status.textContent = "❌ Une erreur est survenue lors de l’envoi. Merci de réessayer ou de nous contacter directement par e-mail.";
-                    status.classList.add("error");
-                }
-            }).catch(error => {
-                console.error(error);
-                status.textContent = "❌ Impossible de contacter le serveur. Vérifie ta connexion ou contacte-nous directement par e-mail.";
-                status.classList.add("error");
-            });
-        });
     })();
 </script>
 </body>
